@@ -425,3 +425,17 @@ footer { padding: 1rem 0; position: relative; }
 .pack b { font-family: var(--font-heading); font-size: 1.5rem; display: block; }
 .pack span { font-size: 0.85rem; color: var(--text-muted); }
 @media (max-width: 900px) { .pricing-grid.tiers { grid-template-columns: 1fr; } }
+
+/* --- Our work gallery ---------------------------------------------------- */
+.work-note { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; font-size: 0.92rem; color: var(--text-muted); }
+.work-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(232px, 1fr)); gap: 1.5rem; max-width: 1180px; margin: 0 auto; }
+.work-card { display: block; text-decoration: none; color: inherit; border-radius: 14px; overflow: hidden; border: 1px solid var(--glass-border); background: var(--bg-card, rgba(255,255,255,0.5)); transition: transform .35s cubic-bezier(.2,.7,.3,1), box-shadow .35s; position: relative; }
+.work-card:hover { transform: translateY(-6px); box-shadow: 0 18px 44px rgba(60,40,10,0.16); }
+.work-shot { position: relative; aspect-ratio: 520 / 470; overflow: hidden; background: var(--bg-alt); }
+.work-shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+.work-meta { padding: 0.9rem 1rem 1.1rem; }
+.work-tag { font-family: var(--font-data); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-ink); font-weight: 600; }
+.work-meta h3 { font-size: 1.05rem; margin: 0.3rem 0 0; line-height: 1.25; }
+.work-flag { position: absolute; top: 0.7rem; left: 0.7rem; z-index: 2; font-family: var(--font-data); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; padding: 0.28rem 0.55rem; border-radius: 999px; background: rgba(20,20,20,0.72); color: #fff; backdrop-filter: blur(6px); }
+.work-flag.live { background: var(--accent); }
+@media (max-width: 560px) { .work-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; } .work-meta h3 { font-size: 0.9rem; } }
