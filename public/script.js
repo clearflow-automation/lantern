@@ -140,3 +140,108 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+/* ==========================================================================
+   THE LANTERN LAYER
+   ========================================================================== */
+(function () {
+    'use strict';
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* --- carried-lantern glow: the owned motif --------------------------- */
+    document.querySelectorAll('.lit').forEach(function (sec) {
+        if (window.innerWidth < 900) return;
+        sec.addEventListener('mousemove', function (e) {
+            var r = sec.getBoundingClientRect();
+            sec.style.setProperty('--lx', ((e.clientX - r.left) / r.width * 100) + '%');
+            sec.style.setProperty('--ly', ((e.clientY - r.top) / r.height * 100) + '%');
+            sec.classList.add('awake');
+        });
+        sec.addEventListener('mouseleave', function () { sec.classList.remove('awake'); });
+    });
+
+    /* --- signature moment: the search that finds nothing ------------------ */
+    var serp = document.getElementById('serp');
+    if (!serp) return;
+    var qEl = document.getElementById('serpQ');
+    var body = document.getElementById('serpBody');
+    var QUERY = 'boutique in sector 31 gurgaon';
+
+    function row(o) {
+        return '<div class="serp-row' + (o.you ? ' serp-you' : '') + '">' +
+            '<div class="serp-fav">' + o.fav + '</div><div>' +
+            '<div class="serp-t">' + o.title + (o.you ? '<span class="serp-chip">Your website</span>' : '') + '</div>' +
+            '<div class="serp-u">' + o.url + '</div>' +
+            '<div class="serp-d">' + o.desc + '</div></div></div>';
+    }
+
+    var LISTING = { fav: 'JD', title: 'Top 10 Boutiques in Sector 31, Gurgaon', url: 'justdial.com › gurgaon › boutiques',
+        desc: 'A directory listing with your phone number, buried among forty others.' };
+    var RIVAL_A = { fav: 'B', title: 'Designer &amp; Bridal Wear — Sector 29', url: 'aboutique.in',
+        desc: 'Photos, prices, WhatsApp button. Open 10am–8pm. 4.6★' };
+    var RIVAL_B = { fav: 'S', title: 'Custom Tailoring Studio, Gurugram', url: 'anotherboutique.co.in',
+        desc: 'Lookbook, made-to-measure enquiry form, directions.' };
+    var YOU = { fav: 'Y', you: true, title: 'Your Boutique — Bridal &amp; Ethnic Wear, Sector 31', url: 'yourboutique.in',
+        desc: 'Your photos, your prices, your 4.8★ reviews — and one tap to WhatsApp you.' };
+
+    var BEFORE = row(LISTING) + row(RIVAL_A) + row(RIVAL_B) +
+        '<div class="serp-miss"><strong>Your shop isn&#8217;t here.</strong>' +
+        '<p>Same street. Better reviews. But nothing for Google to show, so they scroll past you.</p></div>';
+    var AFTER = row(YOU) + row(LISTING) + row(RIVAL_A);
+
+    var state = 'before';
+    function paint(next) {
+        state = next;
+        body.style.opacity = 0;
+        setTimeout(function () {
+            body.innerHTML = (state === 'before') ? BEFORE : AFTER;
+            body.style.opacity = 1;
+        }, reduced ? 0 : 190);
+    }
+    body.style.transition = 'opacity .19s ease';
+
+    document.querySelectorAll('.serp-toggle button').forEach(function (b) {
+        b.addEventListener('click', function () {
+            document.querySelectorAll('.serp-toggle button').forEach(function (x) { x.classList.remove('on'); });
+            b.classList.add('on');
+            paint(b.dataset.state);
+        });
+    });
+
+    /* type the query once, when it scrolls into view */
+    var typed = false;
+    new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (en) {
+            if (!en.isIntersecting || typed) return;
+            typed = true; obs.disconnect();
+            if (reduced) { qEl.textContent = QUERY; serp.classList.add('done'); paint('before'); return; }
+            var i = 0;
+            (function tick() {
+                qEl.textContent = QUERY.slice(0, ++i);
+                if (i < QUERY.length) return setTimeout(tick, 45);
+                serp.classList.add('done');
+                setTimeout(function () { paint('before'); }, 260);
+            })();
+        });
+    }, { threshold: 0.35 }).observe(serp);
+})();
+
+/* --- contact form -> WhatsApp composer (no backend, nothing to break) ----- */
+(function () {
+    'use strict';
+    var f = document.getElementById('contactForm');
+    if (!f) return;
+    f.removeAttribute('action'); f.removeAttribute('method');
+    f.addEventListener('submit', function (e) {
+        e.preventDefault();
+        function v(n) { var el = f.querySelector('[name="' + n + '"]'); return el && el.value.trim(); }
+        var lines = ['Hi Lantern, I saw your website.'];
+        if (v('name')) lines.push('Name: ' + v('name'));
+        if (v('business')) lines.push('Business: ' + v('business'));
+        if (v('business_type')) lines.push('Type: ' + v('business_type'));
+        if (v('area')) lines.push('Area: ' + v('area'));
+        if (v('phone')) lines.push('Phone: ' + v('phone'));
+        lines.push('', 'I would like to talk about a website.');
+        window.open('https://wa.me/919711105497?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+    });
+})();

@@ -439,3 +439,74 @@ footer { padding: 1rem 0; position: relative; }
 .work-flag { position: absolute; top: 0.7rem; left: 0.7rem; z-index: 2; font-family: var(--font-data); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; padding: 0.28rem 0.55rem; border-radius: 999px; background: rgba(20,20,20,0.72); color: #fff; backdrop-filter: blur(6px); }
 .work-flag.live { background: var(--accent); }
 @media (max-width: 560px) { .work-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; } .work-meta h3 { font-size: 0.9rem; } }
+
+/* ==========================================================================
+   THE LANTERN LAYER — motif, signature moment, kinetic band
+   Built against LANTERN-DESIGN-SYSTEM.md Part 2: a clean-but-flat page is a
+   failed draft. The owned motif is the lantern's light: warm radial bloom
+   that reveals things out of the dark.
+   ========================================================================== */
+
+/* --- carried-lantern glow (desktop, dark sections only) ------------------ */
+.lit { position: relative; isolation: isolate; }
+.lit::before {
+    content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background: radial-gradient(420px circle at var(--lx, 50%) var(--ly, 40%),
+        rgba(246, 180, 76, 0.16), rgba(217, 119, 6, 0.07) 42%, transparent 68%);
+    opacity: 0; transition: opacity .5s ease;
+}
+.lit.awake::before { opacity: 1; }
+.lit > * { position: relative; z-index: 1; }
+
+/* --- kinetic band: who we've built for ----------------------------------- */
+.band { background: var(--bg-alt); color: var(--text-alt); padding: 2.6rem 0; overflow: hidden; border-top: 1px solid var(--border-alt); border-bottom: 1px solid var(--border-alt); }
+.band-label { text-align: center; font-family: var(--font-data); font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent-2); opacity: 0.75; margin-bottom: 1.6rem; }
+.marquee { display: flex; width: max-content; animation: slide-names 46s linear infinite; }
+.marquee:hover { animation-play-state: paused; }
+.marquee span { font-family: var(--font-heading); font-size: clamp(1.5rem, 3.4vw, 2.5rem); padding: 0 1.5rem; white-space: nowrap; opacity: 0.42; transition: opacity .3s, color .3s; }
+.marquee span:hover { opacity: 1; color: var(--accent-2); }
+.marquee i { color: var(--accent); opacity: 0.5; font-style: normal; align-self: center; }
+@keyframes slide-names { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marquee { animation: none; } }
+
+/* --- SIGNATURE MOMENT: the search that finds nothing ---------------------- */
+.moment { background: var(--bg-alt); color: var(--text-alt); padding: clamp(4.5rem, 9vw, 7.5rem) 0; }
+.moment .section-title { color: var(--text-alt); }
+.moment-lead { color: rgba(244,241,233,0.62); max-width: 620px; margin: 0 auto 3rem; text-align: center; font-size: 1.02rem; }
+.serp-wrap { max-width: 680px; margin: 0 auto; }
+.serp { background: #FCFAF6; color: #1A1712; border-radius: 18px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.45), 0 0 60px rgba(217,119,6,0.10); }
+.serp-bar { display: flex; align-items: center; gap: 0.7rem; padding: 0.95rem 1.15rem; border-bottom: 1px solid #E7E2D6; background: #fff; }
+.serp-bar svg { flex: none; color: #8a8377; }
+.serp-q { font-family: var(--font-body); font-size: 0.98rem; color: #3a352d; }
+.serp-q::after { content: "▌"; color: var(--accent); animation: caret 1.05s steps(1) infinite; margin-left: 1px; }
+.serp.done .serp-q::after { display: none; }
+@keyframes caret { 50% { opacity: 0; } }
+.serp-body { padding: 0.5rem 0 0.6rem; min-height: 268px; }
+.serp-row { padding: 0.85rem 1.15rem; display: flex; gap: 0.85rem; align-items: flex-start; border-bottom: 1px solid #F1ECE1; }
+.serp-row:last-child { border-bottom: 0; }
+.serp-fav { width: 30px; height: 30px; border-radius: 8px; flex: none; display: grid; place-items: center; font-family: var(--font-data); font-size: 0.72rem; font-weight: 600; color: #fff; background: #b9b2a4; }
+.serp-t { font-size: 0.95rem; font-weight: 600; color: #1a3a8f; line-height: 1.3; }
+.serp-u { font-size: 0.76rem; color: #6b655c; margin-top: 1px; }
+.serp-d { font-size: 0.82rem; color: #55504a; margin-top: 3px; line-height: 1.45; }
+.serp-you { background: linear-gradient(180deg, rgba(246,180,76,0.16), rgba(246,180,76,0.05)); box-shadow: inset 3px 0 0 var(--accent); }
+.serp-you .serp-fav { background: var(--accent); }
+.serp-chip { display: inline-flex; align-items: center; gap: 0.3rem; font-family: var(--font-data); font-size: 0.68rem; font-weight: 600; padding: 0.2rem 0.5rem; border-radius: 999px; background: var(--accent); color: #fff; margin-left: 0.5rem; vertical-align: middle; }
+.serp-miss { padding: 2.2rem 1.4rem; text-align: center; }
+.serp-miss p { font-size: 0.92rem; color: #6b655c; }
+.serp-miss strong { color: #1A1712; display: block; font-family: var(--font-heading); font-size: 1.45rem; margin-bottom: 0.35rem; }
+.serp-toggle { display: flex; justify-content: center; gap: 0; margin: 2.2rem auto 0; width: fit-content; padding: 0.3rem; border-radius: 999px; background: rgba(255,255,255,0.07); border: 1px solid var(--glass-border-dark); }
+.serp-toggle button { font-family: var(--font-data); font-size: 0.78rem; letter-spacing: 0.04em; padding: 0.6rem 1.3rem; border-radius: 999px; border: 0; background: transparent; color: rgba(244,241,233,0.62); cursor: pointer; transition: all .3s; }
+.serp-toggle button.on { background: var(--accent); color: #fff; }
+.moment-foot { text-align: center; margin-top: 1.6rem; font-size: 0.88rem; color: rgba(244,241,233,0.5); }
+
+/* --- work rail: compact, swipeable --------------------------------------- */
+.work-rail-wrap { position: relative; }
+.work-rail { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x proximity; padding: 0.5rem 0 1.5rem; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+.work-rail::-webkit-scrollbar { height: 6px; }
+.work-rail::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 99px; }
+.work-rail .work-card { flex: 0 0 232px; scroll-snap-align: start; }
+.work-rail .work-shot { aspect-ratio: 232 / 190; }
+.work-rail .work-meta { padding: 0.7rem 0.85rem 0.9rem; }
+.work-rail .work-meta h3 { font-size: 0.92rem; }
+.rail-hint { display: flex; align-items: center; justify-content: space-between; max-width: 1180px; margin: 0 auto 0.8rem; font-family: var(--font-data); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+@media (max-width: 560px) { .work-rail .work-card { flex: 0 0 66vw; } }

@@ -131,6 +131,34 @@
     </section>
 
     <!-- ============ PROBLEM BANNER ============ -->
+    <section class="band" aria-label="Businesses we have built for">
+        <p class="band-label">Sites we&#8217;ve built</p>
+        <div class="marquee" aria-hidden="true"><span>Poshak Boutique</span><i>&#9670;</i><span>Queen Madonna</span><i>&#9670;</i><span>Dr. Mona Prabhakar</span><i>&#9670;</i><span>Beauty Life Salon</span><i>&#9670;</i><span>R D Creations</span><i>&#9670;</i><span>Asha Clinic</span><i>&#9670;</i><span>ANSHYA</span><i>&#9670;</i><span>The Bodyline Gym</span><i>&#9670;</i><span>Modern Looks</span><i>&#9670;</i><span>Dr. Deepika Aggarwal</span><i>&#9670;</i><span>Empire of Fitness</span><i>&#9670;</i><span>British Unisex Salon</span><i>&#9670;</i><span>Beast Mode Gym</span><i>&#9670;</i><span>Aayushi Nevatia</span><i>&#9670;</i><span>Poshak Boutique</span><i>&#9670;</i><span>Queen Madonna</span><i>&#9670;</i><span>Dr. Mona Prabhakar</span><i>&#9670;</i><span>Beauty Life Salon</span><i>&#9670;</i><span>R D Creations</span><i>&#9670;</i><span>Asha Clinic</span><i>&#9670;</i><span>ANSHYA</span><i>&#9670;</i><span>The Bodyline Gym</span><i>&#9670;</i><span>Modern Looks</span><i>&#9670;</i><span>Dr. Deepika Aggarwal</span><i>&#9670;</i><span>Empire of Fitness</span><i>&#9670;</i><span>British Unisex Salon</span><i>&#9670;</i><span>Beast Mode Gym</span><i>&#9670;</i><span>Aayushi Nevatia</span><i>&#9670;</i></div>
+    </section>
+
+    <section id="moment" class="moment lit">
+        <div class="container">
+            <h2 class="section-title slide-up" style="text-align:center">The moment that costs you</h2>
+            <p class="moment-lead slide-up">Right now, someone three streets away is looking for exactly what you sell. This is what they see.</p>
+
+            <div class="serp-wrap slide-up delay-1">
+                <div class="serp" id="serp">
+                    <div class="serp-bar">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                        <span class="serp-q" id="serpQ"></span>
+                    </div>
+                    <div class="serp-body" id="serpBody"></div>
+                </div>
+
+                <div class="serp-toggle slide-up delay-2" role="group" aria-label="Compare search results">
+                    <button type="button" class="on" data-state="before">Without a website</button>
+                    <button type="button" data-state="after">With Lantern</button>
+                </div>
+                <p class="moment-foot slide-up delay-2">Same shop. Same reviews. Same street. One difference.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="formula-banner fade-in">
         <div class="container">
             <span class="stat-line">Your next customer is searching <i>"boutique near me"</i> right now. If they can't find you online, they walk into the shop that they <i>can.</i></span>
@@ -216,7 +244,8 @@
         <div class="container">
             <h2 class="section-title slide-up">Work we've built</h2>
             <p class="work-note slide-up">One of these is a live client site, marked below. The rest are <strong>sample sites</strong> — real local businesses we designed a site for to show what's possible, with placeholder photos and copy. Open any of them on your phone; every one is built mobile-first.</p>
-            <div class="work-grid">
+            <div class="rail-hint slide-up"><span>15 sites &middot; swipe to browse</span><span>Tap any to open it</span></div>
+            <div class="work-rail-wrap"><div class="work-rail">
                 <a class="work-card slide-up" href="https://dr-mona-prabhakar.lanternstudio.workers.dev" target="_blank" rel="noopener">
                     <div class="work-shot"><span class="work-flag live">Live client</span><img loading="lazy" decoding="async" width="520" height="470" src="work/dr-mona-prabhakar.webp" alt="Dr. Mona Prabhakar — website built by Lantern"></div>
                     <div class="work-meta"><span class="work-tag">Orthodontist · Sector 31</span><h3>Dr. Mona Prabhakar</h3></div>
@@ -277,7 +306,7 @@
                     <div class="work-shot"><span class="work-flag">Sample</span><img loading="lazy" decoding="async" width="520" height="470" src="work/aayushi-nevatia.webp" alt="Aayushi Nevatia — website built by Lantern"></div>
                     <div class="work-meta"><span class="work-tag">Personal brand</span><h3>Aayushi Nevatia</h3></div>
                 </a>
-            </div>
+            </div></div>
         </div>
     </section>
 
@@ -495,12 +524,7 @@
                     </div>
                 </div>
             </div>
-
-            <!-- NOTE: replace the web3forms access_key below with your own before going live. -->
             <form class="editorial-form glass slide-up delay-2" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_KEY">
-                <input type="hidden" name="subject" value="New Lantern demo request">
-                <input type="hidden" name="from_name" value="Lantern Website">
                 <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">
 
                 <div class="form-group">
