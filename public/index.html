@@ -1,601 +1,467 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lantern | Websites for Local Businesses in Gurugram</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lantern — websites for shops in Gurugram</title>
+<meta name="description" content="A one-page website for your shop, live in two days, from ₹4,999. Built in Gurugram for boutiques, salons, clinics and gyms whose customers look them up before walking in.">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#221B16">
+<link rel="canonical" href="https://airlantern.com/">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <!-- SEO + Social -->
-    <meta name="description" content="Lantern builds fast, mobile-first websites for local shops in Gurugram — boutiques, clinics, salons. Live in a day. From ₹4,999. No monthly charge, ever. Get found on Google, get customers on WhatsApp.">
-    <meta property="og:title" content="Lantern | Websites for Local Businesses in Gurugram">
-    <meta property="og:description" content="A fast, mobile-first website for your shop — live in a day. Get found on Google, get customers on WhatsApp. From ₹4,999.">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#F4F1E9">
+<meta property="og:title" content="Lantern — websites for shops in Gurugram">
+<meta property="og:description" content="A one-page website for your shop, live in two days, from ₹4,999.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://airlantern.com/">
+<meta property="og:image" content="https://airlantern.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://airlantern.com/og.png">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&text=%E0%A4%B2%E0%A4%BE%E0%A4%9F%E0%A5%87%E0%A4%A8&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="styles.css">
 
-    <link rel="stylesheet" href="styles.css?v=2">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Lantern",
+  "description": "One-page websites for local businesses in Gurugram.",
+  "url": "https://airlantern.com/",
+  "telephone": "+91-9711105497",
+  "email": "vaishnandit@airlantern.com",
+  "areaServed": { "@type": "City", "name": "Gurugram" },
+  "founder": { "@type": "Person", "name": "Nandit Vaish" },
+  "priceRange": "₹₹"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "₹4,999 mein poori website? Kuch gadbad toh nahi?",
+     "acceptedAnswer": {"@type": "Answer", "text": "No catch, but there is a visible limit: at ₹4,999 you write the text yourself and the site sits on a Lantern web address rather than your own domain. The speed, the buttons and the Google setup are the same. At ₹9,999 you get your own domain and the writing is done for you."}},
+    {"@type": "Question", "name": "Do I have to pay something every month?",
+     "acceptedAnswer": {"@type": "Answer", "text": "No — not to us, ever. Hosting and the security certificate cost us nearly nothing, so we don't bill for them. The only recurring cost is your domain, roughly ₹1,000 a year, paid directly to the registrar in your own name."}},
+    {"@type": "Question", "name": "Who owns the site if I stop working with you?",
+     "acceptedAnswer": {"@type": "Answer", "text": "You do. The domain is registered in your name on your email from day one. If you leave, you get the files and the domain moves with you."}},
+    {"@type": "Question", "name": "I don't have good photos.",
+     "acceptedAnswer": {"@type": "Answer", "text": "Your phone is enough — you get a list of exactly which five shots to take and where to stand. If there is genuinely nothing usable, the page is designed around it rather than filled with stock photos of someone else's shop."}},
+    {"@type": "Question", "name": "Will I actually come up on Google?",
+     "acceptedAnswer": {"@type": "Answer", "text": "You will be set up correctly for it: the right page title, your address and hours marked up the way Google reads them, and a sitemap submitted to Search Console. Nobody honest can promise a position; anyone guaranteeing the top spot is selling something else."}},
+    {"@type": "Question", "name": "How do I know you won't disappear?",
+     "acceptedAnswer": {"@type": "Answer", "text": "You hold the safeguard: the domain is yours, the hosting account can be yours, and the site is a plain set of files any developer can take over. Nothing depends on Lantern staying around."}}
+  ]
+}
+</script>
 </head>
 <body>
-    <div class="noise-overlay"></div>
+<div class="page-lamp" aria-hidden="true"></div>
 
-    <!-- Warm "lantern glow" aurora blooms (fixed, drift slowly) -->
-    <div class="aurora" aria-hidden="true">
-        <span class="aurora-blob a1"></span>
-        <span class="aurora-blob a2"></span>
-        <span class="aurora-blob a3"></span>
+<header class="hdr">
+  <a class="hdr__logo" href="#top" aria-label="Lantern — home">
+    <img src="assets/brand/lantern-mark-light.svg" alt="" width="22" height="29" aria-hidden="true">
+    <span class="hdr__word">lantern</span>
+    <span class="deva" aria-hidden="true">लालटेन</span>
+  </a>
+  <a class="hdr__cta" href="#work">See the work</a>
+</header>
+
+<main id="top">
+
+  <!-- ═══ 1 · Hero. Dark. The light follows your cursor; on a phone it drifts.
+           No form here, ever — the argument comes first. ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero__light" aria-hidden="true"></div>
+    <div class="hero__grain" aria-hidden="true"></div>
+    <div class="wrap hero__inner">
+      <h1 class="t-hero">They look <span class="italic-turn">you</span> up before they walk in.</h1>
+      <p class="lede">Someone two streets away is deciding right now whether your shop is worth the trip. If nothing comes up, they go to the one that did.</p>
+      <div class="hero__actions">
+        <a class="btn btn--flame" href="#work">
+          See thirteen shops we've drawn
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#pricing">What it costs</a>
+      </div>
+      <div class="hero__meta">
+        <span>Gurugram</span>
+        <span>Live in two days</span>
+        <span>From ₹4,999</span>
+      </div>
     </div>
+  </section>
 
-    <!-- ============ NAV ============ -->
-    <nav class="navbar glass-nav">
-        <div class="container nav-grid">
-            <a href="#top" class="logo" aria-label="Lantern home">
-                <svg class="logo-lantern" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M12 2v2"/><path d="M8.5 4h7"/>
-                    <path d="M7 8c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2H9c-1.1 0-2-.9-2-2z"/>
-                    <path d="M9.5 20h5"/>
-                    <ellipse class="flame" cx="12" cy="12.2" rx="1.7" ry="2.5" fill="currentColor" stroke="none"/>
-                </svg>
-                <span>Lantern</span>
+  <!-- ═══ 2 · The lights come on. One line, huge, with air around it. ═══ -->
+  <section class="sec sec--tall sec--paper" id="why">
+    <div class="wrap">
+      <h2 class="t-h1 statement lift">A shop without a website isn't invisible. It's just harder to trust.</h2>
+      <p class="lede statement-sub lift">Your customer already found your name: on Google Maps, in a WhatsApp forward, from a neighbour. What they're looking for now is a reason to believe you're still open, still good, and worth the auto fare.</p>
+    </div>
+  </section>
+
+  <!-- ═══ 3 · Where we actually are. No invented numbers: one paying client,
+           no Google Business Profile, and we say so. ═══ -->
+  <section class="sec sec--tight sec--paper">
+    <div class="wrap">
+      <div class="position lift">
+        <div>
+          <div class="position__fig">One</div>
+          <div class="position__lbl">shop paying, live, and still live. Dr. Mona Prabhakar's clinic in Sector 31.</div>
+        </div>
+        <div>
+          <div class="position__fig">Thirteen</div>
+          <div class="position__lbl">sites designed and built. Twelve of them are demonstrations, not clients, and they're labelled that way below.</div>
+        </div>
+        <div>
+          <div class="position__fig">Two days</div>
+          <div class="position__lbl">from the go-ahead to a live address you can send anyone. That part we've done.</div>
+        </div>
+      </div>
+      <p class="lede lift" style="margin-top:2rem">That's the honest position. A bigger studio would show you logos. We'd rather you clicked through the actual work and decided for yourself.</p>
+    </div>
+  </section>
+
+  <!-- ═══ 4 · What you get. 62/38 splits, alternating. ═══ -->
+  <section class="sec sec--paper2" id="what">
+    <div class="wrap">
+      <div class="split lift">
+        <div class="split__a">
+          <h2 class="t-h2">Built for the phone in her hand, not the laptop on your desk</h2>
+          <p class="lede" style="margin-top:1rem">Nearly everyone who looks you up is standing somewhere, on a phone, on patchy 4G. So the page is designed at the width of a phone first and widened afterwards — not the other way round. It loads in under two seconds on a cheap Android.</p>
+        </div>
+        <div class="split__b">
+          <span class="halo"><img src="assets/work/dr-mona-prabhakar.webp" alt="Dr. Mona Prabhakar's clinic site shown on a phone-width layout" loading="lazy" width="520" height="640"></span>
+        </div>
+      </div>
+
+      <div class="split split--flip lift">
+        <div class="split__a">
+          <h2 class="t-h2">Call and WhatsApp, one tap, from anywhere on the page</h2>
+          <p class="lede" style="margin-top:1rem">Not a contact form nobody checks. A bar that follows the customer down the page with your real number in it, so the distance between "this looks good" and your phone ringing is one thumb.</p>
+        </div>
+        <div class="split__b">
+          <span class="halo"><img src="assets/work/queen-madonna-premium.webp" alt="A salon site with a sticky call and WhatsApp bar" loading="lazy" width="520" height="640"></span>
+        </div>
+      </div>
+
+      <div class="split lift">
+        <div class="split__a">
+          <h2 class="t-h2">Set up so Google can actually find you</h2>
+          <p class="lede" style="margin-top:1rem">The page title says what you do and where you are. The address, hours and phone number are marked up the way Google expects. A sitemap goes in, and the site gets submitted to Search Console. That last step is the one almost nobody does, and it's the reason most new sites never appear.</p>
+        </div>
+        <div class="split__b">
+          <span class="halo"><img src="assets/work/poshak-boutique.webp" alt="A boutique site laid out with local search details in place" loading="lazy" width="520" height="640"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 5 · The work. The signature moment — this is the proof.
+           Dr. Mona is flagged LIVE and is deliberately larger than her
+           siblings. Everything else is flagged SAMPLE. Never blur that line. ═══ -->
+  <section class="sec sec--paper" id="work">
+    <div class="wrap">
+      <p class="eyebrow lift">The work</p>
+      <h2 class="t-h1 lift" style="margin:.75rem 0 1rem; max-width:18ch">Thirteen shops, drawn out properly.</h2>
+      <p class="lede lift" style="margin-bottom:clamp(2rem,5vw,3.5rem)">One is a paying client with a live site. The other twelve are demonstrations built to show what a shop like yours could look like. They're marked, because a studio that blurs that line will blur other things too.</p>
+
+      <div class="work">
+        <article class="work__item work__item--feature lift">
+          <div class="work__shot"><img src="assets/work/dr-mona-prabhakar.webp" alt="Website built for Dr. Mona Prabhakar, orthodontist in Sector 31" loading="lazy" width="520" height="650"></div>
+          <div class="work__cap">
+            <div><div class="work__name">Dr. Mona Prabhakar</div><div class="work__niche">Orthodontist · Sector 31</div></div>
+            <span class="flag flag--live">Live client</span>
+          </div>
+        </article>
+
+
+        <article class="work__item lift"><div class="work__shot"><img src="assets/work/poshak-boutique.webp" alt="Demonstration site for Poshak Boutique" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Poshak</div><div class="work__niche">Boutique</div></div><span class="flag flag--sample">Sample</span></div></article>
+
+        <article class="work__item lift"><div class="work__shot"><img src="assets/work/rd-creations.webp" alt="Demonstration site for RD Creations" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">RD Creations</div><div class="work__niche">Tailor &amp; boutique</div></div><span class="flag flag--sample">Sample</span></div></article>
+
+        <article class="work__item lift"><div class="work__shot"><img src="assets/work/queen-madonna.webp" alt="Demonstration site for Queen Madonna salon" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Queen Madonna</div><div class="work__niche">Salon</div></div><span class="flag flag--sample">Sample</span></div></article>
+
+        <article class="work__item lift"><div class="work__shot"><img src="assets/work/queen-madonna-premium.webp" alt="Alternative demonstration site for Queen Madonna salon" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Queen Madonna</div><div class="work__niche">Salon · second direction</div></div><span class="flag flag--sample">Sample</span></div></article>
+
+        <article class="work__item lift"><div class="work__shot"><img src="assets/work/beauty-life-salon.webp" alt="Demonstration site for Beauty Life Salon" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Beauty Life</div><div class="work__niche">Salon</div></div><span class="flag flag--sample">Sample</span></div></article>
+
+        <article class="work__item lift"><div class="work__shot"><img src="assets/work/modern-looks-salon.webp" alt="Demonstration site for Modern Looks Salon" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Modern Looks</div><div class="work__niche">Salon</div></div><span class="flag flag--sample">Sample</span></div></article>
+
+        <article class="work__item lift"><div class="work__shot"><img src="assets/work/british-unisex-salon.webp" alt="Demonstration site for British Unisex Salon" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">British Unisex</div><div class="work__niche">Salon</div></div><span class="flag flag--sample">Sample</span></div></article>
+
+        <article class="work__item lift"><div class="work__shot"><img src="assets/work/asha-clinic.webp" alt="Demonstration site for Asha Clinic" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Asha Clinic</div><div class="work__niche">Clinic</div></div><span class="flag flag--sample">Sample</span></div></article>
+
+        <article class="work__item lift"><div class="work__shot"><img src="assets/work/dr-deepika-aggarwal.webp" alt="Demonstration site for Dr. Deepika Aggarwal" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Dr. Deepika Aggarwal</div><div class="work__niche">Doctor</div></div><span class="flag flag--sample">Sample</span></div></article>
+
+        <article class="work__item lift"><div class="work__shot"><img src="assets/work/bodyline-gym.webp" alt="Demonstration site for Bodyline Gym" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Bodyline</div><div class="work__niche">Gym</div></div><span class="flag flag--sample">Sample</span></div></article>
+
+        <article class="work__item lift"><div class="work__shot"><img src="assets/work/beast-mode-gym.webp" alt="Demonstration site for Beast Mode Gym" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Beast Mode</div><div class="work__niche">Gym</div></div><span class="flag flag--sample">Sample</span></div></article>
+
+        <article class="work__item lift"><div class="work__shot"><img src="assets/work/empire-of-fitness.webp" alt="Demonstration site for Empire of Fitness" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Empire of Fitness</div><div class="work__niche">Gym</div></div><span class="flag flag--sample">Sample</span></div></article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 6 · Two doors. Build in clay, Tune-Up in sage. ═══ -->
+  <section class="sec sec--paper2" id="doors">
+    <div class="wrap">
+      <h2 class="t-h1 lift" style="max-width:16ch; margin-bottom:clamp(2rem,5vw,3rem)">Two ways in, depending on what you already have.</h2>
+      <div class="doors">
+        <div class="door door--build lift">
+          <div class="door__who">If you have no website</div>
+          <h3 class="t-h3">Build</h3>
+          <p class="muted" style="margin-top:.6rem">One page that does the whole job: who you are, what you do, what it costs, and a button that rings your phone.</p>
+          <ul>
+            <li>Live in two days</li>
+            <li>Your own address on Google</li>
+            <li>Photos cleaned up and placed properly</li>
+            <li>Call and WhatsApp on every screen</li>
+          </ul>
+          <a class="tlink" href="#pricing">See what it costs</a>
+        </div>
+        <div class="door door--tuneup lift">
+          <div class="door__who">If you already have one</div>
+          <h3 class="t-h3">Tune-Up</h3>
+          <p class="muted" style="margin-top:.6rem">Most shop websites aren't broken, just slow, unfindable, or quietly losing the customer at the last step. We check, in writing, before anyone spends anything.</p>
+          <ul>
+            <li>Free health check, sent as a written note</li>
+            <li>Checked by hand on a phone, not just by a scanner</li>
+            <li>Fixes quoted before they're made</li>
+            <li>You keep your site, your host, your logins</li>
+          </ul>
+          <a class="tlink" href="#contact">Ask for a health check</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 7 · How it works ═══ -->
+  <section class="sec sec--paper" id="how">
+    <div class="wrap">
+      <h2 class="t-h1 lift" style="max-width:14ch; margin-bottom:clamp(2rem,5vw,3rem)">Four steps. Two days.</h2>
+      <div class="steps">
+        <div class="step lift"><h3>We talk</h3><p>Ten minutes on the phone. What you sell, who walks in, what you want them to do next.</p></div>
+        <div class="step lift"><h3>You approve the scope</h3><p>Written down, with the price on it, before anything is built. Half up front.</p></div>
+        <div class="step lift"><h3>We build it</h3><p>Your text, your photos, your colours. You see it before anyone else does.</p></div>
+        <div class="step lift"><h3>It goes live</h3><p>On your own domain, in your own name. Submitted to Google the same day.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 8 · Pricing. Three tiers, never seven. The middle one is the one
+           to sell, so it is physically larger — not just badged. ═══ -->
+  <section class="sec sec--paper2" id="pricing">
+    <div class="wrap">
+      <p class="eyebrow lift">What it costs</p>
+      <h2 class="t-h1 lift" style="margin:.75rem 0 1rem; max-width:16ch">The price is on the page, because that's the whole point.</h2>
+      <p class="lede lift" style="margin-bottom:clamp(2rem,5vw,3.5rem)">Nobody should have to sit through three meetings to find out a number. Paid once. No monthly bill from us, ever.</p>
+
+      <div class="tiers">
+        <div class="tier lift">
+          <div class="tier__price"><sup>₹</sup>4,999</div>
+          <p class="tier__for">Starter — you're online, and you write the words yourself.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>One page, built for phones</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Call and WhatsApp buttons</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Map, hours, directions</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A Lantern web address</li>
+          </ul>
+          <a class="btn btn--ghost" href="#contact">Start here</a>
+        </div>
+
+        <div class="tier tier--pick lift">
+          <div class="tier__badge">The one most shops take</div>
+          <div class="tier__price"><sup>₹</sup>9,999</div>
+          <p class="tier__for">Complete — you're online <em>and</em> people start finding you.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Everything in Starter</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><strong>Your own domain</strong>, in your name</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>All the words written for you</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Photos cleaned and cropped</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Google setup, done properly</li>
+          </ul>
+          <a class="btn btn--clay" href="#contact">
+            Talk to Nandit
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="tier lift">
+          <div class="tier__price"><sup>₹</sup>17,999</div>
+          <p class="tier__for">Presence — for a shop with more than one thing to say.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Everything in Complete</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Three pages instead of one</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Change prices and photos yourself</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Hindi and English</li>
+          </ul>
+          <a class="btn btn--ghost" href="#contact">Ask about it</a>
+        </div>
+      </div>
+
+      <p class="pricing-note lift">Changes later are bought in small packs (₹699 for two, ₹1,499 for five) and the credits don't expire. Hosting and the security certificate cost you nothing from us. Your domain renews directly with the registrar, about ₹1,000 a year, in your name, and we remind you 60 days before it lapses.</p>
+    </div>
+  </section>
+
+  <!-- ═══ 9 · Who's behind it. One person, said plainly. ═══ -->
+  <section class="sec sec--paper" id="who">
+    <div class="wrap">
+      <div class="split lift">
+        <div class="split__a">
+          <h2 class="t-h2">It's one person, and that's the point</h2>
+          <p class="lede" style="margin-top:1rem">I'm Nandit. I build these myself, from Gurugram. There's no account manager, no ticket number, and nobody to pass you to. When you call the number on this page, I pick it up.</p>
+          <p class="lede" style="margin-top:1rem">That's also the honest limit: I take a small number of builds at a time, because two days per shop only works if I'm not running six at once.</p>
+          <p class="sig" aria-hidden="true">— Nandit</p>
+          <p style="margin-top:.5rem"><a class="tlink" href="tel:+919711105497">+91 97111 05497</a></p>
+        </div>
+        <div class="split__b">
+          <div class="me-card">
+            <img src="assets/brand/lantern-mark-inked.svg" alt="" width="72" height="94" loading="lazy">
+            <p>Builds so far: one paying client, fourteen samples, and this page you're reading — which is its own kind of proof.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 10 · FAQ — the real objections from the call script ═══ -->
+  <section class="sec sec--paper2" id="faq">
+    <div class="wrap">
+      <h2 class="t-h1 lift" style="max-width:16ch; margin-bottom:clamp(1.5rem,4vw,2.5rem)">Questions shop owners actually ask</h2>
+      <div class="faq lift">
+        <details>
+          <summary>₹4,999 mein poori website? Kuch gadbad toh nahi?</summary>
+          <p>No catch, but there is a limit, and it's a visible one. At ₹4,999 you write the text yourself and the site sits on a Lantern web address rather than your own domain. Everything that makes it work (the speed, the buttons, the Google setup) is the same. The ₹9,999 one is where you get your own domain and I do the writing.</p>
+        </details>
+        <details>
+          <summary>Do I have to pay something every month?</summary>
+          <p>No. Not to us, ever. Hosting and the security certificate cost us nearly nothing, so we don't bill you for them. The only recurring cost is your domain, roughly ₹1,000 a year, paid directly to the registrar in your own name.</p>
+        </details>
+        <details>
+          <summary>Who owns the site if I stop working with you?</summary>
+          <p>You do. The domain is registered in your name on your email from the first day. We configure it; we never hold it. If you leave, you get the files and the domain moves with you. There is nothing to negotiate because there is nothing of yours that we're holding.</p>
+        </details>
+        <details>
+          <summary>I don't have good photos.</summary>
+          <p>Most shops don't, and it's the single most common reason a site never gets finished. Your phone is enough. I'll tell you exactly which five shots to take and where to stand. If there's genuinely nothing usable, we design around it rather than filling the page with stock photos of someone else's shop.</p>
+        </details>
+        <details>
+          <summary>Will I actually come up on Google?</summary>
+          <p>You'll be set up correctly for it: the right page title, your address and hours marked up the way Google reads them, a sitemap submitted to Search Console. That's the part almost nobody does, and it's why most new sites never appear at all. What nobody honest can promise you is a position. Anyone guaranteeing you the top spot is selling you something else.</p>
+        </details>
+        <details>
+          <summary>How do I know you won't disappear?</summary>
+          <p>Fair question to ask a one-person studio, and the honest answer is that you're holding the safeguard: the domain is yours, the hosting account can be yours, and the site is a plain set of files you can hand to anyone. Nothing here depends on me still being around.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ 10b · Capacity. Nandit's favourite angle: the limit is the
+           promise. Says the quiet part out loud, which nobody else does. ═══ -->
+  <section class="sec sec--tight sec--paper cap">
+    <div class="wrap">
+      <p class="cap__line lift">I take <strong>three builds a week.</strong> Not because demand is overwhelming — because two days per shop stops being two days the moment I'm running six at once.</p>
+      <p class="cap__sub lift">If the week is full, I'll tell you that instead of taking your money and going quiet.</p>
+    </div>
+  </section>
+
+  <!-- ═══ 11 · Contact. Light, so the form is legible and calm. Native
+           POST — no fetch, no "Sending…", no animation. FormSubmit redirects
+           to thanks.html, a real page in our own voice. ═══ -->
+  <section class="sec sec--paper2" id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div class="contact__ask">
+          <h2 class="t-h1">Tell me about your shop.</h2>
+          <p class="lede" style="margin-top:1.25rem">WhatsApp is fastest — it comes straight to my phone and you'll usually hear back the same day. If you'd rather I called you, leave your number instead.</p>
+          <div class="contact__btns">
+            <a class="btn btn--clay" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20I%20saw%20the%20Lantern%20site.%20My%20shop%20is%20" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1112 20.2z"/><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5-.1-.2-.7-1.6-.9-2.1-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.3z"/></svg>
+              Message me on WhatsApp
             </a>
-            <div class="nav-links" id="navLinks">
-                <a href="#who">Who we build for</a>
-                <a href="#included">What's included</a>
-                <a href="#work">Our work</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#faq">FAQ</a>
-                <a href="#work" class="btn-primary">See a Demo</a>
-            </div>
-            <button class="nav-mobile-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+            <a class="tlink" href="tel:+919711105497">Or call +91 97111 05497</a>
+          </div>
         </div>
-    </nav>
 
-    <span id="top"></span>
+        <form class="enq" action="https://formsubmit.co/vaishnandit@airlantern.com" method="POST">
+          <input type="hidden" name="_subject" value="New enquiry — madebylantern.com">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://airlantern.com/thanks.html">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-    <!-- ============ HERO ============ -->
-    <header class="hero">
-        <div class="hero-glow" aria-hidden="true"></div>
-        <div class="container hero-grid">
-            <div class="hero-copy slide-up">
-                <span class="eyebrow-badge glass">Gurugram · Local Businesses</span>
-                <h1>They heard about you. <br>Then they <i class="shimmer">looked you up.</i></h1>
-                <p class="hero-sub">Word of mouth is your best marketing. But before a new customer walks in or books, they check you online — and if they find nothing, they hesitate. Lantern makes sure they find you: fast, trustworthy, and one tap from a call or a booking.</p>
-                <div class="hero-cta-group">
-                    <a href="#work" class="btn-primary btn-hero glow-btn">See our work</a>
-                    <a href="https://wa.me/919711105497?text=Hi%20Lantern%2C%20I%27d%20like%20a%20website%20for%20my%20business." target="_blank" rel="noopener" class="btn-ghost glass">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51h-.57c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                        WhatsApp Us
-                    </a>
-                </div>
-            </div>
-
-            <!-- Phone mockup: a sample local-business site -->
-            <div class="hero-visual fade-in delay-1">
-                <div class="phone tilt" data-tilt>
-                    <div class="phone-screen">
-                        <div class="pm-hero">
-                            <span class="pm-kicker">Bridal Boutique · Sector 31</span>
-                            <h4>Handcrafted lehengas, made to fit you.</h4>
-                            <span class="pm-pill">★ 4.9 on Google · 120+ reviews</span>
-                        </div>
-                        <div class="pm-gallery">
-                            <span class="pm-g1"></span><span class="pm-g2"></span><span class="pm-g3"></span>
-                            <span class="pm-g4"></span><span class="pm-g5"></span><span class="pm-g6"></span>
-                        </div>
-                        <div class="pm-reviews">
-                            <div class="pm-stars">★★★★★</div>
-                            <p>"Beautiful work and they delivered on time for my wedding."</p>
-                            <small>— A real Google review appears here</small>
-                        </div>
-                        <div class="pm-spacer"></div>
-                        <div class="pm-cta">
-                            <a class="pm-call" href="#">Call</a>
-                            <a class="pm-wa" href="#">WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-                <span class="phone-caption glass">A sample of what we build — this is a mock-up</span>
-            </div>
-        </div>
-    </header>
-
-    <!-- ============ CREDIBILITY STRIP ============ -->
-    <section class="credibility-strip border-bottom border-top fade-in">
-        <div class="container cred-inner">
-            <span class="cred-eyebrow">Built for local shops that live on walk-ins and word of mouth</span>
-            <div class="cred-grid">
-                <div class="cred-stat">
-                    <span class="cred-num count-up" data-target="1" data-suffix=" day">1 day</span>
-                    <span class="cred-label">From photos to a live website</span>
-                </div>
-                <div class="cred-divider" aria-hidden="true"></div>
-                <div class="cred-stat">
-                    <span class="cred-num">₹4,999</span>
-                    <span class="cred-label">One-time to set up &amp; go live</span>
-                </div>
-                <div class="cred-divider" aria-hidden="true"></div>
-                <div class="cred-stat">
-                    <span class="cred-num">Mobile</span>
-                    <span class="cred-label">Built for phones first, not desktops</span>
-                </div>
-                <div class="cred-divider" aria-hidden="true"></div>
-                <div class="cred-stat">
-                    <span class="cred-num count-up" data-target="90" data-suffix="+">90+</span>
-                    <span class="cred-label">Google speed score, even on slow 4G</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ PROBLEM BANNER ============ -->
-    <section class="band" aria-label="Businesses we have built for">
-        <p class="band-label">Sites we&#8217;ve built</p>
-        <div class="marquee" aria-hidden="true"><span>Poshak Boutique</span><i>&#9670;</i><span>Queen Madonna</span><i>&#9670;</i><span>Dr. Mona Prabhakar</span><i>&#9670;</i><span>Beauty Life Salon</span><i>&#9670;</i><span>R D Creations</span><i>&#9670;</i><span>Asha Clinic</span><i>&#9670;</i><span>ANSHYA</span><i>&#9670;</i><span>The Bodyline Gym</span><i>&#9670;</i><span>Modern Looks</span><i>&#9670;</i><span>Dr. Deepika Aggarwal</span><i>&#9670;</i><span>Empire of Fitness</span><i>&#9670;</i><span>British Unisex Salon</span><i>&#9670;</i><span>Beast Mode Gym</span><i>&#9670;</i><span>Aayushi Nevatia</span><i>&#9670;</i><span>Poshak Boutique</span><i>&#9670;</i><span>Queen Madonna</span><i>&#9670;</i><span>Dr. Mona Prabhakar</span><i>&#9670;</i><span>Beauty Life Salon</span><i>&#9670;</i><span>R D Creations</span><i>&#9670;</i><span>Asha Clinic</span><i>&#9670;</i><span>ANSHYA</span><i>&#9670;</i><span>The Bodyline Gym</span><i>&#9670;</i><span>Modern Looks</span><i>&#9670;</i><span>Dr. Deepika Aggarwal</span><i>&#9670;</i><span>Empire of Fitness</span><i>&#9670;</i><span>British Unisex Salon</span><i>&#9670;</i><span>Beast Mode Gym</span><i>&#9670;</i><span>Aayushi Nevatia</span><i>&#9670;</i></div>
-    </section>
-
-    <section id="moment" class="moment lit">
-        <div class="container">
-            <h2 class="section-title slide-up" style="text-align:center">The moment that costs you</h2>
-            <p class="moment-lead slide-up">Right now, someone three streets away is looking for exactly what you sell. This is what they see.</p>
-
-            <div class="serp-wrap slide-up delay-1">
-                <div class="serp" id="serp">
-                    <div class="serp-bar">
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
-                        <span class="serp-q" id="serpQ"></span>
-                    </div>
-                    <div class="serp-body" id="serpBody"></div>
-                </div>
-
-                <div class="serp-toggle slide-up delay-2" role="group" aria-label="Compare search results">
-                    <button type="button" class="on" data-state="before">Without a website</button>
-                    <button type="button" data-state="after">With Lantern</button>
-                </div>
-                <p class="moment-foot slide-up delay-2">Same shop. Same reviews. Same street. One difference.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="formula-banner fade-in">
-        <div class="container">
-            <span class="stat-line">Your next customer is searching <i>"boutique near me"</i> right now. If they can't find you online, they walk into the shop that they <i>can.</i></span>
-            <p>No website · a dead Facebook page · a number that's hard to find = a customer lost</p>
-        </div>
-    </section>
-
-    <!-- ============ WHO WE BUILD FOR ============ -->
-    <section id="who" class="section border-bottom alt-bg">
-        <div class="container">
-            <h2 class="section-title text-cream slide-up">Who we build for</h2>
-            <div class="ledger-grid">
-                <article class="ledger-column slide-up delay-1">
-                    <div class="ledger-header">01. Boutiques &amp; Tailors</div>
-                    <p class="ledger-desc">Show off your work. A big photo gallery of your lehengas, suits and fittings, with a "Book a fitting" button that goes straight to WhatsApp.</p>
-                    <div class="ledger-data">
-                        <span class="label">The site includes</span>
-                        <span class="value">Gallery · Reviews · WhatsApp booking</span>
-                    </div>
-                </article>
-                <article class="ledger-column slide-up delay-2">
-                    <div class="ledger-header">02. Dental &amp; Clinics</div>
-                    <p class="ledger-desc">Look trustworthy the moment a patient lands. Services, timings, doctor intro, real Google reviews, and one-tap "Call the clinic" and directions.</p>
-                    <div class="ledger-data">
-                        <span class="label">The site includes</span>
-                        <span class="value">Services · Timings · Map &amp; directions</span>
-                    </div>
-                </article>
-                <article class="ledger-column slide-up delay-3">
-                    <div class="ledger-header">03. Salons &amp; Spas</div>
-                    <p class="ledger-desc">A price menu that's always up to date, a gallery of your work, and a WhatsApp button so bookings land in your chat instead of getting lost in calls.</p>
-                    <div class="ledger-data">
-                        <span class="label">The site includes</span>
-                        <span class="value">Price menu · Gallery · WhatsApp booking</span>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ WHAT'S INCLUDED ============ -->
-    <section id="included" class="section border-bottom">
-        <div class="container">
-            <h2 class="section-title slide-up">Every site comes with</h2>
-            <p class="section-lead slide-up">No extra packages, no upsells. This is what a Lantern website includes, every time.</p>
-            <div class="capabilities-grid">
-                <div class="cap-item glass tilt slide-up delay-1" data-tilt>
-                    <span class="cap-num">01</span>
-                    <h3>WhatsApp &amp; Call buttons</h3>
-                    <p>Always on screen, one tap away. Your customers reach you the way they already message everyone else.</p>
-                </div>
-                <div class="cap-item glass tilt slide-up delay-2" data-tilt>
-                    <span class="cap-num">02</span>
-                    <h3>Found on Google</h3>
-                    <p>Built so you show up when people search your service near your area — with your name, address and hours set up correctly.</p>
-                </div>
-                <div class="cap-item glass tilt slide-up delay-3" data-tilt>
-                    <span class="cap-num">03</span>
-                    <h3>Map &amp; directions</h3>
-                    <p>A Google Map with a "Get Directions" button so first-time customers actually find your door.</p>
-                </div>
-                <div class="cap-item glass tilt slide-up delay-1" data-tilt>
-                    <span class="cap-num">04</span>
-                    <h3>Photo gallery</h3>
-                    <p>Your work, front and centre. We optimise every photo so it looks sharp and loads fast, even on slow data.</p>
-                </div>
-                <div class="cap-item glass tilt slide-up delay-2" data-tilt>
-                    <span class="cap-num">05</span>
-                    <h3>Real Google reviews</h3>
-                    <p>Your genuine reviews shown as testimonials. We never invent reviews — trust is the whole point.</p>
-                </div>
-                <div class="cap-item glass tilt slide-up delay-3" data-tilt>
-                    <span class="cap-num">06</span>
-                    <h3>Fast on any phone</h3>
-                    <p>Loads in a blink on a ₹8,000 phone on 4G. No heavy, slow pages that customers give up on.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ HOW IT WORKS ============ -->
-    <section id="work" class="section border-bottom">
-        <div class="container">
-            <h2 class="section-title slide-up">Work we've built</h2>
-            <p class="work-note slide-up">One of these is a live client site, marked below. The rest are <strong>sample sites</strong> — real local businesses we designed a site for to show what's possible, with placeholder photos and copy. Open any of them on your phone; every one is built mobile-first.</p>
-            <div class="rail-hint slide-up"><span>15 sites &middot; swipe to browse</span><span>Tap any to open it</span></div>
-            <div class="work-rail-wrap"><div class="work-rail">
-                <a class="work-card slide-up" href="https://dr-mona-prabhakar.lanternstudio.workers.dev" target="_blank" rel="noopener">
-                    <div class="work-shot"><span class="work-flag live">Live client</span><img loading="lazy" decoding="async" width="520" height="470" src="work/dr-mona-prabhakar.webp" alt="Dr. Mona Prabhakar — website built by Lantern"></div>
-                    <div class="work-meta"><span class="work-tag">Orthodontist · Sector 31</span><h3>Dr. Mona Prabhakar</h3></div>
-                </a>
-                <a class="work-card slide-up" href="https://clearflow-automation.github.io/lantern-site/demos/anshya-by-tanya/" target="_blank" rel="noopener">
-                    <div class="work-shot"><span class="work-flag">Sample</span><img loading="lazy" decoding="async" width="520" height="470" src="work/anshya-by-tanya.webp" alt="ANSHYA by Tanya Kapoor — website built by Lantern"></div>
-                    <div class="work-meta"><span class="work-tag">Label · Prêt & festive</span><h3>ANSHYA by Tanya Kapoor</h3></div>
-                </a>
-                <a class="work-card slide-up" href="https://clearflow-automation.github.io/lantern-site/demos/poshak-boutique/" target="_blank" rel="noopener">
-                    <div class="work-shot"><span class="work-flag">Sample</span><img loading="lazy" decoding="async" width="520" height="470" src="work/poshak-boutique.webp" alt="Poshak Boutique — website built by Lantern"></div>
-                    <div class="work-meta"><span class="work-tag">Boutique · Sector 40</span><h3>Poshak Boutique</h3></div>
-                </a>
-                <a class="work-card slide-up" href="https://clearflow-automation.github.io/lantern-site/demos/rd-creations/" target="_blank" rel="noopener">
-                    <div class="work-shot"><span class="work-flag">Sample</span><img loading="lazy" decoding="async" width="520" height="470" src="work/rd-creations.webp" alt="R D Creations — website built by Lantern"></div>
-                    <div class="work-meta"><span class="work-tag">Boutique · Sector 22A</span><h3>R D Creations</h3></div>
-                </a>
-                <a class="work-card slide-up" href="https://clearflow-automation.github.io/lantern-site/demos/queen-madonna-premium/" target="_blank" rel="noopener">
-                    <div class="work-shot"><span class="work-flag">Sample</span><img loading="lazy" decoding="async" width="520" height="470" src="work/queen-madonna-premium.webp" alt="Queen Madonna — website built by Lantern"></div>
-                    <div class="work-meta"><span class="work-tag">Bridal studio · Sector 31</span><h3>Queen Madonna</h3></div>
-                </a>
-                <a class="work-card slide-up" href="https://clearflow-automation.github.io/lantern-site/demos/queen-madonna/" target="_blank" rel="noopener">
-                    <div class="work-shot"><span class="work-flag">Sample</span><img loading="lazy" decoding="async" width="520" height="470" src="work/queen-madonna.webp" alt="Queen Madonna Salon — website built by Lantern"></div>
-                    <div class="work-meta"><span class="work-tag">Salon · Sector 31</span><h3>Queen Madonna Salon</h3></div>
-                </a>
-                <a class="work-card slide-up" href="https://clearflow-automation.github.io/lantern-site/demos/beauty-life-salon/" target="_blank" rel="noopener">
-                    <div class="work-shot"><span class="work-flag">Sample</span><img loading="lazy" decoding="async" width="520" height="470" src="work/beauty-life-salon.webp" alt="Beauty Life Salon — website built by Lantern"></div>
-                    <div class="work-meta"><span class="work-tag">Salon · Sector 40</span><h3>Beauty Life Salon</h3></div>
-                </a>
-                <a class="work-card slide-up" href="https://clearflow-automation.github.io/lantern-site/demos/modern-looks-salon/" target="_blank" rel="noopener">
-                    <div class="work-shot"><span class="work-flag">Sample</span><img loading="lazy" decoding="async" width="520" height="470" src="work/modern-looks-salon.webp" alt="Modern Looks Unisex Salon — website built by Lantern"></div>
-                    <div class="work-meta"><span class="work-tag">Salon · Gurugram</span><h3>Modern Looks Unisex Salon</h3></div>
-                </a>
-                <a class="work-card slide-up" href="https://clearflow-automation.github.io/lantern-site/demos/british-unisex-salon/" target="_blank" rel="noopener">
-                    <div class="work-shot"><span class="work-flag">Sample</span><img loading="lazy" decoding="async" width="520" height="470" src="work/british-unisex-salon.webp" alt="British Unisex Salon — website built by Lantern"></div>
-                    <div class="work-meta"><span class="work-tag">Salon · Indirapuram</span><h3>British Unisex Salon</h3></div>
-                </a>
-                <a class="work-card slide-up" href="https://clearflow-automation.github.io/lantern-site/demos/dr-deepika-aggarwal/" target="_blank" rel="noopener">
-                    <div class="work-shot"><span class="work-flag">Sample</span><img loading="lazy" decoding="async" width="520" height="470" src="work/dr-deepika-aggarwal.webp" alt="Dr. Deepika Aggarwal — website built by Lantern"></div>
-                    <div class="work-meta"><span class="work-tag">Dental · Sector 31</span><h3>Dr. Deepika Aggarwal</h3></div>
-                </a>
-                <a class="work-card slide-up" href="https://clearflow-automation.github.io/lantern-site/demos/asha-clinic/" target="_blank" rel="noopener">
-                    <div class="work-shot"><span class="work-flag">Sample</span><img loading="lazy" decoding="async" width="520" height="470" src="work/asha-clinic.webp" alt="Asha Multi Speciality — website built by Lantern"></div>
-                    <div class="work-meta"><span class="work-tag">Clinic · Sector 40</span><h3>Asha Multi Speciality</h3></div>
-                </a>
-                <a class="work-card slide-up" href="https://clearflow-automation.github.io/lantern-site/demos/bodyline-gym/" target="_blank" rel="noopener">
-                    <div class="work-shot"><span class="work-flag">Sample</span><img loading="lazy" decoding="async" width="520" height="470" src="work/bodyline-gym.webp" alt="The Bodyline Gym — website built by Lantern"></div>
-                    <div class="work-meta"><span class="work-tag">Gym · Gurugram</span><h3>The Bodyline Gym</h3></div>
-                </a>
-                <a class="work-card slide-up" href="https://clearflow-automation.github.io/lantern-site/demos/beast-mode-gym/" target="_blank" rel="noopener">
-                    <div class="work-shot"><span class="work-flag">Sample</span><img loading="lazy" decoding="async" width="520" height="470" src="work/beast-mode-gym.webp" alt="Beast Mode Unisex Gym — website built by Lantern"></div>
-                    <div class="work-meta"><span class="work-tag">Gym · Sector 22</span><h3>Beast Mode Unisex Gym</h3></div>
-                </a>
-                <a class="work-card slide-up" href="https://clearflow-automation.github.io/lantern-site/demos/empire-of-fitness/" target="_blank" rel="noopener">
-                    <div class="work-shot"><span class="work-flag">Sample</span><img loading="lazy" decoding="async" width="520" height="470" src="work/empire-of-fitness.webp" alt="Empire of Fitness — website built by Lantern"></div>
-                    <div class="work-meta"><span class="work-tag">Gym · Sector 31</span><h3>Empire of Fitness</h3></div>
-                </a>
-                <a class="work-card slide-up" href="https://clearflow-automation.github.io/lantern-site/demos/aayushi-nevatia/" target="_blank" rel="noopener">
-                    <div class="work-shot"><span class="work-flag">Sample</span><img loading="lazy" decoding="async" width="520" height="470" src="work/aayushi-nevatia.webp" alt="Aayushi Nevatia — website built by Lantern"></div>
-                    <div class="work-meta"><span class="work-tag">Personal brand</span><h3>Aayushi Nevatia</h3></div>
-                </a>
-            </div></div>
-        </div>
-    </section>
-
-    <section id="how" class="section border-bottom alt-bg">
-        <div class="container">
-            <h2 class="section-title text-cream slide-up">How it works</h2>
-            <div class="steps-grid">
-                <div class="step slide-up delay-1">
-                    <span class="step-num">1</span>
-                    <h3 class="text-cream">See what you'd get</h3>
-                    <p>Look through the sites we've built for shops like yours. Open them on your phone — that's exactly the standard you'd get.</p>
-                </div>
-                <div class="step slide-up delay-2">
-                    <span class="step-num">2</span>
-                    <h3 class="text-cream">Pick your package</h3>
-                    <p>We send a short written scope — what's included, what isn't, and the price. Half to start, half when your site goes live.</p>
-                </div>
-                <div class="step slide-up delay-3">
-                    <span class="step-num">3</span>
-                    <h3 class="text-cream">We build it</h3>
-                    <p>Send your photos, prices and timings. Your site is ready in two working days, and you get two rounds of changes.</p>
-                </div>
-                <div class="step slide-up delay-4">
-                    <span class="step-num">4</span>
-                    <h3 class="text-cream">It's yours</h3>
-                    <p>Live, in your name, with no monthly bill. Want something changed later? Buy a small pack of changes — only when you need one.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ PRICING ============ -->
-    <section id="pricing" class="section border-bottom">
-        <div class="container">
-            <h2 class="section-title slide-up">Simple, honest pricing</h2>
-            <p class="section-lead slide-up">Pay once to build it. No monthly charge, ever. You only pay again if you want something changed.</p>
-            <div class="pricing-grid tiers">
-                <div class="price-card glass tilt slide-up delay-1" data-tilt>
-                    <span class="price-kicker">Starter</span>
-                    <h3>A page, up and working</h3>
-                    <div class="price-amount">₹4,999<span class="per"> one-time</span></div>
-                    <p class="price-sub">₹2,500 to start, ₹2,499 when it goes live.</p>
-                    <ul class="price-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> One page, built mobile-first</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> WhatsApp + Call buttons on every screen</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Up to 8 of your photos</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Your Google reviews on the page</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Map &amp; Get Directions</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Fast on mobile — tested before it goes live</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> No hosting bill from us, ever</li>
-                    </ul>
-                    <p class="price-note">Your address is <em>yourshop.lanternstudio.workers.dev</em>, and you send us the words for each section.</p>
-                    <a href="#contact" class="btn-hero btn-outline block-btn">Start here</a>
-                </div>
-
-                <div class="price-card featured tilt slide-up delay-2" data-tilt>
-                    <span class="price-badge">Most chosen</span>
-                    <span class="price-kicker">Complete</span>
-                    <h3>Found on Google</h3>
-                    <div class="price-amount">₹9,999<span class="per"> one-time</span></div>
-                    <p class="price-sub">₹5,000 to start, ₹4,999 when it goes live.</p>
-                    <ul class="price-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Everything in Starter, plus —</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <b>Your own domain</b>, in your name</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> All your text written for you</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Up to 20 photos, cleaned &amp; edited</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Your Google listing tuned up</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Full search setup, so people find you</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Proper preview when your link is shared</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Seasonal banners &amp; QR pack</li>
-                    </ul>
-                    <p class="price-note">Everything above, on your own name. This is the one most businesses take.</p>
-                    <a href="#contact" class="btn-hero glow-btn btn-primary block-btn">Get this one</a>
-                </div>
-
-                <div class="price-card glass tilt slide-up delay-3" data-tilt>
-                    <span class="price-kicker">Presence</span>
-                    <h3>A real website</h3>
-                    <div class="price-amount">₹17,999<span class="per"> one-time</span></div>
-                    <p class="price-sub">₹9,000 to start, ₹8,999 when it goes live.</p>
-                    <ul class="price-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Everything in Complete, plus —</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Up to 3 pages</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> You change your own prices &amp; menu</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Motion and scroll effects</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Hindi + English</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Instagram feed on the page</li>
-                    </ul>
-                    <p class="price-note">For clinics, gyms and studios that need more than one page.</p>
-                    <a href="#contact" class="btn-hero btn-outline block-btn">Talk to us</a>
-                </div>
-            </div>
-
-            <div class="edit-packs slide-up">
-                <h3>Want a change later?</h3>
-                <p>There is no monthly charge. We don't bill you for hosting, SSL or keeping the site online — ever. You buy a small pack only when you actually want something changed, and the credits never expire.</p>
-                <div class="pack-row">
-                    <div class="pack"><b>₹699</b><span>2 changes</span></div>
-                    <div class="pack"><b>₹1,499</b><span>5 changes</span></div>
-                    <div class="pack"><b>₹2,499</b><span>10 changes</span></div>
-                    <div class="pack" style="flex:2 1 260px"><span>A change is a price update, a new photo, new timings, a menu item. A new page or a new section is quoted separately — always before we build it.</span></div>
-                </div>
-            </div>
-
-            <p class="section-lead slide-up" style="margin-top:2rem;font-size:0.88rem">Bigger than this? Online ordering, payments, bookings, a full store — all available, quoted to what you actually need. On Complete and above, your domain is registered in your name and renewed by you (about ₹1,000 a year); we remind you 60 days before it expires.</p>
-        </div>
-    </section>
-
-    <!-- ============ GUARANTEE ============ -->
-    <section id="trust" class="section border-bottom alt-bg">
-        <div class="container">
-            <h2 class="section-title text-cream slide-up">The Lantern promise</h2>
-            <div class="trust-grid">
-                <div class="trust-item glass-dark slide-up delay-1">
-                    <h3>See it before you pay</h3>
-                    <p>We build your demo first and send you a real link. You pay only if you want to keep it. Zero risk.</p>
-                </div>
-                <div class="trust-item glass-dark slide-up delay-2">
-                    <h3>No tech skills needed</h3>
-                    <p>You never touch code or dashboards. Want a change? Send us a WhatsApp message. We do the rest.</p>
-                </div>
-                <div class="trust-item glass-dark slide-up delay-3">
-                    <h3>You own it</h3>
-                    <p>Your website, your domain, your photos — they're yours. Leave anytime and take everything with you.</p>
-                </div>
-                <div class="trust-item glass-dark slide-up delay-4">
-                    <h3>Real reviews only</h3>
-                    <p>We use your genuine Google reviews. We never make up fake testimonials or invent numbers. Ever.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ FAQ ============ -->
-    <section id="faq" class="section border-bottom">
-        <div class="container">
-            <h2 class="section-title slide-up">Questions shop owners ask</h2>
-            <div class="faq-list">
-                <div class="faq-item slide-up delay-1">
-                    <button class="faq-question" aria-expanded="false">
-                        Do I need to know anything technical?
-                        <span class="faq-chevron" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer" hidden>
-                        <p>No. That's the whole point. You send us your shop's name, a few photos, and your WhatsApp number. We build and run everything. When you want a change, you send us a message — you never log into anything.</p>
-                    </div>
-                </div>
-                <div class="faq-item slide-up delay-1">
-                    <button class="faq-question" aria-expanded="false">
-                        What do I have to give you to start?
-                        <span class="faq-chevron" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer" hidden>
-                        <p>Nothing to see examples of our work. When you're ready to go ahead, half up front and half when your site goes live. We'll ask for your photos, your prices or services, your Google Maps link, and the WhatsApp/phone number you want customers to reach.</p>
-                    </div>
-                </div>
-                <div class="faq-item slide-up delay-1">
-                    <button class="faq-question" aria-expanded="false">
-                        Is there a monthly charge?
-                        <span class="faq-chevron" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer" hidden>
-                        <p>No. You pay once to build it, and that's it — we don't bill you for hosting, SSL or keeping the site online, ever. If you want something changed later you buy a small pack of changes: ₹699 for two, ₹1,499 for five, ₹2,499 for ten. The credits never expire and there's nothing to cancel.</p>
-                    </div>
-                </div>
-                <div class="faq-item slide-up delay-1">
-                    <button class="faq-question" aria-expanded="false">
-                        I already have an Instagram/Facebook page. Why a website?
-                        <span class="faq-chevron" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer" hidden>
-                        <p>Social pages are great, but they don't show up cleanly when someone Googles "salon near me" — and they don't put your address, timings and a call button in one tidy place you control. A website works alongside your Instagram; it doesn't replace it. We can link the two together.</p>
-                    </div>
-                </div>
-                <div class="faq-item slide-up delay-1">
-                    <button class="faq-question" aria-expanded="false">
-                        Can I really edit it later?
-                        <span class="faq-chevron" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer" hidden>
-                        <p>On Starter and Complete you tell us and we do it, usually the same day, from your pack of changes. On Presence and above you edit your own prices and menu yourself. Each change comes out of your pack — ₹699 for two, ₹1,499 for five, ₹2,499 for ten, and the credits never expire. Bigger changes we quote upfront.</p>
-                    </div>
-                </div>
-                <div class="faq-item slide-up delay-1">
-                    <button class="faq-question" aria-expanded="false">
-                        Do I own the website?
-                        <span class="faq-chevron" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer" hidden>
-                        <p>Yes, completely. The website, the domain and your content are yours. There's no lock-in — if you ever want to stop, you keep everything.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section id="contact" class="section">
-        <div class="container contact-grid">
-            <div class="contact-copy slide-up">
-                <h2 class="section-title">See a website built for a shop like yours</h2>
-                <p>Send us your shop's name and area on WhatsApp. We'll send you a real website we've built for a shop like yours, so you can see exactly what you'd get. If you love it, it's ₹4,999 to make it yours.</p>
-                <div class="contact-trust mt-2">
-                    <div class="contact-trust-item">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <span>Demo sent within a day</span>
-                    </div>
-                    <div class="contact-trust-item">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <span>No payment until you love it</span>
-                    </div>
-                    <div class="contact-trust-item">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <span>Built and run by a real person — not a template you fill in</span>
-                    </div>
-                </div>
-            </div>
-            <form class="editorial-form glass slide-up delay-2" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">
-
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" autocomplete="name" required placeholder="e.g. Neha">
-                </div>
-                <div class="form-group">
-                    <label for="business">Shop / Business Name</label>
-                    <input type="text" id="business" name="business" required placeholder="e.g. Neha Bridal Studio">
-                </div>
-                <div class="form-group">
-                    <label for="type">What kind of business?</label>
-                    <select id="type" name="business_type" required>
-                        <option value="" disabled selected>Choose one</option>
-                        <option value="Boutique / Tailor">Boutique / Tailor</option>
-                        <option value="Dental / Clinic">Dental / Clinic</option>
-                        <option value="Salon / Spa">Salon / Spa</option>
-                        <option value="Other">Something else</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="phone">WhatsApp Number</label>
-                    <input type="tel" id="phone" name="phone" autocomplete="tel" required placeholder="+91 ">
-                </div>
-                <div class="form-group">
-                    <label for="area">Area / Sector</label>
-                    <input type="text" id="area" name="area" placeholder="e.g. Sector 31, Gurugram">
-                </div>
-                <button type="submit" class="btn-solid block">Show me an example</button>
-                <a href="https://wa.me/919711105497?text=Hi%20Lantern%2C%20I%27d%20like%20a%20free%20demo%20of%20a%20website%20for%20my%20business." target="_blank" rel="noopener" class="btn-whatsapp">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51h-.57c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                    Or just message us on WhatsApp
-                </a>
-            </form>
-        </div>
-    </section>
-
-    <!-- ============ FOOTER ============ -->
-    <footer class="border-top">
-        <div class="container footer-flex">
-            <div>
-                <a href="#top" class="logo">
-                    <svg class="logo-lantern" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M12 2v2"/><path d="M8.5 4h7"/>
-                        <path d="M7 8c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2H9c-1.1 0-2-.9-2-2z"/>
-                        <path d="M9.5 20h5"/>
-                        <ellipse class="flame" cx="12" cy="12.2" rx="1.7" ry="2.5" fill="currentColor" stroke="none"/>
-                    </svg>
-                    <span>Lantern</span>
-                </a>
-                <p class="footer-tagline">Websites for local businesses · Gurugram &copy; 2026</p>
-            </div>
-            <div class="footer-meta">
-                <p>Mobile-first · Found on Google · You own it</p>
-                <p style="margin-top:0.5rem;"><a href="mailto:vaishnandit@gmail.com">vaishnandit@gmail.com</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Sticky mobile CTA -->
-    <div class="mobile-cta">
-        <a class="m-call" href="tel:+919711105497">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.18z"/></svg>
-            Call
-        </a>
-        <a class="m-wa" href="https://wa.me/919711105497?text=Hi%20Lantern%2C%20I%27d%20like%20a%20free%20demo%20of%20a%20website%20for%20my%20business." target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51h-.57c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            WhatsApp
-        </a>
+          <div class="enq__grid">
+            <p class="enq__row">
+              <label for="f-name">Your name</label>
+              <input id="f-name" name="name" type="text" required autocomplete="name">
+            </p>
+            <p class="enq__row">
+              <label for="f-phone">Phone number</label>
+              <input id="f-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel">
+            </p>
+          </div>
+          <p class="enq__row">
+            <label for="f-shop">Shop name and area</label>
+            <input id="f-shop" name="shop" type="text" required placeholder="Sharma Boutique, Sector 31">
+          </p>
+          <p class="enq__row">
+            <label for="f-need">What do you need?</label>
+            <select id="f-need" name="need">
+              <option>A new website</option>
+              <option>Fixing the website I have</option>
+              <option>Not sure yet — just asking</option>
+            </select>
+          </p>
+          <button class="btn btn--clay" type="submit">Send</button>
+          <p class="enq__note">Goes to my inbox and nowhere else. No newsletter, no follow-up spam.</p>
+        </form>
+      </div>
     </div>
+  </section>
 
-    <script src="script.js?v=2"></script>
+  <!-- ═══ 12 · Sign-off. The lights go back down. ═══ -->
+  <section class="sec sec--tall sec--night close">
+    <div class="wrap">
+      <img class="close__mark" src="assets/brand/lantern-mark-light.svg" alt="" width="66" height="86" aria-hidden="true">
+      <h2 class="t-h1">Two days from now, your shop could be live.</h2>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <span>Lantern · लालटेन — Gurugram</span>
+      <span><a href="tel:+919711105497">+91 97111 05497</a> · <a href="mailto:vaishnandit@airlantern.com">vaishnandit@airlantern.com</a></span>
+      <span>&copy; <span id="yr">2026</span> Lantern</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Two actions, in our own colours. Not a stack of vendor-coloured circles
+     floating over the content — see the client-tier study. -->
+<nav class="bar" id="bar" aria-label="Contact Lantern">
+  <a class="wa" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20I%20saw%20the%20Lantern%20site.%20My%20shop%20is%20" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1112 20.2z"/><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5-.1-.2-.7-1.6-.9-2.1-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.3z"/></svg>
+    WhatsApp
+  </a>
+  <a href="tel:+919711105497">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 1.9.6 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.5 2.8.6a2 2 0 011.7 2z"/></svg>
+    Call
+  </a>
+</nav>
+
+<script src="script.js"></script>
 </body>
 </html>
