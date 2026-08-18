@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Empire of Fitness — Sector 31, Gurgaon · Strength, Cardio & Personal Training</title>
+<meta name="description" content="Empire of Fitness, Sector 31 Gurgaon — strength, cardio, personal training & group classes. Rated 4.5★ by 600+ members. Book a visit on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0B0B0D; --panel:#141417; --panel2:#1B1B1F; --ink:#F4F4F1; --muted:#8A8A85;
+  --volt:#C6FF3A; --volt-deep:#A6E017; --line:rgba(255,255,255,.1);
+  --d:'Anton',Impact,sans-serif; --b:'Inter',system-ui,sans-serif; --m:'Space Mono',monospace;
+  --r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--b);background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden;padding-bottom:4.6rem;font-weight:400}
+h1,h2,h3{font-family:var(--d);font-weight:400;text-transform:uppercase;line-height:.92;letter-spacing:.01em}
+.wrap{max-width:600px;margin:0 auto;position:relative;background:var(--bg);overflow:hidden;box-shadow:0 0 80px rgba(0,0,0,.6)}
+svg{display:block}
+.mono{font-family:var(--m)}
+.eyebrow{font-family:var(--m);font-size:.62rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--volt)}
+a{color:inherit}
+
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:1000;background:var(--volt)}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;
+  padding:.85rem 1.3rem;background:rgba(11,11,13,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .logo{font-family:var(--d);font-size:1.35rem;letter-spacing:.02em}
+.nav .logo b{color:var(--volt)}
+.nav a.join{font-family:var(--m);font-size:.64rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--bg);background:var(--volt);padding:.5rem .95rem;border-radius:6px;text-decoration:none;transition:.25s}
+.nav a.join:hover{background:#fff}
+
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;gap:.55rem;font-family:var(--m);font-weight:700;font-size:.72rem;
+  letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:1rem 1.7rem;border-radius:8px;transition:transform .2s,background .25s,color .25s;overflow:hidden}
+.btn .arw{transition:transform .3s}.btn:hover .arw{transform:translateX(4px)}
+.btn.volt{background:var(--volt);color:var(--bg)}
+.btn.volt:hover{background:#fff}
+.btn.wa{background:#25D366;color:#fff}
+.btn.ghost{border:1px solid var(--line);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--volt);color:var(--volt)}
+.btn:active{transform:scale(.97)}
+
+/* HERO */
+.hero{position:relative;min-height:90vh;display:flex;flex-direction:column;justify-content:center;padding:3rem 1.4rem 3rem;overflow:hidden;
+  background:radial-gradient(120% 70% at 80% -10%,rgba(198,255,58,.14),transparent 55%),var(--bg)}
+.hero .big-num{position:absolute;right:-3%;top:6%;font-family:var(--d);font-size:34vw;line-height:.8;color:rgba(255,255,255,.03);pointer-events:none;z-index:0}
+.hero>*{position:relative;z-index:2}
+.hero .eyebrow{margin-bottom:1.3rem;display:inline-block}
+.hero h1{font-size:clamp(3.6rem,17vw,6rem);margin-bottom:1.3rem}
+.hero h1 span{color:var(--volt)}
+.hero .lede{font-size:1rem;color:var(--muted);max-width:26rem;margin-bottom:1.6rem}
+.hero .trust{font-family:var(--m);font-size:.72rem;color:var(--ink);margin-bottom:1.8rem;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+.hero .trust b{color:var(--volt)}
+.hero .cta{display:flex;gap:.6rem;flex-wrap:wrap}
+.scrollcue{position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);z-index:2;font-family:var(--m);font-size:.56rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:.4rem}
+.scrollcue .l{width:1px;height:30px;background:linear-gradient(var(--volt),transparent);animation:cue 2s ease-in-out infinite}
+@keyframes cue{0%,100%{transform:scaleY(.4);opacity:.4}50%{transform:scaleY(1);opacity:1}}
+
+/* marquee */
+.marq{border-block:1px solid var(--line);background:var(--volt);overflow:hidden;padding:.7rem 0}
+.marq .track{display:inline-flex;white-space:nowrap;font-family:var(--d);font-size:1.3rem;color:var(--bg);text-transform:uppercase;letter-spacing:.02em;animation:scroll 18s linear infinite}
+.marq .track span{padding:0 1.2rem}
+.marq .track .dot{color:var(--bg);opacity:.5}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* sections */
+.sec{padding:4.6rem 1.4rem;position:relative}
+.idx{font-family:var(--m);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--volt);margin-bottom:1rem;display:block}
+.sec h2{font-size:clamp(2.6rem,11vw,4rem)}
+.sec h2 span{color:var(--volt)}
+
+/* attitude */
+.attitude{text-align:left}
+.attitude p{font-family:var(--d);text-transform:uppercase;font-size:clamp(2rem,8vw,3rem);line-height:1.02;color:var(--ink);max-width:20ch}
+.attitude p span{color:var(--volt)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-block:1px solid var(--line)}
+.stat{background:var(--bg);padding:2rem .6rem;text-align:center}
+.stat .n{font-family:var(--d);font-size:2.8rem;color:var(--volt);line-height:1}
+.stat .l{font-family:var(--m);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.5rem}
+
+/* facilities */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.8rem}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:1.5rem 1.3rem;transition:transform .3s,border-color .3s,background .3s}
+.card:hover{border-color:var(--volt);background:var(--panel2)}
+.card .ic{width:44px;height:44px;border-radius:10px;background:rgba(198,255,58,.12);display:grid;place-items:center;color:var(--volt);margin-bottom:1rem}
+.card h3{font-size:1.5rem}
+.card p{font-family:var(--b);font-size:.82rem;color:var(--muted);margin-top:.35rem;text-transform:none}
+.note{font-family:var(--m);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:1rem}
+
+/* before/after */
+.ba{position:relative;aspect-ratio:3/2;border-radius:var(--r);overflow:hidden;touch-action:none;user-select:none;border:1px solid var(--line)}
+.ba .layer{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--d);font-size:2rem;text-transform:uppercase}
+.ba .after{background:linear-gradient(135deg,#20240f,#2f3a12);color:var(--volt)}
+.ba .before{background:linear-gradient(135deg,#1a1a1d,#26262b);color:var(--muted);clip-path:inset(0 50% 0 0)}
+.ba .tag{position:absolute;top:12px;font-family:var(--m);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;background:rgba(0,0,0,.5);color:#fff;padding:.25rem .6rem;border-radius:6px}
+.ba .tag.l{left:12px}.ba .tag.r{right:12px;background:var(--volt);color:var(--bg)}
+.ba .handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--volt);transform:translateX(-50%)}
+.ba .knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:var(--volt);display:grid;place-items:center;color:var(--bg);font-weight:700}
+.hint{font-family:var(--m);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:.9rem;text-align:center}
+
+/* reviews */
+.rev{background:var(--volt);color:var(--bg);text-align:center}
+.rev .eyebrow{color:var(--bg);opacity:.7}
+.rev .quote{font-family:var(--d);text-transform:uppercase;font-size:clamp(1.8rem,8vw,2.6rem);line-height:1.05;max-width:16ch;margin:1.2rem auto 0}
+.rev .stars{font-size:1.2rem;margin-top:1rem;letter-spacing:3px}
+.rev small{font-family:var(--m);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;display:block;margin-top:.8rem;opacity:.7}
+
+/* location */
+.map{border:0;width:100%;height:210px;border-radius:var(--r);filter:grayscale(.3) invert(.9) hue-rotate(180deg)}
+.addr{color:var(--muted);margin:1rem 0;line-height:1.7;font-size:.92rem}
+.addr b{color:var(--ink);font-weight:600}
+
+/* join */
+.join-sec{background:var(--panel);text-align:center;border-top:1px solid var(--line)}
+.join-sec h2{font-size:clamp(2.8rem,12vw,4.4rem)}
+.join-sec h2 span{color:var(--volt)}
+.join-sec p{color:var(--muted);max-width:24rem;margin:.8rem auto 2rem}
+
+/* footer */
+footer{background:var(--bg);color:var(--muted);text-align:center;padding:2.2rem 1.4rem;border-top:1px solid var(--line)}
+footer .fl{font-family:var(--d);font-size:1.6rem;color:var(--ink)}
+footer .fl b{color:var(--volt)}
+footer p{font-family:var(--m);font-size:.62rem;letter-spacing:.06em;margin-top:.5rem}
+.tag-demo{font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-top:1rem}
+
+/* sticky bar */
+.bar{position:fixed;bottom:0;left:0;right:0;max-width:600px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;z-index:70}
+.bar a{display:flex;align-items:center;justify-content:center;gap:.5rem;height:4.6rem;font-family:var(--m);font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding-bottom:env(safe-area-inset-bottom,0)}
+.bar .call{background:#fff;color:var(--bg)}.bar .wa{background:#25D366;color:#fff}
+
+@media(min-width:720px){
+  .wrap{max-width:100%}
+  .hero{padding:5rem 8% 4rem}.hero h1{font-size:7rem}
+  .sec{padding:6.5rem 8%}
+  .stats{max-width:900px;margin:0 auto}
+  .grid{grid-template-columns:repeat(4,1fr);max-width:1000px;margin:1.8rem auto 0}
+  .attitude,.ba-wrap,.rev-in,.loc{max-width:1000px;margin-inline:auto}
+  .bar{display:none}body{padding-bottom:0}
+}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important;transition:none!important}
+  .marq .track,.scrollcue .l{animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="progress" id="prog"></div>
+<div class="wrap">
+
+  <nav class="nav">
+    <div class="logo">EMPIRE<b>.</b></div>
+    <a class="join" href="#join">Join</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="big-num">602</div>
+    <span class="eyebrow rv">Empire of Fitness · Sector 31, Gurugram</span>
+    <h1 class="rv d1">Where Sector 31<br>gets <span>strong.</span></h1>
+    <p class="lede rv d2">Strength, cardio, personal training and group classes — under one roof at Huda Market. No fluff. Just results.</p>
+    <div class="trust rv d2"><span>★ <b>4.5</b> on Google</span><span style="color:var(--muted)">·</span><span><b>602</b> members reviewed</span></div>
+    <div class="cta rv d3">
+      <a class="btn volt" href="#join">Join on WhatsApp <span class="arw">→</span></a>
+      <a class="btn ghost" href="#inside">See Inside</a>
+    </div>
+    <div class="scrollcue"><span>Scroll</span><span class="l"></span></div>
+  </header>
+
+  <!-- MARQUEE -->
+  <div class="marq"><div class="track">
+    <span>STRENGTH</span><span class="dot">✦</span><span>CARDIO</span><span class="dot">✦</span><span>PERSONAL TRAINING</span><span class="dot">✦</span><span>GROUP CLASSES</span><span class="dot">✦</span>
+    <span>STRENGTH</span><span class="dot">✦</span><span>CARDIO</span><span class="dot">✦</span><span>PERSONAL TRAINING</span><span class="dot">✦</span><span>GROUP CLASSES</span><span class="dot">✦</span>
+  </div></div>
+
+  <!-- ATTITUDE -->
+  <section class="sec attitude">
+    <span class="idx rv">01 — Why Empire</span>
+    <p class="rv d1">You don't need motivation. You need a place that <span>shows up</span> for you every single day.</p>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat rv"><div class="n"><span class="cu" data-to="602">0</span>+</div><div class="l">Members reviewed</div></div>
+    <div class="stat rv d1"><div class="n"><span class="cu" data-to="4.5" data-dec="1">0</span>★</div><div class="l">Rated on Google</div></div>
+    <div class="stat rv d2"><div class="n" style="font-size:1.9rem;padding-top:.5rem">SEC 31</div><div class="l">Huda Market</div></div>
+  </section>
+
+  <!-- FACILITIES -->
+  <section class="sec" id="inside">
+    <span class="idx rv">02 — What's inside</span>
+    <h2 class="rv">Everything you<br>need to <span>train.</span></h2>
+    <div class="grid">
+      <div class="card rv" data-tilt>
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 6.5l11 11M4 8l2-2M8 4l-2 2M16 20l2-2M20 16l-2 2M2 12l2 2 8-8-2-2zM22 12l-2-2-8 8 2 2z"/></svg></div>
+        <h3>Strength &amp; Weights</h3><p>Free weights, racks and machines for every level.</p>
+      </div>
+      <div class="card rv d1" data-tilt>
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></div>
+        <h3>Cardio Zone</h3><p>Treadmills, cycles and more to build your engine.</p>
+      </div>
+      <div class="card rv d2" data-tilt>
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="6" r="3"/><path d="M6 21v-5l3-3 3 2 3-3 3 3v6"/></svg></div>
+        <h3>Personal Training</h3><p>One-on-one coaching built around your goals.</p>
+      </div>
+      <div class="card rv d3" data-tilt>
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="7" r="2.5"/><path d="M2 20v-3a4 4 0 0 1 8 0v3M14 20v-3a4 4 0 0 1 8 0v3"/></svg></div>
+        <h3>Group Classes</h3><p>Train together, push harder, stay consistent.</p>
+      </div>
+    </div>
+    <p class="note rv">↳ We'll match these to your gym's actual facilities &amp; equipment.</p>
+  </section>
+
+  <!-- TRANSFORMATION -->
+  <section class="sec">
+    <span class="idx rv">03 — The results</span>
+    <h2 class="rv">Drag to see<br>the <span>change.</span></h2>
+    <div class="ba-wrap"><div class="ba rv d1" id="ba" style="margin-top:1.8rem">
+      <div class="layer after"><span class="tag r">After</span>After</div>
+      <div class="layer before" id="baBefore"><span class="tag l">Before</span>Before</div>
+      <div class="handle" id="baHandle"><div class="knob">⇆</div></div>
+    </div>
+    <p class="hint">Your members' real transformation photos will live here</p></div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="sec rev">
+    <div class="rev-in">
+    <span class="eyebrow rv">In their words</span>
+    <p class="quote rv d1">“Your real Google reviews appear here — never invented.”</p>
+    <div class="stars rv d2">★★★★★</div>
+    <small class="rv d2">Pulled live from your Google profile · 4.5★ · 602 reviews</small>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="sec loc">
+    <span class="idx rv">04 — Find us</span>
+    <h2 class="rv">Come <span>train.</span></h2>
+    <p class="addr rv d1"><b>Empire of Fitness</b><br>SCO 8-9, 2nd Floor, Huda Market Rd,<br>above IndusInd Bank, Sector 31, Gurugram — 122001</p>
+    <iframe class="map rv d2" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://maps.google.com/maps?q=Empire%20of%20Fitness%20Sector%2031%20Gurgaon&output=embed"></iframe>
+  </section>
+
+  <!-- JOIN -->
+  <section class="sec join-sec" id="join">
+    <span class="eyebrow rv">Ready?</span>
+    <h2 class="rv d1">Start <span>today.</span></h2>
+    <p class="rv d2">Message us on WhatsApp to book a visit or ask about memberships. Let's get you started.</p>
+    <div class="cta rv d2" style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap">
+      <a class="btn wa" href="https://wa.me/919718669449?text=Hi%20Empire%20of%20Fitness%2C%20I%27d%20like%20to%20book%20a%20visit." target="_blank" rel="noopener">Join on WhatsApp</a>
+      <a class="btn volt" href="tel:+919718669449">Call the Gym <span class="arw">→</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fl">EMPIRE<b>.</b></div>
+    <p>Strength · Cardio · Personal Training · Sector 31, Gurugram</p>
+    <p class="tag-demo">Sample website · a demo by Lantern 🏮</p>
+  </footer>
+
+  <div class="bar">
+    <a class="call" href="tel:+919718669449"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .5 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.5-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1z"/></svg>Call</a>
+    <a class="wa" href="https://wa.me/919718669449?text=Hi%20Empire%20of%20Fitness%2C%20I%27d%20like%20to%20book%20a%20visit." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m4.52 12c-.25-.13-1.47-.73-1.7-.81-.22-.08-.38-.13-.55.12-.17.25-.64.82-.78.98-.15.17-.29.19-.54.06-.3-.15-1.26-.47-2.39-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.07-.12-.27-.2-.57-.35"/></svg>WhatsApp</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var rm=matchMedia('(prefers-reduced-motion:reduce)').matches, touch=matchMedia('(hover:none)').matches;
+  var prog=document.getElementById('prog');
+  addEventListener('scroll',function(){var h=document.documentElement;prog.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.16});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target,to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||0);
+    if(rm){el.textContent=to.toFixed(dec);cio.unobserve(el);return;}
+    var s=performance.now();(function t(n){var p=Math.min((n-s)/1100,1);var v=(1-Math.pow(1-p,3))*to;el.textContent=(dec?v.toFixed(dec):Math.round(v));if(p<1)requestAnimationFrame(t);})(s);cio.unobserve(el);});},{threshold:.6});
+  document.querySelectorAll('.cu').forEach(function(el){cio.observe(el);});
+  if(!rm&&!touch)document.querySelectorAll('[data-tilt]').forEach(function(el){
+    el.addEventListener('mousemove',function(e){var r=el.getBoundingClientRect();var x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      el.style.transform='perspective(800px) rotateX('+(-y*6)+'deg) rotateY('+(x*6)+'deg) translateY(-4px)';});
+    el.addEventListener('mouseleave',function(){el.style.transform='';});});
+  if(!rm&&!touch)document.querySelectorAll('.btn').forEach(function(b){
+    b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.14)+'px,'+((e.clientY-r.top-r.height/2)*.2)+'px)';});
+    b.addEventListener('mouseleave',function(){b.style.transform='';});});
+  var ba=document.getElementById('ba'),bf=document.getElementById('baBefore'),hn=document.getElementById('baHandle');
+  if(ba){function set(x){var r=ba.getBoundingClientRect();var p=Math.max(0,Math.min(1,(x-r.left)/r.width));bf.style.clipPath='inset(0 '+(100-p*100)+'% 0 0)';hn.style.left=(p*100)+'%';}
+    var drag=false;ba.addEventListener('pointerdown',function(e){drag=true;ba.setPointerCapture(e.pointerId);set(e.clientX);});
+    ba.addEventListener('pointermove',function(e){if(drag)set(e.clientX);});
+    ba.addEventListener('pointerup',function(){drag=false;});ba.addEventListener('pointercancel',function(){drag=false;});}
+})();
+</script>
+<script>/*LANTERN_SAFETY_NET*/(function(){function R(){document.querySelectorAll('.rv,.wipe').forEach(function(e){e.classList.add('in');});document.querySelectorAll('.slide-up,.fade-in').forEach(function(e){e.classList.add('visible');});}setTimeout(function(){document.querySelectorAll('.rv,.wipe,.slide-up,.fade-in').forEach(function(e){if(e.getBoundingClientRect().top<window.innerHeight)e.classList.add('in','visible');});},600);window.addEventListener('load',function(){setTimeout(R,2600);});})();</script>
+</body>
+</html>

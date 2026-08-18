@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Beauty Life Salon — Hair, Skin, Makeup &amp; Bridal, Sector 40 Gurgaon</title>
+<meta name="description" content="Beauty Life Salon, HUDA Market, Sector 40, Gurugram — hair, skin & facials, makeup, bridal & nails. 4.8★ on Google. Book on WhatsApp or call.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rose:#B87E74; --rose-deep:#8E5A52; --rose-lt:#D8A99F;
+  --nude:#EBDDD4; --nude-soft:#F6EFE9;
+  --gold:#C29A5C; --ink:#2A2420; --cream:#FBF7F3; --muted:#9A8B82;
+  --h:'Marcellus',Georgia,serif; --b:'Jost',system-ui,sans-serif;
+  --r:16px; --shadow:0 20px 50px -20px rgba(94,60,52,.32);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--b);background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden;font-weight:300;padding-bottom:4.6rem}
+h1,h2,h3,h4{font-family:var(--h);font-weight:400;letter-spacing:.005em;line-height:1.05}
+em,i{font-style:italic;font-family:var(--b);font-weight:300}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:560px;margin:0 auto;position:relative;background:var(--cream);box-shadow:0 0 80px rgba(0,0,0,.07);overflow:hidden}
+svg{display:block}
+.eyebrow{font-family:var(--b);font-size:.62rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--rose)}
+
+/* grain + progress */
+.grain{position:fixed;inset:0;z-index:998;pointer-events:none;opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:1000;background:linear-gradient(90deg,var(--rose-lt),var(--rose))}
+
+/* concept banner */
+.concept{background:var(--ink);color:#e7d4cc;text-align:center;font-family:var(--b);
+  font-size:.62rem;letter-spacing:.1em;padding:.5rem 1rem;line-height:1.5}
+.concept b{color:var(--rose-lt);font-weight:500}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(30px);filter:blur(4px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1),filter .9s ease}
+.rv.in{opacity:1;transform:none;filter:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+.wipe{clip-path:inset(0 0 100% 0);transition:clip-path 1.1s cubic-bezier(.16,1,.3,1)}
+.wipe.in{clip-path:inset(0 0 0 0)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;
+  padding:.85rem 1.3rem;background:rgba(251,247,243,.78);backdrop-filter:blur(16px) saturate(1.3);border-bottom:1px solid rgba(142,90,82,.1)}
+.nav .logo{font-family:var(--h);font-size:1.4rem;color:var(--rose-deep);line-height:.9;letter-spacing:.02em}
+.nav .logo small{display:block;font-family:var(--b);font-size:.5rem;letter-spacing:.24em;color:var(--rose);text-transform:uppercase;margin-top:3px}
+.nav a.book{font-family:var(--b);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;color:var(--rose-deep);border:1px solid var(--rose-deep);padding:.5rem .9rem;border-radius:40px;text-decoration:none;transition:.3s}
+.nav a.book:hover{background:var(--rose-deep);color:#fff}
+
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;gap:.6rem;font-family:var(--b);font-weight:500;
+  font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:1rem 1.8rem;border-radius:44px;
+  overflow:hidden;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .3s;isolation:isolate}
+.btn .arw{transition:transform .3s}
+.btn:hover .arw{transform:translateX(4px)}
+.btn.solid{background:var(--rose-deep);color:#fff;box-shadow:0 10px 30px -8px rgba(142,90,82,.5)}
+.btn.solid::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--rose);opacity:0;transition:opacity .35s}
+.btn.solid:hover::before{opacity:1}
+.btn.ghost{border:1px solid rgba(42,36,32,.25);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--rose-deep);color:var(--rose-deep)}
+.btn:active{transform:scale(.97)}
+
+/* HERO — light editorial */
+.hero{position:relative;min-height:90vh;display:flex;flex-direction:column;justify-content:center;
+  padding:3.5rem 1.6rem 4rem;text-align:center;overflow:hidden;
+  background:radial-gradient(120% 70% at 50% 0%,var(--nude-soft) 0%,var(--nude) 60%,#e3d0c6 100%)}
+.hero .orb{position:absolute;width:60vw;max-width:360px;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(216,169,159,.5),transparent 65%);filter:blur(28px);pointer-events:none;
+  left:50%;top:30%;transform:translate(-50%,-50%);will-change:transform}
+.hero>*{position:relative;z-index:2}
+.hero .eyebrow{margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2.9rem,12.5vw,4.6rem);color:var(--ink);margin-bottom:1.3rem;line-height:1.02}
+.hero h1 em{color:var(--rose-deep)}
+.hero .lede{font-size:1.02rem;font-weight:300;color:#6f5f57;max-width:25rem;margin:0 auto 2.2rem}
+.hero .cta{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}
+.scrollcue{position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);z-index:2;font-family:var(--b);
+  font-size:.56rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(94,60,52,.55);display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.scrollcue .line{width:1px;height:34px;background:linear-gradient(rgba(142,90,82,.5),transparent);animation:cue 2.2s ease-in-out infinite}
+@keyframes cue{0%,100%{transform:scaleY(.5);opacity:.4}50%{transform:scaleY(1);opacity:1}}
+
+/* section shell */
+.sec{padding:5rem 1.5rem;position:relative}
+.idx{font-family:var(--b);font-size:.6rem;letter-spacing:.24em;color:var(--rose);text-transform:uppercase;margin-bottom:1rem;display:block}
+.sec h2{font-size:clamp(2.1rem,8.5vw,3rem);color:var(--rose-deep)}
+
+/* PHILOSOPHY */
+.philo{background:var(--nude-soft);text-align:center}
+.philo p{font-family:var(--h);font-size:clamp(1.5rem,6vw,2.1rem);font-weight:400;line-height:1.4;color:var(--ink);max-width:30rem;margin:1rem auto 0}
+.philo p em{color:var(--rose-deep)}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(142,90,82,.12);border-block:1px solid rgba(142,90,82,.12)}
+.stat{background:var(--cream);padding:2.2rem .6rem;text-align:center}
+.stat .n{font-family:var(--h);font-size:2.6rem;color:var(--rose-deep);line-height:1}
+.stat .n span{color:var(--gold)}
+.stat .l{font-family:var(--b);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.5rem}
+
+/* SERVICES MENU grid */
+.menu{display:grid;grid-template-columns:1fr;gap:.9rem;margin-top:2.2rem}
+.item{position:relative;border:1px solid rgba(142,90,82,.16);border-radius:var(--r);padding:1.5rem 1.4rem;background:var(--cream);
+  transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s,border-color .4s;overflow:hidden}
+.item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--rose-lt),var(--rose));transform:scaleY(0);transform-origin:top;transition:transform .4s}
+.item:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:transparent}
+.item:hover::before{transform:scaleY(1)}
+.item .ico{width:34px;height:34px;color:var(--rose-deep);margin-bottom:.8rem}
+.item h3{font-size:1.35rem;color:var(--ink);margin-bottom:.35rem}
+.item p{font-size:.86rem;color:var(--muted)}
+
+/* SIGNATURE before/after */
+.sig{background:radial-gradient(120% 100% at 50% 0%,var(--rose),var(--rose-deep));color:#fff;text-align:center;overflow:hidden;position:relative}
+.sig .glow{position:absolute;inset:0;background:radial-gradient(60% 40% at 50% 15%,rgba(255,236,228,.25),transparent 60%);pointer-events:none}
+.sig>*{position:relative;z-index:1}
+.sig .eyebrow{color:#ffe6dd}
+.sig h2{color:#fff;font-size:clamp(2.2rem,9vw,3.2rem);margin:1rem 0}
+.sig h2 em{color:#ffe6dd}
+.sig .sub{font-weight:300;color:#f6e2db;max-width:26rem;margin:0 auto 2rem}
+.ba{position:relative;aspect-ratio:3/2;border-radius:var(--r);overflow:hidden;touch-action:none;user-select:none;box-shadow:var(--shadow);max-width:30rem;margin:0 auto}
+.ba .layer{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--h);font-size:1.8rem}
+.ba .after{background:linear-gradient(135deg,#f3ded6,#e9c6bb);color:var(--rose-deep)}
+.ba .before{background:linear-gradient(135deg,#cabdb6,#a8938b);color:#5c4a44;clip-path:inset(0 50% 0 0)}
+.ba .tag{position:absolute;top:12px;font-family:var(--b);font-size:.55rem;letter-spacing:.16em;text-transform:uppercase;background:rgba(0,0,0,.3);color:#fff;padding:.24rem .6rem;border-radius:20px}
+.ba .tag.l{left:12px}.ba .tag.r{right:12px}
+.ba .handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;transform:translateX(-50%);box-shadow:0 0 14px rgba(0,0,0,.35)}
+.ba .knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--rose-deep);box-shadow:0 6px 18px rgba(0,0,0,.28)}
+.hint{text-align:center;font-family:var(--b);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#ffd9cf;margin-top:.9rem}
+
+/* GALLERY */
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:2rem}
+.gal .g{border-radius:12px;overflow:hidden;aspect-ratio:1;position:relative;background:linear-gradient(135deg,var(--nude),#e0c9be);transition:transform .5s}
+.gal .g.big{grid-column:1/3;aspect-ratio:16/10}
+.gal .g::after{content:attr(data-l);position:absolute;inset:0;display:flex;align-items:flex-end;padding:.8rem;
+  font-family:var(--b);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:#9c8177;
+  background:linear-gradient(transparent 55%,rgba(0,0,0,.05))}
+.gal .g:hover{transform:scale(.985)}
+
+/* WORDS */
+.words{background:var(--rose-deep);color:#fff;text-align:center}
+.words .eyebrow{color:#ffe6dd}
+.words .quote{font-family:var(--h);font-size:clamp(1.5rem,6vw,2rem);font-weight:400;line-height:1.45;max-width:28rem;margin:1.4rem auto 0;color:#fdeee9}
+.words .quote em{font-family:var(--b);font-weight:300}
+.words .stars{color:#ffe0a0;letter-spacing:4px;margin-top:1.2rem}
+.words small{display:block;font-family:var(--b);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:.8rem}
+
+/* STORY */
+.story{text-align:center}
+.story .big{font-family:var(--h);font-size:clamp(2.4rem,11vw,3.6rem);color:var(--rose-deep);line-height:1}
+.story p{color:var(--muted);max-width:25rem;margin:1.2rem auto 0;font-size:.98rem}
+
+/* INVITE */
+.invite{background:var(--nude-soft);text-align:center;padding-bottom:6rem}
+.invite h2{margin-bottom:.6rem}
+.invite p{color:var(--muted);max-width:24rem;margin:0 auto 2rem}
+.addr{font-family:var(--b);font-size:.82rem;color:var(--muted);margin-top:2.4rem;line-height:1.7}
+.addr b{color:var(--ink);font-weight:500}
+.maplink{display:inline-flex;align-items:center;gap:.4rem;margin-top:1rem;font-family:var(--b);font-size:.7rem;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--rose-deep);text-decoration:none;border-bottom:1px solid rgba(142,90,82,.3);padding-bottom:2px}
+
+/* footer */
+footer{background:var(--ink);color:#d8c4bc;text-align:center;padding:2.4rem 1.5rem}
+footer .fl{font-family:var(--h);font-size:1.8rem;color:#fff}
+footer p{font-size:.68rem;font-family:var(--b);letter-spacing:.06em;margin-top:.5rem;opacity:.8}
+.tag-demo{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;opacity:.55;margin-top:1.2rem}
+
+/* sticky bar */
+.bar{position:fixed;bottom:0;left:0;right:0;max-width:560px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;z-index:70;box-shadow:0 -6px 24px rgba(0,0,0,.16)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:.5rem;height:4.6rem;font-family:var(--b);font-weight:500;font-size:.88rem;letter-spacing:.04em;text-decoration:none;padding-bottom:env(safe-area-inset-bottom,0)}
+.bar .call{background:var(--ink);color:#fff}
+.bar .wa{background:#25D366;color:#fff;position:relative}
+.bar .wa::after{content:"";position:absolute;top:15px;right:24px;width:7px;height:7px;border-radius:50%;background:#c9ffdb;animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(201,255,219,.7)}70%{box-shadow:0 0 0 9px rgba(201,255,219,0)}100%{box-shadow:0 0 0 0 rgba(201,255,219,0)}}
+
+/* desktop */
+@media(min-width:720px){
+  .wrap{max-width:100%}
+  .hero h1{font-size:5.2rem}
+  .sec{padding:6.5rem 8%}
+  .menu{grid-template-columns:1fr 1fr;max-width:940px;margin:2.2rem auto 0}
+  .stats{max-width:900px;margin:0 auto}
+  .gal{max-width:820px;margin:2rem auto 0}
+  .cursor-glow{position:fixed;width:420px;height:420px;border-radius:50%;pointer-events:none;z-index:1;
+    background:radial-gradient(circle,rgba(184,126,116,.10),transparent 60%);transform:translate(-50%,-50%);left:-100px;top:-100px;transition:opacity .4s;mix-blend-mode:multiply}
+  .bar{display:none}
+  body{padding-bottom:0}
+}
+@media(max-width:719px){.cursor-glow{display:none}}
+
+@media(prefers-reduced-motion:reduce){
+  .rv,.wipe{opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important;transition:none!important}
+  .hero .orb,.scrollcue .line,.bar .wa::after{animation:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<div class="progress" id="prog"></div>
+<div class="cursor-glow" id="cg"></div>
+
+<div class="wrap">
+
+  <div class="concept">Sample website by <b>Lantern 🏮</b> — photos &amp; reviews are placeholders we'll replace with yours.</div>
+
+  <nav class="nav">
+    <div class="logo">Beauty Life<small>Salon · Sector 40</small></div>
+    <a class="book" href="#book">Book</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="orb" id="orb"></div>
+    <span class="eyebrow rv">HUDA Market · Sector 40, Gurugram</span>
+    <h1 class="rv d1">Walk in.<br><em>Glow out.</em></h1>
+    <p class="lede rv d2">Hair, skin, makeup &amp; bridal — the little rituals that leave you looking and feeling your best. Loved by Sector 40 at 4.8★.</p>
+    <div class="cta rv d3">
+      <a class="btn solid" href="#book">Book on WhatsApp <span class="arw">→</span></a>
+      <a class="btn ghost" href="#services">Our Services</a>
+    </div>
+    <div class="scrollcue"><span>Scroll</span><span class="line"></span></div>
+  </header>
+
+  <!-- PHILOSOPHY -->
+  <section class="sec philo">
+    <span class="eyebrow rv">Our promise</span>
+    <p class="rv d1">A calm chair, an unhurried hour, and hands that know their craft — you leave a little more <em>yourself.</em></p>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat rv"><div class="n"><span class="cu" data-to="4.8" data-dec="1">0</span>★</div><div class="l">Loved on Google</div></div>
+    <div class="stat rv d1"><div class="n"><span class="cu" data-to="276">0</span><span>+</span></div><div class="l">Happy reviews</div></div>
+    <div class="stat rv d2"><div class="n" style="font-size:1.9rem;padding-top:.4rem">Sector 40</div><div class="l">HUDA Market</div></div>
+  </section>
+
+  <!-- SERVICES MENU -->
+  <section class="sec" id="services">
+    <span class="idx rv">01 — The menu</span>
+    <h2 class="rv">What we <em>do.</em></h2>
+    <div class="menu">
+      <div class="item rv">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 7.5 20 18M8.5 16.5 20 6"/></svg>
+        <h3>Hair</h3><p>Cuts, colour, blow-dry, keratin &amp; smoothening — shaped to your face and mood.</p>
+      </div>
+      <div class="item rv d1">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c4 0 7 3 7 7 0 5-4 8-7 11-3-3-7-6-7-11 0-4 3-7 7-7z"/><circle cx="12" cy="10" r="2.2"/></svg>
+        <h3>Skin &amp; Facials</h3><p>Clean-ups, facials and glow treatments that actually feel like a treat.</p>
+      </div>
+      <div class="item rv">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 20 14 10l-2-2L2 18v2z"/><path d="M14 8l4-4a2 2 0 0 1 3 3l-4 4"/><path d="m13 5 6 6"/></svg>
+        <h3>Makeup &amp; Bridal</h3><p>Party, engagement and bridal looks — for the days everyone remembers.</p>
+      </div>
+      <div class="item rv d1">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 21V9a4 4 0 0 1 8 0v12"/><path d="M8 15h8"/><rect x="9" y="3" width="6" height="4" rx="2"/></svg>
+        <h3>Nails</h3><p>Manicure, pedicure, gel &amp; extensions — neat, lasting, beautiful.</p>
+      </div>
+      <div class="item rv">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 8c4-4 12-4 16 0"/><path d="M6 12c3-3 9-3 12 0"/><path d="M9 16c1.5-1.5 4.5-1.5 6 0"/></svg>
+        <h3>Waxing &amp; Threading</h3><p>Quick, gentle and hygienic — in and out, glowing.</p>
+      </div>
+      <div class="item rv d1">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v6"/><path d="M9 6h6"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg>
+        <h3>Spa &amp; Relaxation</h3><p>Head and body rituals to unwind — because you've earned it.</p>
+      </div>
+    </div>
+    <p class="idx" style="margin-top:1.4rem;color:var(--muted)">Full menu &amp; prices we'll add together</p>
+  </section>
+
+  <!-- SIGNATURE before/after -->
+  <section class="sec sig">
+    <div class="glow"></div>
+    <span class="eyebrow rv">Our signature</span>
+    <h2 class="rv d1">The <em>glow-up.</em></h2>
+    <p class="sub rv d2">Drag to see the difference a Beauty Life sitting makes — your real before/after photos will live right here.</p>
+    <div class="ba rv d2" id="ba">
+      <div class="layer after"><span class="tag r">After</span>After ✨</div>
+      <div class="layer before" id="baBefore"><span class="tag l">Before</span>Before</div>
+      <div class="handle" id="baHandle"><div class="knob">⇆</div></div>
+    </div>
+    <p class="hint">Drag the handle ⇆</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="sec" style="padding-top:4rem">
+    <span class="idx rv">02 — Our work</span>
+    <h2 class="rv">A look at <em>the results.</em></h2>
+    <div class="gal gal-wrap">
+      <div class="g big rv wipe" data-l="Bridal · your photo"></div>
+      <div class="g rv wipe" data-l="Hair"></div>
+      <div class="g rv wipe d1" data-l="Makeup"></div>
+      <div class="g rv wipe d1" data-l="Skin glow"></div>
+      <div class="g rv wipe d2" data-l="Nails"></div>
+    </div>
+    <p class="idx" style="margin-top:1.2rem;color:var(--muted)">Send 6–8 real photos and we'll set this gallery beautifully</p>
+  </section>
+
+  <!-- WORDS -->
+  <section class="sec words">
+    <span class="eyebrow rv">In their words</span>
+    <p class="quote rv d1">“Your genuine Google reviews will appear here — real words from real clients, <em>never invented.</em>”</p>
+    <div class="stars rv d2">★★★★★</div>
+    <small class="rv d2">Pulled live from your Google profile · 4.8★ · 276 reviews</small>
+  </section>
+
+  <!-- STORY -->
+  <section class="sec story">
+    <span class="idx rv">03 — Behind the chair</span>
+    <div class="big rv d1">Meet the team.</div>
+    <p class="rv d2">A short note from the owner goes here — how Beauty Life started, the belief that everyone deserves an hour that's just for them, and why Sector 40 keeps coming back. Send a line or two and a photo, and this becomes yours.</p>
+  </section>
+
+  <!-- INVITE -->
+  <section class="sec invite" id="book">
+    <span class="eyebrow rv">Come see us</span>
+    <h2 class="rv d1">Let's get you <em>glowing.</em></h2>
+    <p class="rv d2">Message us on WhatsApp for an appointment or a bridal enquiry — we'll take it from there.</p>
+    <a class="btn solid rv d2" href="https://wa.me/919315052066?text=Hi%20Beauty%20Life%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" style="margin:0 auto">Book on WhatsApp <span class="arw">→</span></a>
+    <div class="addr rv d3"><b>Beauty Life Salon</b><br>HUDA Market, Sector 40,<br>Gurugram, Haryana — 122001<br>+91 93150 52066</div>
+    <a class="maplink rv d3" href="https://www.google.com/maps/search/?api=1&query=Beauty+Life+Salon+HUDA+Market+Sector+40+Gurugram" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+      Get Directions
+    </a>
+  </section>
+
+  <footer>
+    <div class="fl">Beauty Life Salon</div>
+    <p>Hair · Skin · Makeup · Bridal · Sector 40, Gurugram</p>
+    <p class="tag-demo">Sample website · a demo by Lantern 🏮</p>
+  </footer>
+
+  <div class="bar">
+    <a class="call" href="tel:+919315052066">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .5 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.5-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1z"/></svg>Call</a>
+    <a class="wa" href="https://wa.me/919315052066?text=Hi%20Beauty%20Life%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m4.52 12c-.25-.13-1.47-.73-1.7-.81-.22-.08-.38-.13-.55.12-.17.25-.64.82-.78.98-.15.17-.29.19-.54.06-.3-.15-1.26-.47-2.39-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.07-.12-.27-.2-.57-.35"/></svg>WhatsApp</a>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var touch=matchMedia('(hover:none)').matches;
+  var prog=document.getElementById('prog');
+  addEventListener('scroll',function(){var h=document.documentElement;var p=h.scrollTop/(h.scrollHeight-h.clientHeight);prog.style.width=(p*100)+'%';},{passive:true});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.18});
+  document.querySelectorAll('.rv,.wipe').forEach(function(el){io.observe(el);});
+  var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target,to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||0);
+    if(rm){el.textContent=to.toFixed(dec);cio.unobserve(el);return;}
+    var s=performance.now();(function t(n){var p=Math.min((n-s)/1000,1);el.textContent=((1-Math.pow(1-p,3))*to).toFixed(dec);if(p<1)requestAnimationFrame(t);})(s);cio.unobserve(el);});},{threshold:.6});
+  document.querySelectorAll('.cu').forEach(function(el){cio.observe(el);});
+  var orb=document.getElementById('orb');
+  if(!rm)addEventListener('scroll',function(){orb.style.transform='translate(-50%,'+(-50+scrollY*0.04)+'%)';},{passive:true});
+  var cg=document.getElementById('cg');
+  if(cg&&!touch&&!rm)addEventListener('mousemove',function(e){cg.style.left=e.clientX+'px';cg.style.top=e.clientY+'px';});
+  if(!rm&&!touch)document.querySelectorAll('.btn').forEach(function(b){
+    b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.15)+'px,'+((e.clientY-r.top-r.height/2)*.2)+'px)';});
+    b.addEventListener('mouseleave',function(){b.style.transform='';});
+  });
+  var ba=document.getElementById('ba'),bf=document.getElementById('baBefore'),hn=document.getElementById('baHandle');
+  if(ba){function set(x){var r=ba.getBoundingClientRect();var p=Math.max(0,Math.min(1,(x-r.left)/r.width));bf.style.clipPath='inset(0 '+(100-p*100)+'% 0 0)';hn.style.left=(p*100)+'%';}
+    var drag=false;ba.addEventListener('pointerdown',function(e){drag=true;ba.setPointerCapture(e.pointerId);set(e.clientX);});
+    ba.addEventListener('pointermove',function(e){if(drag)set(e.clientX);});
+    ba.addEventListener('pointerup',function(){drag=false;});ba.addEventListener('pointercancel',function(){drag=false;});}
+})();
+</script>
+<script>/*LANTERN_SAFETY_NET*/(function(){function R(){document.querySelectorAll('.rv,.wipe').forEach(function(e){e.classList.add('in');});document.querySelectorAll('.slide-up,.fade-in').forEach(function(e){e.classList.add('visible');});}setTimeout(function(){document.querySelectorAll('.rv,.wipe,.slide-up,.fade-in').forEach(function(e){if(e.getBoundingClientRect().top<window.innerHeight)e.classList.add('in','visible');});},600);window.addEventListener('load',function(){setTimeout(R,2600);});})();</script>
+</body>
+</html>

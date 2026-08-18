@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Asha Multi Speciality Clinic — Sector 40, Gurgaon · Specialist Doctors, Lab & Home Visits</title>
+<meta name="description" content="Asha Multi Speciality Clinic, Sector 40 Gurgaon — specialist doctors, blood tests & diagnostics, and doctor home visits. Trusted by 2,100+ patients. Call to book.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#0C6E63; --teal-deep:#08514A; --teal-lt:#37B3A4; --mint:#E5F3F0;
+  --ink:#17242A; --slate:#5C6B70; --line:#E1E9E7; --bg:#FBFDFC; --gold:#C29B4E;
+  --h:'Newsreader',Georgia,serif; --b:'Inter',system-ui,sans-serif;
+  --r:14px; --shadow:0 22px 50px -24px rgba(12,110,99,.4);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--b);background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden;padding-bottom:4.6rem}
+h1,h2,h3{font-family:var(--h);font-weight:500;letter-spacing:-.01em;line-height:1.05}
+em,i{font-style:italic}
+.wrap{max-width:560px;margin:0 auto;position:relative;background:var(--bg);box-shadow:0 0 80px rgba(0,0,0,.06);overflow:hidden}
+svg{display:block}
+.eyebrow{font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--teal)}
+a{color:inherit}
+
+.progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:1000;background:linear-gradient(90deg,var(--teal-lt),var(--teal))}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.09s}.d2{transition-delay:.18s}.d3{transition-delay:.27s}.d4{transition-delay:.36s}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;
+  padding:.8rem 1.3rem;background:rgba(251,253,252,.8);backdrop-filter:blur(14px) saturate(1.2);border-bottom:1px solid var(--line)}
+.nav .logo{display:flex;align-items:center;gap:.55rem;font-family:var(--h);font-size:1.2rem;color:var(--teal);line-height:1;font-weight:600}
+.nav .logo .mark{width:26px;height:26px;border-radius:8px;background:var(--teal);display:grid;place-items:center;flex:none}
+.nav a.call{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:#fff;background:var(--teal);padding:.5rem .95rem;border-radius:40px;text-decoration:none;transition:.3s}
+.nav a.call:hover{background:var(--teal-deep)}
+
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;gap:.55rem;font-weight:600;font-size:.76rem;letter-spacing:.06em;
+  text-transform:uppercase;text-decoration:none;padding:.95rem 1.7rem;border-radius:44px;transition:transform .25s,box-shadow .3s;overflow:hidden}
+.btn .arw{transition:transform .3s}.btn:hover .arw{transform:translateX(4px)}
+.btn.solid{background:var(--teal);color:#fff;box-shadow:0 10px 28px -10px rgba(12,110,99,.7)}
+.btn.solid:hover{background:var(--teal-deep)}
+.btn.wa{background:#25D366;color:#fff}
+.btn.ghost{border:1px solid var(--line);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--teal);color:var(--teal)}
+.btn:active{transform:scale(.97)}
+
+/* HERO */
+.hero{padding:3rem 1.5rem 3.4rem;position:relative;overflow:hidden;background:
+  radial-gradient(120% 70% at 100% 0%,var(--mint),transparent 60%)}
+.hero .eyebrow{margin-bottom:1.1rem;display:inline-block}
+.hero h1{font-size:clamp(2.6rem,10vw,3.6rem);color:var(--ink);margin-bottom:1.1rem}
+.hero h1 em{color:var(--teal)}
+.hero .lede{color:var(--slate);font-size:1rem;max-width:26rem;margin-bottom:1.6rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.8rem}
+.chip{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;font-weight:500;color:var(--teal-deep);
+  background:#fff;border:1px solid var(--line);padding:.4rem .8rem;border-radius:40px}
+.chip b{color:var(--gold)}
+.hero .cta{display:flex;gap:.6rem;flex-wrap:wrap}
+/* trust card */
+.hcard{margin-top:2rem;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.3rem;box-shadow:var(--shadow);display:flex;align-items:center;gap:1rem}
+.hcard .ring{width:64px;height:64px;flex:none;border-radius:50%;display:grid;place-items:center;
+  background:conic-gradient(var(--teal) 0 84%,var(--line) 84% 100%)}
+.hcard .ring b{width:52px;height:52px;border-radius:50%;background:#fff;display:grid;place-items:center;font-family:var(--h);font-size:1.2rem;color:var(--teal)}
+.hcard .t b{font-family:var(--h);font-size:1.1rem;color:var(--ink);display:block}
+.hcard .t span{font-size:.8rem;color:var(--slate)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border-block:1px solid var(--line)}
+.stat{background:var(--bg);padding:1.8rem .8rem;text-align:center}
+.stat .n{font-family:var(--h);font-size:2.2rem;color:var(--teal);line-height:1}
+.stat .l{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);margin-top:.4rem}
+
+/* sections */
+.sec{padding:4.4rem 1.5rem}
+.idx{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:.9rem;display:block}
+.sec h2{font-size:clamp(2rem,8vw,2.7rem);color:var(--ink)}
+.sec .sub{color:var(--slate);margin-top:.6rem;max-width:26rem}
+
+/* specialities */
+.spec{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.8rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.4rem 1.2rem;transition:transform .3s,box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 34px -20px rgba(12,110,99,.5);border-color:var(--teal-lt)}
+.card .ic{width:42px;height:42px;border-radius:12px;background:var(--mint);display:grid;place-items:center;color:var(--teal);margin-bottom:.8rem}
+.card h3{font-size:1.2rem;color:var(--ink)}
+.card p{font-size:.8rem;color:var(--slate);margin-top:.25rem}
+.card.wide{grid-column:1/3}
+
+/* trust promise */
+.why{background:var(--teal);color:#fff;border-radius:0}
+.why .idx,.why .eyebrow{color:var(--teal-lt)}
+.why h2{color:#fff}
+.why .grid{display:flex;flex-direction:column;gap:1.4rem;margin-top:1.8rem}
+.why .item{display:flex;gap:1rem;align-items:flex-start}
+.why .item .ic{width:40px;height:40px;flex:none;border-radius:11px;background:rgba(255,255,255,.12);display:grid;place-items:center;color:#fff}
+.why .item h3{color:#fff;font-size:1.25rem}
+.why .item p{color:#cfe6e2;font-size:.86rem}
+
+/* reviews */
+.rev{background:var(--mint);text-align:center}
+.rev .quote{font-family:var(--h);font-style:italic;font-size:clamp(1.4rem,6vw,1.9rem);font-weight:400;line-height:1.4;color:var(--ink);max-width:28rem;margin:1.3rem auto 0}
+.rev .stars{color:var(--gold);letter-spacing:3px;margin-top:1rem;font-size:1.1rem}
+.rev small{display:block;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);margin-top:.7rem}
+
+/* visit */
+.map{border:0;width:100%;height:210px;border-radius:var(--r);filter:grayscale(.1)}
+.addr{font-size:.92rem;color:var(--slate);margin:1rem 0;line-height:1.7}
+.addr b{color:var(--ink);font-weight:600}
+.hours{display:inline-flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--teal-deep);background:#fff;border:1px solid var(--line);padding:.5rem .9rem;border-radius:40px;margin-bottom:1rem}
+
+/* footer */
+footer{background:var(--teal-deep);color:#bfe0da;text-align:center;padding:2.2rem 1.5rem}
+footer .fl{font-family:var(--h);font-size:1.4rem;color:#fff}
+footer p{font-size:.68rem;margin-top:.4rem;opacity:.85}
+.tag-demo{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-top:1rem}
+
+/* sticky bar */
+.bar{position:fixed;bottom:0;left:0;right:0;max-width:560px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;z-index:70;box-shadow:0 -6px 24px rgba(0,0,0,.14)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:.5rem;height:4.6rem;font-weight:600;font-size:.88rem;text-decoration:none;padding-bottom:env(safe-area-inset-bottom,0)}
+.bar .call{background:var(--ink);color:#fff}.bar .wa{background:#25D366;color:#fff}
+
+@media(min-width:720px){
+  .wrap{max-width:100%}
+  .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;padding:5rem 8%}
+  .hero .hcard{margin-top:0}
+  .sec{padding:6rem 8%}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .spec,.why .grid,.rev,.visit{max-width:1000px;margin-inline:auto}
+  .why .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+  .bar{display:none}body{padding-bottom:0}
+}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="progress" id="prog"></div>
+<div class="wrap">
+
+  <nav class="nav">
+    <div class="logo"><span class="mark"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>Asha Clinic</div>
+    <a class="call" href="tel:+919999888555">Call</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div>
+      <span class="eyebrow rv">Sector 40, Gurugram · Multi-Speciality</span>
+      <h1 class="rv d1">Trusted doctors, <em>close to home.</em></h1>
+      <p class="lede rv d2">Specialist consultations, blood tests and diagnostics — and doctors who'll even visit you at home. Caring for Sector 40's families, one patient at a time.</p>
+      <div class="chips rv d2">
+        <span class="chip">★ <b>4.7</b> on Google</span>
+        <span class="chip">2,100+ patient reviews</span>
+        <span class="chip">Home visits available</span>
+      </div>
+      <div class="cta rv d3">
+        <a class="btn solid" href="tel:+919999888555">Call the Clinic <span class="arw">→</span></a>
+        <a class="btn ghost" href="#specialities">Our Specialities</a>
+      </div>
+    </div>
+    <div class="hcard rv d3">
+      <div class="ring"><b>4.7★</b></div>
+      <div class="t"><b>Loved by patients</b><span>2,100+ Google reviews across our specialities</span></div>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat rv"><div class="n"><span class="cu" data-to="2100">0</span>+</div><div class="l">Patient reviews</div></div>
+    <div class="stat rv d1"><div class="n"><span class="cu" data-to="4.7" data-dec="1">0</span>★</div><div class="l">Google rating</div></div>
+    <div class="stat rv d2"><div class="n">Multi</div><div class="l">Speciality doctors</div></div>
+    <div class="stat rv d3"><div class="n">Home</div><div class="l">Visits available</div></div>
+  </section>
+
+  <!-- SPECIALITIES -->
+  <section class="sec" id="specialities">
+    <span class="idx rv">01 — What we offer</span>
+    <h2 class="rv">Care under <em>one roof.</em></h2>
+    <p class="sub rv">From a routine consultation to specialist care and lab tests — without running across the city.</p>
+    <div class="spec">
+      <div class="card rv" data-tilt>
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3v6a5 5 0 0 0 10 0V3"/><path d="M15 13a4 4 0 0 0 4 4v2"/><circle cx="19" cy="10" r="2"/></svg></div>
+        <h3>Specialist Consultations</h3><p>Experienced doctors across multiple specialities.</p>
+      </div>
+      <div class="card rv d1" data-tilt>
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div>
+        <h3>Dermatology</h3><p>Skin, hair and cosmetic concerns, expertly handled.</p>
+      </div>
+      <div class="card rv" data-tilt>
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 3c1 2 3 2 3 4s-2 2-2 4 2 2 2 4-2 2-3 4"/><path d="M18 3c-1 2-3 2-3 4s2 2 2 4-2 2-2 4 2 2 3 4"/></svg></div>
+        <h3>Orthopaedics</h3><p>Bone, joint and mobility care from specialists.</p>
+      </div>
+      <div class="card rv d1" data-tilt>
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3s5 6 5 10a5 5 0 0 1-10 0c0-4 5-10 5-10z"/></svg></div>
+        <h3>Blood Tests &amp; Diagnostics</h3><p>Reliable lab tests, right here at the clinic.</p>
+      </div>
+      <div class="card wide rv d2" data-tilt>
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div>
+        <h3>Doctor Home Visits</h3><p>Can't come in? Our doctors come to you — care without the commute.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="sec why">
+    <span class="idx rv">02 — Why patients choose us</span>
+    <h2 class="rv">Care you can <em>rely on.</em></h2>
+    <div class="grid">
+      <div class="item rv d1"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></span><div><h3>Experienced specialists</h3><p>Multiple specialities, so you see the right doctor the first time.</p></div></div>
+      <div class="item rv d2"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h3>Everything close by</h3><p>Consult, test and treat in one visit — plus home visits when you need them.</p></div></div>
+      <div class="item rv d3"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 17.3 6.2 21l1.5-6.6L2 9.7l6.7-.6L12 3l3.3 6.1 6.7.6-5.7 4.7L17.8 21z"/></svg></span><div><h3>Trusted by 2,100+</h3><p>One of Sector 40's most-reviewed clinics, with a 4.7★ rating.</p></div></div>
+    </div>
+  </section>
+
+  <!-- HOW A VISIT WORKS (signature moment) -->
+  <style>
+    .steps{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.8rem}
+    .step{display:flex;gap:1rem;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.2rem 1.3rem;position:relative;transition:transform .3s,box-shadow .3s}
+    .step:hover{transform:translateY(-3px);box-shadow:0 16px 32px -22px rgba(12,110,99,.5)}
+    .step .num{font-family:var(--h);font-size:1.5rem;color:#fff;background:var(--teal);width:2.6rem;height:2.6rem;border-radius:50%;display:grid;place-items:center;flex:none;line-height:1}
+    .step.home .num{background:var(--gold)}
+    .step h3{font-size:1.2rem;color:var(--ink)}
+    .step p{font-size:.84rem;color:var(--slate);margin-top:.2rem}
+    .step .badge{display:inline-block;font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-top:.4rem}
+    @media(min-width:760px){.steps{grid-template-columns:repeat(2,1fr);max-width:1000px;margin-inline:auto}}
+  </style>
+  <section class="sec">
+    <span class="idx rv">03 — How a visit works</span>
+    <h2 class="rv">Simple, from start <em>to finish.</em></h2>
+    <p class="sub rv">No confusion, no running around — here's exactly what to expect.</p>
+    <div class="steps">
+      <div class="step rv d1"><span class="num">1</span><div><h3>Book in a tap</h3><p>Call or WhatsApp us — or simply walk in during clinic hours.</p></div></div>
+      <div class="step rv d2"><span class="num">2</span><div><h3>See the right specialist</h3><p>You're matched to the right doctor for your concern the first time.</p></div></div>
+      <div class="step rv d3"><span class="num">3</span><div><h3>Tests, right here</h3><p>Blood work and diagnostics done on-site — no second trip elsewhere.</p></div></div>
+      <div class="step home rv d4"><span class="num">4</span><div><h3>Or we come to you</h3><p>Can't make it in? Book a doctor home visit and get cared for at home.</p><span class="badge">Home visits available</span></div></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="sec rev">
+    <span class="eyebrow rv">In their words</span>
+    <p class="quote rv d1">“Your genuine Google reviews will appear here — real words from real patients, never invented.”</p>
+    <div class="stars rv d2">★★★★★</div>
+    <small class="rv d2">Pulled live from your Google profile · 4.7★ · 2,100+ reviews</small>
+  </section>
+
+  <!-- VISIT -->
+  <section class="sec visit">
+    <span class="idx rv">04 — Visit us</span>
+    <h2 class="rv">Find the clinic.</h2>
+    <p class="addr rv d1"><b>Asha Multi Speciality Clinic</b><br>C-2, HUDA Market Road, Vigyan Vihar,<br>Urban Estate, Sector 40, Gurugram — 122003</p>
+    <div class="hours rv d1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Timings shown on your Google profile</div>
+    <iframe class="map rv d2" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://maps.google.com/maps?q=Asha%20Multi%20Speciality%20Clinic%20Sector%2040%20Gurgaon&output=embed"></iframe>
+    <div class="cta rv d2" style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem">
+      <a class="btn solid" href="tel:+919999888555">Call the Clinic <span class="arw">→</span></a>
+      <a class="btn wa" href="https://wa.me/919999888555?text=Hi%20Asha%20Clinic%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp Us</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Asha%20Multi%20Speciality%20Clinic%20Sector%2040%20Gurgaon&query_place_id=ChIJYwcDhPUYDTkRYCCqfD0l02U" target="_blank" rel="noopener">Directions</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fl">Asha Multi Speciality Clinic</div>
+    <p>Specialist doctors · Lab &amp; diagnostics · Home visits · Sector 40, Gurugram</p>
+    <p class="tag-demo">Sample website · a demo by Lantern 🏮</p>
+  </footer>
+
+  <div class="bar">
+    <a class="call" href="tel:+919999888555"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .5 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.5-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1z"/></svg>Call</a>
+    <a class="wa" href="https://wa.me/919999888555?text=Hi%20Asha%20Clinic%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m4.52 12c-.25-.13-1.47-.73-1.7-.81-.22-.08-.38-.13-.55.12-.17.25-.64.82-.78.98-.15.17-.29.19-.54.06-.3-.15-1.26-.47-2.39-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.07-.12-.27-.2-.57-.35"/></svg>WhatsApp</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var rm=matchMedia('(prefers-reduced-motion:reduce)').matches, touch=matchMedia('(hover:none)').matches;
+  var prog=document.getElementById('prog');
+  addEventListener('scroll',function(){var h=document.documentElement;prog.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.16});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target,to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||0);
+    if(rm){el.textContent=to.toLocaleString('en-IN',{minimumFractionDigits:dec,maximumFractionDigits:dec});cio.unobserve(el);return;}
+    var s=performance.now();(function t(n){var p=Math.min((n-s)/1100,1);var v=(1-Math.pow(1-p,3))*to;
+      el.textContent=(dec?v.toFixed(dec):Math.round(v).toLocaleString('en-IN'));if(p<1)requestAnimationFrame(t);})(s);cio.unobserve(el);});},{threshold:.6});
+  document.querySelectorAll('.cu').forEach(function(el){cio.observe(el);});
+  if(!rm&&!touch)document.querySelectorAll('[data-tilt]').forEach(function(el){
+    el.addEventListener('mousemove',function(e){var r=el.getBoundingClientRect();var x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      el.style.transform='perspective(800px) rotateX('+(-y*5)+'deg) rotateY('+(x*5)+'deg) translateY(-4px)';});
+    el.addEventListener('mouseleave',function(){el.style.transform='';});});
+  if(!rm&&!touch)document.querySelectorAll('.btn').forEach(function(b){
+    b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.12)+'px,'+((e.clientY-r.top-r.height/2)*.18)+'px)';});
+    b.addEventListener('mouseleave',function(){b.style.transform='';});});
+})();
+</script>
+<script>/*LANTERN_SAFETY_NET*/(function(){function R(){document.querySelectorAll('.rv,.wipe').forEach(function(e){e.classList.add('in');});document.querySelectorAll('.slide-up,.fade-in').forEach(function(e){e.classList.add('visible');});}setTimeout(function(){document.querySelectorAll('.rv,.wipe,.slide-up,.fade-in').forEach(function(e){if(e.getBoundingClientRect().top<window.innerHeight)e.classList.add('in','visible');});},600);window.addEventListener('load',function(){setTimeout(R,2600);});})();</script>
+</body>
+</html>

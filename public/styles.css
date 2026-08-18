@@ -300,6 +300,11 @@ p { max-width: 65ch; }
 
 .work { display: grid; gap: clamp(1rem, 2.6vw, 1.75rem); grid-template-columns: 1fr; }
 .work__item { position: relative; }
+
+/* The work cards became links (each opens its site in a new tab). Reset the
+   anchor so the card looks exactly as it did as an <article>. */
+a.work__item { display: block; color: inherit; text-decoration: none; }
+a.work__item:focus-visible { outline: 2px solid var(--glow); outline-offset: 6px; border-radius: 4px; }
 .work__shot {
   position: relative; overflow: hidden; border-radius: var(--r);
   background: var(--paper-2); aspect-ratio: 520 / 650;
