@@ -115,6 +115,25 @@ color:var(--muted);white-space:nowrap;text-align:right}
 
 .proof{border-left:3px solid var(--accent);padding:.1rem 0 .1rem 1.15rem;max-width:52ch;margin-top:2.1rem}
 .proof q{font-family:var(--disp);font-size:clamp(1.04rem,3.4vw,1.3rem);line-height:1.46;quotes:'\201C' '\201D'}
+/* specimen — the one published Tune-Up report, shown as a document not an aside.
+   Deliberately NOT .note or .proof: both already carry a left rule in this section. */
+.spec{margin-top:2rem;max-width:60ch;background:var(--surf);border:1px solid var(--border);
+  border-radius:5px;padding:1.15rem 1.15rem 1.05rem}
+.spec__n{display:flex;align-items:baseline;gap:.65rem;padding-bottom:.85rem;
+  border-bottom:1px solid var(--border);margin-bottom:.85rem}
+.spec__n b{font-family:var(--mono);font-weight:600;font-size:2.5rem;line-height:.88;
+  letter-spacing:-.035em;color:var(--accent);font-variant-numeric:tabular-nums}
+.spec__n span{font-family:var(--mono);font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--muted);line-height:1.4}
+.spec p{font-size:.88rem;color:var(--muted)}
+.spec p b{color:var(--text);font-weight:600}
+.spec a{display:inline-flex;align-items:center;gap:.45rem;min-height:44px;font-family:var(--mono);
+  font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);font-weight:600;
+  text-decoration:underline;text-decoration-color:var(--border);text-decoration-thickness:1px;
+  text-underline-offset:.3em}
+.spec a:hover{text-decoration-color:var(--accent)}
+.spec a i{font-style:normal;transition:transform .18s var(--ease-out)}
+.spec a:hover i{transform:translateX(3px)}
 .proof__by{margin-top:.75rem;font-size:.85rem;color:var(--muted)}
 .proof__by b{color:var(--text)}
 .stars{color:var(--accent);letter-spacing:.14em;font-size:.9rem;margin-bottom:.5rem}
@@ -162,8 +181,8 @@ text-decoration:none;font-weight:600;font-size:.94rem;color:var(--barText)}
 </style></head><body>
 
 <header class="hdr"><div class="wrap hdr__in">
-  <a class="brand" href="#"><img src="assets/brand/lantern-mark-v7.svg" alt="" width="19" height="26" aria-hidden="true"><span>lantern</span></a>
-  <nav class="hdr__nav"><a href="#work">Work</a><a href="#price">Build</a><a href="#tuneup">Tune-Up</a><a class="go" href="#ask">WhatsApp</a></nav>
+  <a class="brand" href="/"><img src="assets/brand/lantern-mark-v7.svg" alt="" width="19" height="26" aria-hidden="true"><span>lantern</span></a>
+  <nav class="hdr__nav"><a href="#work">Work</a><a href="#price">Build</a><a href="#tuneup">Tune-Up</a><a class="go" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20I%20saw%20the%20Lantern%20site.%20My%20shop%20is%20" target="_blank" rel="noopener">WhatsApp</a></nav>
 </div></header>
 
 <main>
@@ -180,7 +199,7 @@ text-decoration:none;font-weight:600;font-size:.94rem;color:var(--barText)}
       <div class="ba__row"><b>They compare you with a shop that has a link</b><i>You are the shop with the link</i></div>
     <p class="ba__foot">Two shops, same street, same rating. One has a link.</p>
   </div>
-  <div class="cta"><a class="btn btn--go" href="#ask">Message me on WhatsApp</a>
+  <div class="cta"><a class="btn btn--go" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20I%20saw%20the%20Lantern%20site.%20My%20shop%20is%20" target="_blank" rel="noopener">Message me on WhatsApp</a>
     <a class="btn btn--ghost" href="#work">See the work</a></div>
 </div></section>
 
@@ -325,6 +344,18 @@ text-decoration:none;font-weight:600;font-size:.94rem;color:var(--barText)}
   <p class="note">The free check is a real check, not a sales call — you get three or four lines
     on WhatsApp saying what is missing, and you can act on them yourself if you want. The written
     report is credited in full against a Tune-Up booked within 30 days.</p>
+
+  <div class="spec">
+    <div class="spec__n"><b>31</b><span>out of 100<br>the last site we reviewed</span></div>
+    <p>The report names seven specific things costing them orders: a no-returns line on clothes
+      sold without a size chart, 8.3 seconds before anything appears on a phone, emoji in product
+      names blocking Google Shopping — with the evidence for each one. <b>Punya's Kriti</b>, a
+      loungewear label, published here with their permission.</p>
+    <a href="https://clearflow-automation.github.io/lantern-site/demos/punyas-kriti/" target="_blank" rel="noopener">Read the whole report <i aria-hidden="true">&rarr;</i></a>
+  </div>
+
+  <div class="cta"><a class="btn btn--go" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20I%20already%20have%20a%20website.%20Please%20run%20the%20free%20check%20on%20" target="_blank" rel="noopener">Get the free check</a>
+    <a class="btn btn--ghost" href="tel:+919711105497">+91 97111 05497</a></div>
 </div></section>
 
 <section class="sec sec--tint"><div class="wrap">
@@ -352,7 +383,7 @@ text-decoration:none;font-weight:600;font-size:.94rem;color:var(--barText)}
   <div class="sec__head"><h2>Tell me about your shop.</h2>
     <p class="lede">WhatsApp is fastest — it comes straight to my phone and you'll usually hear back
       the same day. If you'd rather I called you, leave your number instead.</p></div>
-  <div class="cta"><a class="btn btn--go" href="#">Message me on WhatsApp</a>
+  <div class="cta"><a class="btn btn--go" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20I%20saw%20the%20Lantern%20site.%20My%20shop%20is%20" target="_blank" rel="noopener">Message me on WhatsApp</a>
     <a class="btn btn--ghost" href="tel:+919711105497">+91 97111 05497</a></div>
 </div></section>
 </main>
@@ -360,5 +391,5 @@ text-decoration:none;font-weight:600;font-size:.94rem;color:var(--barText)}
 <footer class="ft"><div class="wrap">
   <b>Lantern</b> · <a href="mailto:vaishnandit@airlantern.com">vaishnandit@airlantern.com</a> · 9711105497
 </div></footer>
-<div class="bar"><a href="#ask">WhatsApp</a><a href="tel:+919711105497">Call</a></div>
+<div class="bar"><a href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20I%20saw%20the%20Lantern%20site.%20My%20shop%20is%20" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+919711105497">Call</a></div>
 </body></html>
