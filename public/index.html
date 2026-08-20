@@ -1,467 +1,364 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lantern — websites for shops in Gurugram</title>
-<meta name="description" content="A one-page website for your shop, live in two days, from ₹4,999. Built in Gurugram for boutiques, salons, clinics and gyms whose customers look them up before walking in.">
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lantern — one-page websites for local shops</title>
+<meta name="description" content="One-page websites for local businesses. Live in two days, from ₹9,999. Paid once, no monthly fee, domain in your name.">
 <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#221B16">
-<link rel="canonical" href="https://airlantern.com/">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-<meta property="og:title" content="Lantern — websites for shops in Gurugram">
-<meta property="og:description" content="A one-page website for your shop, live in two days, from ₹4,999.">
+<link rel="canonical" href="https://airlantern.com/">
+<meta property="og:title" content="Lantern — one-page websites for local shops">
+<meta property="og:description" content="Live in two days, from ₹9,999. Paid once, no monthly fee, domain in your name.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://airlantern.com/">
 <meta property="og:image" content="https://airlantern.com/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://airlantern.com/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box}
+:root{--bg:#F7F4ED;--surf:#FFFEFA;--surf2:#EDE8DC;--text:#1F1B16;--muted:#5E564A;
+--accent:#7A2029;--accentDeep:#5A1219;--onAccent:#FFFEFA;--border:#DED6C6;
+--barBg:#1F1B16;--barText:#F7F4ED;--barAccent:#E4A0A6;
+--disp:'Newsreader',Georgia,serif;--body:'Public Sans',system-ui,sans-serif;
+--mono:'JetBrains Mono',ui-monospace,monospace;
+--gut:clamp(1.15rem,4.6vw,3rem);--max:1060px;
+--ease-out:cubic-bezier(0.23, 1, 0.32, 1)}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;
+line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gut)}
+a{color:inherit} img{max-width:100%;display:block}
+h1,h2{font-family:var(--disp);font-weight:400;margin:0;line-height:1.08;letter-spacing:-.014em}
+h1{font-size:clamp(2.1rem,7.6vw,3.6rem)}
+h2{font-size:clamp(1.6rem,5.2vw,2.4rem);line-height:1.14}
+h3{margin:0;font-size:1.02rem;line-height:1.32;font-weight:600}
+p{margin:0} .lede{color:var(--muted);max-width:58ch}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&text=%E0%A4%B2%E0%A4%BE%E0%A4%9F%E0%A5%87%E0%A4%A8&display=swap" rel="stylesheet">
-<script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="styles.css">
+.hdr{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 93%,transparent);
+backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.hdr__in{display:flex;align-items:center;justify-content:space-between;padding-block:.7rem}
+.brand{display:flex;align-items:center;gap:.45rem;text-decoration:none;font-family:var(--disp);
+font-size:1.2rem;letter-spacing:-.02em;min-height:44px}
+.brand img{width:19px;height:26px}
+.hdr__nav{display:flex;gap:.85rem;align-items:center}
+/* four nav items do not fit at 375px — the two section links wrap and break the
+   header. They are anchors to content the reader will scroll past anyway; the
+   WhatsApp button is the only one that has to survive. */
+.hdr__nav a:not(.go){display:none}
+@media(min-width:560px){.hdr__nav a:not(.go){display:flex}}
+.hdr__nav a{text-decoration:none;font-size:.86rem;font-weight:500;color:var(--muted);
+align-items:center;justify-content:center;min-height:44px;min-width:44px;padding-inline:.4rem;white-space:nowrap}
+.hdr__nav a:not(.go):hover{color:var(--text)}
+.hdr__nav .go{color:var(--onAccent);background:var(--accent);padding:0 1rem;border-radius:2px;font-weight:600}
+.hdr__nav .go:hover{background:var(--accentDeep);color:var(--onAccent)}
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Lantern",
-  "description": "One-page websites for local businesses in Gurugram.",
-  "url": "https://airlantern.com/",
-  "telephone": "+91-9711105497",
-  "email": "vaishnandit@airlantern.com",
-  "areaServed": { "@type": "City", "name": "Gurugram" },
-  "founder": { "@type": "Person", "name": "Nandit Vaish" },
-  "priceRange": "₹₹"
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;text-decoration:none;
+font-weight:600;font-size:.94rem;padding:.95rem 1.5rem;min-height:48px;border-radius:2px;
+border:1px solid transparent;
+transition:background .18s var(--ease-out),border-color .18s var(--ease-out),transform .12s var(--ease-out)}
+.btn:active{transform:scale(.97)}
+.bar a{transition:transform .12s var(--ease-out)}
+.bar a:active{transform:scale(.97)}
+.btn--go{background:var(--accent);color:var(--onAccent)}
+.btn--go:hover{background:var(--accentDeep)}
+.btn--ghost{border-color:var(--border);color:var(--text)}
+.btn--ghost:hover{border-color:var(--text)}
+.cta{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.7rem}
+
+.sec{padding-block:3.4rem;scroll-margin-top:70px}
+.sec--tint{background:var(--surf2);border-block:1px solid var(--border)}
+.sec__head{max-width:62ch;margin-bottom:1.7rem}
+.sec__head h2{margin-bottom:.6rem}
+.hero{padding-block:2.8rem 3rem}
+
+/* the argument: two columns, one line at a time */
+.ba{margin-top:1.9rem;border-top:2px solid var(--text)}
+.ba__hd{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.6rem 0;
+border-bottom:1px solid var(--border)}
+.ba__hd span{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;
+letter-spacing:.15em;color:var(--muted)}
+.ba__hd span:last-child{color:var(--accent);font-weight:600}
+.ba__row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.85rem 0;
+border-bottom:1px solid var(--border);font-size:.92rem}
+.ba__row b{font-weight:400;color:var(--muted)}
+.ba__row i{font-style:normal;font-weight:600}
+.ba__foot{padding-top:1.1rem;font-family:var(--disp);font-size:1.12rem;max-width:34ch}
+
+/* the work, as a record rather than a gallery */
+.idx{width:100%;border-collapse:collapse;font-size:.92rem}
+.idx th{text-align:left;font-family:var(--mono);font-size:.72rem;text-transform:uppercase;
+letter-spacing:.13em;color:var(--muted);font-weight:600;padding:.5rem .6rem .5rem 0;
+border-bottom:2px solid var(--text)}
+.idx td{padding:.8rem .6rem .8rem 0;border-bottom:1px solid var(--border);vertical-align:baseline}
+.idx .n{font-family:var(--mono);color:var(--muted);width:2.4rem}
+.idx .nm{font-weight:600}
+.idx .nm a{text-decoration:none;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;min-height:44px}
+.idx .nm a:hover{border-bottom-color:var(--accent);color:var(--accent)}
+.idx .th{width:52px;padding-right:.6rem}
+/* at 375px five columns force every name onto three lines and the page grows by
+   three screens. Trade is the least load-bearing — the thumbnail already shows it. */
+.idx .trade{display:none}
+@media(min-width:560px){.idx .trade{display:table-cell}}
+.idx td,.idx th{padding-block:.6rem}
+.idx .th a{display:flex;align-items:center;min-height:44px;min-width:44px}
+.idx .th img{width:48px;height:60px;object-fit:cover;object-position:top center;
+  border:1px solid var(--border);border-radius:2px;display:block}
+@media(hover:hover) and (pointer:fine){
+  .idx .th img{transition:border-color .18s var(--ease-out),transform .18s var(--ease-out)}
+  .idx tr:hover .th img{border-color:var(--accent);transform:scale(1.04)}
 }
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type": "Question", "name": "₹4,999 mein poori website? Kuch gadbad toh nahi?",
-     "acceptedAnswer": {"@type": "Answer", "text": "No catch, but there is a visible limit: at ₹4,999 you write the text yourself and the site sits on a Lantern web address rather than your own domain. The speed, the buttons and the Google setup are the same. At ₹9,999 you get your own domain and the writing is done for you."}},
-    {"@type": "Question", "name": "Do I have to pay something every month?",
-     "acceptedAnswer": {"@type": "Answer", "text": "No — not to us, ever. Hosting and the security certificate cost us nearly nothing, so we don't bill for them. The only recurring cost is your domain, roughly ₹1,000 a year, paid directly to the registrar in your own name."}},
-    {"@type": "Question", "name": "Who owns the site if I stop working with you?",
-     "acceptedAnswer": {"@type": "Answer", "text": "You do. The domain is registered in your name on your email from day one. If you leave, you get the files and the domain moves with you."}},
-    {"@type": "Question", "name": "I don't have good photos.",
-     "acceptedAnswer": {"@type": "Answer", "text": "Your phone is enough — you get a list of exactly which five shots to take and where to stand. If there is genuinely nothing usable, the page is designed around it rather than filled with stock photos of someone else's shop."}},
-    {"@type": "Question", "name": "Will I actually come up on Google?",
-     "acceptedAnswer": {"@type": "Answer", "text": "You will be set up correctly for it: the right page title, your address and hours marked up the way Google reads them, and a sitemap submitted to Search Console. Nobody honest can promise a position; anyone guaranteeing the top spot is selling something else."}},
-    {"@type": "Question", "name": "How do I know you won't disappear?",
-     "acceptedAnswer": {"@type": "Answer", "text": "You hold the safeguard: the domain is yours, the hosting account can be yours, and the site is a plain set of files any developer can take over. Nothing depends on Lantern staying around."}}
-  ]
+.idx .st{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;
+color:var(--muted);white-space:nowrap;text-align:right}
+.idx .st--live{color:var(--accent);font-weight:600}
+.idx .st--build{color:var(--text);font-weight:600}
+.idx tr:hover td{background:var(--surf)}
+
+.proof{border-left:3px solid var(--accent);padding:.1rem 0 .1rem 1.15rem;max-width:52ch;margin-top:2.1rem}
+.proof q{font-family:var(--disp);font-size:clamp(1.04rem,3.4vw,1.3rem);line-height:1.46;quotes:'\201C' '\201D'}
+.proof__by{margin-top:.75rem;font-size:.85rem;color:var(--muted)}
+.proof__by b{color:var(--text)}
+.stars{color:var(--accent);letter-spacing:.14em;font-size:.9rem;margin-bottom:.5rem}
+
+.tiers{display:grid;gap:.8rem}
+.tier{background:var(--surf);border:1px solid var(--border);padding:1.3rem 1.25rem;position:relative}
+.tier--pick{border-color:var(--accent);border-width:2px}
+.tier__n{font-family:var(--mono);font-weight:600;font-size:1.75rem;letter-spacing:-.03em;
+display:block;margin:.15rem 0 .5rem}
+.tier>p{font-size:.88rem;color:var(--muted);margin-bottom:.75rem}
+.tier ul{margin:0;padding-left:1.05rem;font-size:.86rem;color:var(--muted)}
+.tier li{margin-bottom:.22rem}
+.tier__flag{position:absolute;top:-.66rem;left:1.1rem;background:var(--accent);color:var(--onAccent);
+font-family:var(--mono);font-size:.7rem;font-weight:600;text-transform:uppercase;
+letter-spacing:.08em;padding:.18rem .55rem}
+.note{margin-top:1.3rem;font-size:.85rem;color:var(--muted);max-width:58ch;padding-left:.95rem;
+border-left:2px solid var(--accent)}
+.faq{margin:0;border-top:2px solid var(--text)}
+.faq div{border-bottom:1px solid var(--border);padding-block:1.15rem}
+.faq dt{font-weight:600;font-size:.96rem;margin-bottom:.35rem}
+.faq dd{margin:0;color:var(--muted);font-size:.9rem;max-width:64ch}
+.ft{padding-block:2rem 6.5rem;border-top:1px solid var(--border);font-size:.85rem;color:var(--muted)}
+.ft a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--accent);
+display:inline-flex;align-items:center;min-height:44px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;
+background:var(--barBg)}
+.bar a{padding:1.05rem .5rem;min-height:52px;display:flex;align-items:center;justify-content:center;
+text-decoration:none;font-weight:600;font-size:.94rem;color:var(--barText)}
+.bar a:first-child{color:var(--barAccent)}
+.bar::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:rgba(247,244,237,.14)}
+@supports (animation-timeline: scroll()){
+  .bar::after{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:var(--barAccent);transform-origin:left center;transform:scaleX(0);
+    animation-name:barfill;animation-timing-function:linear;animation-fill-mode:both;
+    animation-duration:auto;animation-timeline:scroll(root block)}
 }
-</script>
-</head>
-<body>
-<div class="page-lamp" aria-hidden="true"></div>
+@keyframes barfill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(min-width:760px){.tiers{grid-template-columns:repeat(3,1fr)}.bar{display:none}.ft{padding-bottom:2rem}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn:active,.bar a:active{transform:none}
+  .bar::after{animation:none;transform:scaleX(0)}
+  .card:hover,.idx tr:hover td{transition:none}
+}
+</style></head><body>
 
-<header class="hdr">
-  <a class="hdr__logo" href="#top" aria-label="Lantern — home">
-    <img src="assets/brand/lantern-mark-light.svg" alt="" width="22" height="29" aria-hidden="true">
-    <span class="hdr__word">lantern</span>
-    <span class="deva" aria-hidden="true">लालटेन</span>
-  </a>
-  <a class="hdr__cta" href="#work">See the work</a>
-</header>
+<header class="hdr"><div class="wrap hdr__in">
+  <a class="brand" href="#"><img src="assets/brand/lantern-mark-v7.svg" alt="" width="19" height="26" aria-hidden="true"><span>lantern</span></a>
+  <nav class="hdr__nav"><a href="#work">Work</a><a href="#price">Build</a><a href="#tuneup">Tune-Up</a><a class="go" href="#ask">WhatsApp</a></nav>
+</div></header>
 
-<main id="top">
-
-  <!-- ═══ 1 · Hero. Dark. The light follows your cursor; on a phone it drifts.
-           No form here, ever — the argument comes first. ═══ -->
-  <section class="hero" id="hero">
-    <div class="hero__light" aria-hidden="true"></div>
-    <div class="hero__grain" aria-hidden="true"></div>
-    <div class="wrap hero__inner">
-      <h1 class="t-hero">They look <span class="italic-turn">you</span> up before they walk in.</h1>
-      <p class="lede">Someone two streets away is deciding right now whether your shop is worth the trip. If nothing comes up, they go to the one that did.</p>
-      <div class="hero__actions">
-        <a class="btn btn--flame" href="#work">
-          See thirteen shops we've drawn
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a class="btn btn--ghost" href="#pricing">What it costs</a>
-      </div>
-      <div class="hero__meta">
-        <span>Gurugram</span>
-        <span>Live in two days</span>
-        <span>From ₹4,999</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ 2 · The lights come on. One line, huge, with air around it. ═══ -->
-  <section class="sec sec--tall sec--paper" id="why">
-    <div class="wrap">
-      <h2 class="t-h1 statement lift">A shop without a website isn't invisible. It's just harder to trust.</h2>
-      <p class="lede statement-sub lift">Your customer already found your name: on Google Maps, in a WhatsApp forward, from a neighbour. What they're looking for now is a reason to believe you're still open, still good, and worth the auto fare.</p>
-    </div>
-  </section>
-
-  <!-- ═══ 3 · Where we actually are. No invented numbers: one paying client,
-           no Google Business Profile, and we say so. ═══ -->
-  <section class="sec sec--tight sec--paper">
-    <div class="wrap">
-      <div class="position lift">
-        <div>
-          <div class="position__fig">One</div>
-          <div class="position__lbl">shop paying, live, and still live. Dr. Mona Prabhakar's clinic in Sector 31.</div>
-        </div>
-        <div>
-          <div class="position__fig">Thirteen</div>
-          <div class="position__lbl">sites designed and built. Twelve of them are demonstrations, not clients, and they're labelled that way below.</div>
-        </div>
-        <div>
-          <div class="position__fig">Two days</div>
-          <div class="position__lbl">from the go-ahead to a live address you can send anyone. That part we've done.</div>
-        </div>
-      </div>
-      <p class="lede lift" style="margin-top:2rem">That's the honest position. A bigger studio would show you logos. We'd rather you clicked through the actual work and decided for yourself.</p>
-    </div>
-  </section>
-
-  <!-- ═══ 4 · What you get. 62/38 splits, alternating. ═══ -->
-  <section class="sec sec--paper2" id="what">
-    <div class="wrap">
-      <div class="split lift">
-        <div class="split__a">
-          <h2 class="t-h2">Built for the phone in her hand, not the laptop on your desk</h2>
-          <p class="lede" style="margin-top:1rem">Nearly everyone who looks you up is standing somewhere, on a phone, on patchy 4G. So the page is designed at the width of a phone first and widened afterwards — not the other way round. It loads in under two seconds on a cheap Android.</p>
-        </div>
-        <div class="split__b">
-          <span class="halo"><img src="assets/work/dr-mona-prabhakar.webp" alt="Dr. Mona Prabhakar's clinic site shown on a phone-width layout" loading="lazy" width="520" height="640"></span>
-        </div>
-      </div>
-
-      <div class="split split--flip lift">
-        <div class="split__a">
-          <h2 class="t-h2">Call and WhatsApp, one tap, from anywhere on the page</h2>
-          <p class="lede" style="margin-top:1rem">Not a contact form nobody checks. A bar that follows the customer down the page with your real number in it, so the distance between "this looks good" and your phone ringing is one thumb.</p>
-        </div>
-        <div class="split__b">
-          <span class="halo"><img src="assets/work/queen-madonna-premium.webp" alt="A salon site with a sticky call and WhatsApp bar" loading="lazy" width="520" height="640"></span>
-        </div>
-      </div>
-
-      <div class="split lift">
-        <div class="split__a">
-          <h2 class="t-h2">Set up so Google can actually find you</h2>
-          <p class="lede" style="margin-top:1rem">The page title says what you do and where you are. The address, hours and phone number are marked up the way Google expects. A sitemap goes in, and the site gets submitted to Search Console. That last step is the one almost nobody does, and it's the reason most new sites never appear.</p>
-        </div>
-        <div class="split__b">
-          <span class="halo"><img src="assets/work/poshak-boutique.webp" alt="A boutique site laid out with local search details in place" loading="lazy" width="520" height="640"></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ 5 · The work. The signature moment — this is the proof.
-           Dr. Mona is flagged LIVE and is deliberately larger than her
-           siblings. Everything else is flagged SAMPLE. Never blur that line. ═══ -->
-  <section class="sec sec--paper" id="work">
-    <div class="wrap">
-      <p class="eyebrow lift">The work</p>
-      <h2 class="t-h1 lift" style="margin:.75rem 0 1rem; max-width:18ch">Thirteen shops, drawn out properly.</h2>
-      <p class="lede lift" style="margin-bottom:clamp(2rem,5vw,3.5rem)">One is a paying client with a live site. The other twelve are demonstrations built to show what a shop like yours could look like. They're marked, because a studio that blurs that line will blur other things too.</p>
-
-      <div class="work">
-        <a class="work__item work__item--feature lift" href="https://drmonaprabhakar.com" target="_blank" rel="noopener" aria-label="Open the live site for Dr. Mona Prabhakar in a new tab">
-          <div class="work__shot"><img src="assets/work/dr-mona-prabhakar.webp" alt="Website built for Dr. Mona Prabhakar, orthodontist in Sector 31" loading="lazy" width="520" height="650"></div>
-          <div class="work__cap">
-            <div><div class="work__name">Dr. Mona Prabhakar</div><div class="work__niche">Orthodontist · Sector 31</div></div>
-            <span class="flag flag--live">Live client</span>
-          </div>
-        </a>
+<main>
+<section class="hero"><div class="wrap">
+  <h1>Same shop.<br>Different Tuesday.</h1>
+  <p class="lede" style="margin-top:1.1rem">Nothing about your business changes. What changes is what
+    a stranger finds when they look you up — and whether they can reach you in one tap.</p>
+  <div class="ba">
+    <div class="ba__hd"><span>Today</span><span>Two days later</span></div>
+      <div class="ba__row"><b>Search finds a map pin and nothing else</b><i>Your own address, submitted to Google</i></div>
+      <div class="ba__row"><b>Hours unclear, so they don't risk the trip</b><i>Hours, map and directions on the screen</i></div>
+      <div class="ba__row"><b>The number has to be memorised and retyped</b><i>Call and WhatsApp, one tap, every screen</i></div>
+      <div class="ba__row"><b>Photos live on somebody's phone</b><i>Photos cleaned, cropped and placed</i></div>
+      <div class="ba__row"><b>They compare you with a shop that has a link</b><i>You are the shop with the link</i></div>
+    <p class="ba__foot">Two shops, same street, same rating. One has a link.</p>
+  </div>
+  <div class="cta"><a class="btn btn--go" href="#ask">Message me on WhatsApp</a>
+    <a class="btn btn--ghost" href="#work">See the work</a></div>
+</div></section>
 
 
-        <a class="work__item lift" href="work/poshak-boutique/" target="_blank" rel="noopener" aria-label="Open the sample site for Poshak in a new tab"><div class="work__shot"><img src="assets/work/poshak-boutique.webp" alt="Demonstration site for Poshak Boutique" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Poshak</div><div class="work__niche">Boutique</div></div><span class="flag flag--sample">Sample</span></div></a>
+<section class="sec"><div class="wrap">
+  <div class="sec__head"><h2>A shop without a website isn't invisible. It's just harder to trust.</h2>
+    <p class="lede">Your customer already found your name — on Maps, in a WhatsApp forward, from a
+      neighbour. What they're looking for now is a reason to believe you're still open, still good,
+      and worth the trip.</p></div>
+  <table class="idx">
+    <tbody>
+      <tr><td class="n">01</td><td class="nm">Two</td><td>shops paying. One live, one in build.</td></tr>
+      <tr><td class="n">02</td><td class="nm">Twelve</td><td>demonstrations, not clients — and labelled that way.</td></tr>
+      <tr><td class="n">03</td><td class="nm">Two days</td><td>from the go-ahead to a live address you can send anyone.</td></tr>
+    </tbody></table>
+  <p class="note">That's the honest position. A bigger studio would show you logos. I'd rather you
+    clicked through the actual work and decided for yourself — every row below opens.</p>
+</div></section>
 
-        <a class="work__item lift" href="work/rd-creations/" target="_blank" rel="noopener" aria-label="Open the sample site for RD Creations in a new tab"><div class="work__shot"><img src="assets/work/rd-creations.webp" alt="Demonstration site for RD Creations" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">RD Creations</div><div class="work__niche">Tailor &amp; boutique</div></div><span class="flag flag--sample">Sample</span></div></a>
-
-        <a class="work__item lift" href="work/queen-madonna/" target="_blank" rel="noopener" aria-label="Open the sample site for Queen Madonna in a new tab"><div class="work__shot"><img src="assets/work/queen-madonna.webp" alt="Demonstration site for Queen Madonna salon" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Queen Madonna</div><div class="work__niche">Salon</div></div><span class="flag flag--sample">Sample</span></div></a>
-
-        <a class="work__item lift" href="work/queen-madonna-premium/" target="_blank" rel="noopener" aria-label="Open the sample site for Queen Madonna in a new tab"><div class="work__shot"><img src="assets/work/queen-madonna-premium.webp" alt="Alternative demonstration site for Queen Madonna salon" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Queen Madonna</div><div class="work__niche">Salon · second direction</div></div><span class="flag flag--sample">Sample</span></div></a>
-
-        <a class="work__item lift" href="work/beauty-life-salon/" target="_blank" rel="noopener" aria-label="Open the sample site for Beauty Life in a new tab"><div class="work__shot"><img src="assets/work/beauty-life-salon.webp" alt="Demonstration site for Beauty Life Salon" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Beauty Life</div><div class="work__niche">Salon</div></div><span class="flag flag--sample">Sample</span></div></a>
-
-        <a class="work__item lift" href="work/modern-looks-salon/" target="_blank" rel="noopener" aria-label="Open the sample site for Modern Looks in a new tab"><div class="work__shot"><img src="assets/work/modern-looks-salon.webp" alt="Demonstration site for Modern Looks Salon" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Modern Looks</div><div class="work__niche">Salon</div></div><span class="flag flag--sample">Sample</span></div></a>
-
-        <a class="work__item lift" href="work/british-unisex-salon/" target="_blank" rel="noopener" aria-label="Open the sample site for British Unisex in a new tab"><div class="work__shot"><img src="assets/work/british-unisex-salon.webp" alt="Demonstration site for British Unisex Salon" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">British Unisex</div><div class="work__niche">Salon</div></div><span class="flag flag--sample">Sample</span></div></a>
-
-        <a class="work__item lift" href="work/asha-clinic/" target="_blank" rel="noopener" aria-label="Open the sample site for Asha Clinic in a new tab"><div class="work__shot"><img src="assets/work/asha-clinic.webp" alt="Demonstration site for Asha Clinic" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Asha Clinic</div><div class="work__niche">Clinic</div></div><span class="flag flag--sample">Sample</span></div></a>
-
-        <a class="work__item lift" href="work/dr-deepika-aggarwal/" target="_blank" rel="noopener" aria-label="Open the sample site for Dr. Deepika Aggarwal in a new tab"><div class="work__shot"><img src="assets/work/dr-deepika-aggarwal.webp" alt="Demonstration site for Dr. Deepika Aggarwal" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Dr. Deepika Aggarwal</div><div class="work__niche">Doctor</div></div><span class="flag flag--sample">Sample</span></div></a>
-
-        <a class="work__item lift" href="work/bodyline-gym/" target="_blank" rel="noopener" aria-label="Open the sample site for Bodyline in a new tab"><div class="work__shot"><img src="assets/work/bodyline-gym.webp" alt="Demonstration site for Bodyline Gym" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Bodyline</div><div class="work__niche">Gym</div></div><span class="flag flag--sample">Sample</span></div></a>
-
-        <a class="work__item lift" href="work/beast-mode-gym/" target="_blank" rel="noopener" aria-label="Open the sample site for Beast Mode in a new tab"><div class="work__shot"><img src="assets/work/beast-mode-gym.webp" alt="Demonstration site for Beast Mode Gym" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Beast Mode</div><div class="work__niche">Gym</div></div><span class="flag flag--sample">Sample</span></div></a>
-
-        <a class="work__item lift" href="work/empire-of-fitness/" target="_blank" rel="noopener" aria-label="Open the sample site for Empire of Fitness in a new tab"><div class="work__shot"><img src="assets/work/empire-of-fitness.webp" alt="Demonstration site for Empire of Fitness" loading="lazy" width="520" height="640"></div><div class="work__cap"><div><div class="work__name">Empire of Fitness</div><div class="work__niche">Gym</div></div><span class="flag flag--sample">Sample</span></div></a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ 6 · Two doors. Build in clay, Tune-Up in sage. ═══ -->
-  <section class="sec sec--paper2" id="doors">
-    <div class="wrap">
-      <h2 class="t-h1 lift" style="max-width:16ch; margin-bottom:clamp(2rem,5vw,3rem)">Two ways in, depending on what you already have.</h2>
-      <div class="doors">
-        <div class="door door--build lift">
-          <div class="door__who">If you have no website</div>
-          <h3 class="t-h3">Build</h3>
-          <p class="muted" style="margin-top:.6rem">One page that does the whole job: who you are, what you do, what it costs, and a button that rings your phone.</p>
-          <ul>
-            <li>Live in two days</li>
-            <li>Your own address on Google</li>
-            <li>Photos cleaned up and placed properly</li>
-            <li>Call and WhatsApp on every screen</li>
-          </ul>
-          <a class="tlink" href="#pricing">See what it costs</a>
-        </div>
-        <div class="door door--tuneup lift">
-          <div class="door__who">If you already have one</div>
-          <h3 class="t-h3">Tune-Up</h3>
-          <p class="muted" style="margin-top:.6rem">Most shop websites aren't broken, just slow, unfindable, or quietly losing the customer at the last step. We check, in writing, before anyone spends anything.</p>
-          <ul>
-            <li>Free health check, sent as a written note</li>
-            <li>Checked by hand on a phone, not just by a scanner</li>
-            <li>Fixes quoted before they're made</li>
-            <li>You keep your site, your host, your logins</li>
-          </ul>
-          <a class="tlink" href="#contact">Ask for a health check</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ 7 · How it works ═══ -->
-  <section class="sec sec--paper" id="how">
-    <div class="wrap">
-      <h2 class="t-h1 lift" style="max-width:14ch; margin-bottom:clamp(2rem,5vw,3rem)">Four steps. Two days.</h2>
-      <div class="steps">
-        <div class="step lift"><h3>We talk</h3><p>Ten minutes on the phone. What you sell, who walks in, what you want them to do next.</p></div>
-        <div class="step lift"><h3>You approve the scope</h3><p>Written down, with the price on it, before anything is built. Half up front.</p></div>
-        <div class="step lift"><h3>We build it</h3><p>Your text, your photos, your colours. You see it before anyone else does.</p></div>
-        <div class="step lift"><h3>It goes live</h3><p>On your own domain, in your own name. Submitted to Google the same day.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ 8 · Pricing. Three tiers, never seven. The middle one is the one
-           to sell, so it is physically larger — not just badged. ═══ -->
-  <section class="sec sec--paper2" id="pricing">
-    <div class="wrap">
-      <p class="eyebrow lift">What it costs</p>
-      <h2 class="t-h1 lift" style="margin:.75rem 0 1rem; max-width:16ch">The price is on the page, because that's the whole point.</h2>
-      <p class="lede lift" style="margin-bottom:clamp(2rem,5vw,3.5rem)">Nobody should have to sit through three meetings to find out a number. Paid once. No monthly bill from us, ever.</p>
-
-      <div class="tiers">
-        <div class="tier lift">
-          <div class="tier__price"><sup>₹</sup>4,999</div>
-          <p class="tier__for">Starter — you're online, and you write the words yourself.</p>
-          <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>One page, built for phones</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Call and WhatsApp buttons</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Map, hours, directions</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A Lantern web address</li>
-          </ul>
-          <a class="btn btn--ghost" href="#contact">Start here</a>
-        </div>
-
-        <div class="tier tier--pick lift">
-          <div class="tier__badge">The one most shops take</div>
-          <div class="tier__price"><sup>₹</sup>9,999</div>
-          <p class="tier__for">Complete — you're online <em>and</em> people start finding you.</p>
-          <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Everything in Starter</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><strong>Your own domain</strong>, in your name</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>All the words written for you</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Photos cleaned and cropped</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Google setup, done properly</li>
-          </ul>
-          <a class="btn btn--clay" href="#contact">
-            Talk to Nandit
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-
-        <div class="tier lift">
-          <div class="tier__price"><sup>₹</sup>17,999</div>
-          <p class="tier__for">Presence — for a shop with more than one thing to say.</p>
-          <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Everything in Complete</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Three pages instead of one</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Change prices and photos yourself</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Hindi and English</li>
-          </ul>
-          <a class="btn btn--ghost" href="#contact">Ask about it</a>
-        </div>
-      </div>
-
-      <p class="pricing-note lift">Changes later are bought in small packs (₹699 for two, ₹1,499 for five) and the credits don't expire. Hosting and the security certificate cost you nothing from us. Your domain renews directly with the registrar, about ₹1,000 a year, in your name, and we remind you 60 days before it lapses.</p>
-    </div>
-  </section>
-
-  <!-- ═══ 9 · Who's behind it. One person, said plainly. ═══ -->
-  <section class="sec sec--paper" id="who">
-    <div class="wrap">
-      <div class="split lift">
-        <div class="split__a">
-          <h2 class="t-h2">It's one person, and that's the point</h2>
-          <p class="lede" style="margin-top:1rem">I'm Nandit. I build these myself, from Gurugram. There's no account manager, no ticket number, and nobody to pass you to. When you call the number on this page, I pick it up.</p>
-          <p class="lede" style="margin-top:1rem">That's also the honest limit: I take a small number of builds at a time, because two days per shop only works if I'm not running six at once.</p>
-          <p class="sig" aria-hidden="true">— Nandit</p>
-          <p style="margin-top:.5rem"><a class="tlink" href="tel:+919711105497">+91 97111 05497</a></p>
-        </div>
-        <div class="split__b">
-          <div class="me-card">
-            <img src="assets/brand/lantern-mark-inked.svg" alt="" width="72" height="94" loading="lazy">
-            <p>Builds so far: one paying client, fourteen samples, and this page you're reading — which is its own kind of proof.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ 10 · FAQ — the real objections from the call script ═══ -->
-  <section class="sec sec--paper2" id="faq">
-    <div class="wrap">
-      <h2 class="t-h1 lift" style="max-width:16ch; margin-bottom:clamp(1.5rem,4vw,2.5rem)">Questions shop owners actually ask</h2>
-      <div class="faq lift">
-        <details>
-          <summary>₹4,999 mein poori website? Kuch gadbad toh nahi?</summary>
-          <p>No catch, but there is a limit, and it's a visible one. At ₹4,999 you write the text yourself and the site sits on a Lantern web address rather than your own domain. Everything that makes it work (the speed, the buttons, the Google setup) is the same. The ₹9,999 one is where you get your own domain and I do the writing.</p>
-        </details>
-        <details>
-          <summary>Do I have to pay something every month?</summary>
-          <p>No. Not to us, ever. Hosting and the security certificate cost us nearly nothing, so we don't bill you for them. The only recurring cost is your domain, roughly ₹1,000 a year, paid directly to the registrar in your own name.</p>
-        </details>
-        <details>
-          <summary>Who owns the site if I stop working with you?</summary>
-          <p>You do. The domain is registered in your name on your email from the first day. We configure it; we never hold it. If you leave, you get the files and the domain moves with you. There is nothing to negotiate because there is nothing of yours that we're holding.</p>
-        </details>
-        <details>
-          <summary>I don't have good photos.</summary>
-          <p>Most shops don't, and it's the single most common reason a site never gets finished. Your phone is enough. I'll tell you exactly which five shots to take and where to stand. If there's genuinely nothing usable, we design around it rather than filling the page with stock photos of someone else's shop.</p>
-        </details>
-        <details>
-          <summary>Will I actually come up on Google?</summary>
-          <p>You'll be set up correctly for it: the right page title, your address and hours marked up the way Google reads them, a sitemap submitted to Search Console. That's the part almost nobody does, and it's why most new sites never appear at all. What nobody honest can promise you is a position. Anyone guaranteeing you the top spot is selling you something else.</p>
-        </details>
-        <details>
-          <summary>How do I know you won't disappear?</summary>
-          <p>Fair question to ask a one-person studio, and the honest answer is that you're holding the safeguard: the domain is yours, the hosting account can be yours, and the site is a plain set of files you can hand to anyone. Nothing here depends on me still being around.</p>
-        </details>
-      </div>
-    </div>
-  </section>
+<section class="sec sec--tint" id="work"><div class="wrap">
+  <div class="sec__head"><h2>Every build, in order.</h2>
+    <p class="lede">No logo wall, no gallery. This is the whole list. Two are paying clients — one
+      live, one still being built. The other twelve are demonstrations for businesses that have not
+      hired us, and they are marked that way, because a studio that blurs that line will blur other
+      things too.</p></div>
+  <table class="idx">
+    <thead><tr><th></th><th></th><th>Shop</th><th class="trade">Trade</th><th style="text-align:right">Status</th></tr></thead>
+    <tbody>
+        <tr><td class="n">01</td>
+        <td class="th"><a href="https://drmonaprabhakar.com" target="_blank" rel="noopener"><img src="assets/work/dr-mona-prabhakar.webp" alt="The site built for Dr. Mona Prabhakar" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="https://drmonaprabhakar.com" target="_blank" rel="noopener">Dr. Mona Prabhakar</a></td><td class="trade">Orthodontist</td>
+        <td class="st st--live">Live client</td></tr>
+        <tr><td class="n">02</td>
+        <td class="th"><a href="https://clearflow-automation.github.io/lantern-site/demos/peaches-and-cream/" target="_blank" rel="noopener"><img src="assets/work/peaches-and-cream.webp" alt="The site built for Peaches &amp; Cream" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="https://clearflow-automation.github.io/lantern-site/demos/peaches-and-cream/" target="_blank" rel="noopener">Peaches &amp; Cream</a></td><td class="trade">Salon, studio &amp; academy</td>
+        <td class="st st--build">Under construction</td></tr>
+        <tr><td class="n">03</td>
+        <td class="th"><a href="work/poshak-boutique/" target="_blank" rel="noopener"><img src="assets/work/poshak-boutique.webp" alt="The site built for Poshak" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="work/poshak-boutique/" target="_blank" rel="noopener">Poshak</a></td><td class="trade">Boutique</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">04</td>
+        <td class="th"><a href="work/rd-creations/" target="_blank" rel="noopener"><img src="assets/work/rd-creations.webp" alt="The site built for RD Creations" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="work/rd-creations/" target="_blank" rel="noopener">RD Creations</a></td><td class="trade">Tailor &amp; boutique</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">05</td>
+        <td class="th"><a href="work/queen-madonna/" target="_blank" rel="noopener"><img src="assets/work/queen-madonna.webp" alt="The site built for Queen Madonna" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="work/queen-madonna/" target="_blank" rel="noopener">Queen Madonna</a></td><td class="trade">Salon</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">06</td>
+        <td class="th"><a href="work/queen-madonna-premium/" target="_blank" rel="noopener"><img src="assets/work/queen-madonna-premium.webp" alt="The site built for Queen Madonna" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="work/queen-madonna-premium/" target="_blank" rel="noopener">Queen Madonna</a></td><td class="trade">Salon · second direction</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">07</td>
+        <td class="th"><a href="work/beauty-life-salon/" target="_blank" rel="noopener"><img src="assets/work/beauty-life-salon.webp" alt="The site built for Beauty Life" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="work/beauty-life-salon/" target="_blank" rel="noopener">Beauty Life</a></td><td class="trade">Salon</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">08</td>
+        <td class="th"><a href="work/modern-looks-salon/" target="_blank" rel="noopener"><img src="assets/work/modern-looks-salon.webp" alt="The site built for Modern Looks" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="work/modern-looks-salon/" target="_blank" rel="noopener">Modern Looks</a></td><td class="trade">Salon</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">09</td>
+        <td class="th"><a href="work/british-unisex-salon/" target="_blank" rel="noopener"><img src="assets/work/british-unisex-salon.webp" alt="The site built for British Unisex" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="work/british-unisex-salon/" target="_blank" rel="noopener">British Unisex</a></td><td class="trade">Salon</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">10</td>
+        <td class="th"><a href="work/asha-clinic/" target="_blank" rel="noopener"><img src="assets/work/asha-clinic.webp" alt="The site built for Asha Clinic" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="work/asha-clinic/" target="_blank" rel="noopener">Asha Clinic</a></td><td class="trade">Clinic</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">11</td>
+        <td class="th"><a href="work/dr-deepika-aggarwal/" target="_blank" rel="noopener"><img src="assets/work/dr-deepika-aggarwal.webp" alt="The site built for Dr. Deepika Aggarwal" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="work/dr-deepika-aggarwal/" target="_blank" rel="noopener">Dr. Deepika Aggarwal</a></td><td class="trade">Doctor</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">12</td>
+        <td class="th"><a href="work/bodyline-gym/" target="_blank" rel="noopener"><img src="assets/work/bodyline-gym.webp" alt="The site built for Bodyline" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="work/bodyline-gym/" target="_blank" rel="noopener">Bodyline</a></td><td class="trade">Gym</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">13</td>
+        <td class="th"><a href="work/beast-mode-gym/" target="_blank" rel="noopener"><img src="assets/work/beast-mode-gym.webp" alt="The site built for Beast Mode" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="work/beast-mode-gym/" target="_blank" rel="noopener">Beast Mode</a></td><td class="trade">Gym</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">14</td>
+        <td class="th"><a href="work/empire-of-fitness/" target="_blank" rel="noopener"><img src="assets/work/empire-of-fitness.webp" alt="The site built for Empire of Fitness" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="work/empire-of-fitness/" target="_blank" rel="noopener">Empire of Fitness</a></td><td class="trade">Gym</td>
+        <td class="st">Sample</td></tr>
+    </tbody></table>
+  <div class="proof">
+    <div class="stars">★★★★★</div>
+    <q>Extremely happy &amp; satisfied with the website designed by Mr Nandit Vaish (LANTERN). He took personal interest in curating the content as per my requirements &amp; suggestions. Was very prompt in making all the changes that I mentioned and all this at a very reasonable cost! I have been fortunate to have engaged his services…. Thanks from the bottom of my heart.</q>
+    <p class="proof__by"><b>Mona Prabhakar</b> · Google review, August 2026 · row 01 above</p>
+  </div>
+</div></section>
 
 
-  <!-- ═══ 10b · Capacity. Nandit's favourite angle: the limit is the
-           promise. Says the quiet part out loud, which nobody else does. ═══ -->
-  <section class="sec sec--tight sec--paper cap">
-    <div class="wrap">
-      <p class="cap__line lift">I take <strong>three builds a week.</strong> Not because demand is overwhelming — because two days per shop stops being two days the moment I'm running six at once.</p>
-      <p class="cap__sub lift">If the week is full, I'll tell you that instead of taking your money and going quiet.</p>
-    </div>
-  </section>
+<section class="sec" id="how"><div class="wrap">
+  <div class="sec__head"><h2>Four steps. Two days.</h2></div>
+  <table class="idx">
+    <tbody>
+      <tr><td class="n">01</td><td class="nm">We talk</td><td>Ten minutes on the phone. What you sell, who walks in, what you want them to do next.</td></tr>
+      <tr><td class="n">02</td><td class="nm">You approve the scope</td><td>Written down, with the price on it, before anything is built. Half up front.</td></tr>
+      <tr><td class="n">03</td><td class="nm">I build it</td><td>Your text, your photos, your colours. You see it before anyone else does.</td></tr>
+      <tr><td class="n">04</td><td class="nm">It goes live</td><td>On your own domain, in your own name. Submitted to Google the same day.</td></tr>
+    </tbody></table>
+</div></section>
 
-  <!-- ═══ 11 · Contact. Light, so the form is legible and calm. Native
-           POST — no fetch, no "Sending…", no animation. FormSubmit redirects
-           to thanks.html, a real page in our own voice. ═══ -->
-  <section class="sec sec--paper2" id="contact">
-    <div class="wrap">
-      <div class="contact">
-        <div class="contact__ask">
-          <h2 class="t-h1">Tell me about your shop.</h2>
-          <p class="lede" style="margin-top:1.25rem">WhatsApp is fastest — it comes straight to my phone and you'll usually hear back the same day. If you'd rather I called you, leave your number instead.</p>
-          <div class="contact__btns">
-            <a class="btn btn--clay" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20I%20saw%20the%20Lantern%20site.%20My%20shop%20is%20" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1112 20.2z"/><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5-.1-.2-.7-1.6-.9-2.1-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.3z"/></svg>
-              Message me on WhatsApp
-            </a>
-            <a class="tlink" href="tel:+919711105497">Or call +91 97111 05497</a>
-          </div>
-        </div>
+<section class="sec" id="price"><div class="wrap">
+  <div class="sec__head"><h2>A new website. The price is on the page, because that's the whole point.</h2>
+    <p class="lede">Nobody should have to sit through three meetings to find out a number. Paid once.
+      No monthly bill from us, ever.</p></div>
+  <div class="tiers">
+      <div class="tier">
+        <h3>Starter</h3><span class="tier__n">₹9,999</span><p>One page that does the whole job.</p>
+        <ul><li>One page, built for phones first</li><li>Call and WhatsApp on every screen</li><li>Map, hours and directions</li><li>Your photos cleaned and placed</li><li>Live in two days</li></ul></div>
+      <div class="tier tier--pick"><span class="tier__flag">most shops take this</span>
+        <h3>Complete</h3><span class="tier__n">₹15,000</span><p>Online, and set up so Google can find you.</p>
+        <ul><li>Everything in Starter</li><li>Your own domain, registered in your name</li><li>All the words written for you</li><li>Google Business Profile connected</li><li>Search Console set up and the sitemap submitted</li></ul></div>
+      <div class="tier">
+        <h3>Presence</h3><span class="tier__n">₹21,000</span><p>For a shop with more than one thing to say.</p>
+        <ul><li>Everything in Complete</li><li>Three pages instead of one</li><li>Change your own prices and photos</li><li>Hindi and English</li></ul></div>
+  </div>
+  <p class="note">Changes later are bought in small packs (₹699 for two, ₹1,499 for five) and the
+    credits don't expire. Hosting and the security certificate cost you nothing from us. Your domain
+    renews directly with the registrar, about ₹1,000 a year, in your name, and we remind you 60 days
+    before it lapses.</p>
+</div></section>
 
-        <form class="enq" action="https://formsubmit.co/vaishnandit@airlantern.com" method="POST">
-          <input type="hidden" name="_subject" value="New enquiry — madebylantern.com">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://airlantern.com/thanks.html">
-          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-          <div class="enq__grid">
-            <p class="enq__row">
-              <label for="f-name">Your name</label>
-              <input id="f-name" name="name" type="text" required autocomplete="name">
-            </p>
-            <p class="enq__row">
-              <label for="f-phone">Phone number</label>
-              <input id="f-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel">
-            </p>
-          </div>
-          <p class="enq__row">
-            <label for="f-shop">Shop name and area</label>
-            <input id="f-shop" name="shop" type="text" required placeholder="Sharma Boutique, Sector 31">
-          </p>
-          <p class="enq__row">
-            <label for="f-need">What do you need?</label>
-            <select id="f-need" name="need">
-              <option>A new website</option>
-              <option>Fixing the website I have</option>
-              <option>Not sure yet — just asking</option>
-            </select>
-          </p>
-          <button class="btn btn--clay" type="submit">Send</button>
-          <p class="enq__note">Goes to my inbox and nowhere else. No newsletter, no follow-up spam.</p>
-        </form>
-      </div>
-    </div>
-  </section>
+<section class="sec" id="tuneup"><div class="wrap">
+  <div class="sec__head"><h2>Already have a website?</h2>
+    <p class="lede">Then you don't need a new one. Most sites we check are not broken — they
+      are simply unreachable. Of 387 shop websites we scanned, <b>61% had no WhatsApp button</b>
+      and <b>34% had a phone number you could not tap</b>. The customer is standing on the page
+      with a phone in their hand and cannot reach you.</p></div>
+  <table class="idx">
+    <thead><tr><th></th><th>What you get</th><th>How long</th><th style="text-align:right">Price</th></tr></thead>
+    <tbody>
+      <tr><td class="n">01</td><td class="nm">Free check</td><td>5 minutes</td><td class="st st--live">Free</td></tr>
+      <tr><td class="n">02</td><td class="nm">Written report</td><td>Half a day</td><td class="st">₹12,000</td></tr>
+      <tr><td class="n">03</td><td class="nm">Tune-Up — the fixes made</td><td>Two days</td><td class="st">₹18,000</td></tr>
+      <tr><td class="n">04</td><td class="nm">Full Tune-Up — shop with 10+ pages</td><td>Five days</td><td class="st">₹40,000</td></tr>
+      <tr><td class="n">05</td><td class="nm">Care plan — checked every month</td><td>Monthly</td><td class="st">₹6,000/mo</td></tr>
+    </tbody></table>
+  <p class="note">The free check is a real check, not a sales call — you get three or four lines
+    on WhatsApp saying what is missing, and you can act on them yourself if you want. The written
+    report is credited in full against a Tune-Up booked within 30 days.</p>
+</div></section>
 
-  <!-- ═══ 12 · Sign-off. The lights go back down. ═══ -->
-  <section class="sec sec--tall sec--night close">
-    <div class="wrap">
-      <img class="close__mark" src="assets/brand/lantern-mark-light.svg" alt="" width="66" height="86" aria-hidden="true">
-      <h2 class="t-h1">Two days from now, your shop could be live.</h2>
-    </div>
-  </section>
+<section class="sec sec--tint"><div class="wrap">
+  <div class="sec__head"><h2>It's one person, and that's the point.</h2>
+    <p class="lede">I'm Nandit. I build these myself. There's no account manager, no ticket number,
+      and nobody to pass you to. When you call the number on this page, I pick it up.</p></div>
+  <p class="note">I take three builds a week. Not because demand is overwhelming — because two days
+    per shop stops being two days the moment I'm running six at once. If the week is full, I'll tell
+    you that instead of taking your money and going quiet.</p>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec__head"><h2>Questions shop owners actually ask</h2></div>
+  <dl class="faq">
+      <div><dt>₹9,999 mein poori website? Kuch gadbad toh nahi?</dt><dd>No catch. At ₹9,999 you get one page, built properly, live in two days, with the call and WhatsApp buttons that actually bring you work. What it does not include is the Google setup and your own domain — that is ₹15,000, and it is the difference between having a website and being found.</dd></div>
+      <div><dt>Har mahine paisa dena padega?</dt><dd>No. Not to us, ever. Hosting and the security certificate cost us nearly nothing, so we don't bill you for them. The only recurring cost is your domain, roughly ₹1,000 a year, paid directly to the registrar in your own name.</dd></div>
+      <div><dt>Site kiski hogi agar main chala jaun?</dt><dd>Yours. The domain is registered in your name on your email from the first day. We configure it; we never hold it. If you leave, you get the files and the domain moves with you. There is nothing to negotiate because there is nothing of yours that we're holding.</dd></div>
+      <div><dt>Photos achhi nahi hain mere paas.</dt><dd>Most shops don't have them, and it's the single most common reason a site never gets finished. Your phone is enough. I'll tell you exactly which five shots to take and where to stand. If there's genuinely nothing usable, we design around it rather than filling the page with stock photos of someone else's shop.</dd></div>
+      <div><dt>Aap gayab toh nahi ho jaoge?</dt><dd>Fair question to ask a one-person studio, and the honest answer is that you are holding the safeguard: the domain is yours, the hosting account can be yours, and the site is a plain set of files you can hand to anyone. Nothing here depends on me still being around.</dd></div>
+      <div><dt>Will I actually come up on Google?</dt><dd>On Complete and above you'll be set up correctly for it: the right page title, your address and hours marked up the way Google reads them, a sitemap submitted to Search Console. That last step is the one almost nobody does. What nobody honest can promise you is a position — anyone guaranteeing you the top spot is selling you something else.</dd></div>
+  </dl>
+</div></section>
+
+<section class="sec sec--tint" id="ask"><div class="wrap">
+  <div class="sec__head"><h2>Tell me about your shop.</h2>
+    <p class="lede">WhatsApp is fastest — it comes straight to my phone and you'll usually hear back
+      the same day. If you'd rather I called you, leave your number instead.</p></div>
+  <div class="cta"><a class="btn btn--go" href="#">Message me on WhatsApp</a>
+    <a class="btn btn--ghost" href="tel:+919711105497">+91 97111 05497</a></div>
+</div></section>
 </main>
 
-<footer class="foot">
-  <div class="wrap">
-    <div class="foot__in">
-      <span>Lantern · लालटेन — Gurugram</span>
-      <span><a href="tel:+919711105497">+91 97111 05497</a> · <a href="mailto:vaishnandit@airlantern.com">vaishnandit@airlantern.com</a></span>
-      <span>&copy; <span id="yr">2026</span> Lantern</span>
-    </div>
-  </div>
-</footer>
-
-<!-- Two actions, in our own colours. Not a stack of vendor-coloured circles
-     floating over the content — see the client-tier study. -->
-<nav class="bar" id="bar" aria-label="Contact Lantern">
-  <a class="wa" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20I%20saw%20the%20Lantern%20site.%20My%20shop%20is%20" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1112 20.2z"/><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5-.1-.2-.7-1.6-.9-2.1-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.3z"/></svg>
-    WhatsApp
-  </a>
-  <a href="tel:+919711105497">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 1.9.6 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.5 2.8.6a2 2 0 011.7 2z"/></svg>
-    Call
-  </a>
-</nav>
-
-<script src="script.js"></script>
-</body>
-</html>
+<footer class="ft"><div class="wrap">
+  <b>Lantern</b> · <a href="mailto:vaishnandit@airlantern.com">vaishnandit@airlantern.com</a> · 9711105497
+</div></footer>
+<div class="bar"><a href="#ask">WhatsApp</a><a href="tel:+919711105497">Call</a></div>
+</body></html>
