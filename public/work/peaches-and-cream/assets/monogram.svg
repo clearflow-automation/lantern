@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Manpreet Bhasin's Peaches and Cream monogram">
+  <defs>
+    <linearGradient id="mg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#F3E0AE"/>
+      <stop offset=".45" stop-color="#D6B15F"/>
+      <stop offset="1"   stop-color="#A87F2C"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#mg)" stroke-linecap="round">
+    <!-- outer ring, broken at north and south for the dot inlays -->
+    <path d="M100 6a94 94 0 0 1 0 188" stroke-width="4"/>
+    <path d="M100 194a94 94 0 0 1 0-188" stroke-width="4"/>
+    <!-- inner ring -->
+    <circle cx="100" cy="100" r="82" stroke-width="2"/>
+  </g>
+  <!-- ring inlay dots at the four cardinal points -->
+  <g fill="url(#mg)">
+    <circle cx="100" cy="6"   r="5"/>
+    <circle cx="100" cy="194" r="5"/>
+    <circle cx="6"   cy="100" r="5"/>
+    <circle cx="194" cy="100" r="5"/>
+  </g>
+  <!-- MB monogram: the M drawn as two petal strokes, the B flowing off its right stem -->
+  <g fill="none" stroke="url(#mg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M62 143V72c0-14 17-18 24-7l14 23"/>
+    <path d="M100 88l14-23c7-11 24-7 24 7v20"/>
+    <path d="M100 88v55"/>
+    <path d="M138 92c14 0 21 10 21 20s-8 18-21 18c13 0 22 8 22 19s-9 20-24 20c-12 0-20-6-20-6"/>
+  </g>
+</svg>
