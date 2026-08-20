@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>Lantern — one-page websites for local shops</title>
+<meta name="description" content="One-page websites for local businesses. Live in two days, from ₹9,999. Paid once, no monthly fee, domain in your name.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box}
+:root{--bg:#F7F4ED;--surf:#FFFEFA;--surf2:#EDE8DC;--text:#1F1B16;--muted:#5E564A;
+--accent:#7A2029;--accentDeep:#5A1219;--onAccent:#FFFEFA;--border:#DED6C6;
+--barBg:#1F1B16;--barText:#F7F4ED;--barAccent:#E4A0A6;
+--disp:'Newsreader',Georgia,serif;--body:'Public Sans',system-ui,sans-serif;
+--mono:'JetBrains Mono',ui-monospace,monospace;
+--gut:clamp(1.15rem,4.6vw,3rem);--max:1060px;
+--ease-out:cubic-bezier(0.23, 1, 0.32, 1)}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;
+line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gut)}
+a{color:inherit} img{max-width:100%;display:block}
+h1,h2{font-family:var(--disp);font-weight:400;margin:0;line-height:1.08;letter-spacing:-.014em}
+h1{font-size:clamp(2.1rem,7.6vw,3.6rem)}
+h2{font-size:clamp(1.6rem,5.2vw,2.4rem);line-height:1.14}
+h3{margin:0;font-size:1.02rem;line-height:1.32;font-weight:600}
+p{margin:0} .lede{color:var(--muted);max-width:58ch}
+
+.hdr{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 93%,transparent);
+backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.hdr__in{display:flex;align-items:center;justify-content:space-between;padding-block:.7rem}
+.brand{display:flex;align-items:center;gap:.45rem;text-decoration:none;font-family:var(--disp);
+font-size:1.2rem;letter-spacing:-.02em;min-height:44px}
+.brand img{width:19px;height:26px}
+.hdr__nav{display:flex;gap:.85rem;align-items:center}
+/* four nav items do not fit at 375px — the two section links wrap and break the
+   header. They are anchors to content the reader will scroll past anyway; the
+   WhatsApp button is the only one that has to survive. */
+.hdr__nav a:not(.go){display:none}
+@media(min-width:560px){.hdr__nav a:not(.go){display:flex}}
+.hdr__nav a{text-decoration:none;font-size:.86rem;font-weight:500;color:var(--muted);
+align-items:center;justify-content:center;min-height:44px;min-width:44px;padding-inline:.4rem;white-space:nowrap}
+.hdr__nav a:not(.go):hover{color:var(--text)}
+.hdr__nav .go{color:var(--onAccent);background:var(--accent);padding:0 1rem;border-radius:2px;font-weight:600}
+.hdr__nav .go:hover{background:var(--accentDeep);color:var(--onAccent)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;text-decoration:none;
+font-weight:600;font-size:.94rem;padding:.95rem 1.5rem;min-height:48px;border-radius:2px;
+border:1px solid transparent;
+transition:background .18s var(--ease-out),border-color .18s var(--ease-out),transform .12s var(--ease-out)}
+.btn:active{transform:scale(.97)}
+.bar a{transition:transform .12s var(--ease-out)}
+.bar a:active{transform:scale(.97)}
+.btn--go{background:var(--accent);color:var(--onAccent)}
+.btn--go:hover{background:var(--accentDeep)}
+.btn--ghost{border-color:var(--border);color:var(--text)}
+.btn--ghost:hover{border-color:var(--text)}
+.cta{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.7rem}
+
+.sec{padding-block:3.4rem;scroll-margin-top:70px}
+.sec--tint{background:var(--surf2);border-block:1px solid var(--border)}
+.sec__head{max-width:62ch;margin-bottom:1.7rem}
+.sec__head h2{margin-bottom:.6rem}
+.hero{padding-block:2.8rem 3rem}
+
+/* the argument: two columns, one line at a time */
+.ba{margin-top:1.9rem;border-top:2px solid var(--text)}
+.ba__hd{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.6rem 0;
+border-bottom:1px solid var(--border)}
+.ba__hd span{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;
+letter-spacing:.15em;color:var(--muted)}
+.ba__hd span:last-child{color:var(--accent);font-weight:600}
+.ba__row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.85rem 0;
+border-bottom:1px solid var(--border);font-size:.92rem}
+.ba__row b{font-weight:400;color:var(--muted)}
+.ba__row i{font-style:normal;font-weight:600}
+.ba__foot{padding-top:1.1rem;font-family:var(--disp);font-size:1.12rem;max-width:34ch}
+
+/* the work, as a record rather than a gallery */
+.idx{width:100%;border-collapse:collapse;font-size:.92rem}
+.idx th{text-align:left;font-family:var(--mono);font-size:.72rem;text-transform:uppercase;
+letter-spacing:.13em;color:var(--muted);font-weight:600;padding:.5rem .6rem .5rem 0;
+border-bottom:2px solid var(--text)}
+.idx td{padding:.8rem .6rem .8rem 0;border-bottom:1px solid var(--border);vertical-align:baseline}
+.idx .n{font-family:var(--mono);color:var(--muted);width:2.4rem}
+.idx .nm{font-weight:600}
+.idx .nm a{text-decoration:none;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;min-height:44px}
+.idx .nm a:hover{border-bottom-color:var(--accent);color:var(--accent)}
+.idx .th{width:52px;padding-right:.6rem}
+/* at 375px five columns force every name onto three lines and the page grows by
+   three screens. Trade is the least load-bearing — the thumbnail already shows it. */
+.idx .trade{display:none}
+@media(min-width:560px){.idx .trade{display:table-cell}}
+.idx td,.idx th{padding-block:.6rem}
+.idx .th a{display:flex;align-items:center;min-height:44px;min-width:44px}
+.idx .th img{width:48px;height:60px;object-fit:cover;object-position:top center;
+  border:1px solid var(--border);border-radius:2px;display:block}
+@media(hover:hover) and (pointer:fine){
+  .idx .th img{transition:border-color .18s var(--ease-out),transform .18s var(--ease-out)}
+  .idx tr:hover .th img{border-color:var(--accent);transform:scale(1.04)}
+}
+.idx .st{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;
+color:var(--muted);white-space:nowrap;text-align:right}
+.idx .st--live{color:var(--accent);font-weight:600}
+.idx tr:hover td{background:var(--surf)}
+
+.proof{border-left:3px solid var(--accent);padding:.1rem 0 .1rem 1.15rem;max-width:52ch;margin-top:2.1rem}
+.proof q{font-family:var(--disp);font-size:clamp(1.04rem,3.4vw,1.3rem);line-height:1.46;quotes:'\201C' '\201D'}
+.proof__by{margin-top:.75rem;font-size:.85rem;color:var(--muted)}
+.proof__by b{color:var(--text)}
+.stars{color:var(--accent);letter-spacing:.14em;font-size:.9rem;margin-bottom:.5rem}
+
+.tiers{display:grid;gap:.8rem}
+.tier{background:var(--surf);border:1px solid var(--border);padding:1.3rem 1.25rem;position:relative}
+.tier--pick{border-color:var(--accent);border-width:2px}
+.tier__n{font-family:var(--mono);font-weight:600;font-size:1.75rem;letter-spacing:-.03em;
+display:block;margin:.15rem 0 .5rem}
+.tier>p{font-size:.88rem;color:var(--muted);margin-bottom:.75rem}
+.tier ul{margin:0;padding-left:1.05rem;font-size:.86rem;color:var(--muted)}
+.tier li{margin-bottom:.22rem}
+.tier__flag{position:absolute;top:-.66rem;left:1.1rem;background:var(--accent);color:var(--onAccent);
+font-family:var(--mono);font-size:.7rem;font-weight:600;text-transform:uppercase;
+letter-spacing:.08em;padding:.18rem .55rem}
+.note{margin-top:1.3rem;font-size:.85rem;color:var(--muted);max-width:58ch;padding-left:.95rem;
+border-left:2px solid var(--accent)}
+.faq{margin:0;border-top:2px solid var(--text)}
+.faq div{border-bottom:1px solid var(--border);padding-block:1.15rem}
+.faq dt{font-weight:600;font-size:.96rem;margin-bottom:.35rem}
+.faq dd{margin:0;color:var(--muted);font-size:.9rem;max-width:64ch}
+.ft{padding-block:2rem 6.5rem;border-top:1px solid var(--border);font-size:.85rem;color:var(--muted)}
+.ft a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--accent);
+display:inline-flex;align-items:center;min-height:44px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;
+background:var(--barBg)}
+.bar a{padding:1.05rem .5rem;min-height:52px;display:flex;align-items:center;justify-content:center;
+text-decoration:none;font-weight:600;font-size:.94rem;color:var(--barText)}
+.bar a:first-child{color:var(--barAccent)}
+.bar::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:rgba(247,244,237,.14)}
+@supports (animation-timeline: scroll()){
+  .bar::after{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:var(--barAccent);transform-origin:left center;transform:scaleX(0);
+    animation-name:barfill;animation-timing-function:linear;animation-fill-mode:both;
+    animation-duration:auto;animation-timeline:scroll(root block)}
+}
+@keyframes barfill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(min-width:760px){.tiers{grid-template-columns:repeat(3,1fr)}.bar{display:none}.ft{padding-bottom:2rem}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn:active,.bar a:active{transform:none}
+  .bar::after{animation:none;transform:scaleX(0)}
+  .card:hover,.idx tr:hover td{transition:none}
+}
+</style></head><body>
+
+<header class="hdr"><div class="wrap hdr__in">
+  <a class="brand" href="#"><img src="assets/brand/lantern-mark.svg" alt="" width="19" height="26" aria-hidden="true"><span>lantern</span></a>
+  <nav class="hdr__nav"><a href="#work">Work</a><a href="#price">Build</a><a href="#tuneup">Tune-Up</a><a class="go" href="#ask">WhatsApp</a></nav>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap">
+  <h1>Same shop.<br>Different Tuesday.</h1>
+  <p class="lede" style="margin-top:1.1rem">Nothing about your business changes. What changes is what
+    a stranger finds when they look you up — and whether they can reach you in one tap.</p>
+  <div class="ba">
+    <div class="ba__hd"><span>Today</span><span>Two days later</span></div>
+      <div class="ba__row"><b>Search finds a map pin and nothing else</b><i>Your own address, submitted to Google</i></div>
+      <div class="ba__row"><b>Hours unclear, so they don't risk the trip</b><i>Hours, map and directions on the screen</i></div>
+      <div class="ba__row"><b>The number has to be memorised and retyped</b><i>Call and WhatsApp, one tap, every screen</i></div>
+      <div class="ba__row"><b>Photos live on somebody's phone</b><i>Photos cleaned, cropped and placed</i></div>
+      <div class="ba__row"><b>They compare you with a shop that has a link</b><i>You are the shop with the link</i></div>
+    <p class="ba__foot">Two shops, same street, same rating. One has a link.</p>
+  </div>
+  <div class="cta"><a class="btn btn--go" href="#ask">Message me on WhatsApp</a>
+    <a class="btn btn--ghost" href="#work">See the work</a></div>
+</div></section>
+
+
+<section class="sec"><div class="wrap">
+  <div class="sec__head"><h2>A shop without a website isn't invisible. It's just harder to trust.</h2>
+    <p class="lede">Your customer already found your name — on Maps, in a WhatsApp forward, from a
+      neighbour. What they're looking for now is a reason to believe you're still open, still good,
+      and worth the trip.</p></div>
+  <table class="idx">
+    <tbody>
+      <tr><td class="n">01</td><td class="nm">One</td><td>shop paying, live, and still live.</td></tr>
+      <tr><td class="n">02</td><td class="nm">Twelve</td><td>demonstrations, not clients — and labelled that way.</td></tr>
+      <tr><td class="n">03</td><td class="nm">Two days</td><td>from the go-ahead to a live address you can send anyone.</td></tr>
+    </tbody></table>
+  <p class="note">That's the honest position. A bigger studio would show you logos. I'd rather you
+    clicked through the actual work and decided for yourself — every row below opens.</p>
+</div></section>
+
+<section class="sec sec--tint" id="work"><div class="wrap">
+  <div class="sec__head"><h2>Every build, in order.</h2>
+    <p class="lede">No logo wall, no gallery. This is the whole list. Twelve of the thirteen are
+      demonstrations for businesses that have not hired us, and they are marked that way — because a
+      studio that blurs that line will blur other things too.</p></div>
+  <table class="idx">
+    <thead><tr><th></th><th></th><th>Shop</th><th class="trade">Trade</th><th style="text-align:right">Status</th></tr></thead>
+    <tbody>
+        <tr><td class="n">01</td>
+        <td class="th"><a href="https://drmonaprabhakar.com" target="_blank" rel="noopener"><img src="assets/work/dr-mona-prabhakar.webp" alt="The site built for Dr. Mona Prabhakar" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="https://drmonaprabhakar.com" target="_blank" rel="noopener">Dr. Mona Prabhakar</a></td><td class="trade">Orthodontist</td>
+        <td class="st st--live">Live client</td></tr>
+        <tr><td class="n">02</td>
+        <td class="th"><a href="/work/poshak-boutique/" target="_blank" rel="noopener"><img src="assets/work/poshak-boutique.webp" alt="The site built for Poshak" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="/work/poshak-boutique/" target="_blank" rel="noopener">Poshak</a></td><td class="trade">Boutique</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">03</td>
+        <td class="th"><a href="/work/rd-creations/" target="_blank" rel="noopener"><img src="assets/work/rd-creations.webp" alt="The site built for RD Creations" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="/work/rd-creations/" target="_blank" rel="noopener">RD Creations</a></td><td class="trade">Tailor &amp; boutique</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">04</td>
+        <td class="th"><a href="/work/queen-madonna/" target="_blank" rel="noopener"><img src="assets/work/queen-madonna.webp" alt="The site built for Queen Madonna" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="/work/queen-madonna/" target="_blank" rel="noopener">Queen Madonna</a></td><td class="trade">Salon</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">05</td>
+        <td class="th"><a href="/work/queen-madonna-premium/" target="_blank" rel="noopener"><img src="assets/work/queen-madonna-premium.webp" alt="The site built for Queen Madonna" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="/work/queen-madonna-premium/" target="_blank" rel="noopener">Queen Madonna</a></td><td class="trade">Salon · second direction</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">06</td>
+        <td class="th"><a href="/work/beauty-life-salon/" target="_blank" rel="noopener"><img src="assets/work/beauty-life-salon.webp" alt="The site built for Beauty Life" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="/work/beauty-life-salon/" target="_blank" rel="noopener">Beauty Life</a></td><td class="trade">Salon</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">07</td>
+        <td class="th"><a href="/work/modern-looks-salon/" target="_blank" rel="noopener"><img src="assets/work/modern-looks-salon.webp" alt="The site built for Modern Looks" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="/work/modern-looks-salon/" target="_blank" rel="noopener">Modern Looks</a></td><td class="trade">Salon</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">08</td>
+        <td class="th"><a href="/work/british-unisex-salon/" target="_blank" rel="noopener"><img src="assets/work/british-unisex-salon.webp" alt="The site built for British Unisex" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="/work/british-unisex-salon/" target="_blank" rel="noopener">British Unisex</a></td><td class="trade">Salon</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">09</td>
+        <td class="th"><a href="/work/asha-clinic/" target="_blank" rel="noopener"><img src="assets/work/asha-clinic.webp" alt="The site built for Asha Clinic" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="/work/asha-clinic/" target="_blank" rel="noopener">Asha Clinic</a></td><td class="trade">Clinic</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">10</td>
+        <td class="th"><a href="/work/dr-deepika-aggarwal/" target="_blank" rel="noopener"><img src="assets/work/dr-deepika-aggarwal.webp" alt="The site built for Dr. Deepika Aggarwal" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="/work/dr-deepika-aggarwal/" target="_blank" rel="noopener">Dr. Deepika Aggarwal</a></td><td class="trade">Doctor</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">11</td>
+        <td class="th"><a href="/work/bodyline-gym/" target="_blank" rel="noopener"><img src="assets/work/bodyline-gym.webp" alt="The site built for Bodyline" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="/work/bodyline-gym/" target="_blank" rel="noopener">Bodyline</a></td><td class="trade">Gym</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">12</td>
+        <td class="th"><a href="/work/beast-mode-gym/" target="_blank" rel="noopener"><img src="assets/work/beast-mode-gym.webp" alt="The site built for Beast Mode" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="/work/beast-mode-gym/" target="_blank" rel="noopener">Beast Mode</a></td><td class="trade">Gym</td>
+        <td class="st">Sample</td></tr>
+        <tr><td class="n">13</td>
+        <td class="th"><a href="/work/empire-of-fitness/" target="_blank" rel="noopener"><img src="assets/work/empire-of-fitness.webp" alt="The site built for Empire of Fitness" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="/work/empire-of-fitness/" target="_blank" rel="noopener">Empire of Fitness</a></td><td class="trade">Gym</td>
+        <td class="st">Sample</td></tr>
+    </tbody></table>
+  <div class="proof">
+    <div class="stars">★★★★★</div>
+    <q>Extremely happy &amp; satisfied with the website designed by Mr Nandit Vaish (LANTERN). He took personal interest in curating the content as per my requirements &amp; suggestions. Was very prompt in making all the changes that I mentioned and all this at a very reasonable cost! I have been fortunate to have engaged his services…. Thanks from the bottom of my heart.</q>
+    <p class="proof__by"><b>Mona Prabhakar</b> · Google review, August 2026 · row 01 above</p>
+  </div>
+</div></section>
+
+
+<section class="sec" id="how"><div class="wrap">
+  <div class="sec__head"><h2>Four steps. Two days.</h2></div>
+  <table class="idx">
+    <tbody>
+      <tr><td class="n">01</td><td class="nm">We talk</td><td>Ten minutes on the phone. What you sell, who walks in, what you want them to do next.</td></tr>
+      <tr><td class="n">02</td><td class="nm">You approve the scope</td><td>Written down, with the price on it, before anything is built. Half up front.</td></tr>
+      <tr><td class="n">03</td><td class="nm">I build it</td><td>Your text, your photos, your colours. You see it before anyone else does.</td></tr>
+      <tr><td class="n">04</td><td class="nm">It goes live</td><td>On your own domain, in your own name. Submitted to Google the same day.</td></tr>
+    </tbody></table>
+</div></section>
+
+<section class="sec" id="price"><div class="wrap">
+  <div class="sec__head"><h2>A new website. The price is on the page, because that's the whole point.</h2>
+    <p class="lede">Nobody should have to sit through three meetings to find out a number. Paid once.
+      No monthly bill from us, ever.</p></div>
+  <div class="tiers">
+      <div class="tier">
+        <h3>Starter</h3><span class="tier__n">₹9,999</span><p>One page that does the whole job.</p>
+        <ul><li>One page, built for phones first</li><li>Call and WhatsApp on every screen</li><li>Map, hours and directions</li><li>Your photos cleaned and placed</li><li>Live in two days</li></ul></div>
+      <div class="tier tier--pick"><span class="tier__flag">most shops take this</span>
+        <h3>Complete</h3><span class="tier__n">₹15,000</span><p>Online, and set up so Google can find you.</p>
+        <ul><li>Everything in Starter</li><li>Your own domain, registered in your name</li><li>All the words written for you</li><li>Google Business Profile connected</li><li>Search Console set up and the sitemap submitted</li></ul></div>
+      <div class="tier">
+        <h3>Presence</h3><span class="tier__n">₹21,000</span><p>For a shop with more than one thing to say.</p>
+        <ul><li>Everything in Complete</li><li>Three pages instead of one</li><li>Change your own prices and photos</li><li>Hindi and English</li></ul></div>
+  </div>
+  <p class="note">Changes later are bought in small packs (₹699 for two, ₹1,499 for five) and the
+    credits don't expire. Hosting and the security certificate cost you nothing from us. Your domain
+    renews directly with the registrar, about ₹1,000 a year, in your name, and we remind you 60 days
+    before it lapses.</p>
+</div></section>
+
+
+<section class="sec" id="tuneup"><div class="wrap">
+  <div class="sec__head"><h2>Already have a website?</h2>
+    <p class="lede">Then you don't need a new one. Most sites we check are not broken — they
+      are simply unreachable. Of 387 shop websites we scanned, <b>61% had no WhatsApp button</b>
+      and <b>34% had a phone number you could not tap</b>. The customer is standing on the page
+      with a phone in their hand and cannot reach you.</p></div>
+  <table class="idx">
+    <thead><tr><th></th><th>What you get</th><th>How long</th><th style="text-align:right">Price</th></tr></thead>
+    <tbody>
+      <tr><td class="n">01</td><td class="nm">Free check</td><td>5 minutes</td><td class="st st--live">Free</td></tr>
+      <tr><td class="n">02</td><td class="nm">Written report</td><td>Half a day</td><td class="st">₹12,000</td></tr>
+      <tr><td class="n">03</td><td class="nm">Tune-Up — the fixes made</td><td>Two days</td><td class="st">₹18,000</td></tr>
+      <tr><td class="n">04</td><td class="nm">Full Tune-Up — shop with 10+ pages</td><td>Five days</td><td class="st">₹40,000</td></tr>
+      <tr><td class="n">05</td><td class="nm">Care plan — checked every month</td><td>Monthly</td><td class="st">₹6,000/mo</td></tr>
+    </tbody></table>
+  <p class="note">The free check is a real check, not a sales call — you get three or four lines
+    on WhatsApp saying what is missing, and you can act on them yourself if you want. The written
+    report is credited in full against a Tune-Up booked within 30 days.</p>
+</div></section>
+
+<section class="sec sec--tint"><div class="wrap">
+  <div class="sec__head"><h2>It's one person, and that's the point.</h2>
+    <p class="lede">I'm Nandit. I build these myself. There's no account manager, no ticket number,
+      and nobody to pass you to. When you call the number on this page, I pick it up.</p></div>
+  <p class="note">I take three builds a week. Not because demand is overwhelming — because two days
+    per shop stops being two days the moment I'm running six at once. If the week is full, I'll tell
+    you that instead of taking your money and going quiet.</p>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec__head"><h2>Questions shop owners actually ask</h2></div>
+  <dl class="faq">
+      <div><dt>₹9,999 mein poori website? Kuch gadbad toh nahi?</dt><dd>No catch. At ₹9,999 you get one page, built properly, live in two days, with the call and WhatsApp buttons that actually bring you work. What it does not include is the Google setup and your own domain — that is ₹15,000, and it is the difference between having a website and being found.</dd></div>
+      <div><dt>Har mahine paisa dena padega?</dt><dd>No. Not to us, ever. Hosting and the security certificate cost us nearly nothing, so we don't bill you for them. The only recurring cost is your domain, roughly ₹1,000 a year, paid directly to the registrar in your own name.</dd></div>
+      <div><dt>Site kiski hogi agar main chala jaun?</dt><dd>Yours. The domain is registered in your name on your email from the first day. We configure it; we never hold it. If you leave, you get the files and the domain moves with you. There is nothing to negotiate because there is nothing of yours that we're holding.</dd></div>
+      <div><dt>Photos achhi nahi hain mere paas.</dt><dd>Most shops don't have them, and it's the single most common reason a site never gets finished. Your phone is enough. I'll tell you exactly which five shots to take and where to stand. If there's genuinely nothing usable, we design around it rather than filling the page with stock photos of someone else's shop.</dd></div>
+      <div><dt>Aap gayab toh nahi ho jaoge?</dt><dd>Fair question to ask a one-person studio, and the honest answer is that you are holding the safeguard: the domain is yours, the hosting account can be yours, and the site is a plain set of files you can hand to anyone. Nothing here depends on me still being around.</dd></div>
+      <div><dt>Will I actually come up on Google?</dt><dd>On Complete and above you'll be set up correctly for it: the right page title, your address and hours marked up the way Google reads them, a sitemap submitted to Search Console. That last step is the one almost nobody does. What nobody honest can promise you is a position — anyone guaranteeing you the top spot is selling you something else.</dd></div>
+  </dl>
+</div></section>
+
+<section class="sec sec--tint" id="ask"><div class="wrap">
+  <div class="sec__head"><h2>Tell me about your shop.</h2>
+    <p class="lede">WhatsApp is fastest — it comes straight to my phone and you'll usually hear back
+      the same day. If you'd rather I called you, leave your number instead.</p></div>
+  <div class="cta"><a class="btn btn--go" href="#">Message me on WhatsApp</a>
+    <a class="btn btn--ghost" href="tel:+919711105497">+91 97111 05497</a></div>
+</div></section>
+</main>
+
+<footer class="ft"><div class="wrap">
+  <b>Lantern</b> · <a href="mailto:vaishnandit@airlantern.com">vaishnandit@airlantern.com</a> · 9711105497
+</div></footer>
+<div class="bar"><a href="#ask">WhatsApp</a><a href="tel:+919711105497">Call</a></div>
+</body></html>

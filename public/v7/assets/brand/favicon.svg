@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 0 140 288" width="140" height="288" role="img" aria-label="Lantern">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F2C48C" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#E1794F" stop-opacity=".85"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F2C48C"/>
+      <stop offset="1" stop-color="#E1794F"/>
+    </linearGradient>
+    <radialGradient id="halo" cx=".5" cy=".55" r=".5">
+      <stop offset="0" stop-color="#E9A96E" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#E9A96E" stop-opacity="0"/>
+    </radialGradient>
+  </defs><path d="M77,113 L143,113 L147,207 L73,207 Z" fill="url(#glass)"/>
+  <g fill="#221B16">
+    <circle cx="110.0" cy="24" r="13" fill="none" stroke="#221B16" stroke-width="7"/>
+    <rect x="104" y="35" width="12" height="14" rx="3"/>
+    <circle cx="110.0" cy="53" r="7.5"/>
+    <path d="M110,58 C132,64 152,79 161,95 L59,95 C68,79 88,64 110,58 Z"/>
+    <rect x="53" y="95" width="114" height="11" rx="3.5"/>
+    <path d="M70.0,106.0 L150.0,106.0 L154.0,214.0 L66.0,214.0 Z
+             M77.0,113.0 L143.0,113.0
+             L147.0,207.0 L73.0,207.0 Z"
+          fill-rule="evenodd"/>
+    <path d="M93.7,106.0 L99.7,106.0 L98.3,214.0 L92.3,214.0 Z"/>
+    <path d="M120.3,106.0 L126.3,106.0 L127.7,214.0 L121.7,214.0 Z"/>
+    <rect x="55" y="214" width="110" height="12" rx="3.5"/>
+    <path d="M68,226 L152,226 L141,245 L79,245 Z"/>
+    <circle cx="110.0" cy="253" r="8.5"/>
+  </g><path d="M110,128 C122,146 125,158 117,168 C113,173 107,173 103,168 C95,158 98,146 110,128 Z" fill="url(#flame)"/></svg>
