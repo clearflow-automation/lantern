@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Anagh Routes — Website Review &amp; Growth Plan | Lantern</title>
+<meta name="description" content="An independent review of nivedansharma.com (Anagh Routes): what's genuinely good, what's costing leads, the SEO story, and where the next 50 bookings come from.">
+<meta name="theme-color" content="#16130F">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Anagh Routes — Website Review &amp; Growth Plan">
+<meta property="og:description" content="A fair, evidence-backed review of nivedansharma.com — the good, the broken, and the growth plan.">
+<meta property="og:url" content="https://clearflow-automation.github.io/lantern-site/demos/anagh-routes/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#F4F1E9; --paper-2:#FBF9F3; --ink:#16130F; --ink-2:#4A443B; --ink-3:#7A7368;
+  --rule:#DED8C9; --amber:#D97706; --amber-ink:#A85B08; --honey:#F6B44C;
+  --teal:#1F5F63; --teal-soft:#E2EDED;
+  --flag:#B23A16; --flag-soft:#FAE9E2;
+  --good:#0F6B3C; --good-soft:#E6F0E9;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --body:'Inter',system-ui,-apple-system,sans-serif;
+  --data:'Space Grotesk',ui-monospace,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.65;font-size:16.5px;padding-bottom:92px;overflow-x:hidden}
+.wrap{width:100%;max-width:700px;margin:0 auto;padding:0 22px}
+
+.masthead{background:var(--ink);color:var(--paper);padding:26px 0 44px}
+.brandbar{display:flex;align-items:center;gap:9px;padding-bottom:34px;border-bottom:1px solid rgba(246,180,76,.2)}
+.brandbar svg{width:20px;height:20px;stroke:var(--honey);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.brandbar .name{font-family:var(--serif);font-size:1.22rem;letter-spacing:.02em}
+.brandbar .role{margin-left:auto;font-family:var(--data);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(244,241,233,.5);text-align:right}
+.masthead .eyebrow{font-family:var(--data);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--honey);padding-top:34px}
+.masthead h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.1rem,8.6vw,3.3rem);line-height:1.07;letter-spacing:-.015em;margin-top:12px;text-wrap:balance}
+.masthead h1 em{font-style:italic;color:var(--honey)}
+.masthead .dek{margin-top:18px;font-size:1.02rem;color:rgba(244,241,233,.78);max-width:53ch}
+.masthead .stamp{margin-top:22px;font-family:var(--data);font-size:.7rem;letter-spacing:.08em;color:rgba(244,241,233,.42)}
+.toc{margin-top:30px;padding-top:22px;border-top:1px solid rgba(246,180,76,.2)}
+.toc p{font-family:var(--data);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,241,233,.45);margin:0}
+.toc ol{list-style:none;counter-reset:t;margin-top:12px;display:grid;gap:7px}
+.toc li{counter-increment:t;font-size:.92rem}
+.toc li::before{content:counter(t,decimal-leading-zero);font-family:var(--data);font-size:.72rem;color:var(--honey);margin-right:10px}
+.toc a{color:rgba(244,241,233,.85);text-decoration:none;border-bottom:1px solid transparent}
+.toc a:hover,.toc a:focus-visible{border-bottom-color:var(--honey)}
+
+section{padding-top:56px;scroll-margin-top:16px}
+.kicker{font-family:var(--data);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--amber-ink)}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.75rem,6.4vw,2.35rem);line-height:1.12;letter-spacing:-.01em;margin-top:8px;text-wrap:balance}
+h3{font-family:var(--serif);font-weight:600;font-size:1.3rem;line-height:1.25;text-wrap:balance}
+h4{font-size:1rem;font-weight:650;line-height:1.35}
+p{margin-top:14px;color:var(--ink-2)}
+strong{color:var(--ink);font-weight:600}
+code{font-family:var(--data);font-size:.88em;background:rgba(22,19,15,.06);padding:1px 5px;border-radius:3px;word-break:break-word}
+
+.score{background:var(--paper-2);border:1px solid var(--rule);border-radius:4px;padding:22px 20px;margin-top:26px}
+.score .big{display:flex;align-items:baseline;gap:14px;padding-bottom:18px;border-bottom:1px solid var(--rule)}
+.score .big .n{font-family:var(--data);font-weight:600;font-size:3.3rem;line-height:.92;letter-spacing:-.035em;color:var(--amber-ink);font-variant-numeric:lining-nums tabular-nums}
+.score .big .d{font-family:var(--data);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);line-height:1.4}
+.bars{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+.bar{display:grid;grid-template-columns:minmax(0,1fr) 40px;gap:12px;align-items:center}
+.bar .lab{font-size:.82rem;color:var(--ink-2);display:flex;flex-direction:column;gap:6px;line-height:1.3}
+.track{height:6px;background:rgba(22,19,15,.09);border-radius:1px;overflow:hidden}
+.fill{display:block;height:100%}
+.bar .val{font-family:var(--data);font-size:.76rem;text-align:right;color:var(--ink-3);font-variant-numeric:tabular-nums}
+
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:3px;overflow:hidden;margin-top:24px}
+.num{background:var(--paper-2);padding:16px 15px}
+.num .v{font-family:var(--data);font-size:1.65rem;font-weight:600;letter-spacing:-.02em;line-height:1.1;color:var(--flag);font-variant-numeric:tabular-nums}
+.num .v.mid{color:var(--amber-ink)} .num .v.ok{color:var(--good)}
+.num .k{font-size:.76rem;color:var(--ink-3);line-height:1.42;margin-top:5px}
+
+.finds{display:flex;flex-direction:column;gap:16px;margin-top:26px}
+.find{background:var(--paper-2);border:1px solid var(--rule);border-radius:4px;padding:20px 19px}
+.find.hot{background:var(--flag-soft);border-color:rgba(178,58,22,.28)}
+.find-top{display:flex;align-items:baseline;gap:11px}
+.find-top .n{font-family:var(--data);font-size:.82rem;font-weight:600;color:var(--amber-ink);font-variant-numeric:tabular-nums;flex:none}
+.find p{margin-top:11px;font-size:.96rem}
+.proof{font-family:var(--data);font-size:.78rem;line-height:1.62;background:rgba(22,19,15,.055);border-radius:3px;padding:11px 13px;margin-top:13px;color:var(--ink-2);white-space:pre-wrap;word-break:break-word;overflow-x:auto}
+.proof b{display:block;font-size:.61rem;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;font-weight:600}
+.cost{margin-top:13px;font-size:.92rem;color:var(--ink);border-top:1px solid var(--rule);padding-top:11px}
+.cost b{font-family:var(--data);font-size:.61rem;letter-spacing:.13em;text-transform:uppercase;color:var(--amber-ink);display:block;margin-bottom:3px;font-weight:600}
+
+.keep{background:var(--good-soft);border-left:3px solid var(--good);border-radius:0 4px 4px 0;padding:20px 19px;margin-top:24px}
+ul.tick{list-style:none;display:flex;flex-direction:column;gap:11px}
+ul.tick li{position:relative;padding-left:22px;font-size:.95rem;color:var(--ink-2)}
+ul.tick li::before{content:"";position:absolute;left:1px;top:.5em;width:9px;height:5px;border-left:2px solid var(--good);border-bottom:2px solid var(--good);transform:rotate(-45deg)}
+ul.tick li strong{color:var(--ink)}
+ul.arrow{list-style:none;display:flex;flex-direction:column;gap:11px;margin-top:16px}
+ul.arrow li{position:relative;padding-left:24px;font-size:.95rem;color:var(--ink-2)}
+ul.arrow li::before{content:"→";position:absolute;left:0;top:0;color:var(--amber);font-weight:600}
+ul.arrow li strong{color:var(--ink)}
+
+.tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:4px;background:var(--paper-2);margin-top:22px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.87rem;min-width:560px}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink-2)}
+thead th{font-family:var(--data);font-size:.63rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:600;background:rgba(22,19,15,.04)}
+tbody tr:last-child td{border-bottom:none}
+td strong{color:var(--ink)}
+td.n{font-family:var(--data);font-variant-numeric:tabular-nums;white-space:nowrap}
+.scrollhint{font-family:var(--data);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-top:8px}
+
+.cards{display:grid;gap:14px;margin-top:22px}
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:4px;padding:18px 19px}
+.card .tag{font-family:var(--data);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);font-weight:600}
+.card h4{margin-top:7px}
+.card p{margin-top:8px;font-size:.92rem}
+
+.opp{background:var(--teal-soft);border-radius:4px;padding:24px 21px;margin-top:22px}
+.opp .lbl{font-family:var(--data);font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:600;margin:0}
+.opp .line{font-family:var(--serif);font-size:1.5rem;line-height:1.3;margin-top:11px;color:var(--ink);text-wrap:balance}
+.opp p{color:#3A4E4F}
+
+.phase{border-top:1px solid var(--rule);padding:20px 0}
+.phase .when{font-family:var(--data);font-size:.7rem;letter-spacing:.11em;text-transform:uppercase;color:var(--amber-ink);font-weight:600}
+.phase ul{margin-top:10px}
+
+.cta{background:var(--ink);color:var(--paper);border-radius:4px;padding:32px 24px;margin-top:34px;text-align:center}
+.cta h3{color:var(--paper);font-size:1.65rem}
+.cta p{color:rgba(244,241,233,.72);font-size:.96rem;max-width:44ch;margin-left:auto;margin-right:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--honey);color:#16130F;font-weight:600;font-size:1rem;padding:15px 26px;border-radius:999px;text-decoration:none;margin-top:20px;min-height:48px;transition:transform .2s ease,background .2s ease}
+.btn:hover,.btn:focus-visible{background:#FFC96B;transform:translateY(-1px)}
+.btn svg{width:19px;height:19px;fill:currentColor;flex:none}
+.cta .alt{margin-top:15px;font-size:.85rem;color:rgba(244,241,233,.5)}
+.cta .alt a{color:var(--honey);text-decoration:none}
+
+.note{margin-top:48px;padding-top:20px;border-top:1px solid var(--rule)}
+.note p{font-size:.82rem;color:var(--ink-3);line-height:1.62}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(22,19,15,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid rgba(246,180,76,.22);padding:11px 16px calc(11px + env(safe-area-inset-bottom));display:flex;gap:10px;align-items:center}
+.sticky .txt{flex:1;min-width:0;font-size:.79rem;line-height:1.35;color:rgba(244,241,233,.7)}
+.sticky .txt b{display:block;color:var(--paper);font-size:.87rem;font-weight:600}
+.sticky a{flex:none;display:inline-flex;align-items:center;gap:7px;background:#25D366;color:#0B1F13;font-weight:600;font-size:.9rem;padding:11px 17px;border-radius:999px;text-decoration:none;min-height:44px}
+.sticky a svg{width:17px;height:17px;fill:currentColor}
+
+a:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+@media (min-width:560px){.nums{grid-template-columns:repeat(4,1fr)}.cards{grid-template-columns:1fr 1fr}.sticky .txt{font-size:.86rem}}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="brandbar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2h6M12 2v3M7 5h10l1.5 4a6.5 6.5 0 0 1-13 0L7 5ZM12 15v7M9 22h6"/></svg>
+      <span class="name">Lantern</span>
+      <span class="role">Independent review<br>15 Aug 2026</span>
+    </div>
+    <p class="eyebrow">Prepared for Anagh Routes</p>
+    <h1>The site is better than most.<br><em>It still isn't selling.</em></h1>
+    <p class="dek">nivedansharma.com is a competently built, genuinely good-looking site — cleaner than a lot of what agencies charge real money for. The problems aren't craft. They're commercial: two businesses sharing one domain, a funnel that never closes, and near-total invisibility on the searches that actually produce bookings.</p>
+    <p class="stamp">nivedansharma.com · Anagh Routes · Wix</p>
+    <nav class="toc" aria-label="Contents">
+      <p>What's inside</p>
+      <ol>
+        <li><a href="#score">The scorecard</a></li>
+        <li><a href="#good">What's genuinely good</a></li>
+        <li><a href="#issues">What's costing bookings</a></li>
+        <li><a href="#seo">The SEO story</a></li>
+        <li><a href="#reputation">What the internet says</a></li>
+        <li><a href="#who">Who to target</a></li>
+        <li><a href="#campaign">Campaigns to run</a></li>
+        <li><a href="#plan">Where the next 50 bookings come from</a></li>
+      </ol>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ============ 01 ============ -->
+<section id="score">
+  <p class="kicker">01 — The scorecard</p>
+  <h2>Where it stands</h2>
+  <p>For context: this scores nearly twice what a typical small-business site scores. The craft is not the problem, and it would be dishonest to pretend otherwise. The gap is between "well-built site" and "machine that produces bookings."</p>
+
+  <div class="score">
+    <div class="big"><span class="n">54</span><span class="d">out of 100<br>Search &amp; conversion health</span></div>
+    <div class="bars">
+      <div class="bar"><div class="lab">Technical foundation<span class="track"><span class="fill" style="width:80%;background:var(--good)"></span></span></div><span class="val">8/10</span></div>
+      <div class="bar"><div class="lab">Speed &amp; mobile experience<span class="track"><span class="fill" style="width:70%;background:var(--good)"></span></span></div><span class="val">7/10</span></div>
+      <div class="bar"><div class="lab">Page titles &amp; descriptions<span class="track"><span class="fill" style="width:40%;background:var(--amber)"></span></span></div><span class="val">4/10</span></div>
+      <div class="bar"><div class="lab">Heading structure<span class="track"><span class="fill" style="width:25%;background:var(--flag)"></span></span></div><span class="val">2.5/10</span></div>
+      <div class="bar"><div class="lab">Structured data for tours<span class="track"><span class="fill" style="width:30%;background:var(--flag)"></span></span></div><span class="val">3/10</span></div>
+      <div class="bar"><div class="lab">Content &amp; search coverage<span class="track"><span class="fill" style="width:20%;background:var(--flag)"></span></span></div><span class="val">2/10</span></div>
+      <div class="bar"><div class="lab">Conversion path to enquiry<span class="track"><span class="fill" style="width:35%;background:var(--flag)"></span></span></div><span class="val">3.5/10</span></div>
+      <div class="bar"><div class="lab">Reviews &amp; off-site presence<span class="track"><span class="fill" style="width:30%;background:var(--flag)"></span></span></div><span class="val">3/10</span></div>
+    </div>
+  </div>
+
+  <div class="nums">
+    <div class="num"><div class="v ok">2.5s</div><div class="k">Page load. Genuinely fine — better than most travel sites.</div></div>
+    <div class="num"><div class="v mid">23</div><div class="k">Pages on the whole site. Seven of them are photography, not travel.</div></div>
+    <div class="num"><div class="v">0</div><div class="k">Blog articles. The main way inbound travellers find operators.</div></div>
+    <div class="num"><div class="v">2</div><div class="k">H2 headings on the homepage. Google sees an almost structureless page.</div></div>
+    <div class="num"><div class="v mid">8</div><div class="k">Trustpilot reviews, rated 4.3. Real, but far too few to compete.</div></div>
+    <div class="num"><div class="v">213</div><div class="k">Instagram followers, on a visual travel brand.</div></div>
+    <div class="num"><div class="v">0</div><div class="k">TripAdvisor listing or Google Business Profile found.</div></div>
+    <div class="num"><div class="v">5 of 12</div><div class="k">Tours sold with a price but no page of their own.</div></div>
+  </div>
+</section>
+
+<!-- ============ 02 ============ -->
+<section id="good">
+  <p class="kicker">02 — Credit where it's due</p>
+  <h2>What's genuinely good</h2>
+  <p>Worth stating plainly, because the list after this one is long.</p>
+  <div class="keep">
+    <ul class="tick">
+      <li><strong>The homepage title tag is properly written.</strong> "Travel With Nivedan | Anagh Routes - Luxury India Tours" — 55 characters, brand plus category. Most small sites get this wrong; this one doesn't.</li>
+      <li><strong>The mobile layout is clean.</strong> Proper responsive rendering, no horizontal scroll, readable type, a visible call-to-action above the fold. Checked on a real 320px viewport.</li>
+      <li><strong>Speed is respectable.</strong> 2.5 seconds to load, 2.5 MB, on a platform that usually does worse.</li>
+      <li><strong>Prices are published.</strong> Twelve tours with real USD prices and durations, $499 to $1,299. Most Indian operators hide this and lose the enquiry.</li>
+      <li><strong>Destination pages have real depth.</strong> The Rajasthan page runs 1,200–1,400 words of genuine, specific detail — Mehrangarh, Dal Baati Churma, the 52 ghats at Pushkar. That's not filler.</li>
+      <li><strong>Measurement is installed.</strong> Google Tag Manager, Meta pixel and visitor analytics are all live. He is at least able to see what's happening.</li>
+      <li><strong>Schema, canonical and Open Graph tags are all present</strong>, and 13 of 15 homepage images have alt text.</li>
+      <li><strong>The reviews, where they exist, are outstanding.</strong> The long German testimonial about travelling with an 85-year-old mother is one of the best pieces of sales copy on the site — and he didn't write it.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 03 ============ -->
+<section id="issues">
+  <p class="kicker">03 — What's costing bookings</p>
+  <h2>Eight problems, ranked</h2>
+
+  <div class="finds">
+
+    <article class="find hot">
+      <div class="find-top"><span class="n">01</span><h3>Two different businesses are sharing one website</h3></div>
+      <p>Seven of the twenty-three pages are a photography business — portraits, weddings, commercial shoots, portfolio, client albums, landscape. A German couple deciding whether to hand this stranger $3,000 and two weeks of their holiday lands on a site that also shoots weddings in Delhi.</p>
+      <div class="proof"><b>The photography pages</b>/portfolio · /portraits · /commercial-shoots · /weddings
+/travel-landscape-photography · /clients-albums · /services
+
+That's 30% of the site pointing at a different customer, a different
+price point, and a different purchase decision.</div>
+      <div class="cost"><b>What it costs</b>Two things at once. It dilutes the trust signal at the exact moment a high-value traveller is deciding, and it splits Google's understanding of what the site is for. Photography should live on its own domain, or as one page linked from the About section — not as a co-equal half of the navigation.</div>
+    </article>
+
+    <article class="find hot">
+      <div class="find-top"><span class="n">02</span><h3>The funnel breaks exactly where it should close</h3></div>
+      <p>This is the single most expensive problem. The <code>/india</code> page lists twelve tours with prices and durations, but almost no detail. The <code>/rajasthan</code> page has 1,300 words of beautiful detail — and no price, no day-by-day itinerary, no dates, no inclusions, and no booking button. Neither page can actually close a sale.</p>
+      <div class="proof"><b>See for yourself</b>/india      → 12 tours, $499–$1,299, durations. No itineraries.
+/rajasthan  → 1,300 words of destination detail.
+              No price. No itinerary. No dates.
+              No inclusions/exclusions. No "book" button.
+
+A traveller who wants to buy has to email and wait.</div>
+      <div class="cost"><b>What it costs</b>Every serious competitor publishes a day-by-day itinerary with what's included, what isn't, and a clear price. That page is what people forward to their partner and what Google ranks. Right now the two halves of that page exist separately and neither one converts.</div>
+    </article>
+
+    <article class="find hot">
+      <div class="find-top"><span class="n">03</span><h3>Nothing has been written for search, ever</h3></div>
+      <p>Twenty-three pages, zero articles. Inbound travel is won almost entirely on questions people ask before they're ready to book — and he has answered none of them. Meanwhile five of the twelve tours he actually sells don't even have a page of their own.</p>
+      <div class="proof"><b>Sold on /india but with no page to rank</b>Meghalaya · Holi Festival Tours · Yoga Tours
+Himalayan Trekking · Spiti Snow Leopard Expeditions
+
+"Spiti snow leopard expedition" is a low-competition search
+with genuine buyer intent. He sells it. He can't be found for it.</div>
+      <div class="cost"><b>What it costs</b>This is the biggest growth lever on the list and the cheapest to pull. "Is India safe for solo female travellers", "best time to visit Rajasthan", "Golden Triangle 7 day itinerary" — these are searched constantly by exactly his customer. Twenty well-written articles would do more for bookings than any amount of ad spend, and unlike ads they keep working.</div>
+    </article>
+
+    <article class="find hot">
+      <div class="find-top"><span class="n">04</span><h3>The About page's Google snippet is broken English</h3></div>
+      <p>The meta description on <code>/about</code> — the sentence Google shows searchers — contains a grammatical error and an unverifiable superlative. On a page whose entire job is establishing that this person can be trusted with your holiday and your money.</p>
+      <div class="proof"><b>Currently live</b>/about meta description:
+"We Are the India's Most recommended Tailored Expedition Company.
+ The leading innovator in private guided tours…"
+
+  · "the India's Most recommended" — grammatical error
+  · "Most recommended" — inconsistent capitalisation
+  · The claim is unverifiable, and sits behind 8 Trustpilot reviews
+
+Page title: "About Anagh | Anagh Routes"
+  · "Anagh" alone means nothing to someone who's never heard of him
+Body copy: ~1,900 characters — thin for the trust page of a $1,300 purchase</div>
+      <div class="cost"><b>What it costs</b>A European traveller comparing operators reads that snippet before clicking. Broad superlatives with a grammar mistake read as exactly the thing they're afraid of. Competitors say "Ministry of Tourism recognised, operating since 1999" — specific and checkable. That beats "most recommended" every time.</div>
+    </article>
+
+    <article class="find">
+      <div class="find-top"><span class="n">05</span><h3>The domain and the brand are two different names</h3></div>
+      <p>The website is nivedansharma.com. The brand — the logo, the schema, Instagram, Facebook, the Trustpilot profile name — is Anagh Routes. Every backlink, every review and every share is split between two identities, and the one in the domain is a personal name nobody searches for.</p>
+      <div class="proof"><b>The split</b>Domain          nivedansharma.com
+Logo &amp; schema   Anagh Routes
+Instagram       @anaghroutes
+Facebook        /anaghroutes
+Email           anaghroutes@gmail.com
+Trustpilot      listed as "nivedansharma.com"</div>
+      <div class="cost"><b>What it costs</b>Nobody types "nivedan sharma" into Google unless they already met him. Either commit to Anagh Routes and move the site to anaghroutes.com with proper redirects, or fold the brand and go all-in on the personal name. The current halfway position means neither name is accumulating anything. Also: a luxury travel brand running on a Gmail address is a small, avoidable credibility leak.</div>
+    </article>
+
+    <article class="find">
+      <div class="find-top"><span class="n">06</span><h3>Google is being shown almost no structure</h3></div>
+      <p>The homepage has two H1 headings where there should be one, and only two H2s on the entire page. Section headers like "Why Anagh Routes" and "Enriching Lives Through Exceptional Travel Experiences" are styled text, not headings. And one money page has a title tag that's a sentence someone forgot to finish.</p>
+      <div class="proof"><b>See for yourself</b>Homepage    2 × H1, 2 × H2 total
+/rajasthan  title = "Rajasthan: Where History | Anagh Routes"
+                     ↑ truncated mid-sentence
+/india      title = "India | Anagh Routes"   — no keywords at all
+Most destination pages have no meta description
+
+Schema type = LocalBusiness
+  → should be TravelAgency, plus TouristTrip / Offer per tour
+  → no AggregateRating, despite having real reviews</div>
+      <div class="cost"><b>What it costs</b>With twelve priced tours he's eligible for rich results — price, duration and star ratings showing directly in Google. He's currently marked up as a generic local business, so he gets none of it. Fixing the titles and adding proper tour markup is a day of work with a permanent payoff.</div>
+    </article>
+
+    <article class="find">
+      <div class="find-top"><span class="n">07</span><h3>The flagship testimonial is signed with a cartoon name</h3></div>
+      <p>The homepage's hero review is genuinely excellent — long, specific, credible, and it names real places and real decisions. It is signed <strong>"Speedy Gonzalez, Germany."</strong> Separately, the site's Trustpilot link points to a personal user profile rather than the business review page, so the one click that would prove the reviews are real goes to the wrong place.</p>
+      <div class="proof"><b>See for yourself</b>Homepage review byline:  "Speedy Gonzalez, Germany"
+Homepage rating widget:  "average rating is 5 out of 5"
+Actual Trustpilot:       4.3 from 8 reviews
+
+Trustpilot link on site: trustpilot.com/users/69ae6231…   ← user profile
+Should be:               trustpilot.com/review/nivedansharma.com</div>
+      <div class="cost"><b>What it costs</b>Someone about to spend €2,500 with a stranger in another country reads that byline and pauses. Ask the reviewer for permission to use a real first name, last initial and city. And point the Trustpilot link at the actual review page — the reviews are real and good, they should be one click away.</div>
+    </article>
+
+    <article class="find">
+      <div class="find-top"><span class="n">08</span><h3>He's invisible where foreign travellers actually look</h3></div>
+      <p>No TripAdvisor listing and no Google Business Profile were found. For inbound India tours these are the two highest-trust surfaces that exist, and both are free. Eight Trustpilot reviews and 213 Instagram followers is not enough social proof to win a $1,300 decision against operators advertising 27 years and 14,000 guests.</p>
+      <div class="proof"><b>What competitors lead with</b>"Ministry of Tourism–recognised private tour operator"
+"Since 1999 · 14,000 guests from 40 countries"
+Exact-match domains: goldentriangletours.com, luxurygoldentriangle.com
+
+Anagh Routes states no credentials, registration or years-in-business
+anywhere on the site — despite having 12 years of experience.</div>
+      <div class="cost"><b>What it costs</b>He has the experience and the happy customers; he just hasn't converted either into a visible signal. Every past guest is an unclaimed review. Getting from 8 reviews to 50, across Trustpilot, Google and TripAdvisor, would change the business more than any redesign.</div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ 04 ============ -->
+<section id="seo">
+  <p class="kicker">04 — The SEO story</p>
+  <h2>Findable by name, invisible to strangers</h2>
+  <p>Short version: the technical foundation is solid, and there is nothing on top of it. Crawling, indexing, speed, canonicals and sitemaps are all fine — a search engine can read the site perfectly well. There just isn't much for it to read.</p>
+  <p>Searches for luxury India tours, private Golden Triangle tours and Rajasthan packages return operators with exact-match domains, two decades of history, and hundreds of pages of content. Anagh Routes appears for its own name and effectively nothing else. That's not a penalty — it's an absence.</p>
+  <div class="opp">
+    <p class="lbl">The honest read</p>
+    <p class="line">He can't win "India tour packages." He can absolutely win "Spiti snow leopard expedition."</p>
+    <p>Head terms are owned by operators with 27-year head starts and budgets to match. The winnable game is the long tail: specific trips, specific months, specific traveller types. That's also where the buyer intent is highest and the competition is thinnest — and it's exactly what a small, genuinely expert operator is built to serve.</p>
+  </div>
+</section>
+
+<!-- ============ 05 ============ -->
+<section id="reputation">
+  <p class="kicker">05 — What the internet says</p>
+  <h2>Small footprint, high quality</h2>
+  <p>What exists is genuinely positive. There's just very little of it.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Where</th><th>What's there</th><th>Read</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Trustpilot</strong></td><td>4.3 from 8 reviews, business listed as "nivedansharma.com"</td><td>Real and good. Far too few, and filed under the wrong name.</td></tr>
+        <tr><td><strong>Instagram</strong></td><td>@anaghroutes, 213 followers, following 7</td><td>Near-zero social proof on the most visual product there is.</td></tr>
+        <tr><td><strong>LinkedIn</strong></td><td>Personal profile gets real engagement — one post drew 21 comments</td><td>The audience is on his personal account, not the brand's. That's a clue.</td></tr>
+        <tr><td><strong>TripAdvisor</strong></td><td>No listing found</td><td>The single biggest gap. This is where inbound travellers research.</td></tr>
+        <tr><td><strong>Google Business</strong></td><td>No profile found</td><td>Free, high-trust, and it feeds Google Maps and the local pack.</td></tr>
+        <tr><td><strong>Press / mentions</strong></td><td>Nothing found beyond his own properties</td><td>No third party has ever vouched for him in public.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="scrollhint">Scroll the table sideways →</p>
+  <p>One inconsistency worth fixing: the website sells <strong>India, Nepal and Thailand</strong>. The Instagram bio says <strong>India, Nepal and Sri Lanka</strong>. Pick one.</p>
+</section>
+
+<!-- ============ 06 ============ -->
+<section id="who">
+  <p class="kicker">06 — Targeting</p>
+  <h2>Who to actually chase</h2>
+  <p>The best clue about who to target is sitting in his own reviews. The strongest testimonial on the site is a German traveller who brought her 85-year-old mother and her sister, and praised him specifically for pacing the itinerary gently and choosing a smaller town for Holi so it wouldn't overwhelm them. That is a niche, and almost nobody serves it deliberately.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Segment</th><th>Why him specifically</th><th>Where they are</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Multigenerational &amp; older travellers</strong></td><td>Proven ability to pace a trip for an 85-year-old without dulling it. Highest-value, lowest-competition niche available to him.</td><td>Google long-tail, TripAdvisor forums, Facebook groups</td><td class="n">1</td></tr>
+        <tr><td><strong>German-speaking Europe</strong></td><td>His best review is German. DACH is one of India's biggest inbound markets and rewards thorough, detailed operators.</td><td>German travel forums, blogger partnerships</td><td class="n">2</td></tr>
+        <tr><td><strong>Solo female travellers</strong></td><td>The number one hesitation about India is safety. A guide with detailed, verifiable reviews answers it directly.</td><td>Reddit, Instagram, solo-travel communities</td><td class="n">3</td></tr>
+        <tr><td><strong>Special-interest travellers</strong></td><td>Snow leopards, Holi, yoga in Rishikesh, wildlife safaris. Specific, searchable, thin competition, and he already sells all of them.</td><td>Google long-tail, niche forums, YouTube</td><td class="n">4</td></tr>
+        <tr><td><strong>Past guests &amp; referrals</strong></td><td>His reviewers literally write that they wish the trip had been longer. That's a repeat customer nobody is asking.</td><td>Email, WhatsApp</td><td class="n">5</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="scrollhint">Scroll the table sideways →</p>
+</section>
+
+<!-- ============ 07 ============ -->
+<section id="campaign">
+  <p class="kicker">07 — Campaigns</p>
+  <h2>What to actually run</h2>
+  <p>He is a solo operator competing with companies that have twenty-year head starts. Outspending them is not available. Out-specifying them is.</p>
+  <div class="cards">
+    <div class="card">
+      <span class="tag">Free · highest impact</span>
+      <h4>The review campaign</h4>
+      <p>Every past guest, personally messaged, asked for a review on Google, TripAdvisor and Trustpilot. Going from 8 reviews to 50 changes the business more than a redesign would. Do this before anything else on the list.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Content</span>
+      <h4>Twenty articles, one question each</h4>
+      <p>"Is India safe for solo female travellers?" · "Best time to visit Rajasthan" · "Golden Triangle in 7 days" · "Travelling India with elderly parents." Answer them properly, from twelve years of actual experience. This is the compounding asset.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Product pages</span>
+      <h4>One real page per tour</h4>
+      <p>Day-by-day itinerary, price, what's included, what isn't, dates, photos, and an enquiry form on the page. Twelve of these, one per tour he already sells. This is the page Google ranks and the page people forward.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Video</span>
+      <h4>Use the footage he already has</h4>
+      <p>He's a working photographer with years of India footage and 213 Instagram followers. That's the most obviously wasted asset here. Short vertical video — one location, one story, thirty seconds — on Reels and YouTube Shorts.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Community</span>
+      <h4>Be useful where people ask</h4>
+      <p>Reddit's India and solo-travel communities are full of "can anyone recommend a guide" threads. Answer questions genuinely for months without selling. For a one-man operation this converts better than ads.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Paid · later</span>
+      <h4>Long-tail search only</h4>
+      <p>Don't bid on "India tour packages" — that auction is lost. Bid on "snow leopard expedition Spiti", "Holi festival tour small town", "India tour for elderly parents." Small budget, high intent, competitors mostly absent.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 ============ -->
+<section id="plan">
+  <p class="kicker">08 — Execution</p>
+  <h2>Where the next 50 bookings come from</h2>
+
+  <div class="phase">
+    <p class="when">This week — free</p>
+    <ul class="arrow">
+      <li><strong>Create the Google Business Profile and the TripAdvisor listing.</strong> Both free, both missing, both high-trust.</li>
+      <li><strong>Message every past guest</strong> asking for a review. This is the highest-return hour of work available.</li>
+      <li><strong>Fix the /about meta description</strong> — remove the grammar error and the unverifiable superlative, replace with something specific and checkable.</li>
+      <li><strong>Fix the truncated /rajasthan title tag</strong> and write real titles and descriptions for all twelve destination pages.</li>
+      <li><strong>Point the Trustpilot link</strong> at the business review page instead of a user profile.</li>
+      <li><strong>Get permission to use a real name</strong> on the flagship testimonial.</li>
+    </ul>
+  </div>
+
+  <div class="phase">
+    <p class="when">This month</p>
+    <ul class="arrow">
+      <li>Decide the brand question — Anagh Routes or the personal name — and commit fully, with redirects.</li>
+      <li>Move photography off the main navigation onto its own domain or a single page.</li>
+      <li>Build a proper product page for each of the twelve tours: itinerary, price, inclusions, dates, enquiry form.</li>
+      <li>Switch the schema to TravelAgency and add TouristTrip and Offer markup per tour, plus AggregateRating.</li>
+      <li>State the credentials — years operating, registrations, guest numbers, countries served.</li>
+    </ul>
+  </div>
+
+  <div class="phase">
+    <p class="when">Next 90 days</p>
+    <ul class="arrow">
+      <li>Publish twenty articles, roughly two a week, each answering one real pre-booking question.</li>
+      <li>Start posting video weekly from the existing archive.</li>
+      <li>Build the German-market push: one partnership, translated key pages, German testimonials surfaced.</li>
+      <li>Turn on small-budget long-tail search ads once the tour pages exist to send them to.</li>
+      <li>Set up a simple post-trip email flow: review request, then a referral offer.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section>
+  <div class="cta">
+    <h3>Want a second opinion on any of this?</h3>
+    <p>Every point above has its evidence attached so it can be checked or argued with. Happy to walk through it — or to disagree properly.</p>
+    <a class="btn" href="https://wa.me/919711105497?text=Hi%20Lantern%20%E2%80%94%20about%20the%20nivedansharma.com%20review." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.13c-.25.69-1.44 1.32-1.99 1.4-.51.08-1.15.11-1.86-.12-.43-.13-.98-.32-1.69-.62-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07 0-1.46.77-2.18 1.04-2.48.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.06.92 2.21.08.15.13.32.02.52-.1.2-.15.32-.3.5-.15.17-.32.39-.45.52-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.08.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.72.81 2.02.96.3.15.5.22.57.35.07.12.07.72-.18 1.41Z"/></svg>
+      Message on WhatsApp
+    </a>
+    <p class="alt">Or email <a href="mailto:vaishnandit@airlantern.com">vaishnandit@airlantern.com</a></p>
+  </div>
+</section>
+
+<div class="note">
+  <p><strong style="color:var(--ink-2)">How this was checked.</strong> Live inspection of nivedansharma.com on 15 August 2026 — page code, network waterfall on a cold load, robots.txt and sitemaps, structured data, heading structure, and the India, Rajasthan, About and Contact pages. Mobile behaviour was verified on a real 320px viewport after a full reload, not from a resized desktop render. Off-site data comes from public search results, Trustpilot and Instagram. Scores use Lantern's own review framework, not a Google product.</p>
+  <p style="margin-top:12px">Two things this review deliberately does <em>not</em> claim: that the site is badly built — it isn't, it's above average — and that any single fix here guarantees bookings. The mobile layout was initially flagged as broken during testing and that finding was withdrawn once it turned out to be a testing artifact rather than a real fault.</p>
+  <p style="margin-top:12px">Prepared independently by Lantern, unsolicited. Say the word and it comes down the same day.</p>
+</div>
+
+</main>
+
+<div class="sticky">
+  <div class="txt"><b>Want to argue with any of it?</b>Every claim has its evidence attached.</div>
+  <a href="https://wa.me/919711105497?text=Hi%20Lantern%20%E2%80%94%20about%20the%20nivedansharma.com%20review." target="_blank" rel="noopener" aria-label="Message Lantern on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.13c-.25.69-1.44 1.32-1.99 1.4-.51.08-1.15.11-1.86-.12-.43-.13-.98-.32-1.69-.62-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07 0-1.46.77-2.18 1.04-2.48.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.06.92 2.21.08.15.13.32.02.52-.1.2-.15.32-.3.5-.15.17-.32.39-.45.52-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.08.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.72.81 2.02.96.3.15.5.22.57.35.07.12.07.72-.18 1.41Z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+</body>
+</html>

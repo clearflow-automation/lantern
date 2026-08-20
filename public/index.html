@@ -115,25 +115,6 @@ color:var(--muted);white-space:nowrap;text-align:right}
 
 .proof{border-left:3px solid var(--accent);padding:.1rem 0 .1rem 1.15rem;max-width:52ch;margin-top:2.1rem}
 .proof q{font-family:var(--disp);font-size:clamp(1.04rem,3.4vw,1.3rem);line-height:1.46;quotes:'\201C' '\201D'}
-/* specimen — the one published Tune-Up report, shown as a document not an aside.
-   Deliberately NOT .note or .proof: both already carry a left rule in this section. */
-.spec{margin-top:2rem;max-width:60ch;background:var(--surf);border:1px solid var(--border);
-  border-radius:5px;padding:1.15rem 1.15rem 1.05rem}
-.spec__n{display:flex;align-items:baseline;gap:.65rem;padding-bottom:.85rem;
-  border-bottom:1px solid var(--border);margin-bottom:.85rem}
-.spec__n b{font-family:var(--mono);font-weight:600;font-size:2.5rem;line-height:.88;
-  letter-spacing:-.035em;color:var(--accent);font-variant-numeric:tabular-nums}
-.spec__n span{font-family:var(--mono);font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;
-  color:var(--muted);line-height:1.4}
-.spec p{font-size:.88rem;color:var(--muted)}
-.spec p b{color:var(--text);font-weight:600}
-.spec a{display:inline-flex;align-items:center;gap:.45rem;min-height:44px;font-family:var(--mono);
-  font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);font-weight:600;
-  text-decoration:underline;text-decoration-color:var(--border);text-decoration-thickness:1px;
-  text-underline-offset:.3em}
-.spec a:hover{text-decoration-color:var(--accent)}
-.spec a i{font-style:normal;transition:transform .18s var(--ease-out)}
-.spec a:hover i{transform:translateX(3px)}
 .proof__by{margin-top:.75rem;font-size:.85rem;color:var(--muted)}
 .proof__by b{color:var(--text)}
 .stars{color:var(--accent);letter-spacing:.14em;font-size:.9rem;margin-bottom:.5rem}
@@ -348,14 +329,33 @@ text-decoration:none;font-weight:600;font-size:.94rem;color:var(--barText)}
     on WhatsApp saying what is missing, and you can act on them yourself if you want. The written
     report is credited in full against a Tune-Up booked within 30 days.</p>
 
-  <div class="spec">
-    <div class="spec__n"><b>31</b><span>out of 100<br>the last site we reviewed</span></div>
-    <p>The report names seven specific things costing them orders: a no-returns line on clothes
-      sold without a size chart, 8.3 seconds before anything appears on a phone, emoji in product
-      names blocking Google Shopping — with the evidence for each one. <b>Punya's Kriti</b>, a
-      loungewear label, published here with their permission.</p>
-    <a href="/work/punyas-kriti/" target="_blank" rel="noopener">Read the whole report <i aria-hidden="true">&rarr;</i></a>
-  </div>
+</div></section>
+
+<section class="sec sec--tint" id="reviews"><div class="wrap">
+  <div class="sec__head"><h2>Every review, in order.</h2>
+    <p class="lede">Same rule as the builds: this is the whole list, not a selection. The number is
+      what that site scored out of 100 when we checked it — the report itself names every finding
+      and shows the evidence, so the owner can confirm it without taking our word for it.</p></div>
+  <table class="idx">
+    <thead><tr><th></th><th></th><th>Business</th><th class="trade">Trade</th><th style="text-align:right">Score</th></tr></thead>
+    <tbody>
+        <tr><td class="n">01</td>
+        <td class="th"><a href="/work/punyas-kriti/" target="_blank" rel="noopener"><img src="assets/work/punyas-kriti.webp" alt="The review we published for Punya's Kriti" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="/work/punyas-kriti/" target="_blank" rel="noopener">Punya's Kriti</a></td><td class="trade">Loungewear label</td>
+        <td class="st"><b>31</b>/100</td></tr>
+        <tr><td class="n">02</td>
+        <td class="th"><a href="/work/anagh-routes/" target="_blank" rel="noopener"><img src="assets/work/anagh-routes.webp" alt="The review we published for Anagh Routes" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="/work/anagh-routes/" target="_blank" rel="noopener">Anagh Routes</a></td><td class="trade">Travel operator</td>
+        <td class="st"><b>54</b>/100</td></tr>
+        <tr><td class="n">03</td>
+        <td class="th"><a href="/work/v-sachdeva-associates/" target="_blank" rel="noopener"><img src="assets/work/v-sachdeva-associates.webp" alt="The review we published for V. Sachdeva &amp; Associates" width="520" height="650" loading="lazy"></a></td>
+        <td class="nm"><a href="/work/v-sachdeva-associates/" target="_blank" rel="noopener">V. Sachdeva &amp; Associates</a></td><td class="trade">Chartered accountants</td>
+        <td class="st"><b>37</b>/100</td></tr>
+    </tbody></table>
+  <p class="note">Every one of these is kept out of Google's index, so our page can never turn up
+    in a search for their name — the report is theirs to act on, not a billboard. A low score is
+    not an insult either: each of these sites was built by somebody, and most of what we find is
+    cheap to fix.</p>
 
   <div class="cta"><a class="btn btn--go" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20I%20already%20have%20a%20website.%20Please%20run%20the%20free%20check%20on%20" target="_blank" rel="noopener">Get the free check</a>
     <a class="btn btn--ghost" href="tel:+919711105497">+91 97111 05497</a></div>
