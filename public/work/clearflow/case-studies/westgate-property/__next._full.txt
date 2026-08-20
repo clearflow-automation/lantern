@@ -1,0 +1,106 @@
+1:"$Sreact.fragment"
+2:I[39756,["/work/clearflow/_next/static/chunks/05-c3ty_6dwfk.js","/work/clearflow/_next/static/chunks/14mrh2-p_w84d.js"],"default"]
+3:I[37457,["/work/clearflow/_next/static/chunks/05-c3ty_6dwfk.js","/work/clearflow/_next/static/chunks/14mrh2-p_w84d.js"],"default"]
+4:I[22016,["/work/clearflow/_next/static/chunks/05-c3ty_6dwfk.js","/work/clearflow/_next/static/chunks/14mrh2-p_w84d.js","/work/clearflow/_next/static/chunks/1rxncug86bump.js"],""]
+a:I[68027,["/work/clearflow/_next/static/chunks/05-c3ty_6dwfk.js","/work/clearflow/_next/static/chunks/14mrh2-p_w84d.js"],"default",1]
+:HL["/work/clearflow/_next/static/chunks/3j7r_z1i2d8vm.css","style"]
+:HL["/work/clearflow/_next/static/media/01e4147cff8141ee-s.p.3huc2loe0ie8a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/work/clearflow/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+5:T2444,
+            <div style="margin-bottom:2rem">
+                <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;color:#107C41;text-transform:uppercase">Example project — property management</span>
+                <h1 style="font-size:32px;font-weight:600;margin:1rem 0 1.25rem;line-height:1.2;color:#161616;font-family:var(--font-serif)">How Westgate Property Group eliminated 4-day month-end closes and stopped sending owners incorrect statements</h1>
+                <div style="display:flex;gap:1.5rem;font-size:13px;color:#6b6b6b">
+                <span>Mississauga, ON</span>
+                <span>8 employees</span>
+                <span>Residential property management</span>
+                </div>
+            </div>
+
+            <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:2.5rem">
+                <div style="background:transparent;border: 1px solid #D3CFC3;padding:1.25rem">
+                <div style="font-size:13px;color:#6b6b6b;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.05em">Close time</div>
+                <div style="font-size:24px;font-weight:600;color:#107C41">4 hrs</div>
+                <div style="font-size:12px;color:#6b6b6b;margin-top:2px">was 4 days</div>
+                </div>
+                <div style="background:transparent;border: 1px solid #D3CFC3;padding:1.25rem">
+                <div style="font-size:13px;color:#6b6b6b;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.05em">Rent arrears found</div>
+                <div style="font-size:24px;font-weight:600;color:#107C41">$11,200</div>
+                <div style="font-size:12px;color:#6b6b6b;margin-top:2px">previously invisible</div>
+                </div>
+                <div style="background:transparent;border: 1px solid #D3CFC3;padding:1.25rem">
+                <div style="font-size:13px;color:#6b6b6b;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.05em">Owner errors</div>
+                <div style="font-size:24px;font-weight:600;color:#107C41">0</div>
+                <div style="font-size:12px;color:#6b6b6b;margin-top:2px">in 5 months</div>
+                </div>
+                <div style="background:transparent;border: 1px solid #D3CFC3;padding:1.25rem">
+                <div style="font-size:13px;color:#6b6b6b;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.05em">Project cost</div>
+                <div style="font-size:24px;font-weight:600;color:#161616">$1,800</div>
+                <div style="font-size:12px;color:#6b6b6b;margin-top:2px">fixed price</div>
+                </div>
+            </div>
+
+            <div style="border-top:1px solid #D3CFC3;padding-top:2rem;margin-bottom:2rem">
+                <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.12em;color:#6b6b6b;text-transform:uppercase;margin-bottom:1rem">The problem</div>
+                <p style="font-size:1.125rem;line-height:1.75;color:#161616;margin:0 0 1rem">Westgate Property Group manages 112 residential units across 9 buildings in Mississauga and Brampton for 34 private landlords. With 8 staff and no dedicated property management software, their entire operation ran inside a collection of Excel files that had been patched together over 7 years.</p>
+                <p style="font-size:1.125rem;line-height:1.75;color:#161616;margin:0 0 1rem">The centrepiece was a rent roll workbook with 112 rows, one per unit. Every month, the property manager manually cross-referenced bank deposits against this sheet to confirm which tenants had paid. With 112 units paying across the 1st, 7th, and 15th, this reconciliation took the better part of two days.</p>
+                <p style="font-size:1.125rem;line-height:1.75;color:#161616;margin:0 0 1rem">From the reconciled rent roll, a second staff member then manually built individual owner statements — one per landlord, 34 in total — by copying figures into a Word template. Total month-end process: 4 days, every month, without exception.</p>
+                <p style="font-size:1.125rem;line-height:1.75;color:#161616;margin:0">The owner, Sandra, was manually auditing every statement before it went out — a process she described as "checking someone else's homework at 11pm every month."</p>
+            </div>
+
+            <div style="background:#E8E5DA;padding:2rem;margin-bottom:2rem;border:1px solid #D3CFC3">
+                <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.12em;color:#6b6b6b;text-transform:uppercase;margin-bottom:1.5rem">Before vs. after</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+                <div>
+                    <div style="font-size:14px;font-weight:600;color:#D83B01;margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.05em;">Before</div>
+                    <div style="display:flex;flex-direction:column;gap:0.75rem">
+                    <div style="font-size:15px;color:#161616;padding:0.75rem 1rem;background:var(--color-cream);border:1px solid #D3CFC3">4 days to close every month</div>
+                    <div style="font-size:15px;color:#161616;padding:0.75rem 1rem;background:var(--color-cream);border:1px solid #D3CFC3">Manual bank-to-ledger reconciliation</div>
+                    <div style="font-size:15px;color:#161616;padding:0.75rem 1rem;background:var(--color-cream);border:1px solid #D3CFC3">34 owner statements built by hand</div>
+                    </div>
+                </div>
+                <div>
+                    <div style="font-size:14px;font-weight:600;color:#107C41;margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.05em;">After ClearFlow</div>
+                    <div style="display:flex;flex-direction:column;gap:0.75rem">
+                    <div style="font-size:15px;color:#161616;padding:0.75rem 1rem;background:var(--color-cream);border:1px solid #D3CFC3">4 hours, first week of month</div>
+                    <div style="font-size:15px;color:#161616;padding:0.75rem 1rem;background:var(--color-cream);border:1px solid #D3CFC3">One-click bank CSV reconciliation</div>
+                    <div style="font-size:15px;color:#161616;padding:0.75rem 1rem;background:var(--color-cream);border:1px solid #D3CFC3">All 34 PDFs generated in 6 minutes</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div style="border-top:1px solid #D3CFC3;padding-top:2rem;margin-bottom:2rem">
+                <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.12em;color:#6b6b6b;text-transform:uppercase;margin-bottom:1rem">The solution</div>
+                <p style="font-size:1.125rem;line-height:1.75;color:#161616;margin:0 0 1.5rem">ClearFlow rebuilt the rent roll from scratch as a structured data model with three separated layers — a protected master unit register, a monthly payment input sheet with dropdown validation, and a reconciliation engine that auto-matched incoming bank CSV exports against expected payments.</p>
+                <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:1.5rem">
+                <div style="display:flex;gap:1rem;align-items:flex-start">
+                    <span style="font-family:var(--font-mono);font-size:13px;font-weight:600;color:#107C41;background:#E8E5DA;padding:4px 10px;border-radius:4px;margin-top:2px;flex-shrink:0">01</span>
+                    <p style="font-size:1.125rem;line-height:1.7;color:#161616;margin:0">A <strong style="font-weight:600">bank reconciliation script</strong> that imports the monthly bank CSV export, auto-matches deposits to units using amount and date logic, flags unmatched transactions in red, and produces a confirmed-paid list in one click.</p>
+                </div>
+                <div style="display:flex;gap:1rem;align-items:flex-start">
+                    <span style="font-family:var(--font-mono);font-size:13px;font-weight:600;color:#107C41;background:#E8E5DA;padding:4px 10px;border-radius:4px;margin-top:2px;flex-shrink:0">02</span>
+                    <p style="font-size:1.125rem;line-height:1.7;color:#161616;margin:0">A <strong style="font-weight:600">VBA statement generator</strong> that reads the reconciled data, builds all 34 owner statements automatically — applying each owner's property list, management fee percentage, and GST calculation — and exports them as individually named PDFs.</p>
+                </div>
+                </div>
+            </div>
+
+            <div style="border-left:3px solid #107C41;padding:1.5rem 2rem;margin-bottom:2rem;background:#E8E5DA;border-top: 1px solid #D3CFC3; border-right: 1px solid #D3CFC3; border-bottom: 1px solid #D3CFC3;">
+                <p style="font-size:1.5rem;line-height:1.5;color:#161616;margin:0 0 1rem;font-family:var(--font-serif)">"We found $11,200 in rent arrears in the first reconciliation run that we genuinely had no visibility on. That alone covered the cost of the project many times over. I haven't reviewed a single owner statement before sending since we went live."</p>
+                <div style="font-size:15px;color:#6b6b6b;font-weight:600;">Sandra K., Owner — Westgate Property Group, Mississauga</div>
+            </div>
+          0:{"P":null,"c":["","case-studies","westgate-property"],"q":"","i":false,"f":[[["",{"children":["case-studies",{"children":["westgate-property",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/work/clearflow/_next/static/chunks/3j7r_z1i2d8vm.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/work/clearflow/_next/static/chunks/05-c3ty_6dwfk.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/work/clearflow/_next/static/chunks/14mrh2-p_w84d.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"cormorant_garamond_c98c23a3-module__87621G__variable space_grotesk_2d734543-module__zoMBfa__variable scroll-smooth","children":["$","body",null,{"className":"font-sans antialiased bg-[#F8FAFC] text-[#0F172A]","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[["$","main",null,{"className":"min-h-screen bg-[var(--color-cream)] pt-[90px] relative","children":["$","section",null,{"className":"py-16 relative z-10","children":["$","div",null,{"className":"max-w-[800px] mx-auto px-[5%] font-sans","children":[["$","$L4",null,{"href":"/#case-studies","className":"text-sm font-mono tracking-widest text-[#107C41] uppercase mb-8 inline-block hover:underline","children":"← Back to Case Studies"}],["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$5"}}]]}]}]}],["$L6"],"$L7"]}],{},null,false,null]},null,false,"$@8"]},null,false,"$@8"]},null,false,null],"$L9",false]],"m":"$undefined","G":["$a",["$Lb"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"KkTq0hJQD-jVLj6sP5yrp"}
+c:I[97367,["/work/clearflow/_next/static/chunks/05-c3ty_6dwfk.js","/work/clearflow/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+d:"$Sreact.suspense"
+10:I[97367,["/work/clearflow/_next/static/chunks/05-c3ty_6dwfk.js","/work/clearflow/_next/static/chunks/14mrh2-p_w84d.js"],"ViewportBoundary"]
+12:I[97367,["/work/clearflow/_next/static/chunks/05-c3ty_6dwfk.js","/work/clearflow/_next/static/chunks/14mrh2-p_w84d.js"],"MetadataBoundary"]
+6:["$","script","script-0",{"src":"/work/clearflow/_next/static/chunks/1rxncug86bump.js","async":true,"nonce":"$undefined"}]
+7:["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]
+f:[]
+8:"$Wf"
+9:["$","$1","h",{"children":[null,["$","$L10",null,{"children":"$L11"}],["$","div",null,{"hidden":true,"children":["$","$L12",null,{"children":["$","$d",null,{"name":"Next.Metadata","children":"$L13"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+b:["$","link","0",{"rel":"stylesheet","href":"/work/clearflow/_next/static/chunks/3j7r_z1i2d8vm.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+14:I[27201,["/work/clearflow/_next/static/chunks/05-c3ty_6dwfk.js","/work/clearflow/_next/static/chunks/14mrh2-p_w84d.js"],"IconMark"]
+e:null
+13:[["$","title","0",{"children":"ClearFlow - Engineered Data Automation"}],["$","meta","1",{"name":"description","content":"We eliminate repetitive spreadsheet work for Canadian SMEs."}],["$","link","2",{"rel":"icon","href":"/work/clearflow/favicon.ico?favicon.2vob68tjqpejf.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L14","3",{}]]
