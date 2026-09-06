@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Lantern — one-page websites for local shops</title>
-<meta name="description" content="One-page websites for local businesses. Live in two days, from ₹9,999. Paid once, no monthly fee, domain in your name.">
-<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Lantern — run it on numbers, not on memory</title>
+<meta name="description" content="We write down how your business actually runs, put numbers on it, and build the small systems that keep it running the same way when you are not in the room. Free first call.">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="canonical" href="https://airlantern.com/">
-<meta property="og:title" content="Lantern — one-page websites for local shops">
-<meta property="og:description" content="Live in two days, from ₹9,999. Paid once, no monthly fee, domain in your name.">
+<meta property="og:title" content="Lantern — run it on numbers, not on memory">
+<meta property="og:description" content="We write down how your business actually runs, put numbers on it, and build the small systems that keep it running the same way when you are not in the room. Free first call.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://airlantern.com/">
 <meta property="og:image" content="https://airlantern.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>*{box-sizing:border-box}
 :root{--bg:#F7F4ED;--surf:#FFFEFA;--surf2:#EDE8DC;--text:#1F1B16;--muted:#5E564A;
 --accent:#7A2029;--accentDeep:#5A1219;--onAccent:#FFFEFA;--border:#DED6C6;
@@ -27,11 +27,13 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);fon
 line-height:1.62;-webkit-font-smoothing:antialiased}
 .wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gut)}
 a{color:inherit} img{max-width:100%;display:block}
-h1,h2{font-family:var(--disp);font-weight:400;margin:0;line-height:1.08;letter-spacing:-.014em}
+h1,h2{font-family:var(--disp);font-weight:400;margin:0;line-height:1.08;letter-spacing:-.014em;text-wrap:balance}
 h1{font-size:clamp(2.1rem,7.6vw,3.6rem)}
 h2{font-size:clamp(1.6rem,5.2vw,2.4rem);line-height:1.14}
+h1 i,h2 i{font-style:italic;font-weight:400}
 h3{margin:0;font-size:1.02rem;line-height:1.32;font-weight:600}
 p{margin:0} .lede{color:var(--muted);max-width:58ch}
+b{font-weight:600}
 
 .hdr{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 93%,transparent);
 backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
@@ -40,15 +42,12 @@ backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
 font-size:1.2rem;letter-spacing:-.02em;min-height:44px}
 .brand img{width:19px;height:26px}
 .hdr__nav{display:flex;gap:.85rem;align-items:center}
-/* four nav items do not fit at 375px — the two section links wrap and break the
-   header. They are anchors to content the reader will scroll past anyway; the
-   WhatsApp button is the only one that has to survive. */
 .hdr__nav a:not(.go){display:none}
-@media(min-width:560px){.hdr__nav a:not(.go){display:flex}}
+@media(min-width:640px){.hdr__nav a:not(.go){display:flex}}
 .hdr__nav a{text-decoration:none;font-size:.86rem;font-weight:500;color:var(--muted);
 align-items:center;justify-content:center;min-height:44px;min-width:44px;padding-inline:.4rem;white-space:nowrap}
 .hdr__nav a:not(.go):hover{color:var(--text)}
-.hdr__nav .go{color:var(--onAccent);background:var(--accent);padding:0 1rem;border-radius:2px;font-weight:600}
+.hdr__nav .go{display:inline-flex;align-items:center;justify-content:center;color:var(--onAccent);background:var(--accent);padding:0 1rem;border-radius:2px;font-weight:600}
 .hdr__nav .go:hover{background:var(--accentDeep);color:var(--onAccent)}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;text-decoration:none;
@@ -56,13 +55,12 @@ font-weight:600;font-size:.94rem;padding:.95rem 1.5rem;min-height:48px;border-ra
 border:1px solid transparent;
 transition:background .18s var(--ease-out),border-color .18s var(--ease-out),transform .12s var(--ease-out)}
 .btn:active{transform:scale(.97)}
-.bar a{transition:transform .12s var(--ease-out)}
-.bar a:active{transform:scale(.97)}
 .btn--go{background:var(--accent);color:var(--onAccent)}
 .btn--go:hover{background:var(--accentDeep)}
 .btn--ghost{border-color:var(--border);color:var(--text)}
 .btn--ghost:hover{border-color:var(--text)}
 .cta{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.7rem}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
 .sec{padding-block:3.4rem;scroll-margin-top:70px}
 .sec--tint{background:var(--surf2);border-block:1px solid var(--border)}
@@ -70,79 +68,96 @@ transition:background .18s var(--ease-out),border-color .18s var(--ease-out),tra
 .sec__head h2{margin-bottom:.6rem}
 .hero{padding-block:2.8rem 3rem}
 
-/* the argument: two columns, one line at a time */
-.ba{margin-top:1.9rem;border-top:2px solid var(--text)}
-.ba__hd{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.6rem 0;
-border-bottom:1px solid var(--border)}
-.ba__hd span{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;
-letter-spacing:.15em;color:var(--muted)}
-.ba__hd span:last-child{color:var(--accent);font-weight:600}
-.ba__row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.85rem 0;
-border-bottom:1px solid var(--border);font-size:.92rem}
-.ba__row b{font-weight:400;color:var(--muted)}
-.ba__row i{font-style:normal;font-weight:600}
+.kicker{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;
+color:var(--accent);font-weight:600;margin-top:1.3rem}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.9rem}
+.chips span,.chips a{font-family:var(--mono);font-size:.66rem;letter-spacing:.04em;text-transform:uppercase;
+border:1px solid var(--border);background:var(--surf);padding:.3rem .5rem;border-radius:2px;
+color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:30px}
+.chips a{color:var(--text);border-color:var(--text)}
+.chips a:hover{color:var(--accent);border-color:var(--accent)}
+
+/* give · get · keep */
+.ion{margin-top:1.9rem;border-top:2px solid var(--text);display:grid;gap:0}
+.ion>div{padding:.9rem 0;border-bottom:1px solid var(--border)}
+.ion__l{display:block;font-family:var(--mono);font-size:.72rem;text-transform:uppercase;
+letter-spacing:.15em;color:var(--muted);margin-bottom:.4rem}
+.ion ul{margin:0;padding-left:1.05rem;font-size:.92rem;display:grid;gap:.3rem}
+.ion--keep .ion__l{color:var(--accent);font-weight:600}
+@media(min-width:640px){.ion{grid-template-columns:1fr 1fr 1fr;gap:1.4rem}.ion>div{padding-block:1rem}}
 .ba__foot{padding-top:1.1rem;font-family:var(--disp);font-size:1.12rem;max-width:34ch}
 
-/* the work, as a record rather than a gallery */
+/* records, not galleries */
 .idx{width:100%;border-collapse:collapse;font-size:.92rem}
 .idx th{text-align:left;font-family:var(--mono);font-size:.72rem;text-transform:uppercase;
 letter-spacing:.13em;color:var(--muted);font-weight:600;padding:.5rem .6rem .5rem 0;
 border-bottom:2px solid var(--text)}
 .idx td{padding:.8rem .6rem .8rem 0;border-bottom:1px solid var(--border);vertical-align:baseline}
-.idx .n{font-family:var(--mono);color:var(--muted);width:2.4rem}
+.idx .n{font-family:var(--mono);color:var(--muted);width:2.4rem;white-space:nowrap}
+.idx .n--w{width:5.6rem}
 .idx .nm{font-weight:600}
-.idx .nm a{text-decoration:none;border-bottom:1px solid var(--border);
-  display:flex;align-items:center;min-height:44px}
-.idx .nm a:hover{border-bottom-color:var(--accent);color:var(--accent)}
-.idx .th{width:52px;padding-right:.6rem}
-/* at 375px five columns force every name onto three lines and the page grows by
-   three screens. Trade is the least load-bearing — the thumbnail already shows it. */
-.idx .trade{display:none}
-@media(min-width:560px){.idx .trade{display:table-cell}}
-.idx td,.idx th{padding-block:.6rem}
-.idx .th a{display:flex;align-items:center;min-height:44px;min-width:44px}
-.idx .th img{width:48px;height:60px;object-fit:cover;object-position:top center;
-  border:1px solid var(--border);border-radius:2px;display:block}
-@media(hover:hover) and (pointer:fine){
-  .idx .th img{transition:border-color .18s var(--ease-out),transform .18s var(--ease-out)}
-  .idx tr:hover .th img{border-color:var(--accent);transform:scale(1.04)}
-}
-.idx .st{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;
-color:var(--muted);white-space:nowrap;text-align:right}
-.idx .st--live{color:var(--accent);font-weight:600}
-.idx .st--build{color:var(--text);font-weight:600}
+.idx .d{display:block;font-weight:400;color:var(--muted);font-size:.86rem;margin-top:.15rem;max-width:52ch}
+.idx .t{display:none;color:var(--muted);white-space:nowrap}
+.idx .tm{display:inline;color:var(--muted);font-weight:400;font-size:.86rem}
+@media(min-width:560px){.idx .t{display:table-cell}.idx .tm{display:none}}
+.idx .st{font-family:var(--mono);font-size:.78rem;color:var(--text);white-space:nowrap;text-align:right;
+font-variant-numeric:tabular-nums}
+.idx .st--live{color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem}
+.idx .st small{display:block;font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.idx .sum td{border-top:2px solid var(--text);border-bottom:0;font-weight:600}
+.idx .sum .st{font-weight:600;font-size:.9rem}
 .idx tr:hover td{background:var(--surf)}
+.idx--tight td{padding-block:.55rem}
+.example{margin-top:2.2rem;padding-top:1.6rem;border-top:1px solid var(--border)}
+.example h3{font-family:var(--disp);font-weight:400;font-size:1.3rem;letter-spacing:-.01em;margin-bottom:.4rem}
+.example .lede{margin-bottom:1rem;font-size:.92rem}
+.example .idx{max-width:34rem}
+
+/* the three cases */
+.cases{display:grid;gap:0}
+.case{border-top:2px solid var(--text);padding:1.3rem 0 1.7rem;display:grid;gap:.9rem}
+.case:last-child{border-bottom:1px solid var(--border)}
+.case__meta{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);line-height:1.7}
+.case__meta b{color:var(--accent);font-weight:600}
+.case__hook{font-family:var(--disp);font-size:clamp(1.35rem,4.6vw,1.9rem);line-height:1.18;letter-spacing:-.012em;max-width:24ch;text-wrap:balance}
+.case__body{display:grid;gap:.9rem}
+.case ul{margin:0;padding-left:1.05rem;font-size:.92rem;color:var(--muted);display:grid;gap:.45rem;max-width:60ch}
+.case li b{color:var(--text)}
+.case__got{font-size:.92rem;max-width:60ch}
+.case__got b{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:.15rem}
+.case__cav{font-size:.85rem;color:var(--muted);padding-left:.95rem;border-left:2px solid var(--accent);max-width:56ch}
+@media(min-width:760px){.case{grid-template-columns:38fr 62fr;gap:1rem 2.6rem}.case__meta{grid-column:1/-1}}
 
 .proof{border-left:3px solid var(--accent);padding:.1rem 0 .1rem 1.15rem;max-width:52ch;margin-top:2.1rem}
 .proof q{font-family:var(--disp);font-size:clamp(1.04rem,3.4vw,1.3rem);line-height:1.46;quotes:'\201C' '\201D'}
 .proof__by{margin-top:.75rem;font-size:.85rem;color:var(--muted)}
 .proof__by b{color:var(--text)}
 .stars{color:var(--accent);letter-spacing:.14em;font-size:.9rem;margin-bottom:.5rem}
+.proofs{display:grid;gap:1.7rem 2.4rem;margin-top:1.4rem}
+.proofs .proof{margin-top:0}
+@media(min-width:52rem){.proofs{grid-template-columns:1fr 1fr}}
 
-.tiers{display:grid;gap:.8rem}
-.tier{background:var(--surf);border:1px solid var(--border);padding:1.3rem 1.25rem;position:relative}
-.tier--pick{border-color:var(--accent);border-width:2px}
-.tier__n{font-family:var(--mono);font-weight:600;font-size:1.75rem;letter-spacing:-.03em;
-display:block;margin:.15rem 0 .5rem}
-.tier>p{font-size:.88rem;color:var(--muted);margin-bottom:.75rem}
-.tier ul{margin:0;padding-left:1.05rem;font-size:.86rem;color:var(--muted)}
-.tier li{margin-bottom:.22rem}
-.tier__flag{position:absolute;top:-.66rem;left:1.1rem;background:var(--accent);color:var(--onAccent);
-font-family:var(--mono);font-size:.7rem;font-weight:600;text-transform:uppercase;
-letter-spacing:.08em;padding:.18rem .55rem}
+.who{display:grid;gap:1rem;max-width:62ch}
+.who p{color:var(--text)}
+.who a{text-decoration:none;border-bottom:1px solid var(--accent)}
+.who a:hover{color:var(--accent)}
+
 .note{margin-top:1.3rem;font-size:.85rem;color:var(--muted);max-width:58ch;padding-left:.95rem;
 border-left:2px solid var(--accent)}
 .faq{margin:0;border-top:2px solid var(--text)}
 .faq div{border-bottom:1px solid var(--border);padding-block:1.15rem}
 .faq dt{font-weight:600;font-size:.96rem;margin-bottom:.35rem}
 .faq dd{margin:0;color:var(--muted);font-size:.9rem;max-width:64ch}
+.faq--never dt::before{content:"Never";font-family:var(--mono);font-size:.66rem;text-transform:uppercase;
+letter-spacing:.12em;color:var(--accent);margin-right:.7rem;vertical-align:.12em}
 .ft{padding-block:2rem 6.5rem;border-top:1px solid var(--border);font-size:.85rem;color:var(--muted)}
 .ft a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--accent);
 display:inline-flex;align-items:center;min-height:44px}
 .bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;
 background:var(--barBg)}
 .bar a{padding:1.05rem .5rem;min-height:52px;display:flex;align-items:center;justify-content:center;
-text-decoration:none;font-weight:600;font-size:.94rem;color:var(--barText)}
+text-decoration:none;font-weight:600;font-size:.94rem;color:var(--barText);transition:transform .12s var(--ease-out)}
+.bar a:active{transform:scale(.97)}
 .bar a:first-child{color:var(--barAccent)}
 .bar::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:rgba(247,244,237,.14)}
 @supports (animation-timeline: scroll()){
@@ -152,285 +167,273 @@ text-decoration:none;font-weight:600;font-size:.94rem;color:var(--barText)}
     animation-duration:auto;animation-timeline:scroll(root block)}
 }
 @keyframes barfill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-@media(min-width:760px){.tiers{grid-template-columns:repeat(3,1fr)}.bar{display:none}.ft{padding-bottom:2rem}}
+@media(min-width:760px){.bar{display:none}.ft{padding-bottom:2rem}}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .btn:active,.bar a:active{transform:none}
   .bar::after{animation:none;transform:scaleX(0)}
-  .card:hover,.idx tr:hover td{transition:none}
 }
 
 .askform{margin-top:1.4rem;display:grid;gap:.7rem;max-width:34rem}
 .askform__row{display:grid;gap:.7rem;grid-template-columns:1fr}
 @media(min-width:38rem){.askform__row{grid-template-columns:1fr 1fr}}
-.askform input,.askform textarea{width:100%;background:#fff;border:1px solid var(--rule,#d9d2c4);
+.askform input,.askform textarea{width:100%;background:#fff;border:1px solid var(--border);
   border-radius:6px;padding:.7rem .85rem;font:inherit;color:inherit}
-.askform input:focus,.askform textarea:focus{outline:2px solid var(--go,#1c6553);outline-offset:1px}
+.askform input:focus,.askform textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
 .askform button{justify-self:start}
-.askform__hint{font-size:.8125rem;color:var(--dim,#6d6a60);margin:0}
+.askform__hint{font-size:.8125rem;color:var(--muted);margin:0}
 .askform__state{font-size:.9375rem;margin:0}
 
-.proofs{display:grid;gap:1.7rem 2.4rem;margin-top:2.1rem}
-.proofs .proof{margin-top:0}
-@media(min-width:52rem){.proofs{grid-template-columns:1fr 1fr}}
+/* what you get — six things, not a sequence */
+.sys{display:grid;gap:1rem;border-top:2px solid var(--text);padding-top:1.1rem}
+.sys>div{border-bottom:1px solid var(--border);padding-bottom:1rem}
+.sys h3{font-size:1.02rem;margin-bottom:.3rem}
+.sys p{font-size:.92rem;color:var(--muted);max-width:52ch}
+@media(min-width:640px){.sys{grid-template-columns:1fr 1fr;gap:1rem 2.4rem}}
+/* the sample exception report */
+.rep{max-width:34rem;background:var(--surf);border:1px solid var(--border);padding:1.2rem 1.2rem 1rem;position:relative;margin-top:.6rem}
+.rep__flag{position:absolute;top:-.66rem;left:1.1rem;background:var(--accent);color:var(--onAccent);font-family:var(--mono);font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:.18rem .55rem}
+.rep__hd{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);padding:.3rem 0 .5rem;border-bottom:2px solid var(--text);display:flex;justify-content:space-between;gap:1rem}
+.rep__row{display:grid;grid-template-columns:1fr auto;gap:1rem;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.92rem;align-items:baseline}
+.rep__row b{font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:600}
+.rep__row small{display:block;font-size:.8rem;color:var(--muted);font-weight:400}
+.rep__row--need{color:var(--accent)}
+.rep__row--need b{color:var(--accent)}
+.ai{display:grid;gap:1rem;max-width:62ch}
+.ai p{font-size:1rem}
+.case__body p{font-size:.92rem;color:var(--muted);max-width:60ch}
+.ion p{font-size:.92rem;max-width:34ch}
+.who__h{margin-top:2.4rem;font-family:var(--disp);font-weight:400;font-size:1.35rem;letter-spacing:-.01em}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "@id": "https://airlantern.com/#lantern", "name": "Lantern", "description": "One-page websites for local businesses. Live in two days, from ₹9,999. Paid once, no monthly fee, domain in your name.", "url": "https://airlantern.com/", "image": "https://airlantern.com/og.png", "telephone": "+91-9711105497", "email": "vaishnandit@airlantern.com", "founder": {"@type": "Person", "name": "Nandit Vaish"}, "areaServed": {"@type": "Country", "name": "India"}, "priceRange": "₹9,999–₹40,000", "makesOffer": [{"@type": "Offer", "name": "Starter", "price": "9999", "priceCurrency": "INR", "description": "One page that does the whole job."}, {"@type": "Offer", "name": "Complete", "price": "15000", "priceCurrency": "INR", "description": "Online, and set up so Google can find you."}, {"@type": "Offer", "name": "Presence", "price": "21000", "priceCurrency": "INR", "description": "For a shop with more than one thing to say."}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "₹9,999 mein poori website? Kuch gadbad toh nahi?", "acceptedAnswer": {"@type": "Answer", "text": "No catch. At ₹9,999 you get one page, built properly, live in two days, with the call and WhatsApp buttons that actually bring you work. What it does not include is the Google setup and your own domain — that is ₹15,000, and it is the difference between having a website and being found."}}, {"@type": "Question", "name": "Har mahine paisa dena padega?", "acceptedAnswer": {"@type": "Answer", "text": "No. Not to us, ever. Hosting and the security certificate cost us nearly nothing, so we don't bill you for them. The only recurring cost is your domain, roughly ₹1,000 a year, paid directly to the registrar in your own name."}}, {"@type": "Question", "name": "Site kiski hogi agar main chala jaun?", "acceptedAnswer": {"@type": "Answer", "text": "Yours. The domain is registered in your name on your email from the first day. We configure it; we never hold it. If you leave, you get the files and the domain moves with you. There is nothing to negotiate because there is nothing of yours that we're holding."}}, {"@type": "Question", "name": "Photos achhi nahi hain mere paas.", "acceptedAnswer": {"@type": "Answer", "text": "Most shops don't have them, and it's the single most common reason a site never gets finished. Your phone is enough. I'll tell you exactly which five shots to take and where to stand. If there's genuinely nothing usable, we design around it rather than filling the page with stock photos of someone else's shop."}}, {"@type": "Question", "name": "Aap gayab toh nahi ho jaoge?", "acceptedAnswer": {"@type": "Answer", "text": "Fair question to ask a one-person studio, and the honest answer is that you are holding the safeguard: the domain is yours, the hosting account can be yours, and the site is a plain set of files you can hand to anyone. Nothing here depends on me still being around."}}, {"@type": "Question", "name": "Will I actually come up on Google?", "acceptedAnswer": {"@type": "Answer", "text": "On Complete and above you'll be set up correctly for it: the right page title, your address and hours marked up the way Google reads them, a sitemap submitted to Search Console. That last step is the one almost nobody does. What nobody honest can promise you is a position — anyone guaranteeing you the top spot is selling you something else."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "@id": "https://airlantern.com/#lantern", "name": "Lantern", "description": "We write down how a business actually runs, put numbers on it, and build the small systems that keep it running without the owner in every file.", "url": "https://airlantern.com/", "telephone": "+91-9711105497", "email": "vaishnandit@airlantern.com", "founder": {"@type": "Person", "name": "Nandit Vaish", "url": "https://nanditvaish.com"}, "areaServed": {"@type": "Country", "name": "India"}, "priceRange": "₹15,000–₹75,000", "makesOffer": [{"@type": "Offer", "name": "Eight weeks, one process", "price": "75000", "priceCurrency": "INR", "description": "Six steps end to end on one process, with a before-and-after and a trained team."}, {"@type": "Offer", "name": "Another process", "price": "40000", "priceCurrency": "INR", "description": "Same method on a second process."}, {"@type": "Offer", "name": "One piece of the system", "price": "15000", "priceCurrency": "INR", "description": "A checklist, an exception report, a dashboard, or a data cleanup."}, {"@type": "Offer", "name": "The AI layer", "price": "40000", "priceCurrency": "INR", "description": "AI on a process already documented."}, {"@type": "Offer", "name": "The operating record", "price": "25000", "priceCurrency": "INR", "description": "The living manual, kept current monthly."}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What do you need from us?", "acceptedAnswer": {"@type": "Answer", "text": "One named person, a few hours a week, and your own numbers as they are, agreed by email before we start."}}, {"@type": "Question", "name": "Will you touch our books, filings or software?", "acceptedAnswer": {"@type": "Answer", "text": "No. We read, write down, and build alongside. Nothing live is ours to operate."}}, {"@type": "Question", "name": "Who owns what you make?", "acceptedAnswer": {"@type": "Answer", "text": "You. The map, the checklists, the numbers, the templates."}}, {"@type": "Question", "name": "What if a number is wrong?", "acceptedAnswer": {"@type": "Answer", "text": "Anything we couldn't measure is marked as unmeasured next to the figure."}}, {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "Eight weeks for the first process, spread across your calendar, and about five working days of our time for each one after."}}, {"@type": "Question", "name": "Do we have to buy software?", "acceptedAnswer": {"@type": "Answer", "text": "Almost never. Whatever your trade already uses is set up first."}}, {"@type": "Question", "name": "Where does AI come in?", "acceptedAnswer": {"@type": "Answer", "text": "After the process is on paper and the numbers are real. It runs on a subscription in your name, about ₹2,000 a month."}}, {"@type": "Question", "name": "Do you know our industry?", "acceptedAnswer": {"@type": "Answer", "text": "Not on day one. Your people do, and the method exists to get it out of their heads onto paper."}}, {"@type": "Question", "name": "We just want a website.", "acceptedAnswer": {"@type": "Answer", "text": "Then the websites page: from ₹9,999, live in two days, on your own domain."}}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5F1E5D72D"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
 gtag('js',new Date());gtag('config','G-M5F1E5D72D');</script></head><body>
-
 <header class="hdr"><div class="wrap hdr__in">
-  <a class="brand" href="/"><img src="assets/brand/lantern-mark-v7.svg" alt="" width="19" height="26" aria-hidden="true"><span>lantern</span></a>
-  <nav class="hdr__nav"><a href="#work">Work</a><a href="#price">Build</a><a href="#tuneup">Tune-Up</a><a class="go" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20I%20saw%20the%20Lantern%20site.%20My%20shop%20is%20" target="_blank" rel="noopener">WhatsApp</a></nav>
+  <a class="brand" href="/"><img src="/assets/brand/lantern-mark-v7.svg" alt="" width="19" height="26" aria-hidden="true"><span>lantern</span></a>
+  <nav class="hdr__nav"><a href="#offer">The offer</a><a href="#system">What you get</a><a href="#price">Price</a><a href="#work">Work</a><a class="go" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20we%20spoke.%20My%20business%20is%20" target="_blank" rel="noopener">WhatsApp</a></nav>
 </div></header>
 
 <main>
 <section class="hero"><div class="wrap">
-  <h1>Same shop.<br>Different Tuesday.</h1>
-  <p class="lede" style="margin-top:1.1rem">Nothing about your business changes. What changes is what
-    a stranger finds when they look you up — and whether they can reach you in one tap.</p>
-  <div class="ba">
-    <div class="ba__hd"><span>Today</span><span>Two days later</span></div>
-      <div class="ba__row"><b>Search finds a map pin and nothing else</b><i>Your own address, submitted to Google</i></div>
-      <div class="ba__row"><b>Hours unclear, so they don't risk the trip</b><i>Hours, map and directions on the screen</i></div>
-      <div class="ba__row"><b>The number has to be memorised and retyped</b><i>Call and WhatsApp, one tap, every screen</i></div>
-      <div class="ba__row"><b>Photos live on somebody's phone</b><i>Photos cleaned, cropped and placed</i></div>
-      <div class="ba__row"><b>They compare you with a shop that has a link</b><i>You are the shop with the link</i></div>
-    <p class="ba__foot">Two shops, same street, same rating. One has a link.</p>
+  <h1>Run it on numbers,<br>not on <i>memory.</i></h1>
+  <p class="lede" style="margin-top:1.1rem">We write down how your business actually runs, put numbers on it, and build the
+    small systems that keep it running the same way when you are not in the room.</p>
+  <p class="kicker">If we've just spoken on the phone, this page is the long version.</p>
+  <div class="chips">
+    <span>Big-4 method</span>
+    <span>CS engineer · builds with AI daily</span>
+    <a href="https://nanditvaish.com" target="_blank" rel="noopener">Research · 252 million rows</a>
   </div>
-  <div class="cta"><a class="btn btn--go" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20I%20saw%20the%20Lantern%20site.%20My%20shop%20is%20" target="_blank" rel="noopener">Message me on WhatsApp</a>
-    <a class="btn btn--ghost" href="#work">See the work</a></div>
+  <div class="cta"><a class="btn btn--go" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20we%20spoke.%20My%20business%20is%20" target="_blank" rel="noopener">Message me on WhatsApp</a>
+    <a class="btn btn--ghost" href="#offer">The offer, in one screen</a></div>
 </div></section>
 
-
-<section class="sec"><div class="wrap">
-  <div class="sec__head"><h2>A shop without a website isn't invisible. It's just harder to trust.</h2>
-    <p class="lede">Your customer already found your name — on Maps, in a WhatsApp forward, from a
-      neighbour. What they're looking for now is a reason to believe you're still open, still good,
-      and worth the trip.</p></div>
-  <table class="idx">
-    <tbody>
-      <tr><td class="n">01</td><td class="nm">Two</td><td>shops paying. Both live, on their own domains.</td></tr>
-      <tr><td class="n">02</td><td class="nm">Twelve</td><td>demonstrations, not clients — and labelled that way.</td></tr>
-      <tr><td class="n">03</td><td class="nm">Two days</td><td>from the go-ahead to a live address you can send anyone.</td></tr>
-    </tbody></table>
-  <p class="note">That's the honest position. A bigger studio would show you logos. I'd rather you
-    clicked through the actual work and decided for yourself — every row below opens.</p>
+<section class="sec sec--tint" id="offer"><div class="wrap">
+  <div class="sec__head"><h2>Lantern, in one screen.</h2></div>
+  <div class="ion">
+    <div><span class="ion__l">Who it's for</span>
+      <p>Owner-run businesses where everything still crosses the owner: a practice, a factory, a shop with two branches, a label selling online.</p></div>
+    <div><span class="ion__l">What we do</span>
+      <p>Write down how it actually runs, measure it, and build the small systems that let it run the same way whether or not you are watching. Then load AI on top of what is now written down.</p></div>
+    <div><span class="ion__l">What it costs</span>
+      <p>A free call. Eight weeks on one process, ₹75,000. After that, per piece, one-time or monthly, and always something you chose.</p></div>
+  </div>
+  <p class="ba__foot">Most businesses we walk into are run well and recorded nowhere. That is the gap.</p>
 </div></section>
 
-<section class="sec sec--tint" id="work"><div class="wrap">
-  <div class="sec__head"><h2>Every build, in order.</h2>
-    <p class="lede">No logo wall, no gallery. This is the whole list. Two are paying clients, both
-      live on their own domains. Twelve are demonstrations for businesses that have not
-      hired us, and they are marked that way, because a studio that blurs that line will blur other
-      things too. The last one is my own — ClearFlow, the automation studio I run alongside this.</p></div>
-  <table class="idx">
-    <thead><tr><th></th><th></th><th>Shop</th><th class="trade">Trade</th><th style="text-align:right">Status</th></tr></thead>
-    <tbody>
-        <tr><td class="n">01</td>
-        <td class="th"><a href="https://drmonaprabhakar.com" target="_blank" rel="noopener"><img src="assets/work/dr-mona-prabhakar.webp" alt="The site built for Dr. Mona Prabhakar" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="https://drmonaprabhakar.com" target="_blank" rel="noopener">Dr. Mona Prabhakar</a></td><td class="trade">Orthodontist</td>
-        <td class="st st--live">Live client</td></tr>
-        <tr><td class="n">02</td>
-        <td class="th"><a href="https://mbpeachesandcream.com" target="_blank" rel="noopener"><img src="assets/work/peaches-and-cream.webp" alt="The site built for Peaches &amp; Cream" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="https://mbpeachesandcream.com" target="_blank" rel="noopener">Peaches &amp; Cream</a></td><td class="trade">Salon, studio &amp; academy</td>
-        <td class="st st--live">Live client</td></tr>
-        <tr><td class="n">03</td>
-        <td class="th"><a href="work/poshak-boutique/" target="_blank" rel="noopener"><img src="assets/work/poshak-boutique.webp" alt="The site built for Poshak" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="work/poshak-boutique/" target="_blank" rel="noopener">Poshak</a></td><td class="trade">Boutique</td>
-        <td class="st">Sample</td></tr>
-        <tr><td class="n">04</td>
-        <td class="th"><a href="work/rd-creations/" target="_blank" rel="noopener"><img src="assets/work/rd-creations.webp" alt="The site built for RD Creations" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="work/rd-creations/" target="_blank" rel="noopener">RD Creations</a></td><td class="trade">Tailor &amp; boutique</td>
-        <td class="st">Sample</td></tr>
-        <tr><td class="n">05</td>
-        <td class="th"><a href="work/queen-madonna/" target="_blank" rel="noopener"><img src="assets/work/queen-madonna.webp" alt="The site built for Queen Madonna" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="work/queen-madonna/" target="_blank" rel="noopener">Queen Madonna</a></td><td class="trade">Salon</td>
-        <td class="st">Sample</td></tr>
-        <tr><td class="n">06</td>
-        <td class="th"><a href="work/queen-madonna-premium/" target="_blank" rel="noopener"><img src="assets/work/queen-madonna-premium.webp" alt="The site built for Queen Madonna" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="work/queen-madonna-premium/" target="_blank" rel="noopener">Queen Madonna</a></td><td class="trade">Salon · second direction</td>
-        <td class="st">Sample</td></tr>
-        <tr><td class="n">07</td>
-        <td class="th"><a href="work/beauty-life-salon/" target="_blank" rel="noopener"><img src="assets/work/beauty-life-salon.webp" alt="The site built for Beauty Life" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="work/beauty-life-salon/" target="_blank" rel="noopener">Beauty Life</a></td><td class="trade">Salon</td>
-        <td class="st">Sample</td></tr>
-        <tr><td class="n">08</td>
-        <td class="th"><a href="work/modern-looks-salon/" target="_blank" rel="noopener"><img src="assets/work/modern-looks-salon.webp" alt="The site built for Modern Looks" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="work/modern-looks-salon/" target="_blank" rel="noopener">Modern Looks</a></td><td class="trade">Salon</td>
-        <td class="st">Sample</td></tr>
-        <tr><td class="n">09</td>
-        <td class="th"><a href="work/british-unisex-salon/" target="_blank" rel="noopener"><img src="assets/work/british-unisex-salon.webp" alt="The site built for British Unisex" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="work/british-unisex-salon/" target="_blank" rel="noopener">British Unisex</a></td><td class="trade">Salon</td>
-        <td class="st">Sample</td></tr>
-        <tr><td class="n">10</td>
-        <td class="th"><a href="work/asha-clinic/" target="_blank" rel="noopener"><img src="assets/work/asha-clinic.webp" alt="The site built for Asha Clinic" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="work/asha-clinic/" target="_blank" rel="noopener">Asha Clinic</a></td><td class="trade">Clinic</td>
-        <td class="st">Sample</td></tr>
-        <tr><td class="n">11</td>
-        <td class="th"><a href="work/dr-deepika-aggarwal/" target="_blank" rel="noopener"><img src="assets/work/dr-deepika-aggarwal.webp" alt="The site built for Dr. Deepika Aggarwal" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="work/dr-deepika-aggarwal/" target="_blank" rel="noopener">Dr. Deepika Aggarwal</a></td><td class="trade">Doctor</td>
-        <td class="st">Sample</td></tr>
-        <tr><td class="n">12</td>
-        <td class="th"><a href="work/bodyline-gym/" target="_blank" rel="noopener"><img src="assets/work/bodyline-gym.webp" alt="The site built for Bodyline" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="work/bodyline-gym/" target="_blank" rel="noopener">Bodyline</a></td><td class="trade">Gym</td>
-        <td class="st">Sample</td></tr>
-        <tr><td class="n">13</td>
-        <td class="th"><a href="work/beast-mode-gym/" target="_blank" rel="noopener"><img src="assets/work/beast-mode-gym.webp" alt="The site built for Beast Mode" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="work/beast-mode-gym/" target="_blank" rel="noopener">Beast Mode</a></td><td class="trade">Gym</td>
-        <td class="st">Sample</td></tr>
-        <tr><td class="n">14</td>
-        <td class="th"><a href="work/empire-of-fitness/" target="_blank" rel="noopener"><img src="assets/work/empire-of-fitness.webp" alt="The site built for Empire of Fitness" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="work/empire-of-fitness/" target="_blank" rel="noopener">Empire of Fitness</a></td><td class="trade">Gym</td>
-        <td class="st">Sample</td></tr>
-        <tr><td class="n">15</td>
-        <td class="th"><a href="/work/clearflow/" target="_blank" rel="noopener"><img src="assets/work/clearflow.webp" alt="The site built for ClearFlow" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="/work/clearflow/" target="_blank" rel="noopener">ClearFlow</a></td><td class="trade">Data automation</td>
-        <td class="st st--build">Own project</td></tr>
-    </tbody></table>
-  <div class="proofs">
-  <div class="proof">
-    <div class="stars">★★★★★</div>
-    <q>Extremely happy &amp; satisfied with the website designed by Mr Nandit Vaish (LANTERN). He took personal interest in curating the content as per my requirements &amp; suggestions. Was very prompt in making all the changes that I mentioned and all this at a very reasonable cost! I have been fortunate to have engaged his services…. Thanks from the bottom of my heart.</q>
-    <p class="proof__by"><b>Mona Prabhakar</b> · Google review, August 2026 · row 01 above</p>
-  </div>
-  <div class="proof">
-    <div class="stars">★★★★★</div>
-    <q>Amazing work on our website by Nandit,very creative and asthetically pleasing website created..thank you so much.</q>
-    <p class="proof__by"><b>Manpreet Bhasin</b> · Peaches &amp; Cream · Google review, August 2026 · row 02 above</p>
-  </div>
+<section class="sec" id="system"><div class="wrap">
+  <div class="sec__head"><h2>What you get.</h2>
+    <p class="lede">A system is not software. It is the handful of things that let a business run the same
+      way whether or not you are watching. These are the ones we build, in the order they usually pay off.</p></div>
+  <div class="sys">
+    <div><h3>A checklist for what comes in</h3><p>Every job starts with the same request list, so the right inputs arrive complete the first time and nobody spends the week chasing.</p></div>
+    <div><h3>A written way of working</h3><p>Each process on paper, the way it really runs: who does what, in what order, where it breaks. Your people correct it until it is true.</p></div>
+    <div><h3>The one page you read</h3><p>An exception report. What is late, what is stuck, what needs your decision. The rest moves without you.</p></div>
+    <div><h3>Numbers that are yours</h3><p>Cost per job, days per job, where the margin actually sits. Measured on your own work, not estimated from a template.</p></div>
+    <div><h3>A tracker that already exists</h3><p>We don't build software. Your trade already has a tracker; we set it up properly, load your process into it, and train your people on it.</p></div>
+    <div><h3>AI on top, last</h3><p>Once the process is on paper and the numbers are real, AI stops guessing. It drafts in your templates, checks against your figures and flags what needs a person, on every job, every day.</p></div>
   </div>
 </div></section>
-
 
 <section class="sec" id="how"><div class="wrap">
-  <div class="sec__head"><h2>Four steps. Two days.</h2></div>
+  <div class="sec__head"><h2>Eight weeks. <i>One</i> process.</h2>
+    <p class="lede">We start with the job that carries your year, in your quiet months, and take it apart
+      end to end. Six steps, in this order, every time.</p></div>
   <table class="idx">
+    <thead><tr><th></th><th>Step</th><th>What exists by then</th></tr></thead>
     <tbody>
-      <tr><td class="n">01</td><td class="nm">We talk</td><td>Ten minutes on the phone. What you sell, who walks in, what you want them to do next.</td></tr>
-      <tr><td class="n">02</td><td class="nm">You approve the scope</td><td>Written down, with the price on it, before anything is built. Half up front.</td></tr>
-      <tr><td class="n">03</td><td class="nm">I build it</td><td>Your text, your photos, your colours. You see it before anyone else does.</td></tr>
-      <tr><td class="n">04</td><td class="nm">It goes live</td><td>On your own domain, in your own name. Submitted to Google the same day.</td></tr>
+      <tr><td class="n">01</td><td class="nm">Ask<span class="d">The people who do the work, before the owner.</span></td><td>One job, told start to finish in their words.</td></tr>
+      <tr><td class="n">02</td><td class="nm">Watch<span class="d">A few hours beside someone doing the real thing.</span></td><td>Every template, message and spreadsheet the job touches.</td></tr>
+      <tr><td class="n">03</td><td class="nm">Write down<span class="d">The process as it runs, not as anyone remembers it.</span></td><td>A map your own people have signed off as true.</td></tr>
+      <tr><td class="n">04</td><td class="nm">Measure<span class="d">Hours per step, cost per job, waiting time kept apart from working time.</span></td><td>The first honest number: what one job costs you.</td></tr>
+      <tr><td class="n">05</td><td class="nm">Redesign<span class="d">Fewer steps, the right person at each, a template at every handoff.</span></td><td>The new process and its checklists, ready to use.</td></tr>
+      <tr><td class="n">06</td><td class="nm">Pilot<span class="d">A handful of live jobs through the new way. Measure again.</span></td><td>Before and after on one page, and a team that runs it.</td></tr>
     </tbody></table>
+  <p class="note">A one-paragraph note every Friday and a thirty-minute call every two weeks. You always
+    know where it stands and never have to ask. Your peak season sets the pace, not our calendar.</p>
+</div></section>
+
+<section class="sec sec--tint" id="ai"><div class="wrap">
+  <div class="sec__head"><h2>Why AI comes last, and why not just do it yourself.</h2></div>
+  <div class="ai">
+    <p>AI answers from what it is given. Hand it a process nobody has written down and it hands back the
+      industry's average, quickly and with confidence, including the parts it made up. Hand it your own
+      templates, your measured numbers and a process your team has agreed is true, and it answers as your
+      business. Average in, average out. Yours in, yours out.</p>
+    <p>That is the order, and it is also where the return is. On a process that has been written down, AI
+      is no longer an experiment. It prepares the file in your format, reconciles against your numbers,
+      drafts the letter your senior would have drafted, and flags the three things that need a human, on
+      every job, every day, without a training period and without leaving. Loaded onto a business that runs
+      on memory, the same tool produces confident nonsense. The writing-down is what turns it from a gamble
+      into an employee.</p>
+    <p>Could you do this yourselves? Some owners try, and the tool is not the scarce part. The scarce part
+      is the weeks of sitting with your team, writing down how the work really moves, and measuring it,
+      without losing the thread when the phone rings on a Tuesday. That is what I have done inside large
+      finance functions and inside three small businesses this year, and it is the part that makes the AI
+      worth paying for.</p>
+  </div>
 </div></section>
 
 <section class="sec" id="price"><div class="wrap">
-  <div class="sec__head"><h2>A new website. The price is on the page, because that's the whole point.</h2>
-    <p class="lede">Nobody should have to sit through three meetings to find out a number. Paid once.
-      No monthly bill from us, ever.</p></div>
-  <div class="tiers">
-      <div class="tier">
-        <h3>Starter</h3><span class="tier__n">₹9,999</span><p>One page that does the whole job.</p>
-        <ul><li>One page, built for phones first</li><li>Call and WhatsApp on every screen</li><li>Map, hours and directions</li><li>Your photos cleaned and placed</li><li>Live in two days</li></ul></div>
-      <div class="tier tier--pick"><span class="tier__flag">most shops take this</span>
-        <h3>Complete</h3><span class="tier__n">₹15,000</span><p>Online, and set up so Google can find you.</p>
-        <ul><li>Everything in Starter</li><li>Your own domain, registered in your name</li><li>All the words written for you</li><li>Google Business Profile connected</li><li>Search Console set up and the sitemap submitted</li></ul></div>
-      <div class="tier">
-        <h3>Presence</h3><span class="tier__n">₹21,000</span><p>For a shop with more than one thing to say.</p>
-        <ul><li>Everything in Complete</li><li>Three pages instead of one</li><li>Change your own prices and photos</li><li>Hindi and English</li></ul></div>
-  </div>
-  <p class="note">Changes later are bought in small packs (₹699 for two, ₹1,499 for five) and the
-    credits don't expire. Hosting and the security certificate cost you nothing from us. Your domain
-    renews directly with the registrar, about ₹1,000 a year, in your name, and we remind you 60 days
-    before it lapses.</p>
-</div></section>
-
-
-<section class="sec" id="tuneup"><div class="wrap">
-  <div class="sec__head"><h2>Already have a website?</h2>
-    <p class="lede">Then you don't need a new one. Most sites we check are not broken — they
-      are simply unreachable. Of 387 shop websites we scanned, <b>61% had no WhatsApp button</b>
-      and <b>34% had a phone number you could not tap</b>. The customer is standing on the page
-      with a phone in their hand and cannot reach you.</p></div>
+  <div class="sec__head"><h2>The price is on the page.</h2>
+    <p class="lede">You should not need three meetings to hear a number. The call is free, the first
+      eight weeks are a fixed price, and everything after is per piece, so the scope is always something
+      you chose.</p></div>
   <table class="idx">
-    <thead><tr><th></th><th>What you get</th><th>How long</th><th style="text-align:right">Price</th></tr></thead>
+    <thead><tr><th></th><th>What</th><th class="t">Time</th><th style="text-align:right">Price</th></tr></thead>
     <tbody>
-      <tr><td class="n">01</td><td class="nm">Free check</td><td>5 minutes</td><td class="st st--live">Free</td></tr>
-      <tr><td class="n">02</td><td class="nm">Written report</td><td>Half a day</td><td class="st">₹12,000</td></tr>
-      <tr><td class="n">03</td><td class="nm">Tune-Up — the fixes made</td><td>Two days</td><td class="st">₹18,000</td></tr>
-      <tr><td class="n">04</td><td class="nm">Full Tune-Up — shop with 10+ pages</td><td>Five days</td><td class="st">₹40,000</td></tr>
-      <tr><td class="n">05</td><td class="nm">Care plan — checked every month</td><td>Monthly</td><td class="st">₹6,000/mo</td></tr>
+      <tr><td class="n">01</td><td class="nm">A call<span class="d">Thirty minutes. Which process to start with, and whether it is ready for anything more than paper. <span class="tm">· 30 minutes</span></span></td><td class="t">30 minutes</td><td class="st st--live">Free</td></tr>
+      <tr><td class="n">02</td><td class="nm">Eight weeks, one process<span class="d">The six steps, end to end, on the job that carries your year. You end with a before-and-after on one page, the templates, and a team that runs it without you. <span class="tm">· 8 weeks</span></span></td><td class="t">8 weeks</td><td class="st">₹75,000</td></tr>
+      <tr><td class="n">03</td><td class="nm">Another process<span class="d">Same method, faster, because the first one built the templates. <span class="tm">· 5 days of our time</span></span></td><td class="t">5 days of our time</td><td class="st">from ₹40,000</td></tr>
+      <tr><td class="n">04</td><td class="nm">One piece of the system<span class="d">A checklist, an exception report, a dashboard, or a cleanup of messy data. Scoped on the call. <span class="tm">· scoped</span></span></td><td class="t">scoped</td><td class="st">from ₹15,000</td></tr>
+      <tr><td class="n">05</td><td class="nm">The AI layer<span class="d">On a process already on paper: your templates, your numbers and your rules loaded, so it drafts, checks and flags the way your firm would. Runs on a subscription in your name. <span class="tm">· 5 days of our time</span></span></td><td class="t">5 days of our time</td><td class="st">from ₹40,000</td></tr>
+      <tr><td class="n">06</td><td class="nm">The operating record<span class="d">The living manual, kept current every month, once two processes are written. <span class="tm">· monthly</span></span></td><td class="t">monthly</td><td class="st">₹25,000<small>a month</small></td></tr>
     </tbody></table>
-  <p class="note">The free check is a real check, not a sales call — you get three or four lines
-    on WhatsApp saying what is missing, and you can act on them yourself if you want. The written
-    report is credited in full against a Tune-Up booked within 30 days.</p>
-
+  <p class="note">Training and handover, ₹10,000, on every piece: a system nobody was taught is just a
+    document. Nothing gets built that already exists, and nothing is quoted that isn't written down first.</p>
 </div></section>
 
-<section class="sec sec--tint" id="reviews"><div class="wrap">
-  <div class="sec__head"><h2>Every review, in order.</h2>
-    <p class="lede">Same rule as the builds: this is the whole list, not a selection. The number is
-      what that site scored out of 100 when we checked it — the report itself names every finding
-      and shows the evidence, so the owner can confirm it without taking our word for it.</p></div>
-  <table class="idx">
-    <thead><tr><th></th><th></th><th>Business</th><th class="trade">Trade</th><th style="text-align:right">Score</th></tr></thead>
-    <tbody>
-        <tr><td class="n">01</td>
-        <td class="th"><a href="/work/punyas-kriti/" target="_blank" rel="noopener"><img src="assets/work/punyas-kriti.webp" alt="The review we published for Punya's Kriti" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="/work/punyas-kriti/" target="_blank" rel="noopener">Punya's Kriti</a></td><td class="trade">Loungewear label</td>
-        <td class="st"><b>31</b>/100</td></tr>
-        <tr><td class="n">02</td>
-        <td class="th"><a href="/work/anagh-routes/" target="_blank" rel="noopener"><img src="assets/work/anagh-routes.webp" alt="The review we published for Anagh Routes" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="/work/anagh-routes/" target="_blank" rel="noopener">Anagh Routes</a></td><td class="trade">Travel operator</td>
-        <td class="st"><b>54</b>/100</td></tr>
-        <tr><td class="n">03</td>
-        <td class="th"><a href="/work/v-sachdeva-associates/" target="_blank" rel="noopener"><img src="assets/work/v-sachdeva-associates.webp" alt="The review we published for V. Sachdeva &amp; Associates" width="520" height="650" loading="lazy"></a></td>
-        <td class="nm"><a href="/work/v-sachdeva-associates/" target="_blank" rel="noopener">V. Sachdeva &amp; Associates</a></td><td class="trade">Chartered accountants</td>
-        <td class="st"><b>37</b>/100</td></tr>
-    </tbody></table>
-  <p class="note">Every one of these is kept out of Google's index, so our page can never turn up
-    in a search for their name — the report is theirs to act on, not a billboard. A low score is
-    not an insult either: each of these sites was built by somebody, and most of what we find is
-    cheap to fix.</p>
-
-  <div class="cta"><a class="btn btn--go" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20I%20already%20have%20a%20website.%20Please%20run%20the%20free%20check%20on%20" target="_blank" rel="noopener">Get the free check</a>
-    <a class="btn btn--ghost" href="tel:+919711105497">+91 97111 05497</a></div>
-</div></section>
-
-<section class="sec sec--tint"><div class="wrap">
-  <div class="sec__head"><h2>It's one person, and that's the point.</h2>
-    <p class="lede">I'm Nandit. I build these myself. There's no account manager, no ticket number,
-      and nobody to pass you to. When you call the number on this page, I pick it up.</p></div>
-  <p class="note">I take three builds a week. Not because demand is overwhelming — because two days
-    per shop stops being two days the moment I'm running six at once. If the week is full, I'll tell
-    you that instead of taking your money and going quiet.</p>
-</div></section>
-
-<section class="sec"><div class="wrap">
-  <div class="sec__head"><h2>Questions shop owners actually ask</h2></div>
-  <dl class="faq">
-      <div><dt>₹9,999 mein poori website? Kuch gadbad toh nahi?</dt><dd>No catch. At ₹9,999 you get one page, built properly, live in two days, with the call and WhatsApp buttons that actually bring you work. What it does not include is the Google setup and your own domain — that is ₹15,000, and it is the difference between having a website and being found.</dd></div>
-      <div><dt>Har mahine paisa dena padega?</dt><dd>No. Not to us, ever. Hosting and the security certificate cost us nearly nothing, so we don't bill you for them. The only recurring cost is your domain, roughly ₹1,000 a year, paid directly to the registrar in your own name.</dd></div>
-      <div><dt>Site kiski hogi agar main chala jaun?</dt><dd>Yours. The domain is registered in your name on your email from the first day. We configure it; we never hold it. If you leave, you get the files and the domain moves with you. There is nothing to negotiate because there is nothing of yours that we're holding.</dd></div>
-      <div><dt>Photos achhi nahi hain mere paas.</dt><dd>Most shops don't have them, and it's the single most common reason a site never gets finished. Your phone is enough. I'll tell you exactly which five shots to take and where to stand. If there's genuinely nothing usable, we design around it rather than filling the page with stock photos of someone else's shop.</dd></div>
-      <div><dt>Aap gayab toh nahi ho jaoge?</dt><dd>Fair question to ask a one-person studio, and the honest answer is that you are holding the safeguard: the domain is yours, the hosting account can be yours, and the site is a plain set of files you can hand to anyone. Nothing here depends on me still being around.</dd></div>
-      <div><dt>Will I actually come up on Google?</dt><dd>On Complete and above you'll be set up correctly for it: the right page title, your address and hours marked up the way Google reads them, a sitemap submitted to Search Console. That last step is the one almost nobody does. What nobody honest can promise you is a position — anyone guaranteeing you the top spot is selling you something else.</dd></div>
+<section class="sec sec--tint" id="never"><div class="wrap">
+  <div class="sec__head"><h2>What we won't do, at <i>any</i> price.</h2>
+    <p class="lede">Written down so you don't have to ask, and so you know what letting us in does not mean.</p></div>
+  <dl class="faq faq--never">
+    <div><dt>File, submit or send anything to a government portal on your behalf.</dt><dd>The filing stays yours. We get it ready.</dd></div>
+    <div><dt>Hold your logins, tokens or passwords.</dt><dd>We work beside your people, on your machines when it matters.</dd></div>
+    <div><dt>Keep your records anywhere but your own systems.</dt><dd>We read, we write down, and nothing of yours leaves.</dd></div>
+    <div><dt>Give tax, legal, investment or accounting advice.</dt><dd>We document how work moves. Your professionals opine.</dd></div>
+    <div><dt>Promise a savings figure, a headcount cut or a margin.</dt><dd>We say the numbers we measured, and mark the ones we didn't.</dd></div>
+    <div><dt>Take a share of a regulated professional's fees.</dt><dd>We sell a service to the firm, never a cut of it.</dd></div>
   </dl>
 </div></section>
 
-<section class="sec sec--tint" id="ask"><div class="wrap">
-  <div class="sec__head"><h2>Tell me about your shop.</h2>
-    <p class="lede">WhatsApp is fastest — it comes straight to my phone and you'll usually hear back
-      the same day. If you'd rather I called you, leave your number instead.</p></div>
-  <div class="cta"><a class="btn btn--go" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20I%20saw%20the%20Lantern%20site.%20My%20shop%20is%20" target="_blank" rel="noopener">Message me on WhatsApp</a>
+<section class="sec" id="work"><div class="wrap">
+  <div class="sec__head"><h2>Three trades. Same method.</h2>
+    <p class="lede">Names are left off; the owners asked for a system, not a mention. What we did and what
+      moved, in their own numbers.</p></div>
+  <div class="cases">
+    <article class="case">
+      <p class="case__meta">Atta and cold-pressed oil · two shops · <b>baseline delivered</b></p>
+      <p class="case__hook">Ten thousand handwritten ledger entries, turned into a customer list and a P&amp;L.</p>
+      <div class="case__body"><p>Every sale in the shop's ledgers typed, checked and cleaned: 10,244 entries, 1,745 customers with what they buy and how often. From that, the first real profit-and-loss the business has had, line by line, with the figures we could not verify marked as open. The owner now decides on numbers instead of recall.</p></div>
+    </article>
+    <article class="case">
+      <p class="case__meta">Loungewear label · direct to consumer · <b>in progress</b></p>
+      <p class="case__hook">Measurement, before anything else is spent.</p>
+      <div class="case__body"><p>A young label growing on ads and Instagram. We walked the whole store and the ad funnel, defined the eight numbers the owner should see every week and who owns each one, and wrote the fix list in the order that pays. Shipping, bundles and ad decisions now wait for her own data, not a guess.</p></div>
+    </article>
+    <article class="case">
+      <p class="case__meta">Chartered accountancy · four decades in practice · <b>starting October</b></p>
+      <p class="case__hook">Every process the firm runs, drawn and agreed in two meetings.</p>
+      <div class="case__body"><p>A practice where the partner reviews everything himself. We mapped how the work actually moves through the firm, checked it with him line by line, and agreed to start with one return in the quiet months rather than with AI. Documentation first, then the number, then the tools.</p></div>
+    </article>
+  </div>
+</div></section>
+
+<section class="sec sec--tint" id="sample"><div class="wrap">
+  <div class="sec__head"><h2>The one page you'd read.</h2>
+    <p class="lede">A sample of the exception report, with made-up numbers. Yours carries your own jobs and your
+      own people, and it replaces reading everything.</p></div>
+  <div class="rep"><span class="rep__flag">Sample · made-up numbers</span>
+    <div class="rep__hd"><span>Monday, week 6</span><span>One process</span></div>
+    <div class="rep__row"><span>Jobs in progress</span><b>14</b></div>
+    <div class="rep__row"><span>Waiting on the client<small>oldest wait 9 days · reminder sent Friday</small></span><b>6</b></div>
+    <div class="rep__row"><span>Late against the calendar<small>both with the same junior · see note</small></span><b>2</b></div>
+    <div class="rep__row rep__row--need"><span>Needs your decision<small>pricing on job 0412 · two minutes</small></span><b>1</b></div>
+    <div class="rep__row"><span>Closed this week<small>average 3.4 days, down from 5.1</small></span><b>5</b></div>
+  </div>
+</div></section>
+
+<section class="sec" id="who"><div class="wrap">
+  <div class="sec__head"><h2>It's one person, and that's the point.</h2></div>
+  <div class="who">
+    <p>I'm Nandit. At KPMG I worked inside other companies' finance functions: payables, receivables, fixed
+      assets, the MIS packs a board reads. The method came with me. The price didn't.</p>
+    <p>I'm a computer-science engineer and I build with AI every working day, the systems that run this
+      studio included. That is why I put it last: I know what it does to work nobody has written down, and what it does once they have.</p>
+    <p>This year: a flour mill, a fashion label, an accountancy practice. Different trades, the same six
+      steps, and in each one the first thing the owner got was a figure they had never seen.</p>
+    <p>Engagements run side by side, each with a fixed slice of my week and a written update at the end of
+      it, so you always know where yours stands. When you call the number on this page, I pick it up.</p>
+    <p>When nobody is paying, I do research for its own sake: market structure across 252 million rows,
+      India mapped from orbit. It's at <a href="https://nanditvaish.com" target="_blank" rel="noopener">nanditvaish.com</a>,
+      so you can see how I work with no client in the room.</p>
+  </div>
+  <h3 class="who__h">Lantern's reviews on Google</h3>
+  <p class="note" style="margin-top:.7rem">Both of them, and both name me. That is what a one-person studio should look like from the outside.</p>
+  <div class="proofs">
+    <div class="proof"><div class="stars">★★★★★</div>
+      <q>Extremely happy &amp; satisfied with the website designed by Mr Nandit Vaish (LANTERN). He took personal interest in curating the content as per my requirements &amp; suggestions. Was very prompt in making all the changes that I mentioned and all this at a very reasonable cost! I have been fortunate to have engaged his services…. Thanks from the bottom of my heart.</q>
+      <p class="proof__by"><b>Mona Prabhakar</b> · orthodontist · Google review, August 2026</p></div>
+    <div class="proof"><div class="stars">★★★★★</div>
+      <q>Amazing work on our website by Nandit,very creative and asthetically pleasing website created..thank you so much.</q>
+      <p class="proof__by"><b>Manpreet Bhasin</b> · Peaches &amp; Cream · Google review, August 2026</p></div>
+  </div>
+</div></section>
+
+<section class="sec sec--tint"><div class="wrap">
+  <div class="sec__head"><h2>Questions owners ask</h2></div>
+  <dl class="faq">
+    <div><dt>What do you need from us?</dt><dd>One named person, a few hours a week, and your own numbers as they are, agreed by email before we start. That is the whole ask, and without it the work stalls.</dd></div>
+    <div><dt>Will you touch our books, filings or software?</dt><dd>No. We read, write down, and build alongside. Nothing live is ours to operate.</dd></div>
+    <div><dt>Who owns what you make?</dt><dd>You. The map, the checklists, the numbers, the templates. If we stopped tomorrow you would keep a documented business.</dd></div>
+    <div><dt>What if a number is wrong?</dt><dd>Anything we couldn't measure is marked as unmeasured next to the figure. A gap is honest. A confident wrong number is not.</dd></div>
+    <div><dt>How long does it take?</dt><dd>Eight weeks for the first process, spread across your calendar, and about five working days of our time for each one after. Your season wins.</dd></div>
+    <div><dt>Do we have to buy software?</dt><dd>Almost never. Whatever your trade already uses is set up first. Anything new has to prove a sheet can't do it.</dd></div>
+    <div><dt>Where does AI come in?</dt><dd>After the process is on paper and the numbers are real. From then on it works every day, on every job, in your format, on a subscription in your name of about ₹2,000 a month.</dd></div>
+    <div><dt>Do you know our industry?</dt><dd>Not on day one. Your people do, and the method exists to get it out of their heads onto paper. A flour mill, a fashion label and an accountancy practice this year, same six steps.</dd></div>
+    <div><dt>We just want a website.</dt><dd>Then the websites page: from ₹9,999, live in two days, on your own domain.</dd></div>
+  </dl>
+</div></section>
+
+<section class="sec" id="ask"><div class="wrap">
+  <div class="sec__head"><h2>Tell me what runs on memory.</h2>
+    <p class="lede">WhatsApp is fastest and comes straight to my phone. If you'd rather I called, leave a number.</p></div>
+  <div class="cta"><a class="btn btn--go" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20we%20spoke.%20My%20business%20is%20" target="_blank" rel="noopener">Message me on WhatsApp</a>
     <a class="btn btn--ghost" href="tel:+919711105497">+91 97111 05497</a></div>
   <form class="askform" id="askform" novalidate>
     <div class="askform__row">
-      <input type="text" name="shop" placeholder="Your shop (optional)" autocomplete="organization">
+      <input type="text" name="business" placeholder="Your business (optional)" autocomplete="organization">
       <input type="tel" name="phone" placeholder="Your number" required autocomplete="tel" inputmode="tel">
     </div>
-    <textarea name="message" rows="3" placeholder="Anything you want to tell me first (optional)"></textarea>
+    <textarea name="message" rows="3" placeholder="What runs on memory today (optional)"></textarea>
     <button class="btn btn--go" type="submit">Ask me to call you</button>
-    <p class="askform__hint">Goes straight to my inbox. No newsletter, no follow-up sequence — one call back, usually the same day.</p>
+    <p class="askform__hint">Goes straight to my inbox. No newsletter, no follow-up sequence. One call back, usually the same day.</p>
   </form>
+</div></section>
+
+<section class="sec sec--tint"><div class="wrap">
+  <div class="sec__head"><h2>We also build and fix websites for local shops.</h2>
+    <p class="lede">From ₹9,999, live in two days, on your own domain. A separate page for a separate job.</p></div>
+  <div class="cta" style="margin-top:.4rem"><a class="btn btn--ghost" href="/websites/">Websites for local shops</a></div>
 </div></section>
 </main>
 
 <footer class="ft"><div class="wrap">
-  <b>Lantern</b> · <a href="mailto:vaishnandit@airlantern.com">vaishnandit@airlantern.com</a> · 9711105497
+  <b>Lantern</b> · <a href="mailto:vaishnandit@airlantern.com">vaishnandit@airlantern.com</a> · 9711105497 · <a href="https://nanditvaish.com" target="_blank" rel="noopener">nanditvaish.com</a>
 </div></footer>
-<div class="bar"><a href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20I%20saw%20the%20Lantern%20site.%20My%20shop%20is%20" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+919711105497">Call</a></div>
+<div class="bar"><a href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20we%20spoke.%20My%20business%20is%20" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+919711105497">Call</a></div>
 <script>
 (function(){var f=document.getElementById('askform');if(!f)return;
 f.addEventListener('submit',function(ev){ev.preventDefault();
@@ -438,14 +441,14 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
   var b=f.querySelector('button');b.disabled=true;b.textContent='Sending…';
   fetch('https://formsubmit.co/ajax/da68bdf022916e7f4771c192cd673f08',{method:'POST',
     headers:{'Content-Type':'application/json','Accept':'application/json'},
-    body:JSON.stringify({_subject:'airlantern.com — call-back request',
-      site:'airlantern.com',shop:f.shop.value.trim(),phone:ph,message:f.message.value.trim()})})
+    body:JSON.stringify({_subject:'airlantern.com — call-back (systems)',
+      site:'airlantern.com',business:f.business.value.trim(),phone:ph,message:f.message.value.trim()})})
   .then(function(r){return r.json()}).then(function(j){
     if(j.success!=='true')throw new Error('x');
-    f.innerHTML='<p class="askform__state">Got it — I'll call you, usually the same day.</p>';})
+    f.innerHTML='<p class="askform__state">Got it. I\'ll call you, usually the same day.</p>';})
   .catch(function(){b.disabled=false;b.textContent='Ask me to call you';
     var h=f.querySelector('.askform__hint');
-    h.textContent='That didn't send — WhatsApp me instead on 97111 05497.';});
+    h.textContent='That didn\'t send. WhatsApp me instead on 97111 05497.';});
 });})();
 </script>
 </body></html>
