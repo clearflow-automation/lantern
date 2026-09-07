@@ -187,6 +187,9 @@ text-decoration:none;font-weight:600;font-size:.94rem;color:var(--barText);trans
 .askform input:focus,.askform textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
 .askform button{justify-self:start}
 .askform__hint{font-size:.8125rem;color:var(--muted);margin:0}
+.askform__err{font-size:.8125rem;color:var(--accent);margin:-.2rem 0 0;font-weight:600}
+.askform input[aria-invalid="true"]{border-color:var(--accent);outline-color:var(--accent)}
+.askform__hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
 .askform__state{font-size:.9375rem;margin:0}
 
 /* what you get — six things, not a sequence */
@@ -612,10 +615,13 @@ gtag('js',new Date());gtag('config','G-M5F1E5D72D');</script></head><body>
     <a class="btn btn--ghost" href="tel:+919711105497">+91 97111 05497</a></div>
   <form class="askform" id="askform" novalidate>
     <div class="askform__row">
-      <input type="text" name="business" placeholder="Your business (optional)" autocomplete="organization">
-      <input type="tel" name="phone" placeholder="Your number" required autocomplete="tel" inputmode="tel">
+      <input type="text" name="business" placeholder="Your business (optional)" autocomplete="organization" maxlength="120">
+      <input type="tel" name="phone" placeholder="Your number" required autocomplete="tel" inputmode="tel"
+             maxlength="20" aria-describedby="askerr">
     </div>
-    <textarea name="message" rows="3" placeholder="What runs on memory today (optional)"></textarea>
+    <p class="askform__err" id="askerr" role="alert" hidden></p>
+    <textarea name="message" rows="3" placeholder="What runs on memory today (optional)" maxlength="1200"></textarea>
+    <div class="askform__hp" aria-hidden="true"><label>Leave this empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
     <button class="btn btn--go" type="submit">Ask me to call you</button>
     <p class="askform__hint">Goes straight to my inbox. No newsletter, no follow-up sequence. One call back, usually the same day.</p>
   </form>
@@ -630,20 +636,40 @@ gtag('js',new Date());gtag('config','G-M5F1E5D72D');</script></head><body>
 </div></footer>
 <div class="bar"><a href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20we%20spoke.%20My%20business%20is%20" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+919711105497">Call</a></div>
 <script>
-(function(){var f=document.getElementById('askform');if(!f)return;
-f.addEventListener('submit',function(ev){ev.preventDefault();
-  var ph=f.phone.value.trim();if(!ph){f.phone.focus();return}
-  var b=f.querySelector('button');b.disabled=true;b.textContent='Sending…';
-  fetch('https://formsubmit.co/ajax/da68bdf022916e7f4771c192cd673f08',{method:'POST',
-    headers:{'Content-Type':'application/json','Accept':'application/json'},
-    body:JSON.stringify({_subject:'airlantern.com — call-back (systems)',
-      site:'airlantern.com',business:f.business.value.trim(),phone:ph,message:f.message.value.trim()})})
-  .then(function(r){return r.json()}).then(function(j){
-    if(j.success!=='true')throw new Error('x');
-    f.innerHTML='<p class="askform__state">Got it. I\'ll call you, usually the same day.</p>';})
-  .catch(function(){b.disabled=false;b.textContent='Ask me to call you';
-    var h=f.querySelector('.askform__hint');
-    h.textContent='That didn\'t send. WhatsApp me instead on 97111 05497.';});
-});})();
+(function(){
+  var f=document.getElementById('askform'); if(!f) return;
+  var err=document.getElementById('askerr'), ph=f.phone, btn=f.querySelector('button');
+  function fail(m){err.textContent=m;err.hidden=false;ph.setAttribute('aria-invalid','true');ph.focus();}
+  function clear(){err.hidden=true;err.textContent='';ph.removeAttribute('aria-invalid');}
+  function looksLikeANumber(v){
+    if(/[A-Za-z]/.test(v)) return false;
+    var d=v.replace(/\D/g,'');
+    return d.length>=10 && d.length<=13;
+  }
+  ph.addEventListener('input',clear);
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    if(f._honey.value) return;
+    var v=ph.value.trim();
+    if(!v) return fail('Leave a number and I\'ll call you back.');
+    if(!looksLikeANumber(v)) return fail('That does not look like a number I can call. Ten digits is enough.');
+    clear();
+    btn.disabled=true; btn.textContent='Sending\u2026';
+    fetch('https://formsubmit.co/ajax/da68bdf022916e7f4771c192cd673f08',{method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({_subject:'airlantern.com \u2014 call-back (systems)',
+        site:'airlantern.com',business:f.business.value.trim().slice(0,120),phone:v,
+        message:f.message.value.trim().slice(0,1200)})})
+    .then(function(r){return r.json()})
+    .then(function(j){
+      if(j.success!=='true') throw new Error('rejected');
+      f.innerHTML='<p class="askform__state">Got it. I\'ll call you, usually the same day.</p>';
+    })
+    .catch(function(){
+      btn.disabled=false; btn.textContent='Ask me to call you';
+      fail('That did not send. WhatsApp me instead on 97111 05497.');
+    });
+  });
+})();
 </script>
 </body></html>
