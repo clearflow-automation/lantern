@@ -98,6 +98,9 @@ border-bottom:2px solid var(--text)}
 .idx .nm{font-weight:600}
 .idx .d{display:block;font-weight:400;color:var(--muted);font-size:.86rem;margin-top:.15rem;max-width:52ch}
 .idx .t{display:none;color:var(--muted);white-space:nowrap}
+.idx .o{display:none}.idx .om{display:block;margin-top:.35rem;font-size:.86rem;color:var(--text)}
+.idx .om::before{content:"By then: ";color:var(--muted)}
+@media(min-width:560px){.idx .o{display:table-cell}.idx .om{display:none}}
 .idx .tm{display:inline;color:var(--muted);font-weight:400;font-size:.86rem}
 @media(min-width:560px){.idx .t{display:table-cell}.idx .tm{display:none}}
 .idx .st{font-family:var(--mono);font-size:.78rem;color:var(--text);white-space:nowrap;text-align:right;
@@ -203,6 +206,96 @@ text-decoration:none;font-weight:600;font-size:.94rem;color:var(--barText);trans
 .ai p{font-size:1rem}
 .case__body p{font-size:.92rem;color:var(--muted);max-width:60ch}
 .ion p{font-size:.92rem;max-width:34ch}
+.tw{margin-top:1.7rem;border-top:2px solid var(--text)}
+.tw__hd{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--border)}
+.tw__hd span{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+.tw__hd span:last-child{color:var(--accent);font-weight:600}
+.tw__r{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--border);font-size:.92rem}
+.tw__r b{font-weight:400;color:var(--muted)}
+.tw__r i{font-style:normal;font-weight:600}
+.promise{margin-top:1.5rem;background:var(--surf);border:1px solid var(--border);border-left:3px solid var(--accent);padding:1rem 1.15rem;max-width:56ch}
+.promise b{display:block;font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:.35rem}
+.promise p{font-family:var(--disp);font-size:clamp(1.05rem,3.6vw,1.28rem);line-height:1.4}
+.promise small{display:block;margin-top:.5rem;font-size:.84rem;color:var(--muted);font-family:var(--body)}
+
+/* the number a case turned on */
+.case__fig{font-family:var(--mono);font-weight:600;font-size:clamp(2rem,8vw,2.9rem);
+letter-spacing:-.03em;line-height:1;color:var(--accent);display:block;margin-bottom:.3rem;
+font-variant-numeric:tabular-nums}
+.case__figl{display:block;font-family:var(--mono);font-size:.7rem;text-transform:uppercase;
+letter-spacing:.12em;color:var(--muted);max-width:22ch;line-height:1.5}
+.case__got{margin-top:.9rem;font-size:.86rem;color:var(--muted)}
+.case__got b{color:var(--text);font-weight:600;display:block;font-family:var(--mono);
+font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:.25rem}
+
+/* what lands on your desk — four drawn artefacts */
+.arts{display:grid;gap:2rem;margin-top:.6rem}
+@media(min-width:700px){.arts{grid-template-columns:1fr 1fr;gap:2.4rem 2.2rem}}
+.art{margin:0;display:flex;flex-direction:column}
+.art figcaption{margin-top:.9rem;font-size:.88rem}
+.art figcaption b{display:block;font-weight:600;margin-bottom:.2rem}
+.art figcaption span{display:block;color:var(--muted);max-width:46ch;line-height:1.55}
+.paper{position:relative;background:var(--surf);border:1px solid var(--border);border-radius:2px;
+padding:1.05rem 1.1rem 1.2rem;
+box-shadow:0 1px 1px rgba(31,27,22,.06),0 14px 28px -16px rgba(31,27,22,.42)}
+.paper::before{content:"";position:absolute;inset:0;background:var(--surf);
+border:1px solid var(--border);border-radius:2px;z-index:-1;transform:translate(6px,7px);
+box-shadow:0 8px 18px -12px rgba(31,27,22,.45)}
+.paper__t{font-size:.9rem;font-weight:600;padding-bottom:.5rem;margin-bottom:.8rem;
+border-bottom:2px solid var(--text);display:flex;justify-content:space-between;gap:1rem;align-items:baseline}
+.paper__t em{font-style:normal;font-family:var(--mono);font-size:.66rem;font-weight:400;
+text-transform:uppercase;letter-spacing:.11em;color:var(--muted);white-space:nowrap}
+.paper__f{margin-top:1rem;font-family:var(--mono);font-size:.68rem;text-transform:uppercase;
+letter-spacing:.1em;color:var(--accent)}
+.flow{display:grid;gap:0}
+.flow__r{display:grid;grid-template-columns:5.1rem 1fr;align-items:center;gap:.7rem}
+.flow__w{font-family:var(--mono);font-size:.66rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.flow__b{border:1px solid var(--text);border-radius:2px;padding:.5rem .7rem;font-size:.89rem;
+background:var(--bg);box-shadow:inset 0 -2px 0 rgba(31,27,22,.05)}
+.flow__b--you{border-color:var(--accent);background:#FCF2F2;color:var(--accentDeep);font-weight:600}
+.flow__g{display:flex;align-items:center;gap:.65rem;padding:.2rem 0 .2rem calc(5.1rem + .7rem)}
+.flow__g i{display:block;width:0;height:22px;border-left:2px dashed var(--accent);margin-left:.95rem}
+.flow__g--plain i{border-left:2px solid var(--border)}
+.flow__g span{font-size:.8rem;color:var(--accent);line-height:1.3}
+.chk{display:grid;gap:.6rem}
+.chk div{display:grid;grid-template-columns:1.05rem 1fr;gap:.6rem;align-items:start;font-size:.89rem}
+.chk i{width:15px;height:15px;border:1.5px solid var(--border);border-radius:2px;margin-top:.15rem;position:relative;flex:none}
+.chk .on{border-color:var(--accent);background:#FCF2F2}
+.chk .on::after{content:"";position:absolute;left:4px;top:1px;width:4px;height:8px;
+border:solid var(--accent);border-width:0 1.8px 1.8px 0;transform:rotate(42deg)}
+.chk .off{color:var(--muted)}
+.brd{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem}
+.brd__h{font-family:var(--mono);font-size:.6rem;text-transform:uppercase;letter-spacing:.06em;
+color:var(--muted);display:block;margin-bottom:.5rem;white-space:nowrap}
+.brd__h--you{color:var(--accent);font-weight:600}
+.brd i{display:block;height:22px;border:1px solid var(--text);border-radius:2px;background:var(--bg);
+margin-bottom:.4rem;box-shadow:inset 0 -2px 0 rgba(31,27,22,.05)}
+.brd i.on{border-color:var(--accent);background:#FCF2F2;box-shadow:inset 0 -2px 0 rgba(122,32,41,.1)}
+.art .rep{background:none;border:0;padding:0;margin:0;max-width:none;position:static}
+.art .rep__flag{position:static;display:inline-block;margin:0 0 .7rem;border-radius:2px}
+.bars{margin:1rem 0 0;max-width:30rem}
+.bars svg{display:block;width:100%;height:auto}
+.bars figcaption{margin-top:.4rem;font-family:var(--mono);font-size:.7rem;text-transform:uppercase;
+letter-spacing:.1em;color:var(--muted)}
+.art{margin:0}
+.art figcaption{margin-top:.6rem;font-size:.86rem}
+.art figcaption b{display:block;font-weight:600;margin-bottom:.15rem}
+.art figcaption span{color:var(--muted)}
+.art svg{display:block;width:100%;height:auto;border:1px solid var(--border);background:var(--surf)}
+.art svg text{font-family:var(--body)}
+
+/* the eight-week rail */
+.rail{margin-top:1.9rem;display:grid;gap:0;border-top:2px solid var(--text)}
+.rail__r{display:grid;grid-template-columns:auto 1fr;gap:.9rem;padding:.85rem 0;
+border-bottom:1px solid var(--border);align-items:start}
+.rail__w{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;
+color:var(--muted);white-space:nowrap;padding-top:.18rem;min-width:5.6rem}
+.rail__b{font-weight:600;font-size:.95rem}
+.rail__d{display:block;font-weight:400;color:var(--muted);font-size:.88rem;margin-top:.15rem;max-width:56ch}
+.rail__o{display:block;font-family:var(--mono);font-size:.72rem;text-transform:uppercase;
+letter-spacing:.08em;color:var(--accent);margin-top:.35rem}
+@media(min-width:640px){.rail__r{grid-template-columns:7rem 1fr}}
+
 .who__h{margin-top:2.4rem;font-family:var(--disp);font-weight:400;font-size:1.35rem;letter-spacing:-.01em}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "@id": "https://airlantern.com/#lantern", "name": "Lantern", "description": "We write down how a business actually runs, put numbers on it, and build the small systems that keep it running without the owner in every file.", "url": "https://airlantern.com/", "telephone": "+91-9711105497", "email": "vaishnandit@airlantern.com", "founder": {"@type": "Person", "name": "Nandit Vaish", "url": "https://nanditvaish.com"}, "areaServed": {"@type": "Country", "name": "India"}, "priceRange": "₹15,000–₹75,000", "makesOffer": [{"@type": "Offer", "name": "Eight weeks, one process", "price": "75000", "priceCurrency": "INR", "description": "Six steps end to end on one process, with a before-and-after and a trained team."}, {"@type": "Offer", "name": "Another process", "price": "40000", "priceCurrency": "INR", "description": "Same method on a second process."}, {"@type": "Offer", "name": "One piece of the system", "price": "15000", "priceCurrency": "INR", "description": "A checklist, an exception report, a dashboard, or a data cleanup."}, {"@type": "Offer", "name": "The AI layer", "price": "40000", "priceCurrency": "INR", "description": "AI on a process already documented."}, {"@type": "Offer", "name": "The operating record", "price": "25000", "priceCurrency": "INR", "description": "The living manual, kept current monthly."}]}</script>
@@ -212,7 +305,7 @@ text-decoration:none;font-weight:600;font-size:.94rem;color:var(--barText);trans
 gtag('js',new Date());gtag('config','G-M5F1E5D72D');</script></head><body>
 <header class="hdr"><div class="wrap hdr__in">
   <a class="brand" href="/"><img src="/assets/brand/lantern-mark-v7.svg" alt="" width="19" height="26" aria-hidden="true"><span>lantern</span></a>
-  <nav class="hdr__nav"><a href="#offer">The offer</a><a href="#system">What you get</a><a href="#price">Price</a><a href="#work">Work</a><a class="go" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20we%20spoke.%20My%20business%20is%20" target="_blank" rel="noopener">WhatsApp</a></nav>
+  <nav class="hdr__nav"><a href="#offer">The offer</a><a href="#system">What you keep</a><a href="#price">Price</a><a href="#work">Work</a><a class="go" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20we%20spoke.%20My%20business%20is%20" target="_blank" rel="noopener">WhatsApp</a></nav>
 </div></header>
 
 <main>
@@ -243,33 +336,100 @@ gtag('js',new Date());gtag('config','G-M5F1E5D72D');</script></head><body>
   <p class="ba__foot">Most businesses we walk into are run well and recorded nowhere. That is the gap.</p>
 </div></section>
 
-<section class="sec" id="system"><div class="wrap">
-  <div class="sec__head"><h2>What you get.</h2>
-    <p class="lede">A system is not software. It is the handful of things that let a business run the same
-      way whether or not you are watching. These are the ones we build, in the order they usually pay off.</p></div>
-  <div class="sys">
-    <div><h3>A checklist for what comes in</h3><p>Every job starts with the same request list, so the right inputs arrive complete the first time and nobody spends the week chasing.</p></div>
-    <div><h3>A written way of working</h3><p>Each process on paper, the way it really runs: who does what, in what order, where it breaks. Your people correct it until it is true.</p></div>
-    <div><h3>The one page you read</h3><p>An exception report. What is late, what is stuck, what needs your decision. The rest moves without you.</p></div>
-    <div><h3>Numbers that are yours</h3><p>Cost per job, days per job, where the margin actually sits. Measured on your own work, not estimated from a template.</p></div>
-    <div><h3>A tracker that already exists</h3><p>We don't build software. Your trade already has a tracker; we set it up properly, load your process into it, and train your people on it.</p></div>
-    <div><h3>AI on top, last</h3><p>Once the process is on paper and the numbers are real, AI stops guessing. It drafts in your templates, checks against your figures and flags what needs a person, on every job, every day.</p></div>
+<section class="sec" id="changes"><div class="wrap">
+  <div class="sec__head"><h2>Eight weeks from now.</h2>
+    <p class="lede">Not a promise about your margin, which nobody honest can make before measuring it.
+      This is what is different about the way the business runs, and every line of it is checkable.</p></div>
+  <div class="tw">
+    <div class="tw__hd"><span>Today</span><span>Week eight</span></div>
+    <div class="tw__r"><b>Nobody can say what one job costs</b><i>A figure per step and per person, measured on your own files</i></div>
+    <div class="tw__r"><b>Every file crosses your desk</b><i>Your Monday page: what is late, what is stuck, what needs you</i></div>
+    <div class="tw__r"><b>The process lives in three people's heads</b><i>Written down, agreed by the people who do it, and yours</i></div>
+    <div class="tw__r"><b>A new joiner learns by watching for months</b><i>They follow the document your own team signed off</i></div>
+    <div class="tw__r"><b>Every job starts by chasing the same documents</b><i>One request list, sent the same way every time</i></div>
+    <div class="tw__r"><b>AI would answer from the industry average</b><i>It answers from your templates and your measured numbers</i></div>
   </div>
+  <div class="promise"><b>The one number we do promise</b>
+    <p>By week eight you will know what one job costs you, in hours and in rupees, measured on your own files.</p>
+    <small>Anything we could not measure is marked as unmeasured, next to the figure. That is the whole
+      guarantee, and it is the one nobody else on your desk is offering.</small></div>
+</div></section>
+
+<section class="sec sec--tint" id="system"><div class="wrap">
+  <div class="sec__head"><h2>What you keep.</h2>
+    <p class="lede">Four documents stay behind when we leave, and none of them is software. Here they are,
+      roughly as they will look on your desk, whether you run a practice, a factory, a shop or a label.</p></div>
+  <div class="arts">
+
+    <figure class="art">
+      <div class="paper"><div class="paper__t">One job, start to finish<em>the map</em></div>
+        <div class="flow">
+          <div class="flow__r"><span class="flow__w">customer</span><span class="flow__b">sends what&#8217;s needed</span></div>
+          <div class="flow__g"><i></i><span>waiting &mdash; where the days go</span></div>
+          <div class="flow__r"><span class="flow__w">your team</span><span class="flow__b">does the work</span></div>
+          <div class="flow__g flow__g--plain"><i></i></div>
+          <div class="flow__r"><span class="flow__w">you</span><span class="flow__b flow__b--you">approve it</span></div>
+        </div>
+        <div class="paper__f">the wait is the part nobody measures</div></div>
+      <figcaption><b>The map</b><span>How a job really moves between your customer, your team and you. You use
+        it to see where the days go. A new joiner uses it to learn the work without shadowing someone for
+        months.</span></figcaption></figure>
+
+    <figure class="art">
+      <div class="paper"><div class="paper__t">Before we start<em>the list</em></div>
+        <div class="chk">
+          <div><i class="on"></i><span>the previous file</span></div>
+          <div><i class="on"></i><span>the paperwork for this job</span></div>
+          <div><i class="on"></i><span>the numbers for the period</span></div>
+          <div><i></i><span class="off">anything that changed</span></div>
+        </div>
+        <div class="paper__f">the same list, every job</div></div>
+      <figcaption><b>The list</b><span>What a customer sends before a job starts, the same every time. It goes
+        out on day one, so nobody spends the week chasing the same four things.</span></figcaption></figure>
+
+    <figure class="art">
+      <div class="paper"><div class="rep"><span class="rep__flag">Sample &middot; made-up numbers</span>
+        <div class="rep__hd"><span>Monday, week 6</span><span>One process</span></div>
+    <div class="rep__row"><span>Jobs in progress</span><b>14</b></div>
+    <div class="rep__row"><span>Waiting on the client<small>oldest wait 9 days · reminder sent Friday</small></span><b>6</b></div>
+    <div class="rep__row"><span>Late against the calendar<small>both with the same junior · see note</small></span><b>2</b></div>
+    <div class="rep__row rep__row--need"><span>Needs your decision<small>pricing on job 0412 · two minutes</small></span><b>1</b></div>
+    <div class="rep__row"><span>Closed this week<small>average 3.4 days, down from 5.1</small></span><b>5</b></div>
+      </div></div>
+      <figcaption><b>Your Monday page</b><span>What is late, what is stuck, what needs your decision. You read
+        this instead of every file. Made-up numbers here; yours carries your own jobs and your own
+        people.</span></figcaption></figure>
+
+    <figure class="art">
+      <div class="paper"><div class="paper__t">Where every job stands<em>the board</em></div>
+        <div class="brd">
+          <div><span class="brd__h">waiting</span><i></i><i></i></div>
+          <div><span class="brd__h">in hand</span><i></i><i></i><i></i></div>
+          <div><span class="brd__h brd__h--you">needs you</span><i class="on"></i></div>
+          <div><span class="brd__h">done</span><i></i><i></i><i></i></div>
+        </div>
+        <div class="paper__f">one job on the board is yours</div></div>
+      <figcaption><b>The board</b><span>Where every job stands, in a tracker your trade already sells. We set
+        it up and load your process into it. Nothing to build, nothing to buy from us.</span></figcaption></figure>
+
+  </div>
+  <p class="note">AI comes after all four exist, and only then. It drafts in your formats and checks against
+    your numbers instead of guessing from the internet&#8217;s.</p>
 </div></section>
 
 <section class="sec" id="how"><div class="wrap">
-  <div class="sec__head"><h2>Eight weeks. <i>One</i> process.</h2>
-    <p class="lede">We start with the job that carries your year, in your quiet months, and take it apart
-      end to end. Six steps, in this order, every time.</p></div>
+  <div class="sec__head"><h2>How we get there.</h2>
+    <p class="lede">One process, the job that carries your year, taken apart in your quiet months.
+      Six steps, in this order, every time.</p></div>
   <table class="idx">
-    <thead><tr><th></th><th>Step</th><th>What exists by then</th></tr></thead>
+    <thead><tr><th></th><th>Step</th><th class="o">What exists by then</th></tr></thead>
     <tbody>
-      <tr><td class="n">01</td><td class="nm">Ask<span class="d">The people who do the work, before the owner.</span></td><td>One job, told start to finish in their words.</td></tr>
-      <tr><td class="n">02</td><td class="nm">Watch<span class="d">A few hours beside someone doing the real thing.</span></td><td>Every template, message and spreadsheet the job touches.</td></tr>
-      <tr><td class="n">03</td><td class="nm">Write down<span class="d">The process as it runs, not as anyone remembers it.</span></td><td>A map your own people have signed off as true.</td></tr>
-      <tr><td class="n">04</td><td class="nm">Measure<span class="d">Hours per step, cost per job, waiting time kept apart from working time.</span></td><td>The first honest number: what one job costs you.</td></tr>
-      <tr><td class="n">05</td><td class="nm">Redesign<span class="d">Fewer steps, the right person at each, a template at every handoff.</span></td><td>The new process and its checklists, ready to use.</td></tr>
-      <tr><td class="n">06</td><td class="nm">Pilot<span class="d">A handful of live jobs through the new way. Measure again.</span></td><td>Before and after on one page, and a team that runs it.</td></tr>
+      <tr><td class="n">01</td><td class="nm">Ask<span class="d">The people who do the work, before the owner.</span><span class="om">One job, told start to finish in their words.</span></td><td class="o">One job, told start to finish in their words.</td></tr>
+      <tr><td class="n">02</td><td class="nm">Watch<span class="d">A few hours beside someone doing the real thing.</span><span class="om">Every template, message and spreadsheet the job touches.</span></td><td class="o">Every template, message and spreadsheet the job touches.</td></tr>
+      <tr><td class="n">03</td><td class="nm">Write down<span class="d">The process as it runs, not as anyone remembers it.</span><span class="om">A map your own people have signed off as true.</span></td><td class="o">A map your own people have signed off as true.</td></tr>
+      <tr><td class="n">04</td><td class="nm">Measure<span class="d">Hours per step, cost per job, waiting time kept apart from working time.</span><span class="om">The first honest number: what one job costs you.</span></td><td class="o">The first honest number: what one job costs you.</td></tr>
+      <tr><td class="n">05</td><td class="nm">Redesign<span class="d">Fewer steps, the right person at each, a template at every handoff.</span><span class="om">The new process and its checklists, ready to use.</span></td><td class="o">The new process and its checklists, ready to use.</td></tr>
+      <tr><td class="n">06</td><td class="nm">Pilot<span class="d">A handful of live jobs through the new way. Measure again.</span><span class="om">Before and after on one page, and a team that runs it.</span></td><td class="o">Before and after on one page, and a team that runs it.</td></tr>
     </tbody></table>
   <p class="note">A one-paragraph note every Friday and a thirty-minute call every two weeks. You always
     know where it stands and never have to ask. Your peak season sets the pace, not our calendar.</p>
@@ -307,9 +467,9 @@ gtag('js',new Date());gtag('config','G-M5F1E5D72D');</script></head><body>
       <tr><td class="n">01</td><td class="nm">A call<span class="d">Thirty minutes. Which process to start with, and whether it is ready for anything more than paper. <span class="tm">· 30 minutes</span></span></td><td class="t">30 minutes</td><td class="st st--live">Free</td></tr>
       <tr><td class="n">02</td><td class="nm">Eight weeks, one process<span class="d">The six steps, end to end, on the job that carries your year. You end with a before-and-after on one page, the templates, and a team that runs it without you. <span class="tm">· 8 weeks</span></span></td><td class="t">8 weeks</td><td class="st">₹75,000</td></tr>
       <tr><td class="n">03</td><td class="nm">Another process<span class="d">Same method, faster, because the first one built the templates. <span class="tm">· 5 days of our time</span></span></td><td class="t">5 days of our time</td><td class="st">Starts at ₹40,000</td></tr>
-      <tr><td class="n">04</td><td class="nm">One piece of the system<span class="d">A checklist, an exception report, a dashboard, or a cleanup of messy data. Scoped on the call. <span class="tm">· scoped</span></span></td><td class="t">scoped</td><td class="st">Starts at ₹15,000</td></tr>
+      <tr><td class="n">04</td><td class="nm">One piece of the system<span class="d">The list, the Monday page, the board, or a cleanup of messy data. Scoped on the call. <span class="tm">· scoped</span></span></td><td class="t">scoped</td><td class="st">Starts at ₹15,000</td></tr>
       <tr><td class="n">05</td><td class="nm">The AI layer<span class="d">On a process already on paper: your templates, your numbers and your rules loaded, so it drafts, checks and flags the way your firm would. Runs on a subscription in your name. <span class="tm">· 5 days of our time</span></span></td><td class="t">5 days of our time</td><td class="st">Starts at ₹40,000</td></tr>
-      <tr><td class="n">06</td><td class="nm">The operating record<span class="d">The living manual, kept current every month, once two processes are written. <span class="tm">· monthly</span></span></td><td class="t">monthly</td><td class="st">₹25,000<small>a month</small></td></tr>
+      <tr><td class="n">06</td><td class="nm">The manual, kept current<span class="d">Everything written down, brought up to date every month, once two processes exist. <span class="tm">· monthly</span></span></td><td class="t">monthly</td><td class="st">₹25,000<small>a month</small></td></tr>
     </tbody></table>
   <p class="note">Training and handover, ₹10,000, on every piece: a system nobody was taught is just a
     document. Nothing gets built that already exists, and nothing is quoted that isn't written down first.</p>
@@ -330,42 +490,77 @@ gtag('js',new Date());gtag('config','G-M5F1E5D72D');</script></head><body>
 
 <section class="sec" id="work"><div class="wrap">
   <div class="sec__head"><h2>Three trades. Same method.</h2>
-    <p class="lede">Names are left off; the owners asked for a system, not a mention. What we did and what
-      moved, in their own numbers.</p></div>
+    <p class="lede">Names are left off; the owners asked for a system, not a mention. Each one starts with
+      the number nobody had calculated, and ends with something they keep.</p></div>
   <div class="cases">
     <article class="case">
       <p class="case__meta">Atta and cold-pressed oil · two shops · <b>baseline delivered</b></p>
-      <p class="case__hook">Ten thousand handwritten ledger entries, turned into a customer list and a P&amp;L.</p>
-      <div class="case__body"><p>Every sale in the shop's ledgers typed, checked and cleaned: 10,244 entries, 1,745 customers with what they buy and how often. From that, the first real profit-and-loss the business has had, line by line, with the figures we could not verify marked as open. The owner now decides on numbers instead of recall.</p></div>
+      <div><span class="case__fig">₹29,000</span><span class="case__figl">a month, found without spending a rupee of capital</span></div>
+      <div class="case__body">
+        <p>Three priced wrong and one line under-sold: the flagship atta ₹2 a kilo below the rest of its
+          own range, spices at a fraction of the capacity already installed, and five different oil-cakes
+          leaving the shop at one price. None of it needed a machine, a loan or an advertisement. Ten tonnes of a commodity were paying the rent so the two lines that actually earn could run at a fraction of the capacity already installed.</p>
+        <figure class="bars"><svg viewBox="0 0 300 108" role="img" aria-hidden="true">
+          <text x="0" y="18" font-size="11" fill="#5E564A" font-family="'Public Sans',sans-serif">atta</text>
+          <rect x="62" y="8" width="14" height="13" fill="#DED6C6"/>
+          <text x="84" y="18" font-size="11" fill="#1F1B16" font-family="'Public Sans',sans-serif">&#8377;11.60 a kilo</text>
+          <text x="0" y="52" font-size="11" fill="#5E564A" font-family="'Public Sans',sans-serif">oil</text>
+          <rect x="62" y="42" width="134" height="13" fill="#7A2029"/>
+          <text x="204" y="52" font-size="11" fill="#1F1B16" font-family="'Public Sans',sans-serif">&#8377;111 a litre</text>
+          <text x="0" y="86" font-size="11" fill="#5E564A" font-family="'Public Sans',sans-serif">spices</text>
+          <rect x="62" y="76" width="160" height="13" fill="#7A2029"/>
+          <text x="230" y="86" font-size="11" fill="#1F1B16" font-family="'Public Sans',sans-serif">&#8377;133 a kilo</text>
+        </svg><figcaption>Margin per unit handled &middot; his own figures</figcaption></figure>
+        <p class="case__got"><b>What they keep</b>10,244 handwritten ledger entries typed and cleaned into
+          1,745 customers with what they buy and how often, and the first profit-and-loss the business has
+          ever had, line by line.</p>
+        <p class="case__cav">Grinding loss is not in the atta cost yet and the demand case rests on recall,
+          both marked open in the document. The number will move. The shape will not.</p>
+      </div>
     </article>
     <article class="case">
       <p class="case__meta">Loungewear label · direct to consumer · <b>in progress</b></p>
-      <p class="case__hook">Measurement, before anything else is spent.</p>
-      <div class="case__body"><p>A young label growing on ads and Instagram. We walked the whole store and the ad funnel, defined the eight numbers the owner should see every week and who owns each one, and wrote the fix list in the order that pays. Shipping, bundles and ad decisions now wait for her own data, not a guess.</p></div>
+      <div><span class="case__fig">₹29</span><span class="case__figl">what a ₹999 product actually contributes</span></div>
+      <div class="case__body">
+        <p>Cost of goods, courier, packaging and the payment fee came to ₹970 against ₹999, before a rupee
+          of advertising. Every ad on that product was losing money. Two pieces at ₹1,899 contribute ₹379,
+          because the courier and the packing are paid once instead of twice.</p>
+        <figure class="bars"><svg viewBox="0 0 300 108" role="img" aria-hidden="true">
+          <rect x="0" y="30" width="165" height="22" fill="#DED6C6"/>
+          <rect x="165" y="30" width="90" height="22" fill="#7A2029"/>
+          <rect x="255" y="30" width="21" height="22" fill="#B8AE9B"/>
+          <rect x="276" y="30" width="15" height="22" fill="#8E8474"/>
+          <rect x="291" y="30" width="9" height="22" fill="#FFFEFA" stroke="#7A2029" stroke-width="1.2"/>
+          <text x="0" y="76" font-size="11" fill="#5E564A">goods 550 · courier 300 · packing 70 · fee 50</text>
+          <text x="0" y="97" font-size="11" fill="#7A2029">what is left of ₹999: ₹29</text>
+        </svg><figcaption>Where ₹999 goes &middot; her own figures</figcaption></figure>
+        <p class="case__got"><b>What they keep</b>Contribution per product, the eight numbers to read every
+          week with a name against each one, and the fix list in the order that pays.</p>
+        <p class="case__cav">The ₹300 courier is the owner's figure and has not been seen on an invoice
+          yet. At an aggregator's ₹110 the same product contributes ₹219.</p>
+      </div>
     </article>
     <article class="case">
       <p class="case__meta">Chartered accountancy · four decades in practice · <b>starting October</b></p>
-      <p class="case__hook">Every process the firm runs, drawn and agreed in two meetings.</p>
-      <div class="case__body"><p>A practice where the partner reviews everything himself. We mapped how the work actually moves through the firm, checked it with him line by line, and agreed to start with one return in the quiet months rather than with AI. Documentation first, then the number, then the tools.</p></div>
+      <div><span class="case__fig">21 &rarr; 12</span><span class="case__figl">processes, built from twelve repeated pieces</span></div>
+      <div class="case__body">
+        <p>Everything the practice does turned out to be the same twelve tasks in different orders. Fix one
+          task and every process using it moves, which is why the work starts with one return in the quiet
+          months rather than with the busiest job in the year.</p>
+        <figure class="bars"><svg viewBox="0 0 300 108" role="img" aria-hidden="true">
+          <rect x="6" y="30" width="20" height="20" rx="2" fill="#FCF2F2" stroke="#7A2029" stroke-width="1.2"/><rect x="30" y="30" width="20" height="20" rx="2" fill="#FCF2F2" stroke="#7A2029" stroke-width="1.2"/><rect x="54" y="30" width="20" height="20" rx="2" fill="#FCF2F2" stroke="#7A2029" stroke-width="1.2"/><rect x="78" y="30" width="20" height="20" rx="2" fill="#FCF2F2" stroke="#7A2029" stroke-width="1.2"/><rect x="102" y="30" width="20" height="20" rx="2" fill="#FCF2F2" stroke="#7A2029" stroke-width="1.2"/><rect x="126" y="30" width="20" height="20" rx="2" fill="#FCF2F2" stroke="#7A2029" stroke-width="1.2"/><rect x="150" y="30" width="20" height="20" rx="2" fill="#FCF2F2" stroke="#7A2029" stroke-width="1.2"/><rect x="174" y="30" width="20" height="20" rx="2" fill="#FFFEFA" stroke="#1F1B16" stroke-width="1.2"/><rect x="198" y="30" width="20" height="20" rx="2" fill="#FFFEFA" stroke="#1F1B16" stroke-width="1.2"/><rect x="222" y="30" width="20" height="20" rx="2" fill="#FFFEFA" stroke="#1F1B16" stroke-width="1.2"/><rect x="246" y="30" width="20" height="20" rx="2" fill="#FFFEFA" stroke="#1F1B16" stroke-width="1.2"/><rect x="270" y="30" width="20" height="20" rx="2" fill="#FFFEFA" stroke="#1F1B16" stroke-width="1.2"/>
+          <text x="6" y="76" font-size="11" fill="#1F1B16">one return alone touches seven of the twelve</text>
+          <text x="6" y="97" font-size="11" fill="#5E564A">the other five arrive with the tax audit</text>
+        </svg><figcaption>Twelve repeated pieces &middot; agreed with the partner</figcaption></figure>
+        <p class="case__got"><b>What they keep</b>The whole firm drawn on two pages and corrected by the
+          partner himself, and the order the processes get taken apart in.</p>
+        <p class="case__cav">Nothing is measured yet. Measuring is the first thing we do.</p>
+      </div>
     </article>
   </div>
 </div></section>
 
-<section class="sec sec--tint" id="sample"><div class="wrap">
-  <div class="sec__head"><h2>The one page you'd read.</h2>
-    <p class="lede">A sample of the exception report, with made-up numbers. Yours carries your own jobs and your
-      own people, and it replaces reading everything.</p></div>
-  <div class="rep"><span class="rep__flag">Sample · made-up numbers</span>
-    <div class="rep__hd"><span>Monday, week 6</span><span>One process</span></div>
-    <div class="rep__row"><span>Jobs in progress</span><b>14</b></div>
-    <div class="rep__row"><span>Waiting on the client<small>oldest wait 9 days · reminder sent Friday</small></span><b>6</b></div>
-    <div class="rep__row"><span>Late against the calendar<small>both with the same junior · see note</small></span><b>2</b></div>
-    <div class="rep__row rep__row--need"><span>Needs your decision<small>pricing on job 0412 · two minutes</small></span><b>1</b></div>
-    <div class="rep__row"><span>Closed this week<small>average 3.4 days, down from 5.1</small></span><b>5</b></div>
-  </div>
-</div></section>
-
-<section class="sec" id="who"><div class="wrap">
+<section class="sec sec--tint" id="who"><div class="wrap">
   <div class="sec__head"><h2>It's one person, and that's the point.</h2></div>
   <div class="who">
     <p>I'm Nandit. At KPMG I worked inside other companies' finance functions: payables, receivables, fixed
@@ -380,9 +575,21 @@ gtag('js',new Date());gtag('config','G-M5F1E5D72D');</script></head><body>
       India mapped from orbit. It's at <a href="https://nanditvaish.com" target="_blank" rel="noopener">nanditvaish.com</a>,
       so you can see how I work with no client in the room.</p>
   </div>
+  <h3 class="who__h">Both reviews on Google, in full</h3>
+  <p class="note" style="margin-top:.7rem">Two so far, and both name me rather than the work. The jobs they
+    describe were websites, the studio's other line — what carries over is what it is like to work with one
+    person who picks up the phone.</p>
+  <div class="proofs">
+    <div class="proof"><div class="stars">★★★★★</div>
+      <q>Extremely happy &amp; satisfied with the website designed by Mr Nandit Vaish (LANTERN). He took personal interest in curating the content as per my requirements &amp; suggestions. Was very prompt in making all the changes that I mentioned and all this at a very reasonable cost! I have been fortunate to have engaged his services…. Thanks from the bottom of my heart.</q>
+      <p class="proof__by"><b>Mona Prabhakar</b> · orthodontist · Google review, August 2026</p></div>
+    <div class="proof"><div class="stars">★★★★★</div>
+      <q>Amazing work on our website by Nandit,very creative and asthetically pleasing website created..thank you so much.</q>
+      <p class="proof__by"><b>Manpreet Bhasin</b> · Peaches &amp; Cream · Google review, August 2026</p></div>
+  </div>
   </div></section>
 
-<section class="sec sec--tint"><div class="wrap">
+<section class="sec"><div class="wrap">
   <div class="sec__head"><h2>Questions owners ask</h2></div>
   <dl class="faq">
     <div><dt>What do you need from us?</dt><dd>One named person, a few hours a week, and your own numbers as they are, agreed by email before we start. That is the whole ask, and without it the work stalls.</dd></div>
