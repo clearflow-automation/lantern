@@ -1,0 +1,122 @@
+const stages = ['Ask','Watch','Write down','Measure','Redesign','Pilot'];
+const dialog = document.getElementById('method-examples');
+const panels = [...document.querySelectorAll('[data-example-panel]')];
+const buttons = [...document.querySelectorAll('[data-example-step]')];
+const chooser = document.getElementById('example-select');
+const scroller = document.getElementById('example-scroll');
+const previous = document.getElementById('example-previous');
+const next = document.getElementById('example-next');
+const outputButtons = [...document.querySelectorAll('[data-output]')];
+const outputPanels = [...document.querySelectorAll('[data-output-panel]')];
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+let current = 0;
+let returnFocus = null;
+let returnScroll = 0;
+let returnAnchorTop = 0;
+let returnViewport = {width:0,height:0};
+let previousOverflow = '';
+function selectOutput(key) {
+  outputButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.output===key)));
+  outputPanels.forEach(panel=>{panel.hidden=panel.dataset.outputPanel!==key});
+}
+function selectExample(index, output='comparison') {
+  if(index<0||index>=stages.length)return;
+  current=index;
+  panels.forEach((panel,i)=>{panel.hidden=i!==index});
+  buttons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));
+  chooser.value=String(index);
+  previous.disabled=index===0;
+  next.firstChild.textContent=index===5?'Back to Ask ':`Next: ${stages[index+1]} `;
+  document.getElementById('example-progress').textContent=`${index+1} of 6 · ${stages[index]}`;
+  if(index===5)selectOutput(output);
+  scroller.scrollTop=0;
+}
+function openExample(index,output,opener) {
+  returnFocus=opener;
+  returnScroll=window.scrollY;
+  returnAnchorTop=opener.getBoundingClientRect().top;
+  returnViewport={width:innerWidth,height:innerHeight};
+  previousOverflow=document.body.style.overflow;
+  selectExample(index,output);
+  document.body.style.overflow='hidden';
+  dialog.showModal();
+  document.getElementById('example-close').focus({preventScroll:true});
+}
+document.querySelectorAll('[data-example-open]').forEach(button=>button.addEventListener('click',()=>openExample(Number(button.dataset.exampleOpen),button.dataset.exampleOutput||'comparison',button)));
+buttons.forEach((button,i)=>{
+  button.setAttribute('aria-controls',panels[i].id);
+  button.addEventListener('click',()=>selectExample(i));
+});
+chooser.addEventListener('change',()=>selectExample(Number(chooser.value)));
+previous.addEventListener('click',()=>selectExample(current-1));
+next.addEventListener('click',()=>selectExample(current===5?0:current+1));
+document.getElementById('example-close').addEventListener('click',()=>dialog.close());
+dialog.addEventListener('click',event=>{
+  if(event.target===dialog){
+    const rect=dialog.getBoundingClientRect();
+    if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)dialog.close();
+  }
+});
+dialog.addEventListener('close',()=>{
+  document.body.style.overflow=previousOverflow;
+  const resized=innerWidth!==returnViewport.width||innerHeight!==returnViewport.height;
+  const target=resized&&returnFocus?.isConnected
+    ? window.scrollY+returnFocus.getBoundingClientRect().top-Math.min(returnAnchorTop,innerHeight-90)
+    : returnScroll;
+  window.scrollTo({top:target,behavior:'instant'});
+  if(returnFocus?.isConnected)returnFocus.focus({preventScroll:true});
+});
+outputButtons.forEach(button=>button.addEventListener('click',()=>selectOutput(button.dataset.output)));
+selectExample(0);
+const mobileMenu=document.querySelector('.mobile-menu');
+mobileMenu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{mobileMenu.open=false}));
+mobileMenu.addEventListener('keydown',event=>{
+  if(event.key==='Escape'){mobileMenu.open=false;mobileMenu.querySelector('summary').focus()}
+});
+if(!reducedMotion.matches&&'IntersectionObserver' in window){
+  const reveals=[...document.querySelectorAll('.home-section')];
+  document.body.classList.add('home-motion');
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.remove('pending');observer.unobserve(entry.target)}
+  }),{threshold:.04});
+  reveals.forEach(section=>{section.classList.add('home-reveal','pending');observer.observe(section)});
+  setTimeout(()=>reveals.forEach(section=>section.classList.remove('pending')),4500);
+}
+
+(function(){
+  var f=document.getElementById('askform'); if(!f) return;
+  var err=document.getElementById('askerr'), ph=f.phone, btn=f.querySelector('button');
+  function fail(m){err.textContent=m;err.hidden=false;ph.setAttribute('aria-invalid','true');ph.focus();}
+  function clear(){err.hidden=true;err.textContent='';ph.removeAttribute('aria-invalid');}
+  function looksLikeANumber(v){
+    if(/[A-Za-z]/.test(v)) return false;
+    var d=v.replace(/\D/g,'');
+    return d.length>=10 && d.length<=13;
+  }
+  ph.addEventListener('input',clear);
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    if(f._honey.value) return;
+    var v=ph.value.trim();
+    if(!v) return fail('Leave a number and I\'ll call you back.');
+    if(!looksLikeANumber(v)) return fail('That does not look like a number I can call. Ten digits is enough.');
+    clear();
+    btn.disabled=true; btn.textContent='Sending\u2026';
+    fetch('https://formsubmit.co/ajax/da68bdf022916e7f4771c192cd673f08',{method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({_subject:'airlantern.com \u2014 call-back (systems)',
+        site:'airlantern.com',business:f.business.value.trim().slice(0,120),phone:v,
+        message:f.message.value.trim().slice(0,1200)})})
+    .then(function(r){if(!r.ok) throw new Error('request failed');return r.json()})
+    .then(function(j){
+      if(j.success!=='true') throw new Error('rejected');
+      f.innerHTML='<p class="askform__state">Got it. I\'ll call you, usually the same day.</p>';
+    })
+    .catch(function(){
+      btn.disabled=false; btn.textContent='Ask me to call you';
+      fail('That did not send. WhatsApp me instead on 97111 05497.');
+    });
+  });
+})();
+
+document.querySelectorAll('a[href^="https://wa.me/"],a[href^="tel:"],a[href^="mailto:"]').forEach(link=>link.addEventListener('click',()=>{const channel=link.href.startsWith('tel:')?'phone':link.href.startsWith('mailto:')?'email':'whatsapp';if(typeof gtag==='function')gtag('event','contact_click',{contact_channel:channel});}));
