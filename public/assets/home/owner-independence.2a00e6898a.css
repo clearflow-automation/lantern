@@ -1,0 +1,37 @@
+/* Isolated owner-independence positioning prototype. */
+.attention-section{background:#e7edf5;margin:0 12px 32px;border-radius:25px;padding:78px 0;overflow:hidden}
+.attention-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:8%;align-items:center}
+.attention-copy>.eyebrow{font-size:8px;color:#5c708d}
+.attention-copy h2{font-size:clamp(42px,4.8vw,69px);line-height:1.03;letter-spacing:-.055em;margin:22px 0 25px;text-wrap:balance}
+.attention-copy h2 span{color:#315d9f}
+.attention-copy>p:not(.eyebrow){font-size:15px;line-height:1.72;color:#596d88;max-width:430px}
+.attention-copy>small{display:block;font-size:8px;letter-spacing:.08em;color:#75859a;margin-top:24px;text-transform:uppercase}
+.attention-board{background:#112b50;color:#eef4ff;border:8px solid #cbd8e9;border-radius:22px;padding:27px;box-shadow:0 28px 55px #173b6818;transform:rotate(.45deg)}
+.board-head{display:flex;justify-content:space-between;gap:20px;font-size:7px;letter-spacing:.11em;color:#afc4df;margin-bottom:20px}
+.routine-card{display:grid;grid-template-columns:1fr 170px;align-items:end;gap:20px;background:#f3e5d6;color:#563e31;border-radius:12px;padding:23px 24px}
+.routine-card div>span,.attention-label>span{display:block;font-size:7px;letter-spacing:.11em;font-weight:600}
+.routine-card strong{font-family:Manrope,sans-serif;display:block;font-size:60px;line-height:1;letter-spacing:-.07em;margin:9px 0 4px;color:#9a5b3f;font-variant-numeric:tabular-nums}
+.routine-card small{font-size:10px;color:#795d4d}
+.routine-card svg{width:100%;height:auto;fill:none;stroke:#ce7952;stroke-width:3;stroke-linecap:round}
+.attention-label{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:25px 3px 12px;color:#b8cae1}
+.attention-label b{font-size:9px;font-weight:500;color:#ffb58d}
+.exception-list{list-style:none;margin:0;padding:0;background:#1b3a63;border-radius:12px;overflow:hidden}
+.exception-list li{display:grid;grid-template-columns:9px 1fr auto;gap:15px;align-items:center;padding:18px 19px}
+.exception-list li+li{border-top:1px solid #426083}
+.exception-list i{width:8px;height:8px;border-radius:50%;background:#efa47d;box-shadow:0 0 0 4px #efa47d1c}
+.exception-list strong{display:block;font-size:12px;font-weight:500;line-height:1.4}
+.exception-list small{display:block;font-size:8px;color:#afc2dc;margin-top:5px;line-height:1.5}
+.exception-list li>span{font-size:7px;letter-spacing:.1em;color:#ffbe9d;border:1px solid #6f88a8;border-radius:4px;padding:6px 7px}
+.board-foot{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-top:18px;font-size:9px;color:#adc0da}
+.board-foot strong{font-size:10px;font-weight:500;color:#ffb58d}
+.home-hero h1{max-width:760px}
+.home-hero .hero-description{max-width:520px}
+.home-hero .cta{max-width:390px;text-align:left}
+.offer-strip{grid-template-columns:1.25fr .75fr 1.05fr .85fr}
+.offer-strip p{max-width:260px}
+.evidence-copy h3{max-width:560px}
+.entry-includes>span{line-height:1.4}
+@media(max-width:920px){.attention-grid{grid-template-columns:.85fr 1.15fr;gap:5%}.attention-board{padding:22px}.routine-card{grid-template-columns:1fr 130px;padding:21px}.routine-card strong{font-size:54px}.attention-copy>p:not(.eyebrow){font-size:14px}}
+@media(max-width:680px){.attention-section{margin:0 8px 26px;border-radius:21px;padding:58px 0}.attention-grid{grid-template-columns:1fr;gap:31px}.attention-copy h2{font-size:46px}.attention-copy>p:not(.eyebrow){font-size:15px}.attention-board{transform:none;padding:22px 18px;border-width:6px}.routine-card{grid-template-columns:1fr 115px;padding:20px 17px}.routine-card strong{font-size:54px}.routine-card svg{align-self:center}.exception-list li{grid-template-columns:8px 1fr;gap:13px;padding:17px 15px}.exception-list li>span{grid-column:2;justify-self:start;margin-top:-3px}.exception-list strong{font-size:12px}.exception-list small{font-size:9px}.board-foot{align-items:flex-start}.offer-strip{grid-template-columns:1fr 1fr}.home-hero .cta{max-width:340px}}
+@media(max-width:400px){.attention-copy h2{font-size:41px}.routine-card{grid-template-columns:1fr}.routine-card svg{display:none}.attention-board{padding:18px 14px}.board-head{font-size:6px}.board-foot{font-size:8px}.board-foot strong{font-size:9px}.home-hero .cta{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.attention-board{transform:none}}
