@@ -20,7 +20,7 @@ export default {
         (ifRange && ifRange !== source.headers.get('ETag') && ifRange !== source.headers.get('Last-Modified'))) {
       return new Response(source.body, {headers: resultHeaders});
     }
-    // The versioned film is 7.83 MB, bounded well below the Worker memory limit.
+    // The versioned films are each under 8 MB, bounded well below the Worker memory limit.
     const body = await source.arrayBuffer();
     const size = body.byteLength;
     const start = match[1] ? Number(match[1]) : Math.max(0, size - Number(match[2]));
