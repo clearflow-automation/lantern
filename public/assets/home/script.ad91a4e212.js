@@ -114,7 +114,7 @@ if(!reducedMotion.matches&&'IntersectionObserver' in window){
     })
     .catch(function(){
       btn.disabled=false; btn.textContent='Ask me to call you';
-      fail('That did not send. WhatsApp me instead on 97111 05497.');
+      fail('That did not send. Please email vaishnandit@airlantern.com.');
     });
   });
 })();

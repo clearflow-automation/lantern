@@ -107,6 +107,12 @@ code{font-family:var(--data);font-size:.88em;background:rgba(22,19,15,.06);paddi
 .finds{display:flex;flex-direction:column;gap:16px;margin-top:26px}
 .find{background:var(--paper-2);border:1px solid var(--rule);border-radius:4px;padding:20px 19px}
 .find.hot{background:var(--flag-soft);border-color:rgba(178,58,22,.28)}
+.find.done{background:var(--good-soft);border-color:rgba(15,107,60,.30)}
+.find.done .find-top .n{color:var(--good)}
+.find.done h3{text-decoration:none}
+.tag-done{display:inline-block;font-family:var(--data);font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;color:#fff;background:var(--good);border-radius:2px;padding:2px 7px;margin-left:9px;vertical-align:middle;font-weight:600}
+.recheck{background:var(--good-soft);border:1px solid rgba(15,107,60,.28);border-radius:4px;padding:14px 16px;margin-top:20px;font-size:.93rem}
+.recheck b{font-family:var(--data);font-size:.61rem;letter-spacing:.13em;text-transform:uppercase;color:var(--good);display:block;margin-bottom:5px;font-weight:600}
 .find-top{display:flex;align-items:baseline;gap:11px}
 .find-top .n{font-family:var(--data);font-size:.82rem;font-weight:600;color:var(--amber-ink);font-variant-numeric:tabular-nums;flex:none}
 .find p{margin-top:11px;font-size:.96rem}
@@ -313,18 +319,30 @@ a:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:
   <h2>Seven issues costing you orders</h2>
   <p>Ordered by how much each one is likely costing, not by how hard it is to fix. The first four are cheap.</p>
 
+  <div class="recheck"><b>Re-checked 25 August 2026</b>Since this review was written you've cleaned the emoji out of every product name — all 236 of them — and cleared the decorative text off the collection pages. Issue 04 below is closed, and the Google Shopping route is open again. Issue 01 has been corrected too: you do have size charts, and this page had that wrong.</div>
+
   <div class="finds">
 
     <article class="find hot">
-      <div class="find-top"><span class="n">01</span><h3>"All sales are final" — on clothes with no size chart</h3></div>
-      <p>Your return policy says you don't offer refunds, gives customers <strong>24 hours</strong> to report a problem, and asks them to pay return shipping. Meanwhile you sell sizes M through 4XL with no size chart anywhere, and a review on your own homepage says the sizes run big.</p>
+      <div class="find-top"><span class="n">01</span><h3>"All sales are final" — and four different size charts</h3></div>
+      <p>Your return policy says you don't offer refunds, gives customers <strong>24 hours</strong> to report a problem, and asks them to pay return shipping — on sizes M through 4XL, with a review on your own homepage saying the sizes run big.</p>
+      <p><strong>Correction to our first review:</strong> we said there was no size chart. There are four, and we missed them. But every one of them is a <em>picture</em> of a table with no text in it, so Google can't read them, a screen reader can't read them, and on a phone a customer is pinch-zooming a JPEG. One of them is a forwarded WhatsApp image, and the co-ord page is showing the nightsuit chart.</p>
       <div class="proof"><b>See for yourself</b>Return policy page: "we do not offer refunds. All sales are final."
 Exchange window:   24 hours from delivery
 Return shipping:   paid by the customer
 Your own homepage review:
   "the size 3 XL is too big overall… I think ur sizes r big."
-Product page sizes: M / L / XL / 2XL / 3XL / 4XL — no size chart, no model measurements</div>
-      <div class="cost"><b>What it costs</b>Fit is the single biggest reason people hesitate to buy clothes online, and you're answering that fear with "no refunds." Many shoppers read this page before checkout and close the tab. A 7-day exchange plus a proper size chart usually lifts conversion more than any advertising spend — and costs nothing but an afternoon of writing. It also protects you: "all sales are final" on consumer apparel is the kind of clause that invites complaints and payment disputes under India's e-commerce consumer rules.</div>
+Product page sizes: M / L / XL / 2XL / 3XL / 4XL
+
+Four size-chart pages, all live, all image-only:
+  /pages/night-suit-size-chart   image: Nightsuit_Size_Chart_e0175b76....png
+  /pages/co-ord-set-size-chart   image: Nightsuit_Size_Chart.png   &#8592; nightsuit chart on the co-ord page
+  /pages/sizing-chart            image: WhatsApp_Image_2026-05-31_at_7.39.28_PM.jpg
+  /pages/size-guide              image: size_chart.jpg
+
+On all four pages:  0 tables, 0 alt text, and the words
+                    chest / bust / waist / sleeve / inches appear 0 times</div>
+      <div class="cost"><b>What it costs</b>Fit is the single biggest reason people hesitate to buy clothes online, and you're answering that fear with "no refunds." Many shoppers read this page before checkout and close the tab. The good news is that the hard part is already done — the measurements exist, they're just trapped inside images. Typing them into a real table, keeping one chart instead of four, and pairing that with a 7-day exchange usually lifts conversion more than any advertising spend. It also protects you: "all sales are final" on consumer apparel is the kind of clause that invites complaints and payment disputes under India's e-commerce consumer rules.</div>
     </article>
 
     <article class="find hot">
@@ -358,19 +376,24 @@ In your page code:
       <div class="cost"><b>What it costs</b>Every customer who searches "cotton nightwear for women" or "farshi co-ord set" and doesn't find you is a sale going to a competitor for free. Today you're only findable by people who already know your name — which means you pay for every single new customer, forever.</div>
     </article>
 
-    <article class="find hot">
-      <div class="find-top"><span class="n">04</span><h3>Emoji in product names are blocking Google Shopping</h3></div>
-      <p>Several products have emoji in their names, and the emoji have leaked into the web addresses themselves. Google Shopping rejects product names with decorative characters — which means the highest-intent advertising channel available to you is closed until it's cleaned up. There are also live products named "untitled," and a spelling mistake running across every page.</p>
-      <div class="proof"><b>See for yourself</b>Product name:  Pink Signature Badla Farshi Co-ord Set💫
-Web address:   /products/pista-pataka-farshi-co-ord-set%F0%9F%92%9A   ← the 💚 is in the URL
+    <article class="find done">
+      <div class="find-top"><span class="n">04</span><h3>Emoji in product names<span class="tag-done">Fixed</span></h3></div>
+      <p><strong>You've already fixed this.</strong> When we wrote this review, several products carried emoji in their names and Google Shopping rejects those outright. On 25 August we re-checked all 236 products and found <strong>none</strong>. That route is open again, and it was your doing, not ours.</p>
+      <p>Two web addresses still carry an encoded character, and our advice is to <em>leave them alone</em> — Google Shopping reads the product name, not the address, and changing addresses breaks every existing link. Not worth the risk for no gain.</p>
+      <p>Three smaller things in the same family are still open: products named "untitled", a spelling mistake in the top bar, and a link on every page that goes nowhere.</p>
+      <div class="proof"><b>Re-checked 25 August 2026</b>Emoji in product titles:   0 of 236 products   &#10004; clear
 
-Live on your site right now, linked from the homepage:
-  /products/untitled-aug9_01-11-33
-  /products/untitled-aug9_00-55-22
+Still open, same family:
+  /products/untitled-jul19_01-59-03
   /products/untitled-jul29_20-11-00
+  /products/untitled-aug9_00-36-40
+  /products/untitled-aug9_00-55-22
+  /products/untitled-aug9_01-11-33
+  /products/untitled-aug24_01-06-19    &#8592; created 24 August
 
-Top bar of every page:  "Buy Any 2 Sleewear At ₹1899/-"   ← Sleewear</div>
-      <div class="cost"><b>What it costs</b>Google Shopping is where people search with their wallet already out. You can't run it until product names are clean. That's an afternoon of work standing between you and your best paid channel.</div>
+  Top bar, every page:  "Buy Any 2 Sleewear At &#8377;1899/-"   &#8592; Sleewear
+  /pages/wishlist:      404, and it's linked from every page</div>
+      <div class="cost"><b>What this unlocks</b>Google Shopping is where people search with their wallet already out, and it was closed to you until now. It's open. Worth doing properly once the product titles are also written for search rather than just cleaned — which is on the list.</div>
     </article>
 
     <article class="find">
@@ -594,9 +617,9 @@ Social links in your site code        blank</div>
   <div class="cta">
     <h3>Want us to just fix it?</h3>
     <p>We build fast, mobile-first websites for Indian businesses, and we do exactly this kind of clean-up. Send a message and we'll walk you through the list — free, whether or not you work with us.</p>
-    <a class="btn" href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20we%20saw%20your%20review%20of%20punyaskriti.com.%20Can%20we%20talk%3F" target="_blank" rel="noopener">
+    <a class="btn" href="mailto:vaishnandit@airlantern.com?subject=Punya%27s%20Kriti%20review">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.13c-.25.69-1.44 1.32-1.99 1.4-.51.08-1.15.11-1.86-.12-.43-.13-.98-.32-1.69-.62-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07 0-1.46.77-2.18 1.04-2.48.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.06.92 2.21.08.15.13.32.02.52-.1.2-.15.32-.3.5-.15.17-.32.39-.45.52-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.08.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.72.81 2.02.96.3.15.5.22.57.35.07.12.07.72-.18 1.41Z"/></svg>
-      Message us on WhatsApp
+      Email Lantern
     </a>
     <p class="alt">Or email <a href="mailto:vaishnandit@airlantern.com">vaishnandit@airlantern.com</a></p>
   </div>
@@ -613,9 +636,9 @@ Social links in your site code        blank</div>
 
 <div class="sticky">
   <div class="txt"><b>Questions about any of this?</b>We'll explain it in plain language — free.</div>
-  <a href="https://wa.me/919711105497?text=Hi%20Nandit%20%E2%80%94%20we%20saw%20your%20review%20of%20punyaskriti.com.%20Can%20we%20talk%3F" target="_blank" rel="noopener" aria-label="Message Lantern on WhatsApp">
+  <a href="mailto:vaishnandit@airlantern.com?subject=Punya%27s%20Kriti%20review" aria-label="Email Lantern">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.13c-.25.69-1.44 1.32-1.99 1.4-.51.08-1.15.11-1.86-.12-.43-.13-.98-.32-1.69-.62-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07 0-1.46.77-2.18 1.04-2.48.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.06.92 2.21.08.15.13.32.02.52-.1.2-.15.32-.3.5-.15.17-.32.39-.45.52-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.08.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.72.81 2.02.96.3.15.5.22.57.35.07.12.07.72-.18 1.41Z"/></svg>
-    WhatsApp
+    Email
   </a>
 </div>
 
