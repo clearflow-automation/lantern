@@ -1,6 +1,13 @@
 // Supply byte ranges for the approved film; all other assets keep normal routing.
 export default {
   async fetch(request, env) {
+    const url = new URL(request.url);
+    if (url.pathname === '/business-process-consulting' || url.pathname === '/business-process-consulting/') {
+      const destination = new URL('/', url);
+      destination.search = url.search;
+      return Response.redirect(destination.toString(), 301);
+    }
+
     const range = request.headers.get('Range');
     if (request.method !== 'GET' || !range) {
       const response = await env.ASSETS.fetch(request);
