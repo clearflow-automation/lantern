@@ -6,6 +6,8 @@
     "not_found_handling": "404-page",
     "binding": "ASSETS",
     "run_worker_first": [
+      "/business-process-consulting",
+      "/business-process-consulting/",
       "/assets/home/lantern-explained.cbb936376a.mp4",
       "/assets/home/lantern-explained.6067799281.mp4",
       "/assets/home/lantern-explained.a8706ff717.mp4"
