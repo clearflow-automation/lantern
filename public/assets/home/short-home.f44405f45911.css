@@ -30,6 +30,16 @@
   padding-bottom: 72px;
 }
 
+.short-hero h1 {
+  max-width: 690px;
+  font-size: clamp(48px, 4.55vw, 66px);
+  line-height: 1.02;
+}
+
+.short-hero .hero-description {
+  max-width: 590px;
+}
+
 .short-film {
   margin: 0;
   min-width: 0;
@@ -574,6 +584,11 @@
 }
 
 @media (max-width: 680px) {
+  .short-hero h1 {
+    max-width: 520px;
+    font-size: clamp(43px, 11.2vw, 55px);
+  }
+
   .conversion-proof-grid {
     grid-template-columns: repeat(2, 1fr);
   }
