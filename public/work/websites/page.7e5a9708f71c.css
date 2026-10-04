@@ -1,0 +1,16 @@
+.website-collection { padding-block:0 32px; scroll-margin-top:24px; }
+.collection-heading { margin-bottom:24px; }
+.website-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px; }
+.website-card { min-width:0; }
+.project-image { display:block; overflow:hidden; border-radius:12px; background:var(--surface); aspect-ratio:16/10; }
+.project-image img { width:100%; height:100%; object-fit:cover; object-position:top; }
+.project-meta { display:flex; justify-content:space-between; align-items:center; gap:16px; margin:16px 0 8px; font-size:14px; color:var(--muted); }
+.website-card h3 { font-size:24px; }
+.website-card h3 a { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:44px; }
+.website-services { display:flex; align-items:center; justify-content:space-between; gap:32px; padding-block:16px 40px; scroll-margin-top:24px; }
+.website-services h2 { font-size:clamp(26px,2.4vw,32px); }
+.website-services p { font-size:16px; margin-top:12px; max-width:54ch; }
+.website-services .cta { flex:none; }
+@media(max-width:680px) { .website-grid { grid-template-columns:1fr; gap:24px; } .website-card h3 { font-size:22px; } .project-meta { flex-wrap:wrap; gap:4px 16px; } .website-services { display:block; padding-block:8px 32px; } .website-services h2 { font-size:26px; } .website-services .cta { margin-top:20px; } }
+
+.visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }

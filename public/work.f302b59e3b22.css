@@ -1,0 +1,114 @@
+/* One category-page system for all department, About, website and legal pages. */
+.breadcrumb { display:flex; align-items:center; gap:12px; margin-bottom:24px; color:var(--muted); font-size:14px; }
+.breadcrumb a { display:inline-flex; align-items:center; min-height:32px; text-decoration:underline; }
+.finance-opening { padding-block:24px 40px; }
+.opening-grid { display:grid; grid-template-columns:1.3fr 1fr; align-items:center; gap:48px; }
+.opening-grid h1 { max-width:23ch; }
+.opening-aside>p { max-width:50ch; font-size:17px; }
+.example-section { margin-bottom:24px; scroll-margin-top:24px; }
+.example-panel { padding:32px; background:var(--surface); color:var(--ink); border-radius:var(--radius); }
+.example-intro { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); gap:40px; align-items:center; }
+.example-intro>div { min-width:0; }
+.example-intro h2 { font-size:clamp(28px,2.5vw,34px); }
+.example-intro p { max-width:58ch; margin-top:16px; font-size:16px; }
+.example-intro .audience { margin-top:12px; font-size:14px; }
+.example-intro .reference-note { margin-top:12px; font-size:14px; }
+.adapt-row { margin-top:20px; }
+.adapt-row>span { display:block; font-size:14px; font-weight:600; }
+.example-intro .adapt-row p { margin-top:6px; font-size:14px; }
+.film-space { display:flex; flex-direction:column; justify-content:space-between; gap:20px; min-width:0; width:100%; min-height:0; aspect-ratio:16/10; padding:24px; background:var(--paper); border-radius:12px; color:var(--ink); }
+.film-label { font-size:12px; font-weight:600; line-height:1.5; color:var(--muted); }
+.film-note { display:block; font-size:12px; line-height:1.5; color:var(--muted); }
+.pricing-poster { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.pricing-poster>div { display:grid; gap:8px; }
+.pricing-poster div>span { font-size:12px; }
+.pricing-poster strong { font:600 clamp(24px,2.2vw,32px)/1.2 'DM Sans',sans-serif; letter-spacing:-.03em; }
+.scene-arrow { font-size:24px; color:var(--ink); }
+.poster-tabs { display:flex; flex-wrap:wrap; gap:8px 16px; font-size:14px; color:var(--muted); }
+.hub-poster svg { width:100%; height:auto; margin-top:16px; }
+.poster-grid { stroke:var(--line); stroke-width:1; }
+.poster-path { stroke:var(--ink); stroke-width:2.8; fill:none; }
+.review-poster { display:grid; gap:12px; }
+.review-poster>div { display:flex; align-items:center; gap:12px; font-size:16px; }
+.review-step { display:none; }
+.finance-close { display:grid; grid-template-columns:1.4fr 1fr; align-items:center; gap:48px; padding-block:40px 48px; }
+.finance-close h2 { max-width:27ch; }
+.finance-close>div>p:not(.eyebrow) { max-width:58ch; margin-top:16px; font-size:16px; }
+.close-action { justify-self:end; }
+.close-action>p { font-size:14px; margin-top:12px; }
+@media(max-width:1000px) {
+ .opening-grid,.example-intro,.finance-close { gap:32px; }
+ .example-panel { padding:24px; }
+ .film-space { padding:20px; }
+}
+@media(max-width:780px) {
+ .opening-grid { grid-template-columns:1fr; gap:20px; }
+ .opening-aside>p { max-width:65ch; }
+ .example-intro { grid-template-columns:1fr; gap:24px; }
+ .film-space { width:100%; max-width:640px; justify-self:center; aspect-ratio:16/9; }
+ .finance-close { grid-template-columns:1fr; gap:24px; }
+ .close-action { justify-self:start; }
+}
+@media(max-width:680px) {
+ .finance-opening { padding-block:16px 32px; }
+ .breadcrumb { margin-bottom:20px; }
+ .opening-grid h1 { max-width:none; }
+ .opening-aside>p { font-size:16px; }
+ .example-panel { padding:24px 16px; }
+ .example-intro h2 { font-size:28px; }
+ .example-intro p { font-size:16px; }
+ .film-space { padding:20px 16px; aspect-ratio:auto; min-height:184px; gap:16px; }
+ .film-note,.film-label,.pricing-poster div>span { font-size:12px; }
+ .poster-tabs { font-size:14px; }
+ .pricing-poster strong { font-size:24px; }
+ .review-poster>div { font-size:15px; }
+ .finance-close { padding-block:24px 32px; }
+ .finance-close h2 { font-size:28px; }
+}
+
+.research-poster,.content-poster,.workflow-poster { display:grid; gap:12px; }
+.research-poster>div,.content-poster>div,.workflow-poster>div { font-size:16px; line-height:1.5; }
+.follow-up-poster { display:grid; gap:20px; }
+.follow-up-poster>div { display:grid; gap:8px; }
+.follow-up-poster span { font-size:12px; color:var(--muted); }
+.follow-up-poster strong { font:600 clamp(22px,2vw,28px)/1.2 'DM Sans',sans-serif; letter-spacing:-.03em; }
+@media(max-width:680px) { .research-poster>div,.content-poster>div,.workflow-poster>div { font-size:15px; } .follow-up-poster strong { font-size:22px; } }
+
+/* Department examples follow the homepage's open heading-and-media composition. */
+.department-context { padding-top:16px; }
+.department-context .breadcrumb { margin-bottom:0; }
+.department-page .example-section { margin-bottom:0; padding-block:40px 48px; }
+.department-page .example-panel { padding:0; background:transparent; border-radius:0; }
+.department-page .example-intro { grid-template-columns:minmax(0,1fr) minmax(0,1.08fr); gap:48px; }
+.department-page .example-intro h1 { margin-bottom:24px; }
+.department-page .keep-word { white-space:nowrap; }
+.department-page .example-intro h2 { margin-bottom:20px; }
+.department-page .example-intro p { margin-top:0; max-width:48ch; font-size:17px; }
+.department-page .adapt-row { margin-top:24px; }
+.department-page .adapt-row p { margin-top:8px; font-size:14px; }
+.department-page .example-intro .reference-note { margin-top:12px; font-size:14px; }
+.department-page .film-space { background:var(--surface); aspect-ratio:16/9; padding:20px; }
+.department-page .finance-close { padding-block:24px 48px; }
+@media(max-width:900px) {
+ .department-page .example-intro { grid-template-columns:1fr; gap:32px; }
+ .department-page .film-space { max-width:680px; justify-self:start; }
+}
+@media(max-width:680px) {
+ .department-context { padding-top:8px; }
+ .department-page .example-section { padding-block:24px 32px; }
+ .department-page .example-intro { gap:24px; }
+ .department-page .example-intro p { font-size:17px; }
+ .department-page .adapt-row p,.department-page .example-intro .reference-note { font-size:14px; }
+ .department-page .film-space { padding:16px; aspect-ratio:16/9; min-height:0; }
+}
+
+/* Pending recordings keep a clear, usable invitation alongside the work. */
+.department-page .demo-preview { gap:16px; }
+.video-status { padding-block:12px; font:500 clamp(28px,2.6vw,40px)/1.12 'DM Sans',sans-serif; letter-spacing:-.035em; text-align:center; color:var(--ink); }
+.video-status em { display:block; font-family:'Instrument Serif',serif; font-weight:400; font-size:1.22em; }
+.demo-request { display:inline-flex; align-items:center; gap:8px; min-height:44px; color:var(--ink); font-size:14px; text-decoration:underline; }
+.demo-request:hover { text-decoration-thickness:2px; }
+@media(max-width:680px) {
+ .department-page .demo-preview { aspect-ratio:auto; min-height:208px; }
+ .video-status { font-size:28px; padding-block:8px; }
+}

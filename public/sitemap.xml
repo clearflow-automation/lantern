@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://airlantern.com/</loc><lastmod>2026-09-21</lastmod></url>
-  <url><loc>https://airlantern.com/projects/</loc><lastmod>2026-09-21</lastmod></url>
-  <url><loc>https://airlantern.com/websites/</loc><lastmod>2026-09-06</lastmod></url>
-  <url><loc>https://airlantern.com/privacy/</loc><lastmod>2026-09-21</lastmod></url>
-  <url><loc>https://airlantern.com/terms/</loc><lastmod>2026-09-21</lastmod></url>
+<url><loc>https://airlantern.com/</loc><lastmod>2026-10-04</lastmod></url>
+<url><loc>https://airlantern.com/about/</loc><lastmod>2026-10-04</lastmod></url>
+<url><loc>https://airlantern.com/work/sales/</loc><lastmod>2026-10-04</lastmod></url>
+<url><loc>https://airlantern.com/work/finance/</loc><lastmod>2026-10-04</lastmod></url>
+<url><loc>https://airlantern.com/work/hr/</loc><lastmod>2026-10-04</lastmod></url>
+<url><loc>https://airlantern.com/work/marketing/</loc><lastmod>2026-10-04</lastmod></url>
+<url><loc>https://airlantern.com/work/admin-operations/</loc><lastmod>2026-10-04</lastmod></url>
+<url><loc>https://airlantern.com/work/agents/</loc><lastmod>2026-10-04</lastmod></url>
+<url><loc>https://airlantern.com/work/websites/</loc><lastmod>2026-10-04</lastmod></url>
+<url><loc>https://airlantern.com/privacy/</loc><lastmod>2026-10-04</lastmod></url>
+<url><loc>https://airlantern.com/terms/</loc><lastmod>2026-10-04</lastmod></url>
+<url><loc>https://airlantern.com/websites/</loc><lastmod>2026-10-04</lastmod></url>
 </urlset>

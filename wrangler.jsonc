@@ -1,18 +1,17 @@
 {
   "name": "lantern",
   "compatibility_date": "2026-08-14",
+  "main": "worker.mjs",
   "assets": {
     "directory": "./public",
-    "not_found_handling": "404-page",
     "binding": "ASSETS",
+    "not_found_handling": "404-page",
     "run_worker_first": [
       "/business-process-consulting",
       "/business-process-consulting/",
-      "/assets/home/lantern-explained.cbb936376a.mp4",
-      "/assets/home/lantern-explained.6067799281.mp4",
-      "/assets/home/lantern-explained.a8706ff717.mp4",
-      "/assets/home/lantern-explained.959033faec.mp4"
+      "/projects",
+      "/projects/",
+      "/assets/video/lantern-film-50s.b7c52327a38c.mp4"
     ]
-  },
-  "main": "worker.mjs"
+  }
 }

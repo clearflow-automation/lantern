@@ -1,0 +1,10 @@
+.founder-focus { padding-left:32px; border-left:1px solid var(--line); }
+.founder-focus ul { display:grid; gap:24px; padding:0; margin:0; list-style:none; }
+.founder-focus li { font:600 22px/1.4 Manrope,sans-serif; letter-spacing:-.025em; }
+.profile-link,.work-link { display:inline-flex; align-items:center; gap:16px; min-height:44px; text-decoration:underline; font-size:14px; margin-top:20px; }
+.approach-section { padding-block:24px 32px; }
+.approach-heading h2 { max-width:650px; }
+.approach-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px; margin-top:24px; }
+.approach-grid h3 { font-size:22px; margin-bottom:12px; }
+.approach-grid p { font-size:16px; }
+@media(max-width:780px) { .founder-focus { padding:24px 0 0; border-left:0; border-top:1px solid var(--line); } .founder-focus ul { gap:12px; } .founder-focus li { font-size:20px; } .approach-grid { grid-template-columns:1fr; gap:24px; } }
