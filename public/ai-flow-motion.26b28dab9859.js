@@ -39,7 +39,7 @@ class FlowMotion {
   }
   sync() {
     const running=this.visible&&!document.hidden&&!this.paused&&!this.reduced.matches;
-    this.control.setAttribute('aria-label',this.reduced.matches?'Business flow: information, rules, AI tasks and team review':this.paused?'Resume business flow animation: Sales, Operations, Finance, Rules & Scripts, Team Review':'Pause business flow animation: Sales, Operations, Finance, Rules & Scripts, Team Review');
+    this.control.setAttribute('aria-label',this.reduced.matches?'Business flow: information, rules, AI tasks and team review':this.paused?'Resume business flow animation: Sales Operations Finance Rules & Scripts Team Review Sales Finance Operations':'Pause business flow animation: Sales Operations Finance Rules & Scripts Team Review Sales Finance Operations');
     this.control.setAttribute('aria-pressed',String(this.paused));
     this.control.setAttribute('aria-disabled',String(this.reduced.matches));
     this.root.dataset.flowRunning=String(running);
