@@ -137,5 +137,30 @@ class FlowMotion {
 
 }
 const root=document.querySelector('[data-flow2]');
-if(root)new FlowMotion(root);
+if(root){
+  const stage=root.querySelector('[data-k="stage"]');
+  // The artwork has an equivalent description on its enclosing figure.
+  // Keep the control name separate from decorative internal text and icons.
+  root.setAttribute('aria-hidden','true');
+  const control=root.closest('.ai-flow-motion-window');
+  control.setAttribute('role','button');control.tabIndex=0;
+  control.setAttribute('aria-label','Start business flow animation');
+  let initialized=false;
+  const sizing=new ResizeObserver(entries=>{
+    const width=entries[0].contentRect.width;
+    stage.style.transform=`scale(${width/1536})`;
+  });
+  sizing.observe(root);
+  const init=()=>{
+    if(initialized)return;
+    initialized=true;visibility.disconnect();sizing.disconnect();
+    new FlowMotion(root);
+  };
+  const visibility=new IntersectionObserver(entries=>{
+    if(entries[0].isIntersecting)init();
+  },{threshold:.01});
+  visibility.observe(root);
+  control.addEventListener('focus',init,{once:true});
+}
+
 })();

@@ -23,7 +23,7 @@
   };
   addEventListener('scroll', () => { if (!scheduled) { scheduled = true; requestAnimationFrame(updateProgress); } }, { passive:true });
   addEventListener('resize',updateProgress);
-  updateProgress();
+  // Measure full-page geometry when scrolling, after the opening has painted.
 
   document.querySelectorAll('.faq-list details,.privacy-details').forEach(details => {
     details.addEventListener('toggle', () => {
