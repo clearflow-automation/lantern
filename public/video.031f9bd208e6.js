@@ -64,7 +64,6 @@
   const toggle = async () => {
     if (!video.paused) { video.pause(); return; }
     if (video.ended) video.currentTime = 0;
-    video.hidden = false;
     try { await video.play(); status.textContent = ''; }
     catch (error) {
       if (error.name === 'AbortError') { update(); return; }
@@ -127,8 +126,6 @@
   video.addEventListener('ended', reveal);
   ['timeupdate','loadedmetadata','pause','ended','volumechange','ratechange'].forEach(event => video.addEventListener(event, update));
   figure.tabIndex = 0;
-  // The same cover artwork paints as an ordinary image. Native poster remains the no-JS fallback.
-  video.removeAttribute('poster');
   video.controls = false;
   setVisible(false);
   update();
